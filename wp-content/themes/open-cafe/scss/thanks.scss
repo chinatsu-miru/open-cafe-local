@@ -1,0 +1,50 @@
+@use './common' as *;
+@use './header' as *;
+@use './footer' as *;
+
+
+.contact-completed {
+    margin-top: 54px;
+    color: $main-color;
+
+    .contact-completed__inner {
+        padding-inline: 20px;
+        max-width: 640px;
+        padding-bottom: 60px;
+        margin-inline: auto;
+        margin-bottom: 100px;
+
+        @include mq(lg) {
+            max-width: 728px;
+        }
+
+        .contact-completed__title {
+            h2 {
+                text-align: center;
+                color: $main-color;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 40px;
+
+                @include mq(lg) {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 40px;
+                }
+            }
+
+            p {
+                padding-top: 26px;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 24px;
+
+                @include mq(lg) {
+                    padding-top: 28px;
+                    font-size: 16px;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

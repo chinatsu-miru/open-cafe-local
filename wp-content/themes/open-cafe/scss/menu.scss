@@ -1,0 +1,93 @@
+@use './common' as *;
+@use './header' as *;
+@use './footer' as *;
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    padding-top: 60px;
+    padding-inline: 20px;
+    padding-bottom: 160px;
+
+    @include mq(md) {
+        padding-inline: 90px;
+    }
+
+    .menu__contents {
+        .tab-buttons {
+            max-width: 600px;
+            margin: 0 auto;
+
+            @include mq(md) {
+                max-width: 840px;
+            }
+
+            .tab-buttons__inner {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, auto);
+                row-gap: 12px;
+                column-gap: 3.467vw;
+
+                @include mq(md) {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(1, auto);
+                }
+            }
+        }
+
+        .menu__images {
+            padding-top: 60px;
+            max-width: 600px;
+            margin: 0 auto;
+
+            @include mq(md) {
+                max-width: 1100px;
+            }
+
+            .menu__images-contents {
+                display: none;
+
+                .menu__images-inner {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(7, auto);
+                    row-gap: 24px;
+                    column-gap: 5.066vw;
+
+                    @include mq(md) {
+                        grid-template-columns: repeat(4, 1fr);
+                        grid-template-rows: repeat(5, auto);
+                        column-gap: 3.333vw;
+                    }
+
+                    .menu__image {
+                        img {
+                            width: 100%;
+                        }
+                        .menu__image-text {
+                            .desc {
+                                font-weight: 700;
+                            }
+
+                            .price {
+                                font-family: Damion;
+                                font-size: 24px;
+                                font-weight: 400;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+
+                }
+
+                &.menu-active {
+                    display: block;
+                }
+            }
+        }
+    }
+}

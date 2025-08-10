@@ -1,0 +1,593 @@
+@use "sass:string";
+@use "sass:map";
+
+// font-family
+$base-font: "Noto Serif JP", serif;
+$amatic: "Amatic SC", sans-serif;
+$patua: "Patua One", serif;
+$damion: "Damion", cursive;
+
+// color
+$main-text-color: #222222;
+$sub-text-color: #ffffff;
+$main-color: #382620;
+$base-color: #eae0d5;
+$light-color: #f3efeb;
+$accent-color: #f07317;
+$button-color: #f3efeb;
+
+// breakpoints
+$breakpoints: (
+    xs: "screen and (min-width: 375px)",
+    sm: "screen and (min-width: 600px)",
+    md: "screen and (min-width: 768px)",
+    lg: "screen and (min-width: 1024px)",
+    xl: "screen and (min-width: 1280px)",
+);
+
+// mixin
+@mixin mq($breakpoint: lg) {
+    $mq-value: map.get($breakpoints, $breakpoint);
+
+    @media #{string.unquote($mq-value)} {
+        @content;
+    }
+}
+
+// 共通パーツ
+// * {
+//     outline:1px solid rgb(252, 154, 172);
+// }
+html {
+    font-size: 14px;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: $base-font;
+    color: $main-text-color;
+}
+
+.sp-none {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.pc-none {
+    @include mq(md) {
+        display: none;
+    }
+}
+
+//headerメニューバー
+.hamburger {
+    width: 60px;
+    height: 60px;
+}
+
+.header__title {
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    padding-top: 21px;
+
+    @include mq(xl) {
+        padding-top: 84px;
+    }
+
+    h1 {
+        font-family: $amatic;
+        font-size: 32px;
+        letter-spacing: 6.4px;
+
+        @include mq(xl) {
+            font-size: 72px;
+            letter-spacing: 14.4px;
+        }
+    }
+
+    p {
+        font-family: $base-font;
+        font-size: 12px;
+        letter-spacing: 0.96px;
+
+        @include mq(xl) {
+            font-size: clamp(16px, 1.25vw, 18px);
+            letter-spacing: 1.28px;
+        }
+    }
+}
+
+//各セクション------------------------------------------
+.section {
+    padding-inline: 20px;
+}
+
+//背景色----------------------------------------------
+.bg {
+    background-color: $base-color;
+}
+
+// button1-------------------------------------------
+.button1 {
+    width: 290px;
+    height: 72px;
+    margin-top: 56px;
+    background-color: $main-text-color;
+    margin-inline: auto;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 289px;
+        height: 72px;
+        border-right: 1px solid $main-text-color;
+        border-bottom: 1px solid $main-text-color;
+        top: 6px;
+        left: 6px;
+        display: inline-block;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        transform: translate(5px, 6px);
+    }
+
+    &:active::after {
+        display: none;
+    }
+
+    .btn1 {
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: $sub-text-color;
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 16px;
+            height: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 12px;
+            background-image: url(../img/arrow.png);
+            color: $sub-text-color;
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.tab-button {
+    width: 100%;
+    aspect-ratio: 161 / 64;
+    background-color: #888;
+    color: $sub-text-color;
+    padding: 4px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        border: 1px solid $sub-text-color;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    .btn-text {
+        width: 100%;
+        height: 100%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: $sub-text-color;
+        font-size: clamp(14px, 2vw, 18px);
+        font-weight: 700;
+        line-height: 19px;
+    }
+
+    &.btn-active {
+        background-color: $main-color;
+    }
+}
+
+.button2 {
+    width: 140px;
+    height: 29px;
+    padding: 5.44px 16px 6.56px 15px;
+    margin-top: 12px;
+    background-color: $main-text-color;
+    margin-inline: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .btn2 {
+        width: 100%;
+        height: 100%;
+        color: $sub-text-color;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+.gift-btn {
+    width: 140px;
+    height: 29px;
+    padding: 5.44px 16px 6.56px 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-text-color;
+    font-size: 16px;
+    font-weight: 700;
+
+    .btn-text {
+        color: $sub-text-color;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+// ナビゲーション----------------------------------
+.header,
+.hero-pc,
+.hero-sp {
+
+    .hero__nav,
+    .hero__nav.is_sub {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 767px;
+        background-color: $main-color;
+        padding-top: 130px;
+        padding-bottom: 50px;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: transform 0.3s;
+        color: $sub-text-color;
+
+        &.is-checked {
+            transform: translateX(0);
+        }
+
+        @include mq(md) {
+            max-width: 375px;
+            height: 800px;
+            z-index: 12;
+        }
+
+        .nav__logo {
+            width: 128px;
+            height: 64px;
+            position: absolute;
+            top: 10px;
+            left: 14px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .nav__lists {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-bottom: 52px;
+            gap: 32px;
+
+            .nav__list {
+                padding-left: 40px;
+
+                .nav__link {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    .en {
+                        color: #fff;
+                        font-family: "Patua One";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        letter-spacing: 2.88px;
+                        margin-right: 11px;
+                    }
+
+                    .slash {
+                        color: $sub-text-color;
+                        font-family: "Noto Serif JP";
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+
+                    .ja {
+                        color: $sub-text-color;
+                        font-family: "Noto Serif JP";
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+
+        .sns-icons {
+            display: flex;
+            width: 184px;
+            height: 40px;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            .sns-icon {
+                width: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $sub-text-color;
+
+                .fa-twitter,
+                .fa-youtube,
+                .fa-instagram {
+                    color: $sub-text-color;
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
+// セクションタイトル-------------------------------------
+.section__title {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: $main-text-color;
+    font-weight: 700;
+    text-align: center;
+
+    @include mq(md) {
+        gap: 8px;
+    }
+
+    h2 {
+        font-family: "Amatic SC";
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        line-height: normal;
+
+        @include mq(md) {
+            font-size: 52px;
+            letter-spacing: 10.4px;
+        }
+    }
+
+    p {
+        font-family: "Noto Serif JP";
+        font-size: 12px;
+        font-weight: 700;
+        line-height: normal;
+
+        @include mq(md) {
+            font-size: 14px;
+        }
+    }
+}
+
+// accessセクション--------------------------------------
+.access {
+    background-color: $base-color;
+    padding-top: 81px;
+    position: relative;
+    z-index: 10;
+
+    @include mq(md) {
+        padding-top: 80px;
+    }
+
+    .access__inner {
+        max-width: 688px;
+        margin: 0 auto;
+
+        @include mq(xl) {}
+
+        .section__title {
+            font-size: 12px;
+
+            @include mq(md) {
+                font-size: 14px;
+            }
+        }
+
+        .access__contents {
+            padding-top: 43px;
+            padding-bottom: 80px;
+
+            @include mq(md) {
+                width: 688px;
+                margin: 0 auto;
+            }
+
+            .access__map {
+                aspect-ratio: 335 / 188;
+                background: $sub-text-color;
+                margin: 0 auto;
+                margin-bottom: 40px;
+                position: relative;
+
+                @include mq(md) {
+                    aspect-ratio: 688 / 387;
+                    margin-bottom: 40px;
+                }
+
+                .access__map-content {
+                    aspect-ratio: 335 / 188;
+                    padding: 5px;
+
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
+                        display: block;
+                        border: 0;
+                    }
+                }
+
+                .access__pin {
+                    position: absolute;
+                    aspect-ratio: 17 / 29;
+                    width: 17px;
+                    top: 67.68px;
+                    left: 158.74px;
+
+                    @include mq(md) {
+                        aspect-ratio: 35 / 60;
+                        width: 35px;
+                        top: 139px;
+                        left: 326px;
+                    }
+                }
+            }
+
+            .business-info__inner {
+                display: flex;
+                flex-direction: column;
+                gap: 18px; // ← スマホ時の上下余白
+
+                @media screen and (min-width: 768px) {
+                    display: grid;
+                    grid-template-rows: repeat(3, auto); // 3行
+                    grid-template-columns: 1fr 1fr; // 2列
+                    grid-auto-flow: column;
+                    gap: 18px 40px; // ← 上下18px, 左右40px
+                }
+
+                .info__list {
+                    display: flex;
+                    gap: 6.4vw;
+                    border-bottom: 1px solid #333;
+                    padding-bottom: 12px;
+
+                    @include mq(md) {
+                        gap: 1.875vw;
+                    }
+
+                    .info__details {
+                        min-width: 56px;
+                        font-weight: 700;
+                    }
+
+                    .info__meta {
+                        line-height: 24px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .access-dec {
+        position: absolute;
+        width: 50.85vw;
+        height: 48vw;
+        top: -100px;
+        right: -37px;
+
+        img {
+            width: 100%;
+        }
+
+        @include mq(md) {
+            width: auto;
+            height: auto;
+            max-width: 350px;
+            top: -181px;
+            right: -93px;
+        }
+
+        @include mq(xl) {
+            max-width: 437.609px;
+            max-height: 403.773px;
+        }
+    }
+
+    .access-bubble {
+        width: 53.333vw;
+        height: 45.866vw;
+        position: absolute;
+        top: -42px;
+        left: -30px;
+
+        img {
+            width: 100%;
+        }
+
+        @include mq(md) {
+            width: auto;
+            height: auto;
+            max-width: 300px;
+        }
+
+        @include mq(lg) {
+            width: 18.196vw;
+            height: 15.625vw;
+            top: -50.12px;
+            left: min(26.25vw, 378px);
+        }
+
+        @include mq(xl) {
+            width: 232px;
+            height: 200px;
+            top: -50.12px;
+            left: 336px;
+        }
+    }
+}
+
+// topへ戻る-------------------------------------------
+.to-top {
+    position: fixed;
+    width: 44px;
+    height: 44px;
+    bottom: 6px;
+    right: 8px;
+    transition: translate 0.3s;
+    display: none;
+    z-index: 9999;
+}

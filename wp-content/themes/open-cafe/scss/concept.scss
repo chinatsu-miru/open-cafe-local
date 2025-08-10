@@ -1,0 +1,258 @@
+@use './common' as *;
+@use './header' as *;
+@use './footer' as *;
+
+
+body {
+    overflow-x: hidden;
+}
+
+.concept-page {
+    max-width: none;
+}
+
+.concept-main {
+    padding-top: 4px;
+    overflow: hidden;
+
+    .concept__contents {
+        padding-inline: 20px;
+        padding-top: 48px;
+        padding-bottom: 160px;
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+
+        @include mq(lg) {
+            gap: 200px;
+            padding-top: 80px;
+            padding-inline: 90px;
+        }
+
+        .concept__content {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+            position: relative;
+            z-index: 1;
+
+            @include mq(lg) {
+                flex-direction: row;
+                gap: 71px;
+            }
+
+            .contents__text {
+                @include mq(lg) {
+                    width: 389px;
+                    flex-shrink: 0;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 40px;
+                    /* 200% */
+
+                    @include mq(lg) {
+                        font-size: 28px;
+                        line-height: 60px;
+                    }
+                }
+
+                .contents__description {
+                    padding-top: 32px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    /* 200% */
+                }
+            }
+
+            .contents__image {
+                position: relative;
+
+                @include mq(lg) {
+                    flex: 1;
+                }
+            }
+
+            .image-sub-bg {
+                position: absolute;
+            }
+
+            &.concept__content--type1 {
+                padding-bottom: 48px;
+
+                @include mq(lg) {
+                    padding-bottom: 0;
+                }
+
+                .contents__text {
+                    @include mq(lg) {
+                        padding-top: 7.265vw;
+                    }
+                }
+
+                .contents__image {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include mq(lg) {
+                        flex: 1;
+                    }
+
+                    .image-main {
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .image-sub {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 11px;
+
+                        img {
+                            width: calc(50% - 5.5px);
+                            display: block;
+
+                            @include mq(lg) {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+
+                    .image-sub-bg {
+                        background-color: $base-color;
+                        position: absolute;
+                        bottom: -48px;
+                        right: -20px;
+                        width: 89.33vw;
+                        height: 26.66vw;
+                        z-index: -1;
+
+                        @include mq(lg) {
+                            width: 76.875vw;
+                            height: 15.625vw;
+                            right: -90px;
+                            top: 380px;
+                        }
+
+                        @include mq(xl) {
+                            top: 49.218vw;
+                        }
+                    }
+                }
+            }
+
+            &.concept__content--type2 {
+                padding-bottom: 89px;
+                position: relative;
+
+                @include mq(lg) {
+                    flex-direction: row-reverse;
+                }
+
+                .contents__text {
+                    @include mq(lg) {
+                        padding-top: 5.235vw;
+                        width: 389px;
+                        flex-shrink: 0;
+                    }
+                }
+
+                .contents__image {
+
+                    @include mq(lg) {
+                        flex: 1;
+                        max-width: 100%;
+                    }
+
+                    .image-main {
+                        width: 75.46vw;
+                        margin-left: auto;
+                        display: block;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        @include mq(lg) {
+                            margin-left: 7.812vw;
+                            width: auto;
+                            display: block;
+                        }
+
+                        .image-sub {
+                            position: absolute;
+                            top: 38.13vw;
+                            right: 40.533vw;
+                            width: 48.8vw;
+
+                            @include mq(lg) {
+                                width: 27.343vw;
+                                height: auto;
+                                top: auto;
+                                bottom: -132px;
+                                left: -7.812vw;
+                            }
+                        }
+                    }
+
+                }
+
+                .image-sub-bg {
+                    background-color: $base-color;
+                    position: absolute;
+                    top: 74px;
+                    left: -20px;
+                    width: 75.733vw;
+                    height: 60.533vw;
+                    z-index: -1;
+
+                    @include mq(lg) {
+                        top: 160px;
+                        left: -90px;
+                        width: 580px;
+                        height: 34.14vw;
+                    }
+                }
+            }
+
+            &.concept__content--type3 {
+                padding-bottom: 36px;
+
+                .contents__image {
+                    position: relative;
+                    .image-main  {
+                        width: 50vw;
+                        margin-right: auto;
+                        display: block;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .image-sub-bg {
+                        background-color: $base-color;
+                        position: absolute;
+                        bottom: -9.6vw;
+                        right: 0;
+                        width: 49.066vw;
+                        height: 63.733vw;
+                        z-index: -1;
+
+                        @include mq(lg) {
+                            width: 31.25vw;
+                            height: 40.625vw;
+                            bottom: -6.25vw;
+                            right: -7.031vw;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

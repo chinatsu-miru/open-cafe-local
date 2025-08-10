@@ -1,0 +1,16 @@
+# WordPress
+wp-content/uploads/
+wp-content/cache/
+wp-config.php
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Docker
+db_data/
+*.sql
+
+# OS / Editor
+.DS_Store
+.vscode/

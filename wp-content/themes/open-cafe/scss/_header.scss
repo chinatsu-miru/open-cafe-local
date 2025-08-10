@@ -1,0 +1,135 @@
+@use 'common'  as * ;
+.header.top {
+    @include mq(xl) {
+        height: auto;
+    }
+}
+
+.header {
+    position: relative;
+    padding: 6px;
+    width: 100%;
+    height: 120px;
+
+    @include mq(xl) {
+        width: 100%;
+        height: 320px;
+        padding: 10px;
+    }
+
+    &.header-mask::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.40);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .header-border {
+        border: 2px solid $sub-text-color;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        position: relative;
+        z-index: 2;
+
+        @include mq(md) {
+            padding: 6px;
+        }
+
+        .header-border__inner {
+            border: 1px solid $sub-text-color;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .hamburger {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        z-index: 20;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+
+    &.concept {
+        z-index: 20;
+        background: url("../img/concept/concept-top.jpg") no-repeat center center / cover;
+    }
+    &.menu-top {
+        z-index: 20;
+        background: url("../img/menu/menu-top.jpg") no-repeat center center / cover;
+    }
+    &.news-top {
+        z-index: 20;
+        background: url("../img/news/news-top.jpg") no-repeat center center / cover;
+    }
+    &.shop-top {
+        z-index: 20;
+        background: url("../img/shop/shop-top.jpg") no-repeat center center / cover;
+    }
+    &.gift-top{
+        z-index: 20;
+        background: url("../img/gift/gift-top.jpg") no-repeat center center / cover;
+    }
+    &.contact-top {
+        z-index: 20;
+        background: url("../img/contact/contact-top.jpg") no-repeat center center / cover;
+    }
+    &.thanks-top {
+        z-index: 20;
+        background: url("../img/contact/contact-top.jpg") no-repeat center center / cover;
+    }
+
+    &.concept {
+        z-index: 20;
+        background: url("../img/concept/concept-top.jpg") no-repeat center center / cover;
+    }
+}
+
+.breadcrumbs {
+    font-family: $base-font;
+    font-weight: 700;
+    padding-top: 4px;
+    padding-left: 10px;
+    display: flex;
+    gap: 5px;
+
+    @include mq(md) {
+        padding-left: 90px;
+        padding-top: 16px;
+        gap: 15px;
+    }
+
+    span {
+        color: #382620;
+        font-family: "Noto Serif JP";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+
+        @include mq(md) {
+            font-size: 14px;
+        }
+    }
+}
+
+#mask {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+#mask.hidden {
+    display: none;
+}

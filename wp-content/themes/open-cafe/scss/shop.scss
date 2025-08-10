@@ -1,0 +1,154 @@
+@use './common' as *;
+@use './header' as *;
+@use './footer' as *;
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+// * {
+//     outline: 1px solid rgb(252, 154, 172);
+// }
+
+.shop-lists__inner {
+    padding-inline: 20px;
+    padding-bottom: 100px;
+
+    @include mq(md) {
+        max-width: 729px;
+        margin: 0 auto;
+    }
+
+    .access-lists {
+        padding-top: 48px;
+
+        @include mq(md) {
+            padding-top: 80px;
+        }
+
+        .access__inner {
+            padding-bottom: 60px;
+
+            @include mq(md) {
+                padding-bottom: 120px;
+            }
+
+            h2 {
+                padding-left: 14px;
+                font-size: 20px;
+                font-weight: 700;
+                position: relative;
+
+                @include mq(md) {
+                    font-size: 24px;
+                    padding-left: 22px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 6px;
+                    height: 29px;
+                    background-color: $main-color;
+                    left: 0px;
+                    top: 0;
+
+                    @include mq(md) {
+                        height: 35px;
+                    }
+                }
+            }
+
+            .access__contents {
+                padding-top: 20px;
+
+                @include mq(md) {
+                    width: 688px;
+                    margin: 0 auto;
+                }
+
+                .access__map {
+                    aspect-ratio: 335 / 188;
+                    background: $sub-text-color;
+                    margin: 0 auto;
+                    margin-bottom: 18px;
+                    position: relative;
+
+                    @include mq(md) {
+                        aspect-ratio: 688 / 387;
+                        margin-bottom: 22px;
+                    }
+
+                    .access__map-content {
+                        aspect-ratio: 335 / 188;
+                        padding: 5px;
+
+                        @include mq(md) {
+                            padding: 10px;
+                        }
+
+                        iframe {
+                            width: 100%;
+                            height: 100%;
+                            max-width: 100%;
+                            display: block;
+                            border: 0;
+                        }
+                    }
+
+                    .access__pin {
+                        position: absolute;
+                        aspect-ratio: 17 / 29;
+                        width: 17px;
+                        top: 67.68px;
+                        left: 158.74px;
+                        z-index: 2;
+
+                        @include mq(md) {
+                            aspect-ratio: 35 / 60;
+                            width: 35px;
+                            top: 139px;
+                            left: 326px;
+                        }
+                    }
+                }
+
+                .business-info__inner {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px; // ← スマホ時の上下余白
+
+                    @media screen and (min-width: 768px) {
+                        display: grid;
+                        grid-template-rows: repeat(3, auto); // 3行
+                        grid-template-columns: 1fr 1fr; // 2列
+                        grid-auto-flow: column;
+                        gap: 24px 40px; // ← 上下18px, 左右40px
+                    }
+
+                    .info__list {
+                        display: flex;
+                        gap: 6.4vw;
+                        border-bottom: 1px solid #333;
+                        padding-bottom: 12px;
+
+                        @include mq(md) {
+                            gap: 1.875vw;
+                        }
+
+                        .info__details {
+                            min-width: 56px;
+                            font-weight: 700;
+                        }
+
+                        .info__meta {
+                            line-height: 24px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

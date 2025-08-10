@@ -1,0 +1,101 @@
+@use './common' as *;
+
+// footer-------------------------------------------
+footer {
+    background-color: $main-color;
+    height: 147px;
+    position: relative;
+    z-index: 50;
+
+    @include mq(md) {
+        height: 141px;
+    }
+
+    @include mq(xl) {
+        // max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .footer-inner {
+        padding-top: 40px;
+        position: relative;
+
+        .sns-icons {
+            display: flex;
+            width: 184px;
+            height: 40px;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            @include mq(md) {
+                width: 120px;
+                height: 24px;
+            }
+
+            .sns-icon {
+                width: 32px;
+                height: 32px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $sub-text-color;
+
+                @include mq(md) {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                .fa-twitter::before,
+                .fa-youtube::before,
+                .fa-instagram::before {
+                    color: $sub-text-color;
+                    font-size: 32px;
+
+                    @include mq(md) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .footer-copy {
+            color: $sub-text-color;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: center;
+            padding-top: 37px;
+            padding-bottom: 14px;
+        }
+    }
+
+    .footer-beans {
+        // aspect-ratio: 128 / 114;
+        width: 34.133vw;
+        height: 30.4vw;
+        // max-width: 150px;
+        // max-height: 67.4px;
+        position: absolute;
+        bottom: 89px;
+        left: -36px;
+
+        img {
+            width: 100%;
+        }
+
+        @include mq(md) {
+            width: auto;
+            height: auto;
+            max-width: 150px;
+        }
+
+        @include mq(lg) {
+            width: 26.64vw;
+            height: 22.5vw;
+            max-width: 340px;
+            max-height: 324px;
+            bottom: 1px;
+            left: -85px;
+        }
+    }
+}
