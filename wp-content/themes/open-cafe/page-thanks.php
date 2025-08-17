@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <div class="breadcrumbs">
-        <span><a href="../index.html">HOME</a></span>
+        <span><a href="<?php echo home_url(); ?>">HOME</a></span>
         <span>></span>
         <span><a href="./contact.html">お問い合わせ</a></span>
         <span>></span>

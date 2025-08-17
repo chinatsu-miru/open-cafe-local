@@ -57,7 +57,7 @@ if (is_page('concept')) {
 </head>
 
 <body>
-    <header class="header header-mask <?php global $classes; echo $classes; ?>">
+    <header class="header header-mask <?php echo esc_attr($header_class); ?>">
         <div class="header-border">
             <div class="header-border__inner">
                 <div class="header__title">

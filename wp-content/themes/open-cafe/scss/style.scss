@@ -575,7 +575,9 @@ body {
         height: 398px;
         z-index: 0;
 
-        @include mq(md) {}
+        @include mq(lg) {
+            bottom: -150px;
+        }
     }
 }
 
@@ -711,9 +713,18 @@ body {
 
         @include mq(md) {
             width: 92.968vw;
-            aspect-ratio: 1190 / 300;
+            aspect-ratio: 1190 / 900;
             max-width: 1324px;
             z-index: 0;
+        }
+
+        @include mq(lg) {
+            aspect-ratio: 1190 / 500;
+        }
+
+        @include mq(xl) {
+            aspect-ratio: 1190 / 300;
+
         }
     }
 

@@ -1,0 +1,410 @@
+<div class="menu__images">
+    <div id="pasta" class="menu__images-contents menu-active">
+        <div class="menu__images-inner">
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/pasta4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">テキストテキストテキストの○○○○風パスタ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="salad" class="menu__images-contents">
+        <div class="menu__images-inner">
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/salad4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○風サラダ</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sweets" class="menu__images-contents">
+        <div class="menu__images-inner">
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/sweets4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○サンド</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="drink" class="menu__images-contents">
+        <div class="menu__images-inner">
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink5.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink1.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink2.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink3.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+            <div class="menu__image">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/menu/drink4.jpg" alt="パスタ画像">
+                <div class="menu__image-text">
+                    <div class="desc">○○○○ドリンク</div>
+                    <div class="price">780 yen</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

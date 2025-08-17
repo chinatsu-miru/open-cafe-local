@@ -84,6 +84,7 @@ body {
   margin-inline: auto;
   position: relative;
   cursor: pointer;
+  z-index: 5;
 }
 .button1::after {
   content: "";
@@ -95,6 +96,7 @@ body {
   top: 6px;
   left: 6px;
   display: inline-block;
+  z-index: 0;
 }
 .button1:hover {
   opacity: 0.8;
@@ -115,6 +117,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   position: relative;
+  z-index: 5;
 }
 .button1 .btn1::after {
   content: "";
@@ -129,6 +132,7 @@ body {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .tab-button {
@@ -801,6 +805,7 @@ footer .footer-beans {
   position: absolute;
   bottom: 89px;
   left: -36px;
+  clip-path: inset(-100vmax -100vmax 0 -100vmax);
 }
 footer .footer-beans img {
   width: 100%;
@@ -1315,6 +1320,12 @@ body {
   height: 398px;
   z-index: 0;
 }
+@media screen and (min-width: 1024px) {
+  .hero-pc .hero__pc-bg {
+    bottom: -150px;
+  }
+}
+
 .main {
   background-color: #f3efeb;
 }
@@ -1432,9 +1443,19 @@ body {
 @media screen and (min-width: 768px) {
   .concept .bg {
     width: 92.968vw;
-    aspect-ratio: 1190/300;
+    aspect-ratio: 1190/900;
     max-width: 1324px;
     z-index: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .concept .bg {
+    aspect-ratio: 1190/500;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept .bg {
+    aspect-ratio: 1190/300;
   }
 }
 .concept .kv__decor {

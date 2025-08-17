@@ -39,5 +39,10 @@ services:
       - db
     restart: unless-stopped
 
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025" 
+
 volumes:
   db_data:

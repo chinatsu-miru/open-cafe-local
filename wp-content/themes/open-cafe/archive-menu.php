@@ -2,7 +2,7 @@
 
 <main class="menu-lists">
     <div class="breadcrumbs">
-        <span><a href="../index.html">HOME</a></span>
+        <span><a href="<?php echo home_url(); ?>">HOME</a></span>
         <span>></span>
         <span>メニュー</span>
     </div>

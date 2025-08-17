@@ -83,6 +83,7 @@ body {
   margin-inline: auto;
   position: relative;
   cursor: pointer;
+  z-index: 5;
 }
 .button1::after {
   content: "";
@@ -94,6 +95,7 @@ body {
   top: 6px;
   left: 6px;
   display: inline-block;
+  z-index: 0;
 }
 .button1:hover {
   opacity: 0.8;
@@ -114,6 +116,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   position: relative;
+  z-index: 5;
 }
 .button1 .btn1::after {
   content: "";
@@ -128,6 +131,7 @@ body {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .tab-button {
@@ -800,6 +804,7 @@ footer .footer-beans {
   position: absolute;
   bottom: 89px;
   left: -36px;
+  clip-path: inset(-100vmax -100vmax 0 -100vmax);
 }
 footer .footer-beans img {
   width: 100%;

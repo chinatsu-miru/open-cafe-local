@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <div class="breadcrumbs">
-        <span><a href="../index.html">HOME</a></span>
+        <span><a href="<?php echo home_url(); ?>">HOME</a></span>
         <span>></span>
         <span>ギフト・贈り物</span>
     </div>

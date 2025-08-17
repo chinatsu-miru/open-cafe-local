@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <div class="breadcrumbs">
-        <span><a href="../index.html">HOME</a></span>
+        <span><a href="<?php echo home_url(); ?>">HOME</a></span>
         <span>></span>
         <span>店舗一覧</span>
     </div>
@@ -145,5 +145,5 @@
         </div>
         <?php get_template_part('template-parts/access'); ?>
     </main>
-    
+
 <?php get_footer(); ?>

@@ -13,6 +13,7 @@ body {
 
 img {
     vertical-align: bottom;
+    width: 100%;
 }
 
 .single__news {
@@ -23,6 +24,13 @@ img {
     @include mq(md) {
         max-width: 728px;
         margin: 0 auto;
+    }
+
+    .single__news-thumbnail{
+        padding-top: 80px;
+        img {
+            width: 100%;
+        }
     }
 
     .single__news-content {
@@ -36,7 +44,6 @@ img {
             @include mq(md) {
                 font-size: 28px;
                 line-height: 40px;
-
             }
         }
 
@@ -352,6 +359,7 @@ img {
 
                         img {
                             display: block;
+                            width: 100%;
                         }
 
                         .ribbon-s {

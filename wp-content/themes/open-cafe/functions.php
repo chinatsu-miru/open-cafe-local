@@ -49,30 +49,6 @@ function my_enqueue_assets() {
 add_action("wp_enqueue_scripts", "my_enqueue_assets");
 
 
-// ページごとのクラス名が動的にheader.phpに付く様にする関数
-function add_classes($classes) {
-    global $classes, $post;
-    $classes = '';
-    //conceptページのみのクラス名を追加
-    if (is_page('concept')) {
-        $classes = 'concept concept-page';
-    // その他の固定ページのスラッグ名を取得してクラス名を生成
-    } elseif (is_page()){
-        $slug = $post->post_name;
-        $classes = $slug . '-top';
-
-    // アーカイブページに関するスラッグ名を取得するためにget_queried_objectでカスタム投稿タイプの情報を取得
-    } elseif (is_archive()) {
-        $queried_object = get_queried_object();
-        if (is_post_type_archive()) {
-            $slug = $queried_object->rewrite['slug'];
-            $classes = $slug . '-top';
-        }
-    }
-}
-add_action('wp_head', 'add_classes');
-
-
 // メニュー機能をアクティブにする関数
 function my_menu_init() {
 	register_nav_menus(
@@ -114,6 +90,61 @@ class Custom_Global_Menu_Walker extends Walker_Nav_Menu {
 }
 
 
+// 汎用パンくずリスト出力関数
+function my_breadcrumb() {
+    // ===== 設定（必要に応じて追加/変更）=====
+    $map = array(
+        'menu' => 'genre',
+        // 'news' => 'news_cat',
+        // 'product' => 'product_cat',
+        // 'shop' => 'shop_cat',
+    );
+    echo '<ul class="breadcrumb">';
+
+    // Home
+    echo '<li><a href="' . esc_url( home_url('/')) . '">Home</a></li>';
+
+    // フロントページはHomeのみ
+    if ( is_front_page()) {
+        echo '</ul>';
+        return;
+    }
+
+    // 固定ページ
+    if ( is_page()) {
+        $current_id = get_the_ID();
+
+        // 親ページがあれば辿って出力
+        $ancestors = get_post_ancestors( $current_id );
+        if ($ancestors ) {
+            $ancestors = array_reverse( $ancestors );
+            foreach ( $ancestors as $ancestor_id) {
+                $url = get_permalink($ancestor_id);
+                $title = get_the_title($ancestor_id);
+                if ( $url ) {
+                    echo '<li><a href="' . esc_url($url) . '">' . esc_html($title) . '</a></li>';
+                } else {
+                    echo '<li>' . esc_html($title) . '</li>';
+                }
+            }
+        }
+
+        // 現在のページ
+        echo '<li>' . esc_html( get_the_title( $current_id)) . '</li>';
+        echo '</ul>';
+        return;
+    }
+
+    // カスタム投稿タイプ / タクソノミー / シングル判定
+    $post_type = '';
+
+    if ( is_post_type_archive() ) {
+        $qo = get_queried_object();
+        if ($qo && isset( $qo->name)) {
+            $post_type = $qo->name;
+        }
+    }
+}
 
 // モバイル表示でもアドミンバーがトップに表示されるように
 function fix_adminbar_mobile()
@@ -150,6 +181,7 @@ add_action('init', 'add_excerpt_to_pages');
 add_filter( "wpcf7_autop_or_not", '__return_false');
 
 
+// お問い合わせ完了ページに遷移する関数
 function redirect_to_thanks_page() {
     if (is_page('contact')) {
 echo <<<EOD

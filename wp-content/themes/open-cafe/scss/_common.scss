@@ -125,6 +125,7 @@ body {
     margin-inline: auto;
     position: relative;
     cursor: pointer;
+    z-index: 5;
 
     &::after {
         content: "";
@@ -136,6 +137,7 @@ body {
         top: 6px;
         left: 6px;
         display: inline-block;
+        z-index: 0;
     }
 
     &:hover {
@@ -160,6 +162,7 @@ body {
         font-size: 16px;
         font-weight: 700;
         position: relative;
+        z-index: 5;
 
         &::after {
             content: "";
@@ -174,6 +177,7 @@ body {
             display: inline-block;
             background-size: contain;
             background-repeat: no-repeat;
+            z-index: 0;
         }
     }
 }

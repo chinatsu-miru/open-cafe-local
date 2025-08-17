@@ -84,6 +84,7 @@ body {
   margin-inline: auto;
   position: relative;
   cursor: pointer;
+  z-index: 5;
 }
 .button1::after {
   content: "";
@@ -95,6 +96,7 @@ body {
   top: 6px;
   left: 6px;
   display: inline-block;
+  z-index: 0;
 }
 .button1:hover {
   opacity: 0.8;
@@ -115,6 +117,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   position: relative;
+  z-index: 5;
 }
 .button1 .btn1::after {
   content: "";
@@ -129,6 +132,7 @@ body {
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
+  z-index: 0;
 }
 
 .tab-button {
@@ -801,6 +805,7 @@ footer .footer-beans {
   position: absolute;
   bottom: 89px;
   left: -36px;
+  clip-path: inset(-100vmax -100vmax 0 -100vmax);
 }
 footer .footer-beans img {
   width: 100%;
@@ -830,6 +835,7 @@ body {
 
 img {
   vertical-align: bottom;
+  width: 100%;
 }
 
 .single__news {
@@ -842,6 +848,12 @@ img {
     max-width: 728px;
     margin: 0 auto;
   }
+}
+.single__news .single__news-thumbnail {
+  padding-top: 80px;
+}
+.single__news .single__news-thumbnail img {
+  width: 100%;
 }
 .single__news .single__news-content .single__news-title {
   padding-top: 24px;
@@ -1151,6 +1163,7 @@ img {
 }
 .single__news .related-articles__box .news__lists .news__lists-wrapper .news__list .news__image-s img {
   display: block;
+  width: 100%;
 }
 .single__news .related-articles__box .news__lists .news__lists-wrapper .news__list .news__image-s .ribbon-s {
   position: absolute;
