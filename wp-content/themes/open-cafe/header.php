@@ -10,6 +10,8 @@ if (is_singular()) {
     $page_title = 'SHOP';
 } elseif (is_post_type_archive('gift')) {
     $page_title = 'GIFT';
+// } elseif (is_tax('presentation')) {
+//     $page_title= '発表会';
 }
 // サブタイトルを表示するための関数
 $subtitle = '';
@@ -18,7 +20,7 @@ if (is_page()) { //ACFでサブタイトルを設定しているものを取得
 } elseif (is_post_type_archive('menu') || is_singular('menu')) {
     $subtitle = 'メニュー';
 } elseif (is_post_type_archive('news') || is_singular('news')) {
-    $subtitle = 'ニュース';
+    $subtitle = 'お知らせ';
 } elseif (is_post_type_archive('shop') || is_singular('shop')) {
     $subtitle = '店舗情報';
 } elseif (is_post_Type_archive('gift') || is_singular('gift')) {

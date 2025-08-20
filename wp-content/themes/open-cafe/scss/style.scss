@@ -502,7 +502,8 @@ body {
                             &::after {
                                 content: "カテゴリ";
                                 position: absolute;
-                                bottom: 4px;
+                                // bottom: 4px;
+                                top: 3px;
                                 left: 10px;
                                 color: #fff;
                                 font-family: "Noto Serif JP";

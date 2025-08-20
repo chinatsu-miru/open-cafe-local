@@ -49,6 +49,7 @@ body {
   font-family: "Amatic SC", sans-serif;
   font-size: 32px;
   letter-spacing: 6.4px;
+  line-height: normal;
 }
 @media screen and (min-width: 1280px) {
   .header__title h1 {
@@ -1263,7 +1264,7 @@ body {
 .hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .kv__card-inner .ribbon::after {
   content: "カテゴリ";
   position: absolute;
-  bottom: 4px;
+  top: 3px;
   left: 10px;
   color: #fff;
   font-family: "Noto Serif JP";

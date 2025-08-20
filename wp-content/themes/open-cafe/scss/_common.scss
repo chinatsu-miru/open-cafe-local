@@ -87,6 +87,7 @@ body {
         font-family: $amatic;
         font-size: 32px;
         letter-spacing: 6.4px;
+        line-height: normal;
 
         @include mq(xl) {
             font-size: 72px;
