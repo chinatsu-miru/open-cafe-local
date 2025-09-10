@@ -62,8 +62,42 @@
                         </svg>
                     </span>
                 </div>
+
+                <!-- <?php
+                $post_id = get_queried_object_id();
+                $sets = [
+                    'lunch_1' => 'A',
+                    'lunch_2' => 'B',
+                    'lunch_3' => 'C',
+                    'lunch_4' => 'D',
+                ];
+                ?> -->
+
+                <!-- <?php
+                $post_id = get_queried_object_id(); // そのページのID
+                $group   = get_field('lunch_1', $post_id); // グループ全体（配列）
+                $image_url = '';
+                ?> -->
+
+
                 <ul class="lunch-set__pasta-list">
-                    <li class="lunch-set__pasta-item lunch-set__pasta-item--a">
+                <?php
+                    // if (is_array($group) && !empty($group['lunch_1-image'])) {
+                    // $val = $group['lunch_1-image']; // ACFの「返り値」設定に依存（ID/URL/配列）
+                    //     if (is_string($val)) { // 返り値=URL
+                    //     $image_url = $val;
+                    //     } elseif (is_int($val)) { // 返り値=ID
+                    //     $image_url = wp_get_attachment_url($val);
+                    //     } elseif (is_array($val)) { // 返り値=配列
+                    //     $image_url = $val['url'] ?? '';
+                    //     }
+                    // }
+
+                    // if ($image_url) {
+                    // echo '<img src="' . esc_url($image_url) . '" alt="">';
+                    // }
+                    ?>
+                    <li class="lunch-set__pasta-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta1.jpg" alt="パスタ画像">
                         <div class="lunch-set__pasta-desc">
                             <span class="lunch-set__pasta-label"><span class="pasta-label-text">A</span></span>
@@ -71,7 +105,7 @@
                             <p class="lunch-set__pasta-text sp-none">テキストテキストの○○風パスタ</p>
                         </div>
                     </li>
-                    <li class="lunch-set__pasta-item lunch-set__pasta-item--b">
+                    <li class="lunch-set__pasta-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta2.jpg" alt="パスタ画像">
                         <div class="lunch-set__pasta-desc">
                             <span class="lunch-set__pasta-label"><span class="pasta-label-text">B</span></span>
@@ -79,7 +113,7 @@
                             <p class="lunch-set__pasta-text sp-none">テキストテキストの○○風パスタ</p>
                         </div>
                     </li>
-                    <li class="lunch-set__pasta-item lunch-set__pasta-item--c">
+                    <li class="lunch-set__pasta-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta3.jpg" alt="パスタ画像">
                         <div class="lunch-set__pasta-desc">
                             <span class="lunch-set__pasta-label"><span class="pasta-label-text">C</span></span>
@@ -87,7 +121,7 @@
                             <p class="lunch-set__pasta-text sp-none">テキストテキストの○○風パスタ</p>
                         </div>
                     </li>
-                    <li class="lunch-set__pasta-item lunch-set__pasta-item--d">
+                    <li class="lunch-set__pasta-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta4.jpg" alt="パスタ画像">
                         <div class="lunch-set__pasta-desc">
                             <span class="lunch-set__pasta-label"><span class="pasta-label-text">D</span></span>

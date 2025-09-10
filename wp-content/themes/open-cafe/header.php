@@ -2,16 +2,16 @@
 // 一覧ページのタイトルを設定するための関数
 if (is_singular()) {
     $page_title = get_the_title();
-}elseif (is_post_type_archive('menu')) {
+} elseif (is_post_type_archive('menu') || is_singular('menu')) {
     $page_title = 'MENU';
-} elseif (is_post_type_archive('news')) {
+} elseif (is_post_type_archive('news') || is_singular('news')) {
     $page_title = 'NEWS';
 } elseif (is_post_type_archive('shop')) {
     $page_title = 'SHOP';
 } elseif (is_post_type_archive('gift')) {
     $page_title = 'GIFT';
-// } elseif (is_tax('presentation')) {
-//     $page_title= '発表会';
+    // } elseif (is_tax('presentation')) {
+    //     $page_title= '発表会';
 }
 // サブタイトルを表示するための関数
 $subtitle = '';
@@ -58,7 +58,8 @@ if (is_page('concept')) {
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <header class="header header-mask <?php echo esc_attr($header_class); ?>">
         <div class="header-border">
             <div class="header-border__inner">
@@ -98,3 +99,10 @@ if (is_page('concept')) {
         </nav>
     </header>
     <div id="mask" class="hidden"></div>
+
+    <main class="concept-main">
+        <div class="breadcrumbs">
+            <span><a href="<?php echo home_url(); ?>">HOME</a></span>
+            <span>></span>
+            <span>当店のこだわり</span>
+        </div>

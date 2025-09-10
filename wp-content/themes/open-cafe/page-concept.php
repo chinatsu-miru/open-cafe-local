@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<main class="concept-main">
+<!-- <main class="concept-main">
 	<div class="breadcrumbs">
 		<span><a href="<?php echo home_url(); ?>">HOME</a></span>
 		<span>></span>
 		<span>当店のこだわり</span>
-	</div>
+	</div> -->
 	<div class="concept__contents">
 		<section class="concept__content concept__content--type1">
 			<div class="contents__text">

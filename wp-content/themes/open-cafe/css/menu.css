@@ -893,6 +893,7 @@ body {
 }
 .container .menu__contents .menu__images .menu__images-contents .menu__images-inner .menu__image img {
   width: 100%;
+  height: auto;
 }
 .container .menu__contents .menu__images .menu__images-contents .menu__images-inner .menu__image .menu__image-text .desc {
   font-weight: 700;
@@ -904,7 +905,7 @@ body {
   text-align: center;
 }
 .container .menu__contents .menu__images .menu__images-contents.menu-active {
-  display: block;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=menu.css.map */

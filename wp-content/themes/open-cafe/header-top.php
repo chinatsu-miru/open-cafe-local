@@ -15,7 +15,8 @@ if (is_front_page()) {
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
     <div class="body__inner">
         <header class="header top">
             <h1 class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="ヘッダーロゴ画像"></h1>
@@ -117,7 +118,8 @@ if (is_front_page()) {
                             'theme_location' => 'global',
                             'container'      => false,
                             'menu_class'     => 'nav__lists-pc',
-                            'walker'         => new Custom_global_Menu_Walker(),                        )
+                            'walker'         => new Custom_global_Menu_Walker(),
+                        )
                     );
                     ?>
                     <div class="sns__icons-pc">
@@ -182,7 +184,7 @@ if (is_front_page()) {
                     'menu_class'     => 'nav__lists',
                     'walker'         => new Custom_Drawer_Menu_Walker(),
                 ));
-                
+
                 ?>
 
             </nav>
