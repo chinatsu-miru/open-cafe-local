@@ -26,7 +26,7 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.40);
         z-index: 1;
-        pointer-events: none;
+        // pointer-events: none;
     }
 
     .header-border {
@@ -98,12 +98,15 @@
     font-weight: 700;
     padding-top: 4px;
     padding-left: 10px;
-    display: flex;
-    gap: 5px;
 
     @include mq(md) {
         padding-left: 90px;
         padding-top: 16px;
+        gap: 15px;
+    }
+
+    .breadcrumbs_inner {
+        display: flex;
         gap: 15px;
     }
 

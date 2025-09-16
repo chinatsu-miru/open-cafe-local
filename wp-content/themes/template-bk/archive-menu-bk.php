@@ -71,15 +71,6 @@
                     <?php get_template_part('template-parts/loop-menu-drink'); ?>
                 </div>
             </div>
-            <?php
-            $non_drink_posts = [];
-            if (have_posts()) :
-                while (have_posts()) : the_post();
-
-                endwhile;
-                wp_reset_postdata();
-            endif;
-            ?>
         </section>
     </div>
     <?php get_template_part('template-parts/access'); ?>

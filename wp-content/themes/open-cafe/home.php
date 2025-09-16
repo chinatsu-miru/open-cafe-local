@@ -6,17 +6,12 @@ $post_type_obj = get_post_type_object($post_type_name);
 
 <main class="news-lists">
     <div class="news-lists__inner">
-        <div class="breadcrumbs">
-            <span><a href="<?php echo home_url(); ?>">HOME</a></span>
-            <span>></span>
-            <span>ニュース</span>
-        </div>
         <div class="contents__wrapper">
             <section class="news__contents">
-                <div class="category">
-                    <h2><?php echo $post_type_obj->label; ?></h2>
+                <!-- <div class="category"> -->
+                    <!-- <h2><?php echo $post_type_obj->label; ?></h2> -->
                     <!-- 投稿タイプの名前が入るようにしている↑ -->
-                </div>
+                <!-- </div> -->
                 <?php
                 $news_query = new WP_Query(
                     array(

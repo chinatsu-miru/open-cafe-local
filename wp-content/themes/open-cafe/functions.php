@@ -1,7 +1,7 @@
 <?php
 // 標準機能を拡張---サムネイル、
 function my_setup(){
-	add_theme_support('post-thumbnails', array('post', 'page'));
+	add_theme_support('post-thumbnails');
 	add_theme_support('title-tag');
 	add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script'));
 }
@@ -34,13 +34,13 @@ function my_enqueue_assets() {
 		wp_enqueue_style("contact-page", get_template_directory_uri() . "/css/contact.css", array(), filemtime(get_theme_file_path('css/contact.css')), "all");
 	} elseif (is_page('thanks')) { // お問い合わせ完了
 		wp_enqueue_style("thanks-page", get_template_directory_uri() . "/css/thanks.css", array(), filemtime(get_theme_file_path('css/thanks.css')), "all");
-	} elseif (is_post_type_archive('news')) { // ニュース一覧
+	} elseif (is_home()) { // ニュース一覧
 		wp_enqueue_style("news-page", get_template_directory_uri() . "/css/news.css", array(), filemtime(get_theme_file_path('css/news.css')), "all");
-	} elseif (is_singular('news')) { // ニュースページ
+	} elseif (is_single('news')) { // ニュースページ
 		wp_enqueue_style("news-page", get_template_directory_uri() . "/css/news-single.css", array(), filemtime(get_theme_file_path('css/news-single.css')), "all");
 	} elseif (is_singular('gift') || is_post_type_archive('gift')) { // GIFTページ
 		wp_enqueue_style("gift-page", get_template_directory_uri() . "/css/gift.css", array(), filemtime(get_theme_file_path('css/gift.css')), "all");
-	} elseif (is_singular('menu') || is_post_type_archive('menu')) { // メニューページ
+	} elseif (is_singular('menu') || is_post_type_archive('menu') || is_tax('genre')) { // メニューページ
 		wp_enqueue_style("menu-page", get_template_directory_uri() . "/css/menu.css", array(), filemtime(get_theme_file_path('css/menu.css')), "all");
 	} elseif (is_post_type_archive('shop')) { // 店舗紹介ページ
 		wp_enqueue_style("shop-page", get_template_directory_uri() . "/css/shop.css", array(), filemtime(get_theme_file_path('css/shop.css')), "all");
@@ -90,62 +90,6 @@ class Custom_Global_Menu_Walker extends Walker_Nav_Menu {
 }
 
 
-// 汎用パンくずリスト出力関数
-function my_breadcrumb() {
-    // ===== 設定（必要に応じて追加/変更）=====
-    $map = array(
-        'menu' => 'genre',
-        // 'news' => 'news_cat',
-        // 'product' => 'product_cat',
-        // 'shop' => 'shop_cat',
-    );
-    echo '<ul class="breadcrumb">';
-
-    // Home
-    echo '<li><a href="' . esc_url( home_url('/')) . '">Home</a></li>';
-
-    // フロントページはHomeのみ
-    if ( is_front_page()) {
-        echo '</ul>';
-        return;
-    }
-
-    // 固定ページ
-    if ( is_page()) {
-        $current_id = get_the_ID();
-
-        // 親ページがあれば辿って出力
-        $ancestors = get_post_ancestors( $current_id );
-        if ($ancestors ) {
-            $ancestors = array_reverse( $ancestors );
-            foreach ( $ancestors as $ancestor_id) {
-                $url = get_permalink($ancestor_id);
-                $title = get_the_title($ancestor_id);
-                if ( $url ) {
-                    echo '<li><a href="' . esc_url($url) . '">' . esc_html($title) . '</a></li>';
-                } else {
-                    echo '<li>' . esc_html($title) . '</li>';
-                }
-            }
-        }
-
-        // 現在のページ
-        echo '<li>' . esc_html( get_the_title( $current_id)) . '</li>';
-        echo '</ul>';
-        return;
-    }
-
-    // カスタム投稿タイプ / タクソノミー / シングル判定
-    $post_type = '';
-
-    if ( is_post_type_archive() ) {
-        $qo = get_queried_object();
-        if ($qo && isset( $qo->name)) {
-            $post_type = $qo->name;
-        }
-    }
-}
-
 // モバイル表示でもアドミンバーがトップに表示されるように
 function fix_adminbar_mobile()
 {
@@ -194,3 +138,35 @@ EOD;
     }
 }
 add_action ('wp_footer', 'redirect_to_thanks_page');
+
+
+//breadcrumbsの文字を任意にする関数
+// function my_breadcrumb_title() {
+
+// }
+// add_filter('bcn_breadcrumb_title', 'my_breadcrumb_title');
+
+
+
+//管理画面の「投稿」を「お知らせ」に変更
+function my_admin_menu() {
+    global $menu;
+    $menu[5][0] = 'お知らせ';
+}
+add_action('admin_menu', 'my_admin_menu');
+
+
+//パンくずリストのnewsをお知らせに変更
+// 投稿（post）のアーカイブ項目だけ「お知らせ」にする
+function my_bcn_breadcrumb_title($title, $type, $id)
+{
+    // 投稿タイプ: post のアーカイブ（または「ブログ」項目）
+    if (in_array('post-type-archive', $type, true) && in_array('post', $type, true)) {
+        return 'お知らせ';
+    }
+    if (in_array('blog', $type, true)) { // 投稿ページを割り当てている場合のタイプ名
+        return 'お知らせ';
+    }
+    return $title;
+}
+add_filter('bcn_breadcrumb_title', 'my_bcn_breadcrumb_title', 10, 3);

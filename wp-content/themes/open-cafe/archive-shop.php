@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-    <div class="breadcrumbs">
-        <span><a href="<?php echo home_url(); ?>">HOME</a></span>
-        <span>></span>
-        <span>店舗一覧</span>
-    </div>
-
     <main class="shop-lists">
         <div class="shop-lists__inner">
             <section class="access-lists">

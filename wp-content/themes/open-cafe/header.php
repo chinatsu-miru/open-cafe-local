@@ -1,31 +1,33 @@
 <?php
 // 一覧ページのタイトルを設定するための関数
-if (is_singular()) {
-    $page_title = get_the_title();
-} elseif (is_post_type_archive('menu') || is_singular('menu')) {
+$page_title = '';
+if (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
     $page_title = 'MENU';
-} elseif (is_post_type_archive('news') || is_singular('news')) {
+} elseif (is_home() || is_single()) {
     $page_title = 'NEWS';
 } elseif (is_post_type_archive('shop')) {
     $page_title = 'SHOP';
 } elseif (is_post_type_archive('gift')) {
     $page_title = 'GIFT';
-    // } elseif (is_tax('presentation')) {
-    //     $page_title= '発表会';
+} elseif ( is_archive()) {
+    $page_title = 'NEWS';
+}elseif (is_page()) {
+    $page_title = get_the_title();
 }
 // サブタイトルを表示するための関数
 $subtitle = '';
 if (is_page()) { //ACFでサブタイトルを設定しているものを取得
     $subtitle = get_field('subtitle');
-} elseif (is_post_type_archive('menu') || is_singular('menu')) {
+} elseif (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
     $subtitle = 'メニュー';
-} elseif (is_post_type_archive('news') || is_singular('news')) {
-    $subtitle = 'お知らせ';
 } elseif (is_post_type_archive('shop') || is_singular('shop')) {
     $subtitle = '店舗情報';
-} elseif (is_post_Type_archive('gift') || is_singular('gift')) {
+} elseif (is_post_type_archive('gift') || is_singular('gift')) {
     $subtitle = 'ギフト・贈り物';
+} elseif (is_archive() || is_single()) {
+    $page_title = 'お知らせ';
 }
+
 
 
 // 各ページごとにクラスをつけるための関数
@@ -33,9 +35,9 @@ $header_class = ''; // 初期化
 
 if (is_page('concept')) {
     $header_class = 'concept';
-} elseif (is_post_type_archive('menu') || is_singular('menu')) {
+} elseif (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
     $header_class = 'menu-top';
-} elseif (is_post_type_archive('news') || is_singular('news')) {
+} elseif (is_home() || is_archive() || is_single()) {
     $header_class = 'news-top';
 } elseif (is_post_type_archive('shop') || is_singular('shop')) {
     $header_class = 'shop-top';
@@ -101,8 +103,4 @@ if (is_page('concept')) {
     <div id="mask" class="hidden"></div>
 
     <main class="concept-main">
-        <div class="breadcrumbs">
-            <span><a href="<?php echo home_url(); ?>">HOME</a></span>
-            <span>></span>
-            <span>当店のこだわり</span>
-        </div>
+    <?php get_template_part( 'template-parts/breadcrumb'); ?>

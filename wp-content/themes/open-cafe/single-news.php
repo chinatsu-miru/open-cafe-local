@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
-<main class="news-lists">
+<!-- <main class="news-lists">
     <div class="news-lists__inner">
         <div class="breadcrumbs">
             <span><a href="<?php echo home_url(); ?>">HOME</a></span>
             <span>></span>
-            <span><a href="<?php echo get_post_type_archive_link('news'); ?>">NEWS</a></span>
+            <span><a href="<?php echo get_post_type_archive_link('news'); ?>">NEWS</a></span> -->
             <!-- <span>></span>
             <span>お知らせ</span> -->
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 
     <div class="single__news">
         <div class="single__news__inner">

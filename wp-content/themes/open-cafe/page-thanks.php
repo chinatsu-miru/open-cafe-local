@@ -1,11 +1,11 @@
 <?php get_header(); ?>
-    <div class="breadcrumbs">
+    <!-- <div class="breadcrumbs">
         <span><a href="<?php echo home_url(); ?>">HOME</a></span>
         <span>></span>
         <span><a href="./contact.html">お問い合わせ</a></span>
         <span>></span>
         <span>お問い合わせ完了</span>
-    </div>
+    </div> -->
 
     <main class="contact-completed">
         <div class="contact-completed__inner">

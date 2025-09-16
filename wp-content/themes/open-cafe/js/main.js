@@ -2,31 +2,28 @@
 {
     // ハンバーガーメニュークリックした時の動作
     const btn = document.querySelector('.hamburger');
-    const navs= document.querySelectorAll('.hero__nav');
+    const navs = document.querySelectorAll('.hero__nav');
     const img = document.querySelector('.btn-img');
     const mask = document.getElementById('mask');
-    const logo = document.querySelector('.logo');
 
     btn.addEventListener('click', () => {
         navs.forEach(nav => {
             nav.classList.toggle('is-checked');
         });
         btn.classList.toggle('is-checked');
-        logo.classList.toggle('is-checked');
 
         const isInPagesFolder = location.pathname.includes('/pages/');
-        const isChecked = btn.classList.contains("is-checked");
-        if (isChecked) {
-            if(isInPagesFolder) {
-                img.src = `${themeData.themeUrl}/img/close.png`;
+        if (btn.classList.contains('is-checked')) {
+            if (isInPagesFolder) {
+                img.src = "../img/close.png";
             } else {
-                img.src = `${themeData.themeUrl}/img/close.png`;
+                img.src = "./img/close.png";
             }
         } else {
-            if(isInPagesFolder) {
-                img.src = `${themeData.themeUrl}/img/menu-icon.png`;
+            if (isInPagesFolder) {
+                img.src = "../img/menu-icon.png";
             } else {
-                img.src = `${themeData.themeUrl}/img/menu-icon.png`;
+                img.src = "./img/menu-icon.png";
             }
         }
         mask.classList.toggle('hidden');
@@ -66,24 +63,30 @@
 
 
     //menuページ・タブをクリックした時の動作-----------------------------------
-    const menuItems = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.menu__images-contents');
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const buttons = document.querySelectorAll('.tab-button');
 
-    menuItems.forEach(clickedItem => {
-        clickedItem.addEventListener('click', e => {
-            e.preventDefault();
+    //     buttons.forEach(function (btn) {
+    //         btn.addEventListener('click', function (e) {
+    //             e.preventDefault(); // リンク遷移を止める（※必要なときだけ）
 
-            menuItems.forEach(item => { //item はmenuItems要素のひとつ
-                item.classList.remove('btn-active');
-            });
-            clickedItem.classList.add('btn-active');// clickedItemはクリックされた要素
+    //             // すべてのボタンの色をリセット
+    //             buttons.forEach(function (b) {
+    //                 b.classList.remove('btn-active');
+    //             });
 
-            contents.forEach(content => {
-                content.classList.remove('menu-active');
-            });
+    //             // クリックしたボタンだけ色をつける
+    //             btn.classList.add('btn-active');
+    //         });
+    //     });
+    // });
 
-            document.getElementById(clickedItem.dataset.id).classList.add('menu-active');
-            console.log(clickedItem.dataset.id);
-        });
-    });
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     // .tab-button 内のリンクを “必ず” 遷移させる
+    //     document.querySelectorAll('.tab-button a').forEach(function (a) {
+    //         a.addEventListener('click', function () {
+    //             window.location.href = a.href; // ← これで確実に飛ぶ
+    //         });
+    //     });
+    // });
 }
