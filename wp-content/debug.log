@@ -1,3 +1,133 @@
 [16-Sep-2025 05:11:34 UTC] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 361
 [16-Sep-2025 06:36:01 UTC] PHP Warning:  Undefined variable $terms in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
 [16-Sep-2025 07:22:04 UTC] PHP Warning:  Undefined variable $terms in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 7
+[17-Sep-2025 01:34:51 UTC] PHP Warning:  Array to string conversion in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 27
+[17-Sep-2025 01:50:11 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Term could not be converted to string in /var/www/html/wp-content/themes/open-cafe/archive-menu.php:5
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 5
+[17-Sep-2025 01:53:37 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 4
+[17-Sep-2025 01:53:37 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 6
+[17-Sep-2025 02:40:13 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:40:13 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 02:40:25 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:40:25 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 02:43:07 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:43:07 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 02:44:20 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:44:20 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 02:46:12 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:46:12 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 02:46:17 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:46:17 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 02:46:21 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:46:21 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 02:46:24 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 02:46:24 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 07:59:03 UTC] PHP Warning:  Undefined array key 1 in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 07:59:03 UTC] PHP Warning:  Attempt to read property "name" on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 12
+[17-Sep-2025 07:59:03 UTC] PHP Warning:  Undefined variable $slug in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 21
+[17-Sep-2025 07:59:31 UTC] PHP Warning:  Undefined variable $slug in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 08:01:56 UTC] PHP Warning:  Undefined variable $term in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 10
+[17-Sep-2025 08:02:46 UTC] PHP Warning:  Undefined variable $term in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 16
+[17-Sep-2025 08:02:48 UTC] PHP Warning:  Undefined variable $term in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 16
+[18-Sep-2025 12:11:28 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[18-Sep-2025 12:11:28 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[18-Sep-2025 12:11:34 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[18-Sep-2025 12:11:34 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[18-Sep-2025 12:11:38 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[18-Sep-2025 12:11:38 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[18-Sep-2025 12:11:42 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[18-Sep-2025 12:11:42 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[19-Sep-2025 01:01:53 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[19-Sep-2025 01:01:53 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 13
+[19-Sep-2025 01:10:14 UTC] PHP Parse error:  syntax error, unexpected variable "$args" in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 14
+[19-Sep-2025 01:12:52 UTC] PHP Parse error:  syntax error, unexpected variable "$terms" in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 15
+[19-Sep-2025 01:14:44 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 20
+[19-Sep-2025 01:14:44 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 20
+[19-Sep-2025 01:15:17 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 21
+[19-Sep-2025 01:15:17 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 21
+[19-Sep-2025 01:16:11 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 21
+[19-Sep-2025 01:16:11 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 21
+[19-Sep-2025 01:17:24 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 20
+[19-Sep-2025 01:17:24 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 20
+[19-Sep-2025 01:19:23 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 22
+[19-Sep-2025 01:19:23 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 22
+[19-Sep-2025 01:28:58 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 25
+[19-Sep-2025 01:28:58 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 25
+[19-Sep-2025 01:30:32 UTC] PHP Warning:  Undefined variable $genres in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 21
+[19-Sep-2025 01:30:32 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php on line 21
+[19-Sep-2025 02:19:37 UTC] PHP Fatal error:  Uncaught TypeError: ltrim(): Argument #1 ($string) must be of type string, WP_Error given in /var/www/html/wp-includes/formatting.php:4476
+Stack trace:
+#0 /var/www/html/wp-includes/formatting.php(4476): ltrim(Object(WP_Error))
+#1 /var/www/html/wp-content/themes/open-cafe/taxonomy-genre.php(16): esc_url(Object(WP_Error))
+#2 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-includes/formatting.php on line 4476
+[19-Sep-2025 07:06:02 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:06:18 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:07:31 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:08:01 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:10:01 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:10:08 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:22:13 UTC] PHP Parse error:  syntax error, unexpected token "}" in /var/www/html/wp-content/themes/open-cafe/header.php on line 75
+[19-Sep-2025 07:24:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function NEWS() in /var/www/html/wp-content/themes/open-cafe/header.php:70
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(810): require_once()
+#1 /var/www/html/wp-includes/template.php(745): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/open-cafe/home.php(5): get_header()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/header.php on line 70
+[19-Sep-2025 07:27:55 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function NEWS() in /var/www/html/wp-content/themes/open-cafe/header.php:74
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(810): require_once()
+#1 /var/www/html/wp-includes/template.php(745): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/open-cafe/home.php(5): get_header()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/header.php on line 74
+[19-Sep-2025 07:27:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function NEWS() in /var/www/html/wp-content/themes/open-cafe/header.php:74
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(810): require_once()
+#1 /var/www/html/wp-includes/template.php(745): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/open-cafe/home.php(5): get_header()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/header.php on line 74
+[19-Sep-2025 07:29:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function NEWS() in /var/www/html/wp-content/themes/open-cafe/header.php:74
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(810): require_once()
+#1 /var/www/html/wp-includes/template.php(745): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/open-cafe/home.php(5): get_header()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/header.php on line 74
+[19-Sep-2025 07:31:48 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:32:08 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:32:12 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:34:46 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:37:53 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:38:01 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 07:57:49 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 08:15:17 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 08:15:25 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 08:15:33 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12
+[19-Sep-2025 08:15:43 UTC] PHP Warning:  Attempt to read property "label" on null in /var/www/html/wp-content/themes/open-cafe/home.php on line 12

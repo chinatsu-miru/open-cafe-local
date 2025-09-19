@@ -5,32 +5,35 @@
         <section class="menu__contents">
             <div class="tab-buttons">
                 <div class="tab-buttons__inner">
-                    <!-- <div class="tab-button">
-                        <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="btn-text">すべて</a>
-                    </div> -->
                     <?php
-                    $order = array('pasta', 'salad', 'sweets', 'drink');
-
-                    foreach ($order as $slug): ?>
-                    <?php $term = get_term_by('slug', $slug, 'genre'); ?>
-                        <?php if ($term): ?>
-                        <div class="tab-button">
-                            <a href="<?php echo get_term_link($term); ?>" class="btn-text">
-                                <?php echo $term->name; ?>
-                            </a>
-                        </div>
-                        <?php endif; ?>
+                    $genres = array(
+                        'pasta' => 'パスタ',
+                        'salad' => 'サラダ',
+                        'sweets' => 'パン＆スイーツ',
+                        'drink' => 'ドリンク',
+                    );
+                    ?>
+                    <?php foreach ($genres as $slug => $label) : ?>
+                        <?php $term = get_term_by('slug', $slug, 'genre'); ?>
+                        <a href="<?php echo esc_url(get_term_link($term)); ?>" class="tab-button">
+                            <span class="btn-text">
+                                <?php echo $label; ?>
+                            </span>
+                        </a>
                     <?php endforeach; ?>
                 </div>
             </div>
 
-            <div id="archive" class="menu__images archive">
-                <div class="menu__images-contents archive">
+
+            <div id="archive" class="menu__images">
+                <div class="menu__images-contents">
                     <div class="menu__images-inner">
                         <?php if (have_posts()) : ?>
                             <?php while (have_posts()) : the_post(); ?>
-                            <?php $drink_terms = array('drink', 'coffee', 'softdrink', 'tea')?>
-                            <?php if (has_term($drink_terms, 'genre')) {continue;} ?>
+                                <?php $drink_terms = array('drink', 'coffee', 'softdrink', 'tea') ?>
+                                <?php if (has_term($drink_terms, 'genre')) {
+                                    continue;
+                                } ?>
                                 <div class="menu__image">
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail(); ?>
@@ -40,7 +43,7 @@
                                         <div class="price">
                                             <?php
                                             $price = get_post_meta(get_the_ID(), 'price', true);
-                                            echo esc_html($price). 'yen';
+                                            echo esc_html($price) . 'yen';
                                             ?>
                                         </div>
                                     </div>
@@ -102,7 +105,7 @@
                     </div>
                 </div>
 
-            </div>
+
         </section>
     </div>
     <?php get_template_part('template-parts/access'); ?>

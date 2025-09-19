@@ -9,9 +9,9 @@ if (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
     $page_title = 'SHOP';
 } elseif (is_post_type_archive('gift')) {
     $page_title = 'GIFT';
-} elseif ( is_archive()) {
+} elseif (is_archive()) {
     $page_title = 'NEWS';
-}elseif (is_page()) {
+} elseif (is_page()) {
     $page_title = get_the_title();
 }
 // サブタイトルを表示するための関数
@@ -66,8 +66,17 @@ if (is_page('concept')) {
         <div class="header-border">
             <div class="header-border__inner">
                 <div class="header__title">
-                    <h1><?php echo $page_title; ?></h1>
-                    <p><?php echo esc_html($subtitle); ?></p>
+
+                    <?php if (is_home()) :
+                        $page_title = get_the_title(243);
+                        $subtitle = get_field('subtitle', 243);
+                    ?>
+                        <h1><?php echo $page_title; ?></h1>
+                        <p><?php echo $subtitle; ?></p>
+                    <?php else: ?>
+                        <h1><?php echo $page_title; ?></h1>
+                        <p><?php echo $subtitle; ?></p>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -103,4 +112,4 @@ if (is_page('concept')) {
     <div id="mask" class="hidden"></div>
 
     <main class="concept-main">
-    <?php get_template_part( 'template-parts/breadcrumb'); ?>
+        <?php get_template_part('template-parts/breadcrumb'); ?>

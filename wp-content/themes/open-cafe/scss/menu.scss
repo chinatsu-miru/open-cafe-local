@@ -24,6 +24,7 @@ body {
                 max-width: 840px;
             }
 
+
             .tab-buttons__inner {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -45,6 +46,7 @@ body {
 
             @include mq(md) {
                 max-width: 1100px;
+
             }
 
             // &.archive {
@@ -56,7 +58,6 @@ body {
             // }
 
             .menu__images-contents {
-                // display: none;
 
                 .menu__images-inner {
                     display: grid;
@@ -73,6 +74,7 @@ body {
 
                     .menu__image {
                         min-width: 0;
+
                         .menu__image-text {
                             .desc {
                                 font-weight: 700;
@@ -85,6 +87,7 @@ body {
                                 text-align: center;
                             }
                         }
+
                         img {
                             max-width: 100%;
                             height: auto;
@@ -148,6 +151,7 @@ body {
                                     img {
                                         width: 100%;
                                     }
+
                                     @include mq(md) {
                                         height: 26.875vw;
                                     }
@@ -253,6 +257,7 @@ body {
 
                         .drink-img {
                             padding: 8px;
+
                             img {
                                 width: 100%;
                             }
@@ -334,6 +339,321 @@ body {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+
+        .grand__menu-inner {
+            padding-top: 44px;
+            position: relative;
+
+            .grand__menus {
+                display: flex;
+                flex-direction: column;
+
+                .grand__menu-content {
+                    @include mq(xl) {
+                        max-width: 1287px;
+                        margin: 0 auto;
+                    }
+
+                    .grand__menu-top {
+                        padding-top: 2px;
+                        padding-bottom: 3px;
+                        padding-left: 10px;
+                        font-size: 20px;
+                        border-top: 1px solid $main-text-color;
+                        border-bottom: 1px solid $main-text-color;
+                        font-weight: 700;
+                        position: relative;
+
+
+                        @include mq(md) {
+                            padding-top: 5px;
+                            padding-bottom: 4px;
+                            padding-left: 21px;
+                            font-size: 24px;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            background-color: $main-text-color;
+                            width: 100%;
+                            height: 2px;
+                            top: -4px;
+                            left: 0;
+
+                            @include mq(md) {
+                                top: -7px;
+                            }
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            background-color: $main-text-color;
+                            width: 100%;
+                            height: 2px;
+                            bottom: -4px;
+                            left: 0;
+
+                            @include mq(md) {
+                                bottom: -7px;
+                            }
+                        }
+                    }
+
+                    .grand__menu-list-wrapper {
+                        padding-top: 24px;
+                        padding-bottom: 20px;
+
+                        @include mq(md) {
+                            padding-top: 28px;
+                            padding-bottom: 84px;
+                        }
+
+                        .grand__menu-list {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+
+                            @include mq(sm) {
+                                //600px以上
+                                max-width: 728px;
+                                gap: 19px;
+                                margin: 0 auto;
+                            }
+
+                            @include mq(md) {
+                                //768px以上
+                                max-width: 100%;
+                                flex-wrap: nowrap;
+                            }
+
+                            &.bread {
+                                @include mq(md) {
+                                    flex-wrap: wrap;
+                                }
+
+                                .grand__menu-info {
+                                    &:nth-child(-n+3) {
+                                        @include mq(md) {
+                                            padding-bottom: 21px;
+                                        }
+                                    }
+
+                                    &:nth-child(n+4) {
+                                        .grand__menu-img {
+                                            img {
+                                                width: 100%;
+                                            }
+
+                                            @include mq(md) {
+                                                height: 26.875vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .grand__menu-info {
+                                display: flex;
+                                padding-bottom: 20px;
+                                width: 42.1vw;
+                                flex-direction: column;
+
+                                @include mq(md) {
+                                    width: 26.8vw;
+                                    max-width: 384px;
+                                }
+
+
+                                .grand__menu-img {
+                                    width: 100%;
+                                    height: 42.1vw;
+                                    background-color: $sub-text-color;
+
+                                    @include mq(md) {
+                                        height: 26.8vw;
+                                        max-width: 385px;
+                                        max-height: 385px;
+                                    }
+
+                                    img {
+                                        display: inline-block;
+                                        padding: 5px;
+                                        width: 100%;
+                                        height: 100%;
+
+                                        @include mq(md) {
+                                            padding: 8px;
+                                        }
+                                    }
+                                }
+
+                                .grand__menu-text {
+                                    font-size: 3.73vw;
+                                    padding-top: 7px;
+                                    font-weight: 700;
+                                    line-height: normal;
+
+                                    @include mq(md) {
+                                        padding-top: 12px;
+                                        font-size: 1.56vw;
+                                    }
+                                }
+
+                                .grand__menu-price {
+                                    font-size: 6.4vw;
+                                    font-family: Damion;
+                                    font-weight: 400;
+                                    line-height: normal;
+
+                                    @include mq(md) {
+                                        font-size: 2.5vw;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.drink {
+                            padding-top: 20px;
+                            width: 100%;
+                            padding-bottom: 0;
+
+                            @include mq(lg) {
+                                padding-top: 29px;
+                                display: flex;
+                                gap: 36px;
+                            }
+
+                            @include mq(xl) {
+                                padding-top: 29px;
+                                gap: 62px;
+                            }
+
+                            .grand__menu-drink-image {
+                                display: none;
+
+                                @include mq(lg) {
+                                    display: block;
+                                    width: 19.531vw;
+                                    height: 19.531vw;
+                                    background-color: $sub-text-color;
+                                }
+
+                                @include mq(xl) {
+                                    aspect-ratio: 1 / 1;
+                                    max-width: 343px;
+                                    width: 100%;
+                                    height: auto;
+                                    max-height: 343px;
+                                    background-color: $sub-text-color;
+                                }
+
+                                .drink-img {
+                                    padding: 8px;
+
+                                    img {
+                                        width: 100%;
+                                    }
+
+                                    @include mq(xl) {
+                                        max-width: 100%;
+
+                                    }
+                                }
+                            }
+
+                            .grand__menu-drink-section {
+                                display: flex;
+                                flex-direction: column;
+                                padding-left: 20px;
+                                padding-right: 20px;
+
+                                @include mq(lg) {
+                                    padding: 0;
+                                    flex-direction: row;
+                                    flex: 1;
+                                    justify-content: space-between;
+                                }
+
+                                .drink-group {
+                                    padding-bottom: 43px;
+
+                                    @include mq(lg) {
+                                        width: 19.531vw;
+                                    }
+
+                                    @include mq(xl) {
+                                        width: 15.39vw;
+                                        max-width: 222px;
+                                    }
+                                }
+
+                                .drink-section-title {
+                                    font-family: "Noto Serif JP";
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    line-height: normal;
+                                    padding-bottom: 10px;
+                                    border-bottom: 1px solid $main-text-color;
+                                }
+
+                                .grand__menu-drink-lists {
+                                    padding-top: 15.5px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+
+                                    @include mq(lg) {
+                                        padding-top: 16px;
+                                        gap: 8px;
+                                    }
+
+                                    .drink-menu {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+
+                                        .menu {
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            line-height: normal;
+
+                                            @include mq(lg) {
+                                                min-width: 98px;
+                                                padding-right: 40px;
+                                            }
+                                        }
+
+                                        .price {
+                                            font-family: Damion;
+                                            font-size: 20px;
+                                            font-weight: 400;
+                                            line-height: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>.button1 {
+                margin-top: 0;
+
+                @include mq(lg) {
+                    margin-top: 54px;
+                    width: 280px;
+                }
+
+                &::after {
+                    @include mq(md) {
+                        width: 280px;
                     }
                 }
             }
