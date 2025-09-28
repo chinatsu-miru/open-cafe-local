@@ -5,6 +5,9 @@
     const navs = document.querySelectorAll('.hero__nav');
     const img = document.querySelector('.btn-img');
     const mask = document.getElementById('mask');
+    const themeDir = btn.dataset.themeDir;
+    img.src = themeDir + '/img/menu-icon.png';
+
 
     btn.addEventListener('click', () => {
         navs.forEach(nav => {
@@ -13,19 +16,12 @@
         btn.classList.toggle('is-checked');
 
         const isInPagesFolder = location.pathname.includes('/pages/');
+
         if (btn.classList.contains('is-checked')) {
-            if (isInPagesFolder) {
-                img.src = "../img/close.png";
-            } else {
-                img.src = "./img/close.png";
-            }
+            img.src = themeDir + "/img/close.png";
         } else {
-            if (isInPagesFolder) {
-                img.src = "../img/menu-icon.png";
-            } else {
-                img.src = "./img/menu-icon.png";
-            }
-        }
+            img.src = themeDir + "/img/menu-icon.png";
+        };
         mask.classList.toggle('hidden');
     });
 

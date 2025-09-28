@@ -17,10 +17,14 @@ body {
         margin: 0 auto;
     }
 }
+
 .contents__wrapper {
+    padding-top: 60px;
     padding-bottom: 100px;
+
     @include mq(lg) {
         display: flex;
+        padding-top: 80px;
         padding-left: 58px;
         padding-right: 50px;
         gap: 5.635vw;
@@ -29,12 +33,10 @@ body {
 
     .news__contents {
         padding-inline: 20px;
-        padding-top: 48px;
         gap: 0;
 
         @include mq(lg) {
             padding-inline: 0;
-            padding-top: 80px;
             max-width: 728px;
         }
 
@@ -44,7 +46,6 @@ body {
         }
 
         .news__lists {
-            padding-top: 40px;
 
             .news__lists-wrapper {
                 display: grid;
@@ -80,42 +81,39 @@ body {
 
                     @include mq(xl) {
                         width: 340px;
-
+                        gap: 12px;
                     }
-
 
                     .news__image-s {
                         position: relative;
+                        aspect-ratio: 158 / 99;
+                        width: clamp(158px, 42.133vw, 340px);
+
+                        @include mq(md) {}
 
                         img {
                             display: block;
                             width: 100%;
+                            height: 100%;
+                            object-fit: cover;
                         }
 
                         .ribbon-s {
                             position: absolute;
-                            width: 70px;
                             height: 22px;
                             top: 10px;
                             left: -8px;
+                            padding-inline: 10px;
+                            font-size: 12px;
+                            font-weight: 700;
+                            color: $sub-text-color;
+                            background-color: $main-color;
+                            line-height: 22px;
 
-                            .ribbon-bg {
-                                width: 100%;
-                                height: 100%;
-                                display: inline-block;
-                                position: relative;
-                            }
-
-                            &::after {
-                                content: "カテゴリ";
+                            svg {
                                 position: absolute;
-                                bottom: 3px;
-                                left: 10px;
-                                color: #fff;
-                                font-family: "Noto Serif JP";
-                                font-size: 12px;
-                                font-weight: 700;
-                                z-index: 14;
+                                top: 0;
+                                right: -5px;
                             }
                         }
 
@@ -140,6 +138,13 @@ body {
                             font-size: 14px;
                             line-height: 24px;
                         }
+
+                        p {
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 3;
+                            overflow: hidden;
+                        }
                     }
 
                     .news__date-s {
@@ -159,9 +164,10 @@ body {
         }
 
         .news__nav {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            display: flex;
+            flex-wrap: wrap;
             gap: 12px;
+            justify-content: center;
             max-width: 300px;
             margin: 0 auto;
             padding-inline: 18px;
@@ -171,18 +177,25 @@ body {
                 padding-bottom: 160px;
             }
 
-            .nav__btn {
+            .page-numbers {
                 background-color: $sub-text-color;
                 border-radius: 50%;
                 border: 1px solid $main-color;
-                aspect-ratio: 40 / 40;
-                display: flex;
+                aspect-ratio: 1 / 1;
+                min-width: 40px;
+                min-height: 40px;
+                display: inline-flex;
                 font-size: 16px;
                 font-weight: 500;
                 align-items: center;
                 justify-content: center;
+                white-space: nowrap;
 
-                &:nth-child(3) {
+                // &:nth-child(3) {
+                //     background-color: $main-color;
+                //     color: $sub-text-color;
+                // }
+                &.current {
                     background-color: $main-color;
                     color: $sub-text-color;
                 }
@@ -198,9 +211,7 @@ body {
         @include mq(lg) {
             max-width: 300px;
             margin: 0;
-            padding-top: 116px;
             padding-inline: 0;
-            margin-top: -20px;
         }
 
         .latest__contents {
@@ -244,7 +255,7 @@ body {
 
                     .articles__card__image {
                         aspect-ratio: 100 / 100;
-                        max-width: 150px;
+                        width: clamp(100px, 100%, 150px);
                         width: 26.666vw;
 
                         @include mq(md) {
@@ -254,15 +265,21 @@ body {
                         img {
                             display: block;
                             width: 100%;
-                            height: auto;
+                            height: 100%;
+                            object-fit: cover;
                         }
                     }
 
                     .articles__card__text-s {
+                        flex: 1;
                         p {
                             font-size: 14px;
                             font-weight: 700;
                             line-height: 24px;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 3;
+                            overflow: hidden;
                         }
 
                         .news__card__date-s {

@@ -23,8 +23,12 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-
-
+            <?php
+            $args = array(
+                'post-type' => 'post',
+                'posts_per_page' => 5,
+            )
+            ?>
             <div id="archive" class="menu__images">
                 <div class="menu__images-contents">
                     <div class="menu__images-inner">

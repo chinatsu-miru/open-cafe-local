@@ -2669,6 +2669,7 @@ body {
 .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list .news__image-s img {
   display: block;
   width: 100%;
+  height: auto;
 }
 .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list .news__image-s .ribbon-s {
   position: absolute;

@@ -856,6 +856,7 @@ img {
 }
 .single__news .single__news-thumbnail img {
   width: 100%;
+  height: auto;
 }
 .single__news .single__news-content .single__news-title {
   padding-top: 24px;
@@ -866,7 +867,7 @@ img {
 @media screen and (min-width: 768px) {
   .single__news .single__news-content .single__news-title {
     font-size: 28px;
-    line-height: 40px;
+    line-height: 150%;
   }
 }
 .single__news .single__news-content .article__news-meta {

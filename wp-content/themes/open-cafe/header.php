@@ -1,34 +1,24 @@
 <?php
 // 一覧ページのタイトルを設定するための関数
 $page_title = '';
+$subtitle = '';
+
 if (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
     $page_title = 'MENU';
-} elseif (is_home() || is_single()) {
-    $page_title = 'NEWS';
-} elseif (is_post_type_archive('shop')) {
-    $page_title = 'SHOP';
-} elseif (is_post_type_archive('gift')) {
-    $page_title = 'GIFT';
-} elseif (is_archive()) {
-    $page_title = 'NEWS';
-} elseif (is_page()) {
-    $page_title = get_the_title();
-}
-// サブタイトルを表示するための関数
-$subtitle = '';
-if (is_page()) { //ACFでサブタイトルを設定しているものを取得
-    $subtitle = get_field('subtitle');
-} elseif (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
     $subtitle = 'メニュー';
+} elseif (is_home() || is_single() || is_category()) {
+    $page_title = 'NEWS';
+    $subtitle = 'お知らせ';
 } elseif (is_post_type_archive('shop') || is_singular('shop')) {
+    $page_title = 'SHOP';
     $subtitle = '店舗情報';
 } elseif (is_post_type_archive('gift') || is_singular('gift')) {
+    $page_title = 'GIFT';
     $subtitle = 'ギフト・贈り物';
-} elseif (is_archive() || is_single()) {
-    $page_title = 'お知らせ';
+} elseif (is_page()) {
+    $page_title = get_the_title();
+    $subtitle = get_field('subtitle');
 }
-
-
 
 // 各ページごとにクラスをつけるための関数
 $header_class = ''; // 初期化
@@ -37,7 +27,7 @@ if (is_page('concept')) {
     $header_class = 'concept';
 } elseif (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
     $header_class = 'menu-top';
-} elseif (is_home() || is_archive() || is_single()) {
+} elseif (is_home() || is_single() || is_category()) {
     $header_class = 'news-top';
 } elseif (is_post_type_archive('shop') || is_singular('shop')) {
     $header_class = 'shop-top';
@@ -81,8 +71,8 @@ if (is_page('concept')) {
             </div>
         </div>
 
-        <button id="pages" class="hamburger" type="button">
-            <img id="open" class="btn-img" src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
+        <button id="pages" class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+            <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
         </button>
         <nav class="hero__nav is_sub">
             <div class="nav__logo">

@@ -20,8 +20,8 @@ if (is_front_page()) {
     <div class="body__inner">
         <header class="header top">
             <h1 class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="ヘッダーロゴ画像"></h1>
-            <button class="hamburger" type="button">
-                <img id="open" class="btn-img" src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
+            <button id="pages" class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+                <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
             </button>
 
         </header>
