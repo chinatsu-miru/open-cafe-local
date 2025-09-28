@@ -14,3 +14,5 @@ db_data/
 # OS / Editor
 .DS_Store
 .vscode/
+wp-content/ai1wm-backups/
+*.wpress
