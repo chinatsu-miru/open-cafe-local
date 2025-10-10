@@ -28,55 +28,28 @@
                             }
                             ?>
                         </div>
-                        <h2 class="single__news-title">この冬限定のスペシャルドリンク</h2>
-                        <p class="article__news-text">
-                            寒い季節にぴったりの特別メニューとして、当店オリジナルのホットチョコレートが新登場しました。ほどよい甘さと濃厚なカカオのコクが絶妙にマッチし、寒い外から飛び込んできた身体を芯から温めてくれます。
-                        </p>
-                    </section>
-                    <section class="single__news-content">
-                        <h3 class="single__news-title">チョコレートとは？</h3>
-                        <p class="article__news-text">
-                            冬ならではの甘く濃厚なホットチョコレートを楽しむ前に、その主役となるチョコレートについて少しだけご紹介します。古くは神聖な飲み物として扱われていたカカオですが、今では世界中で親しまれるお菓子の原料として幅広いバリエーションを生み出しています。
-                        </p>
-                        <p class="article__news-text">
-                            チョコレート（英: chocolate）は、カカオの種子を発酵又は焙煎したカカオマスを主原料とし、これに砂糖、ココアバター、粉乳などを混ぜて練り固めた菓子である。略してチョコともいう。なお、イギリス英語では俗に“choc”と略す場合がある。ショコラ（フランス語: chocolat）と呼ばれることもある。
-                        </p>
-                        <blockquote>
-                            <cite>
-                                引用元: <a href="https://ja.wikipedia.org">https://ja.wikipedia.org</a>
-                            </cite>
-                        </blockquote>
-                    </section>
-                    <section class="single__news-content">
-                        <h4 class="single__news-title">厳選チョコレートの深い味わい</h4>
-                        <p>ホットチョコレートには、カカオ含有量の高いチョコレートを厳選して使用。甘すぎず、ほどよい苦みを活かすことで、奥行きのある贅沢な風味を実現しました。ひと口飲むたびに、リッチなコクと芳醇な香りが口いっぱいに広がります。</p>
-                        <div class="article__news-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-single/single-coffee.jpg" alt="">
-                        </div>
-                        <p class="article__news-text">トッピングもお好みで</p>
-                        <ul class="article__news-lists">
-                            <li class="article__news-list">ホイップクリームのやわらかな甘さ</li>
-                            <li class="article__news-list">焼きマシュマロのふわふわ食感</li>
-                            <li class="article__news-list">シナモンパウダーのスパイシーなアクセント</li>
-                        </ul>
-                        <p class="article__news-text">こんな方におすすめ</p>
-                        <ul class="article__news-lists">
-                            <li class="article__news-list">コーヒー以外の冬限定ドリンクをお探しの方</li>
-                            <li class="article__news-list">濃厚なチョコレートの味わいを楽しみたい方</li>
-                            <li class="article__news-list">少し甘いもので、ほっとひと息つきたい方</li>
-                        </ul>
-                        <p>ぜひ、この機会に「冬だけの特別メニュー！ホットチョコレート」をお楽しみください。</p>
-                    </section>
 
+                        <?php the_content(); ?>
+                    </section>
                 <?php endwhile; ?>
             <?php endif; ?>
+
+            <?php
+            $prev_icon = '<img src="' . get_template_directory_uri() . '/img/news/news-single/prev.svg" alt="前の記事">';
+            $next_icon = '<img src="' . get_template_directory_uri() . '/img/news/news-single/next.svg" alt="次の記事">';
+
+
+            ?>
+            <br>
             <nav class="post-nav__box" aria-label="記事ナビゲーション">
                 <ul class="post-nav">
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/news/news-single/prev.svg" alt=""></li>
-                    <li><a href="">前の記事</a></li>
-                    <li><a href="">記事一覧</a></li>
-                    <li><a href="">次の記事</a></li>
-                    <li><img src="<?php echo get_template_directory_uri(); ?>/img/news/news-single/next.svg" alt=""></li>
+                    <li>
+                        <?php previous_post_link('%link', $prev_icon . '前の記事');?>
+                    </li>
+                    <li><a href="<?php echo get_post_type_archive_link('post'); ?>">記事一覧</a></li>
+                    <li>
+                        <?php next_post_link('%link', '次の記事' . $next_icon); ?>
+                    </li>
                 </ul>
             </nav>
         </div>

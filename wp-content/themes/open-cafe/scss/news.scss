@@ -32,7 +32,7 @@ body {
     }
 
     .news__contents {
-        padding-inline: 20px;
+        padding-inline: clamp(20px, 5vw, 45px);
         gap: 0;
 
         @include mq(lg) {
@@ -87,7 +87,7 @@ body {
                     .news__image-s {
                         position: relative;
                         aspect-ratio: 158 / 99;
-                        width: clamp(158px, 42.133vw, 340px);
+                        // width: clamp(158px, 42.133vw, 340px);
 
                         @include mq(md) {}
 

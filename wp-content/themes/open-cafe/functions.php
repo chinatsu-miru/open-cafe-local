@@ -123,7 +123,7 @@ function fix_adminbar_mobile()
             position: fixed !important;
         }
         body.admin-bar {
-            padding-top: 46px !important;
+            padding-top: 46px;
             padding-bottom: 0 !important;
         }
     }

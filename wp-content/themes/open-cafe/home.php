@@ -43,28 +43,7 @@ $the_query = new WP_Query($args);
                         <?php endif; ?>
                     </ul>
                 </div>
-                <?php if (paginate_links()): ?>
-                    <div class="news__nav">
-                        <?php
-                        echo paginate_links(
-                            array(
-                                'end_size' => 1,
-                                'mid_size' => 1,
-                                'prev_next' => true,
-                                'prev_text' => '<i class="fa-solid fa-chevron-left"></i>',
-                                'next_text' => '<i class="fa-solid fa-chevron-right"></i>'
-                            )
-                        );
-                        ?>
-                    </div>
-                <?php endif; ?>
-                <!-- <a class="nav__btn"><i class="fa-solid fa-chevron-left"></i></a>
-                    <a class="nav__btn">1</a>
-                    <a class="nav__btn">2</a>
-                    <a class="nav__btn">3</a>
-                    <a class="nav__btn">4</a>
-                    <a class="nav__btn"><i class="fa-solid fa-chevron-right"></i></a>
-                </div> -->
+                <?php get_template_part('template-parts/pagination'); ?>
             </section>
             <?php get_sidebar(); ?>
         </div>

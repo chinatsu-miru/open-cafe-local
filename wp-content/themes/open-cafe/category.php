@@ -37,14 +37,8 @@
                         <?php endif; ?>
                     </ul>
                 </div>
-                <div class="news__nav">
-                    <a class="nav__btn"><i class="fa-solid fa-chevron-left"></i></a>
-                    <a class="nav__btn">1</a>
-                    <a class="nav__btn">2</a>
-                    <a class="nav__btn">3</a>
-                    <a class="nav__btn">4</a>
-                    <a class="nav__btn"><i class="fa-solid fa-chevron-right"></i></a>
-                </div>
+                <?php get_template_part('template-parts/pagination'); ?>
+
             </section>
             <?php get_sidebar(); ?>
         </div>

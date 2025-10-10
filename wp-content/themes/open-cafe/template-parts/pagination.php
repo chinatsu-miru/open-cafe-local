@@ -1,3 +1,6 @@
+<?php
+echo '<!-- pagination.php: PHP実行済み -->';
+?>
 <?php if (paginate_links()) : ?>
     <div class="news__nav">
         <?php
