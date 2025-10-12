@@ -1,10 +1,11 @@
+<!-- ページ本体とは関係ない投稿リストを別に出したい -->
 <section class="articles__contents">
     <div class="latest__contents">
         <h3>最近の投稿</h3>
         <div class="latest__articles">
             <?php
             $args = array(
-                'post-type' => 'post',
+                'post_type' => 'post',
                 'posts_per_page' => 4,
             );
             $the_query = new WP_Query($args);
@@ -26,6 +27,7 @@
                     </a>
                 <?php endwhile; ?>
             <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
         </div>
     </div>
 

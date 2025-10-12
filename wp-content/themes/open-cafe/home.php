@@ -1,19 +1,12 @@
 <?php get_header(); ?>
-<?php
-$args = array(
-    'post-type' => 'post',
-    'posts_per_page' => 8,
-);
-$the_query = new WP_Query($args);
-?>
 <main class="news-lists">
     <div class="news-lists__inner">
         <div class="contents__wrapper">
             <section class="news__contents">
                 <div class="news__lists">
                     <ul class="news__lists-wrapper">
-                        <?php if ($the_query->have_posts()): ?>
-                            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <?php if (have_posts()): ?>
+                            <?php while (have_posts()) : the_post(); ?>
                                 <li class="news__list">
                                     <div class="news__image-s">
                                         <?php if (has_post_thumbnail()): ?>
@@ -42,8 +35,8 @@ $the_query = new WP_Query($args);
                             <?php endwhile; ?>
                         <?php endif; ?>
                     </ul>
+                    <?php get_template_part('template-parts/pagination'); ?>
                 </div>
-                <?php get_template_part('template-parts/pagination'); ?>
             </section>
             <?php get_sidebar(); ?>
         </div>
