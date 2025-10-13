@@ -3,6 +3,7 @@
 <main class="menu-lists">
     <div class="container">
         <section class="menu__contents">
+            <!-- tab-button -->
             <div class="tab-buttons">
                 <div class="tab-buttons__inner">
                     <?php
@@ -23,15 +24,32 @@
                     <?php endforeach; ?>
                 </div>
             </div>
+            <!-- tab-buttonここまで -->
+
+            <!-- メニューコンテンツここから -->
             <div id="archive" class="menu__images">
                 <div class="menu__images-contents">
                     <div class="menu__images-inner">
-                        <?php if (have_posts()) : ?>
-                            <?php while (have_posts()) : the_post(); ?>
-                                <?php $drink_terms = array('drink', 'coffee', 'softdrink', 'tea') ?>
-                                <?php if (has_term($drink_terms, 'genre')) {
-                                    continue;
-                                } ?>
+
+                        <!-- ここからdrink以外 -->
+                        <?php
+                        $args = array(
+                            'post_type' => 'menu',
+                            'posts_per_page' => -1,
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'genre',
+                                    'field' => 'slug',
+                                    'terms' => $slug,
+                                    'operator' => 'NOT IN' // 含めない
+                                ),
+                            ),
+                        );
+                        $query = new WP_Query($args);
+
+                        if ($query->have_posts()) :
+                            while ($query->have_posts()) : $query->the_post();
+                        ?>
                                 <div class="menu__image">
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail(); ?>
@@ -46,13 +64,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            <?php endwhile; ?>
-                            <!-- ループ -->
-                        <?php else : ?>
-                            <p>投稿がありません。</p>
-                        <?php endif; ?>
+                        <?php
+                        endwhile;
+                            wp_reset_postdata();
+                        endif;
+                        ?>
                     </div>
                 </div>
+                <!-- ここまでdrink以外 -->
+
+                <!-- ここからdrink -->
                 <div class="grand__menu-list-wrapper drink">
                     <div class="grand__menu-drink-image">
                         <div class="drink-img">
@@ -105,8 +126,7 @@
                         </div>
                     </div>
                 </div>
-
-
+            </div>
         </section>
     </div>
     <?php get_template_part('template-parts/access'); ?>
