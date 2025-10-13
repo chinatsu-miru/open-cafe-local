@@ -897,7 +897,7 @@ body {
 .header .logo img {
   width: 100%;
 }
-.header .logo.is-checked {
+.header .logo.is-hidden {
   display: none;
 }
 .header .hamburger {
@@ -909,7 +909,7 @@ body {
 .header .hamburger img {
   width: 100%;
 }
-.header .hamburger.is-checked .logo img {
+.header .hamburger.is-checked + .logo img {
   display: none;
 }
 

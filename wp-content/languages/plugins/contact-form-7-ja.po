@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-05 08:50:03+0000\n"
+"PO-Revision-Date: 2025-09-30 07:44:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -11,16 +11,61 @@ msgstr ""
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
 
+#. translators: 1: URL to support page about Cloudflare Turnstile, 2: Stripe
+#: admin/includes/welcome-panel.php:139
+msgid "With help from cloud-based machine learning, anti-spam services will protect your forms (<a href=\"%1$s\">Cloudflare Turnstile</a>). Even payment services are natively supported (<a href=\"%2$s\">Stripe</a>)."
+msgstr "クラウドベースの機械学習を活かしたスパム対策サービスがフォームを保護します (<a href=\"%1$s\">Cloudflare Turnstile</a>)。さらには支払いのサービスだってネイティブサポートしています (<a href=\"%2$s\">Stripe</a>)。"
+
+#. translators: 1: URL to support page about Akismet, 2: Cloudflare Turnstile,
+#. 3: Disallowed list
+#: admin/includes/welcome-panel.php:64
+msgid "Contact Form 7 supports spam-filtering with <a href=\"%1$s\">Akismet</a>. <a href=\"%2$s\">Cloudflare Turnstile</a> blocks annoying spambots. Plus, using <a href=\"%3$s\">disallowed list</a>, you can block messages containing specified keywords or those sent from specified IP addresses."
+msgstr "Contact Form 7 は <a href=\"%1$s\">Akismet</a> によるスパムフィルタリングをサポートしています。<a href=\"%2$s\">Cloudflare Turnstile</a> はイライラするスパムボットをブロックします。さらに、<a href=\"%3$s\">禁止用語リスト</a>を使うことで特定のキーワードを含んだメッセージや特定の IP アドレスから送信されたメッセージをブロックすることが可能です。"
+
+#. translators: %s: URL to support page about the additional settings editor
+#: admin/includes/editor.php:520
+msgid "You can add customization code snippets here. For details, see <a href=\"%s\">Additional settings</a>."
+msgstr "ここにはカスタマイズのためのコードを追加できます。詳しくは<a href=\"%s\">その他の設定</a>を参照してください。"
+
+#. translators: %s: URL to support page about the messages editor
+#: admin/includes/editor.php:459
+msgid "You can edit messages used in various situations here. For details, see <a href=\"%s\">Editing messages</a>."
+msgstr "ここではさまざまな状況で用いられるメッセージを編集できます。詳しくは<a href=\"%s\">メッセージを編集する</a>を参照してください。"
+
+#. translators: %s: URL to support page about the email template
+#: admin/includes/editor.php:207
+msgid "You can edit the email template here. For details, see <a href=\"%s\">Setting up mail</a>."
+msgstr "ここではメールテンプレートを編集できます。詳しくは<a href=\"%s\">メールのセットアップ</a>を参照してください。"
+
+#. translators: %s: URL to support page about the form template
+#: admin/includes/editor.php:86
+msgid "You can edit the form template here. For details, see <a href=\"%s\">Editing form template</a>."
+msgstr "ここではフォームテンプレートを編集できます。詳しくは<a href=\"%s\">フォームのテンプレートを編集する</a>を参照してください。"
+
+#: admin/includes/editor.php:37
+msgid "Contact form editor tabs"
+msgstr "コンタクトフォームエディターのタブ"
+
+#. Author URI of the plugin
+#: wp-contact-form-7.php
+msgid "https://github.com/rocklobster-in/"
+msgstr "https://github.com/rocklobster-in/"
+
+#. Author of the plugin
+#: wp-contact-form-7.php
+msgid "Rock Lobster Inc."
+msgstr "株式会社ロックロブスター"
+
 #. translators: %s: Search query.
 #: admin/admin.php:467
 msgid "Search results for: <strong>%s</strong>"
 msgstr "<strong>%s</strong> の検索結果"
 
-#: modules/turnstile/turnstile.php:174
+#: modules/turnstile/turnstile.php:179
 msgid "Turnstile validation failed."
 msgstr "Turnstile の検証に失敗しました。"
 
-#: modules/turnstile/turnstile.php:169
+#: modules/turnstile/turnstile.php:174
 msgid "Turnstile token is empty."
 msgstr "Turnstile トークンが空です。"
 
@@ -71,11 +116,7 @@ msgstr "ファイルシステムにアクセスできませんでした。"
 msgid "Sender&#8217;s message failed to send"
 msgstr "メッセージの送信に失敗した"
 
-#: admin/includes/welcome-panel.php:70 admin/includes/welcome-panel.php:165
-msgid "Cloudflare Turnstile"
-msgstr "Cloudflare Turnstile"
-
-#: admin/includes/welcome-panel.php:69 admin/includes/welcome-panel.php:164
+#: admin/includes/welcome-panel.php:66 admin/includes/welcome-panel.php:140
 #: modules/turnstile/service.php:279
 msgid "https://contactform7.com/turnstile-integration/"
 msgstr "https://contactform7.com/ja/turnstile-integration/"
@@ -97,20 +138,16 @@ msgstr "コンタクトフォームを追加"
 msgid "Invalid Stripe Payment Intent ID detected."
 msgstr "不正な Stripe Payment Intent ID が検知されました。"
 
-#: admin/includes/welcome-panel.php:102
-msgid "contribute to the project"
-msgstr "プロジェクトに貢献する方法"
-
-#: admin/includes/welcome-panel.php:101
+#: admin/includes/welcome-panel.php:90
 msgid "https://contactform7.com/contributing/"
 msgstr "https://contactform7.com/ja/contributing/"
 
-#. translators: %s: link labeled 'contribute to the project'
-#: admin/includes/welcome-panel.php:99
-msgid "There are several ways for you to %s: testing, coding, translating it into your local languages, helping other users, financial donations, etc, etc. We equally welcome you regardless of the way you contribute."
-msgstr "%sはいくつもあります: テストに協力する、コードを書く、あなたのローカル言語に翻訳する、他のユーザーの手助けをする、経済的ドネーション、などなど。方法を問わずすべての貢献者を歓迎します。"
+#. translators: %s: URL to support page about ways to contribute
+#: admin/includes/welcome-panel.php:89
+msgid "There are several ways for you to <a href=\"%s\">contribute to the project</a>: testing, coding, translating it into your local languages, helping other users, financial donations, etc, etc. We equally welcome you regardless of the way you contribute."
+msgstr "<a href=\"%s\">プロジェクトに貢献する方法</a>はいくつもあります: テストに協力する、コードを書く、あなたのローカル言語に翻訳する、他のユーザーの手助けをする、経済的ドネーション、などなど。方法を問わずすべての貢献者を歓迎します。"
 
-#: admin/includes/welcome-panel.php:96
+#: admin/includes/welcome-panel.php:86
 msgid "It is hard to continue to maintain this plugin without support from users like you."
 msgstr "このプラグインを維持し続けるためにユーザーのみなさんからの支援を必要としています。"
 
@@ -411,7 +448,6 @@ msgstr "設定エラーが検出されました。"
 msgid "Brevo is active on this site."
 msgstr "Brevo はこのサイト上で有効化されています。"
 
-#: admin/includes/welcome-panel.php:157
 #: modules/sendinblue/contact-form-properties.php:110
 #: modules/sendinblue/contact-form-properties.php:405
 #: modules/sendinblue/service.php:30
@@ -634,34 +670,28 @@ msgstr "コンタクトフォームの一意識別子。"
 msgid "Dots are used in form-tag names."
 msgstr "フォームタグの名前にドット記号が使われている。"
 
-#: admin/includes/welcome-panel.php:305
+#: admin/includes/welcome-panel.php:276
 msgid "Show welcome panel"
 msgstr "ウェルカムパネルを表示"
 
-#: admin/includes/welcome-panel.php:302
+#: admin/includes/welcome-panel.php:273
 msgid "Welcome panel"
 msgstr "ウェルカムパネル"
 
-#: admin/includes/welcome-panel.php:169 modules/stripe/service.php:38
+#: modules/stripe/service.php:38
 msgid "Stripe"
 msgstr "Stripe"
 
-#: admin/includes/welcome-panel.php:168 modules/stripe/service.php:183
+#: admin/includes/welcome-panel.php:141 modules/stripe/service.php:183
 msgid "https://contactform7.com/stripe-integration/"
 msgstr "https://contactform7.com/ja/stripe-integration/"
 
-#. translators: 1: link labeled 'Cloudflare Turnstile', 2: link labeled
-#. 'Stripe'
-#: admin/includes/welcome-panel.php:162
-msgid "With help from cloud-based machine learning, anti-spam services will protect your forms (%1$s). Even payment services are natively supported (%2$s)."
-msgstr "クラウドベースの機械学習の助けを借りて、アンチスパムサービスはあなたのフォームを守ります (%1$s)。支払いサービスまでもネイティブでサポートされています (%2$s)。"
+#. translators: %s: URL to support page about the Brevo integration
+#: admin/includes/welcome-panel.php:134
+msgid "Your contact forms will become more powerful and versatile by integrating them with external APIs. With CRM and email marketing services, you can build your own contact lists (<a href=\"%s\">Brevo</a>)."
+msgstr "外部の API との連携があなたのコンタクトフォームをもっと強力で多機能なものにします。CRM とメールマーケティングのサービスと連携すれば独自の連絡先リストの構築が可能になります (<a href=\"%s\">Brevo</a>)。"
 
-#. translators: 1: link labeled 'Brevo'
-#: admin/includes/welcome-panel.php:154
-msgid "Your contact forms will become more powerful and versatile by integrating them with external APIs. With CRM and email marketing services, you can build your own contact lists (%1$s)."
-msgstr "外部の API との連携があなたのコンタクトフォームをもっと強力で多機能なものにします。CRM とメールマーケティングのサービスと連携すれば独自の連絡先リストの構築が可能になります (%1$s)。"
-
-#: admin/includes/welcome-panel.php:146
+#: admin/includes/welcome-panel.php:127
 msgid "You have strong allies to back you up."
 msgstr "あなたを助ける強い味方がいます。"
 
@@ -756,7 +786,7 @@ msgstr "API キー"
 msgid "Setup integration"
 msgstr "インテグレーションのセットアップ"
 
-#: admin/includes/welcome-panel.php:156
+#: admin/includes/welcome-panel.php:135
 #: modules/sendinblue/contact-form-properties.php:97
 #: modules/sendinblue/service.php:176
 msgid "https://contactform7.com/sendinblue-integration/"
@@ -791,10 +821,6 @@ msgstr "送信"
 #: includes/contact-form-template.php:37
 msgid "(optional)"
 msgstr "(任意)"
-
-#: admin/includes/welcome-panel.php:74
-msgid "disallowed list"
-msgstr "禁止用語リスト"
 
 #. translators: %s: comma separated list of disallowed words
 #: modules/disallowed-list.php:36
@@ -834,10 +860,6 @@ msgstr "ドキュメント"
 #: admin/edit-contact-form.php:366
 msgid "%1$s and %2$s"
 msgstr "%1$sと%2$s"
-
-#: admin/includes/editor.php:527
-msgid "Additional settings"
-msgstr "その他の機能"
 
 #: modules/sendinblue/service.php:127 modules/sendinblue/service.php:138
 msgid "Error"
@@ -972,34 +994,11 @@ msgstr "同意する"
 msgid "Sending mail has been aborted."
 msgstr "メールの送信が中断されました。"
 
-#. translators: %s: link labeled 'Editing messages'
 #: admin/includes/editor.php:460
-msgid "You can edit messages used in various situations here. For details, see %s."
-msgstr "様々な状況で用いられるメッセージをここで編集できます。詳しくは%sを参照。"
-
-#: admin/includes/editor.php:463
-msgid "Editing messages"
-msgstr "メッセージを編集する"
-
-#: admin/includes/editor.php:462
 msgid "https://contactform7.com/editing-messages/"
 msgstr "https://contactform7.com/ja/editing-messages/"
 
-#. translators: %s: link labeled 'Setting up mail'
-#: admin/includes/editor.php:205
-msgid "You can edit the mail template here. For details, see %s."
-msgstr "メールのテンプレートをここで編集できます。詳しくは%sを参照。"
-
-#. translators: %s: link labeled 'Editing form template'
-#: admin/includes/editor.php:81
-msgid "You can edit the form template here. For details, see %s."
-msgstr "フォームのテンプレートをここで編集できます。詳しくは%sを参照。"
-
-#: admin/includes/editor.php:84
-msgid "Editing form template"
-msgstr "フォームのテンプレートを編集する"
-
-#: admin/includes/editor.php:83
+#: admin/includes/editor.php:87
 msgid "https://contactform7.com/editing-form-template/"
 msgstr "https://contactform7.com/ja/editing-form-template/"
 
@@ -1093,38 +1092,28 @@ msgstr "コンタクトフォームを保存する際にエラーが発生しま
 msgid "Hook %1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
 msgstr "フック %1$s の使用は Contact Form 7 バージョン %2$s から<strong>非推奨</strong>になっています! 代わりに %3$s を使ってください。"
 
-#: admin/includes/welcome-panel.php:130
-msgid "Flamingo"
-msgstr "Flamingo"
+#. translators: %s: URL to support page about the Flamingo plugin
+#: admin/includes/welcome-panel.php:112
+msgid "Install a message storage plugin before this happens to you. <a href=\"%s\">Flamingo</a> saves all messages through contact forms into the database. Flamingo is a free WordPress plugin created by the same author as Contact Form 7."
+msgstr "こんなことが現実になる前にメッセージ保存プラグインをインストールしましょう。<a href=\"%s\">Flamingo</a> はコンタクトフォームを経由するすべてのメッセージをデータベースに保存します。Flamingo は Contact Form 7 と同じ作者が開発したフリーの WordPress プラグインです。"
 
-#. translators: %s: link labeled 'Flamingo'
-#: admin/includes/welcome-panel.php:127
-msgid "Install a message storage plugin before this happens to you. %s saves all messages through contact forms into the database. Flamingo is a free WordPress plugin created by the same author as Contact Form 7."
-msgstr "こんなことが現実になる前にメッセージ保存プラグインをインストールしましょう。%s はコンタクトフォームを経由するすべてのメッセージをデータベースに保存します。Flamingo は Contact Form 7 と同じ作者が作成したフリーの WordPress プラグインです。"
-
-#: admin/includes/welcome-panel.php:124
+#: admin/includes/welcome-panel.php:109
 msgid "Contact Form 7 does not store submitted messages anywhere. Therefore, you may lose important messages forever if your mail server has issues or you make a mistake in mail configuration."
 msgstr "Contact Form 7 は送信されたメッセージをどこにも保存しません。そのため、メールサーバーに問題があったりメールの設定に間違いがあれば、大事なメッセージを永遠に失うことになりかねません。"
 
-#: admin/includes/welcome-panel.php:118
+#: admin/includes/welcome-panel.php:104
 msgid "Before you cry over spilt mail&#8230;"
 msgstr "こぼしたメールを嘆く前に。"
 
-#: admin/includes/welcome-panel.php:73
+#: admin/includes/welcome-panel.php:67
 msgid "https://contactform7.com/comment-blacklist/"
 msgstr "https://contactform7.com/comment-blacklist/"
 
-#. translators: links labeled 1: 'Akismet', 2: 'Cloudflare Turnstile', 3:
-#. 'disallowed list'
-#: admin/includes/welcome-panel.php:63
-msgid "Contact Form 7 supports spam-filtering with %1$s. %2$s blocks annoying spambots. Plus, using %3$s, you can block messages containing specified keywords or those sent from specified IP addresses."
-msgstr "Contact Form 7 は %1$s によるスパムフィルタリングをサポート。%2$s はうっとうしいスパムボットをブロックしてくれます。さらに%3$sを使えば、指定したキーワードを含むか指定した IP アドレスから送られてきたメッセージを排除できます。"
-
-#: admin/includes/welcome-panel.php:60
+#: admin/includes/welcome-panel.php:61
 msgid "Spammers target everything; your contact forms are not an exception. Before you get spammed, protect your contact forms with the powerful anti-spam features Contact Form 7 provides."
 msgstr "スパマーはあらゆるものを標的にします。あなたのコンタクトフォームも例外ではありません。スパムの被害を受ける前に、Contact Form 7 が提供する強力なアンチスパム機能でコンタクトフォームを守りましょう。"
 
-#: admin/includes/welcome-panel.php:54
+#: admin/includes/welcome-panel.php:56
 msgid "Getting spammed? You have protection."
 msgstr "スパムが来ました? 対策ならありますよ。"
 
@@ -1241,16 +1230,6 @@ msgstr "不正なキー値。"
 msgid "reCAPTCHA"
 msgstr "reCAPTCHA"
 
-#. Author URI of the plugin
-#: wp-contact-form-7.php
-msgid "https://ideasilo.wordpress.com/"
-msgstr "https://ideasilo.wordpress.com/"
-
-#. Author of the plugin
-#: wp-contact-form-7.php
-msgid "Takayuki Miyoshi"
-msgstr "Takayuki Miyoshi"
-
 #. Description of the plugin
 #: wp-contact-form-7.php
 msgid "Just another contact form plugin. Simple but flexible."
@@ -1270,7 +1249,7 @@ msgstr "コンタクトフォーム %d"
 msgid "text area"
 msgstr "テキストエリア"
 
-#: admin/includes/welcome-panel.php:66 modules/akismet/service.php:22
+#: modules/akismet/service.php:22
 msgid "Akismet"
 msgstr "Akismet"
 
@@ -1653,60 +1632,55 @@ msgstr "可能な操作"
 msgid "Overview"
 msgstr "概要"
 
-#. translators: %s: link labeled 'Additional settings'
-#: admin/includes/editor.php:524
-msgid "You can add customization code snippets here. For details, see %s."
-msgstr "カスタマイズのためのコードをここに追加できます。詳しくは%sを参照。"
-
-#: admin/includes/editor.php:526
+#: admin/includes/editor.php:521
 msgid "https://contactform7.com/additional-settings/"
 msgstr "https://contactform7.com/additional-settings/"
 
-#: admin/includes/editor.php:433
+#: admin/includes/editor.php:432
 msgid "File attachments"
 msgstr "ファイル添付"
 
-#: admin/includes/editor.php:417
+#: admin/includes/editor.php:416
 msgid "Use HTML content type"
 msgstr "HTML 形式のメールを使用する"
 
-#: admin/includes/editor.php:397
+#: admin/includes/editor.php:396
 msgid "Exclude lines with blank mail-tags from output"
 msgstr "空のメールタグを含む行を出力から除外する"
 
-#: admin/includes/editor.php:360
+#: admin/includes/editor.php:359
 msgid "Message body"
 msgstr "メッセージ本文"
 
-#: admin/includes/editor.php:329
+#: admin/includes/editor.php:328
 msgid "Additional headers"
 msgstr "追加ヘッダー"
 
-#: admin/includes/editor.php:301 includes/contact-form-template.php:40
+#: admin/includes/editor.php:300 includes/contact-form-template.php:40
 msgid "Subject"
 msgstr "題名"
 
-#: admin/includes/editor.php:273
+#: admin/includes/editor.php:272
 msgid "From"
 msgstr "送信元"
 
-#: admin/includes/editor.php:245
+#: admin/includes/editor.php:244
 msgid "To"
 msgstr "送信先"
 
-#: admin/includes/editor.php:217
+#: admin/includes/editor.php:216
 msgid "In the following fields, you can use these mail-tags:"
 msgstr "以下の項目にて、これらのメールタグを利用できます:"
 
-#: admin/includes/editor.php:191
+#: admin/includes/editor.php:193
 msgid "Mail (2) is an additional mail template often used as an autoresponder."
 msgstr "メール (2) は追加のメールテンプレートで、自動返信メールによく使われます。"
 
-#: admin/includes/editor.php:130
+#: admin/includes/editor.php:132
 msgid "Use Mail (2)"
 msgstr "メール (2) を使用"
 
-#: admin/includes/editor.php:129
+#: admin/includes/editor.php:131
 msgid "Mail (2)"
 msgstr "メール (2)"
 
@@ -1741,24 +1715,24 @@ msgstr "ショートコード"
 msgid "Title"
 msgstr "タイトル"
 
-#: admin/edit-contact-form.php:449 admin/includes/editor.php:536
+#: admin/edit-contact-form.php:448 admin/includes/editor.php:529
 msgid "Additional Settings"
 msgstr "その他の設定"
 
 #. translators: %d: number of additional settings
-#: admin/edit-contact-form.php:446
+#: admin/edit-contact-form.php:445
 msgid "Additional Settings (%d)"
 msgstr "その他の設定 (%d)"
 
-#: admin/edit-contact-form.php:426 admin/includes/editor.php:481
+#: admin/edit-contact-form.php:425 admin/includes/editor.php:477
 msgid "Messages"
 msgstr "メッセージ"
 
-#: admin/edit-contact-form.php:422 admin/includes/editor.php:138
+#: admin/edit-contact-form.php:421 admin/includes/editor.php:140
 msgid "Mail"
 msgstr "メール"
 
-#: admin/edit-contact-form.php:418 admin/includes/editor.php:91
+#: admin/edit-contact-form.php:417 admin/includes/editor.php:93
 msgid "Form"
 msgstr "フォーム"
 
@@ -1820,7 +1794,7 @@ msgstr "保存"
 msgid "You are not allowed to edit this contact form."
 msgstr "このコンタクトフォームを編集する権限がありません。"
 
-#: admin/includes/welcome-panel.php:129
+#: admin/includes/welcome-panel.php:113
 msgid "https://contactform7.com/save-submitted-messages-with-flamingo/"
 msgstr "https://contactform7.com/save-submitted-messages-with-flamingo/"
 
@@ -1833,18 +1807,14 @@ msgid "https://contactform7.com/spam-filtering-with-akismet/"
 msgstr "https://contactform7.com/spam-filtering-with-akismet/"
 
 #: admin/includes/editor.php:208
-msgid "Setting up mail"
-msgstr "メールのセットアップ"
-
-#: admin/includes/editor.php:207
 msgid "https://contactform7.com/setting-up-mail/"
 msgstr "https://contactform7.com/ja/setting-up-mail/"
 
-#: admin/includes/welcome-panel.php:90
+#: admin/includes/welcome-panel.php:81
 msgid "Contact Form 7 needs your support."
 msgstr "Contact Form 7 は支援を必要としています。"
 
-#: admin/includes/welcome-panel.php:218
+#: admin/includes/welcome-panel.php:189
 msgid "Dismiss"
 msgstr "非表示にする"
 

@@ -113,23 +113,7 @@ class Custom_Global_Menu_Walker extends Walker_Nav_Menu
 
 
 // モバイル表示でもアドミンバーがトップに表示されるように
-function fix_adminbar_mobile()
-{
-    echo '<style>
-    @media screen and (max-width: 600px) {
-        #wpadminbar {
-            top: 0 !important;
-            bottom: auto !important;
-            position: fixed !important;
-        }
-        body.admin-bar {
-            padding-top: 46px;
-            padding-bottom: 0 !important;
-        }
-    }
-    </style>';
-}
-add_action('wp_head', 'fix_adminbar_mobile');
+
 
 
 // 抜粋欄を追加

@@ -1,6 +1,7 @@
 'use strict';
 {
     // ハンバーガーメニュークリックした時の動作
+    const logo = document.querySelector('.logo');
     const btn = document.querySelector('.hamburger');
     const navs = document.querySelectorAll('.hero__nav');
     const img = document.querySelector('.btn-img');
@@ -14,6 +15,7 @@
             nav.classList.toggle('is-checked');
         });
         btn.classList.toggle('is-checked');
+        logo.classList.toggle('is-hidden');
 
         const isInPagesFolder = location.pathname.includes('/pages/');
 
