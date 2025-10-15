@@ -1,13 +1,4 @@
-<?php
-get_header();
-?>
-
-<div class="breadcrumbs">
-    <span><a href="<?php echo home_url(); ?>">HOME</a></span>
-    <span>></span>
-    <span>お問い合わせ</span>
-</div>
-
+<?php get_header(); ?>
 
 <main class="contact">
     <div class="contact__inner">

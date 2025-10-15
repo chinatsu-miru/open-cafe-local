@@ -1,4 +1,7 @@
 <?php
+require_once get_template_directory() . '/inc/breadcrumb.php';
+
+
 // 標準機能を拡張---サムネイル、
 function my_setup()
 {
@@ -44,7 +47,7 @@ function my_enqueue_assets()
         wp_enqueue_style("gift-page", get_template_directory_uri() . "/css/gift.css", array(), filemtime(get_theme_file_path('css/gift.css')), "all");
     } elseif (is_singular('menu') || is_post_type_archive('menu') || is_tax('genre')) { // メニューページ
         wp_enqueue_style("menu-page", get_template_directory_uri() . "/css/menu.css", array(), filemtime(get_theme_file_path('css/menu.css')), "all");
-    } elseif (is_post_type_archive('shop')) { // 店舗紹介ページ
+    } elseif (is_singular('shop') || is_post_type_archive('shop')) { // 店舗紹介ページ
         wp_enqueue_style("shop-page", get_template_directory_uri() . "/css/shop.css", array(), filemtime(get_theme_file_path('css/shop.css')), "all");
     }
 }
@@ -154,19 +157,3 @@ function my_admin_menu()
     $menu[5][0] = 'お知らせ';
 }
 add_action('admin_menu', 'my_admin_menu');
-
-
-//パンくずリストのnewsをお知らせに変更
-// 投稿（post）のアーカイブ項目だけ「お知らせ」にする
-function my_bcn_breadcrumb_title($title, $type, $id)
-{
-    // 投稿タイプ: post のアーカイブ（または「ブログ」項目）
-    if (in_array('post-type-archive', $type, true) && in_array('post', $type, true)) {
-        return 'お知らせ';
-    }
-    if (in_array('blog', $type, true)) { // 投稿ページを割り当てている場合のタイプ名
-        return 'お知らせ';
-    }
-    return $title;
-}
-add_filter('bcn_breadcrumb_title', 'my_bcn_breadcrumb_title', 10, 3);

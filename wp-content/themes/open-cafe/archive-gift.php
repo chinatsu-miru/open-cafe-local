@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-    <div class="breadcrumbs">
-        <span><a href="<?php echo home_url(); ?>">HOME</a></span>
-        <span>></span>
-        <span>ギフト・贈り物</span>
-    </div>
-
     <main class="gift__main">
         <section class="gift__container">
             <div class="gift__item1">

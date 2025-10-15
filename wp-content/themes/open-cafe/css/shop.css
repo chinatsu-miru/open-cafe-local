@@ -845,15 +845,12 @@ body {
   }
 }
 .shop-lists__inner .access-lists {
-  padding-top: 48px;
+  padding-top: 60px;
 }
 @media screen and (min-width: 768px) {
   .shop-lists__inner .access-lists {
     padding-top: 80px;
   }
-}
-.shop-lists__inner .access-lists .access__inner {
-  padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .shop-lists__inner .access-lists .access__inner {
@@ -862,8 +859,9 @@ body {
 }
 .shop-lists__inner .access-lists .access__inner h2 {
   padding-left: 14px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
+  line-height: 27px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -888,6 +886,7 @@ body {
 }
 .shop-lists__inner .access-lists .access__inner .access__contents {
   padding-top: 20px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .shop-lists__inner .access-lists .access__inner .access__contents {
@@ -917,7 +916,7 @@ body {
     padding: 10px;
   }
 }
-.shop-lists__inner .access-lists .access__inner .access__contents .access__map .access__map-content iframe {
+.shop-lists__inner .access-lists .access__inner .access__contents .access__map .access__map-content img {
   width: 100%;
   height: 100%;
   max-width: 100%;
