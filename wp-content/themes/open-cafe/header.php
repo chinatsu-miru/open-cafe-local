@@ -12,7 +12,7 @@ if (is_post_type_archive('menu') || is_singular('menu') || is_tax('genre')) {
 } elseif (is_post_type_archive('shop') || is_singular('shop')) {
     $page_title = 'SHOP';
     $subtitle = '店舗情報';
-} elseif (is_post_type_archive('gift') || is_singular('gift')) {
+} elseif (is_post_type_archive('products') || is_singular('products')) {
     $page_title = 'GIFT';
     $subtitle = 'ギフト・贈り物';
 } elseif (is_page()) {
@@ -31,7 +31,7 @@ if (is_page('concept')) {
     $header_class = 'news-top';
 } elseif (is_post_type_archive('shop') || is_singular('shop')) {
     $header_class = 'shop-top';
-} elseif (is_post_type_archive('gift') || is_singular('gift')) {
+} elseif (is_post_type_archive('products') || is_singular('products')) {
     $header_class = 'gift-top';
 } elseif (is_page('contact')) {
     $header_class = 'contact-top';

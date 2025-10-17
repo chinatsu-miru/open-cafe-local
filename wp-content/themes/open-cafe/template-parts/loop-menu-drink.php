@@ -7,51 +7,56 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/drink.jpg" alt="コーヒー画像">
                     </div>
                 </div>
-                <div class="grand__menu-drink-section">
-                    <div class="drink-group">
-                        <h4 class="drink-section-title">コーヒー</h4>
-                        <ul class="grand__menu-drink-lists">
-                            <li class="drink-menu"><span class="menu">ブレンド</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">カフェラテ</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">豆乳ラテ</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">カフェモカ</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">キャラメルラテ</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">バニララテ</span><span class="price">500
-                                    yen</span></li>
-                        </ul>
+
+                <?php
+                //親ターム 'drink'の情報を取得
+                $drink_parent = get_term_by('slug', 'drink', 'genre');
+
+                //子ターム（コーヒー、紅茶、ソフトドリンク）
+                $drink_children = get_terms(array(
+                    'taxonomy'   => 'genre',
+                    'parent'     => $drink_parent->term_id,
+                    'hide_empty' => false,
+                ));
+
+                if (!empty($drink_children)):
+                ?>
+                    <div class="grand__menu-drink-section">
+                        <?php foreach ($drink_children as $child_term) : ?>
+                            <div class="drink-group">
+                                <h4 class="drink-section-title"><?php echo esc_html($child_term->name); ?></h4>
+                                <ul class="grand__menu-drink-lists">
+                                    <?php
+                                    //各子タームに属する投稿を取得
+                                    $args = array(
+                                        'post_type' => 'menu',
+                                        'orderby'   => 'menu_order',
+                                        'posts_per_page' => -1,
+                                        'order'     => 'ASC',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'genre',
+                                                'field'    => 'term_id',
+                                                'terms'    => $child_term->term_id,
+                                            ),
+                                        ),
+                                    );
+                                    $drink_query = new WP_Query($args);
+                                    if ($drink_query->have_posts()) :
+                                        while ($drink_query->have_posts()): $drink_query->the_post(); ?>
+                                            <li class="drink-menu">
+                                                <span class="menu"><?php the_title(); ?></span>
+                                                <span class="price"><?php echo esc_html(get_post_meta(get_the_ID(), 'price', true)); ?> yen</span>
+                                            </li>
+                                    <?php
+                                        endwhile;
+                                        wp_reset_postdata();
+                                    endif; ?>
+                                </ul>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="drink-group">
-                        <h4 class="drink-section-title">紅茶</h4>
-                        <ul class="grand__menu-drink-lists">
-                            <li class="drink-menu"><span class="menu">ストレート</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">ミルク</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">アップル</span><span class="price">500
-                                    yen</span></li>
-                        </ul>
-                    </div>
-                    <div class="drink-group">
-                        <h4 class="drink-section-title">ソフトドリンク</h4>
-                        <ul class="grand__menu-drink-lists">
-                            <li class="drink-menu"><span class="menu">バナナ</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">オレンジ</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">アップル</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">マンゴー</span><span class="price">500
-                                    yen</span></li>
-                            <li class="drink-menu"><span class="menu">ミックス</span><span class="price">500
-                                    yen</span></li>
-                        </ul>
-                    </div>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

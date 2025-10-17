@@ -20,7 +20,7 @@ body {
             max-width: 600px;
             margin: 0 auto;
 
-            @include mq(md) {
+            @include mq(xl) {
                 max-width: 840px;
             }
 
@@ -30,11 +30,12 @@ body {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, auto);
                 row-gap: 12px;
-                column-gap: 3.467vw;
+                column-gap: 4vw;
 
                 @include mq(md) {
                     grid-template-columns: repeat(4, 1fr);
                     grid-template-rows: repeat(1, auto);
+                    column-gap: 12px;
                 }
             }
         }
@@ -353,7 +354,6 @@ body {
                 .grand__menu-content {
                     @include mq(xl) {
                         max-width: 1287px;
-                        margin: 0 auto;
                     }
 
                     .grand__menu-top {
@@ -544,10 +544,10 @@ body {
 
                                 @include mq(xl) {
                                     aspect-ratio: 1 / 1;
-                                    max-width: 343px;
+                                    max-width: 327px;
                                     width: 100%;
                                     height: auto;
-                                    max-height: 343px;
+                                    max-height: 327px;
                                     background-color: $sub-text-color;
                                 }
 
@@ -582,12 +582,16 @@ body {
                                     padding-bottom: 43px;
 
                                     @include mq(lg) {
-                                        width: 19.531vw;
+                                        width: 19vw;
                                     }
 
                                     @include mq(xl) {
                                         width: 15.39vw;
-                                        max-width: 222px;
+                                        max-width: 197px;
+                                    }
+
+                                    @media (min-width: 1440px) {
+                                        max-width: 253px;
                                     }
                                 }
 
@@ -623,7 +627,7 @@ body {
 
                                             @include mq(lg) {
                                                 min-width: 98px;
-                                                padding-right: 40px;
+                                                padding-right: 27px;
                                             }
                                         }
 

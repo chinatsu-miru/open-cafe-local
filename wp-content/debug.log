@@ -47,3 +47,25 @@ Stack trace:
     [post_type] => gift
 )
 
+[16-Oct-2025 01:41:17 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Term could not be converted to string in /var/www/html/wp-content/themes/open-cafe/archive-menu.php:87
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 87
+[17-Oct-2025 01:36:25 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type WP_Term as array in /var/www/html/wp-content/themes/open-cafe/archive-menu.php:87
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 87
+[17-Oct-2025 04:18:21 UTC] PHP Warning:  Undefined variable $drink_query in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 118
+[17-Oct-2025 04:18:21 UTC] PHP Fatal error:  Uncaught Error: Call to a member function have_posts() on null in /var/www/html/wp-content/themes/open-cafe/archive-menu.php:118
+Stack trace:
+#0 /var/www/html/wp-includes/template-loader.php(106): include()
+#1 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#2 /var/www/html/index.php(17): require('/var/www/html/w...')
+#3 {main}
+  thrown in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 118

@@ -43,8 +43,8 @@ function my_enqueue_assets()
         wp_enqueue_style("news-page", get_template_directory_uri() . "/css/news.css", array(), filemtime(get_theme_file_path('css/news.css')), "all");
     } elseif (is_single()) { // ニュースページ
         wp_enqueue_style("news-page", get_template_directory_uri() . "/css/news-single.css", array(), filemtime(get_theme_file_path('css/news-single.css')), "all");
-    } elseif (is_singular('gift') || is_post_type_archive('gift')) { // GIFTページ
-        wp_enqueue_style("gift-page", get_template_directory_uri() . "/css/gift.css", array(), filemtime(get_theme_file_path('css/gift.css')), "all");
+    } elseif (is_singular('products') || is_post_type_archive('products')) { // productsページ
+        wp_enqueue_style("products-page", get_template_directory_uri() . "/css/products.css", array(), filemtime(get_theme_file_path('css/products.css')), "all");
     } elseif (is_singular('menu') || is_post_type_archive('menu') || is_tax('genre')) { // メニューページ
         wp_enqueue_style("menu-page", get_template_directory_uri() . "/css/menu.css", array(), filemtime(get_theme_file_path('css/menu.css')), "all");
     } elseif (is_singular('shop') || is_post_type_archive('shop')) { // 店舗紹介ページ
