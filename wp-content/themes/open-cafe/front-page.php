@@ -64,39 +64,23 @@
                 </div>
 
                 <!-- <?php
-                $post_id = get_queried_object_id();
-                $sets = [
-                    'lunch_1' => 'A',
-                    'lunch_2' => 'B',
-                    'lunch_3' => 'C',
-                    'lunch_4' => 'D',
-                ];
-                ?> -->
+                        $post_id = get_queried_object_id();
+                        $sets = [
+                            'lunch_1' => 'A',
+                            'lunch_2' => 'B',
+                            'lunch_3' => 'C',
+                            'lunch_4' => 'D',
+                        ];
+                        ?> -->
 
                 <!-- <?php
-                $post_id = get_queried_object_id(); // そのページのID
-                $group   = get_field('lunch_1', $post_id); // グループ全体（配列）
-                $image_url = '';
-                ?> -->
+                        $post_id = get_queried_object_id(); // そのページのID
+                        $group   = get_field('lunch_1', $post_id); // グループ全体（配列）
+                        $image_url = '';
+                        ?> -->
 
 
                 <ul class="lunch-set__pasta-list">
-                <?php
-                    // if (is_array($group) && !empty($group['lunch_1-image'])) {
-                    // $val = $group['lunch_1-image']; // ACFの「返り値」設定に依存（ID/URL/配列）
-                    //     if (is_string($val)) { // 返り値=URL
-                    //     $image_url = $val;
-                    //     } elseif (is_int($val)) { // 返り値=ID
-                    //     $image_url = wp_get_attachment_url($val);
-                    //     } elseif (is_array($val)) { // 返り値=配列
-                    //     $image_url = $val['url'] ?? '';
-                    //     }
-                    // }
-
-                    // if ($image_url) {
-                    // echo '<img src="' . esc_url($image_url) . '" alt="">';
-                    // }
-                    ?>
                     <li class="lunch-set__pasta-item">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta1.jpg" alt="パスタ画像">
                         <div class="lunch-set__pasta-desc">
@@ -167,165 +151,137 @@
         </div>
         <div class="grand__menu-inner">
             <div class="grand__menus">
+
+                <!-- パスタの欄 -->
                 <div class="grand__menu-content">
-                    <h3 class="grand__menu-top">パスタ</h3>
+                    <?php
+                    $term = get_term_by('slug', 'pasta', 'genre');
+                    ?>
+                    <h3 class="grand__menu-top">
+                        <?php echo $term->name; ?>
+                    </h3>
+                    <?php
+                    $args = array(
+                        'post_type' => 'menu',
+                        'posts_per_page' => 3,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'genre',
+                                'field' => 'slug',
+                                'terms' => $term->slug,
+                            ),
+                        ),
+                    );
+                    $query = new WP_Query($args);
+                    ?>
                     <div class="grand__menu-list-wrapper">
                         <ul class="grand__menu-list">
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/pasta1.jpg" alt="パスタ画像">
-                                </div>
-                                <div class="grand__menu-text">テキストテキストテキストの○○○○風パスタ</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/pasta2.jpg" alt="パスタ画像">
-                                </div>
-                                <div class="grand__menu-text">テキストテキストの○○風パスタ</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/pasta3.jpg" alt="パスタ画像">
-                                </div>
-                                <div class="grand__menu-text">テキストテキストの○○風パスタ</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
+                            <?php if ($query->have_posts()): ?>
+                                <?php while ($query->have_posts()): $query->the_post(); ?>
+                                    <li class="grand__menu-info">
+                                        <div class="grand__menu-img">
+                                            <?php if (has_post_thumbnail()): ?>
+                                                <?php the_post_thumbnail(); ?>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="grand__menu-text"><?php the_title(); ?></div>
+                                        <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
+                                    </li>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
+
+                <!-- サラダの欄 -->
                 <div class="grand__menu-content">
-                    <h3 class="grand__menu-top">サラダ</h3>
+                    <?php
+                    $term = get_term_by('slug', 'salad', 'genre');
+                    ?>
+                    <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
+                    <?php
+                    $args = array(
+                        'post_type' => 'menu',
+                        'posts_per_page' => 3,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'genre',
+                                'field' => 'slug',
+                                'terms' => $term->slug,
+                            ),
+                        ),
+                    );
+                    $query = new WP_Query($args);
+                    ?>
                     <div class="grand__menu-list-wrapper">
                         <ul class="grand__menu-list">
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/salad1.jpg" alt="サラダ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○風サラダ</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/salad2.jpg" alt="サラダ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○風サラダ</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/salad3.jpg" alt="サラダ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○風サラダ</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
+                            <?php if ($query->have_posts()): ?>
+                                <?php while ($query->have_posts()): $query->the_post(); ?>
+                                    <li class="grand__menu-info">
+                                        <div class="grand__menu-img">
+                                            <?php if (has_post_thumbnail()): ?>
+                                                <?php the_post_thumbnail(); ?>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="grand__menu-text"><?php the_title(); ?></div>
+                                        <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
+                                    </li>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
+
+                <!-- スイーツの欄 -->
                 <div class="grand__menu-content">
-                    <h3 class="grand__menu-top">パン & スイーツ</h3>
+                    <?php
+                    $term = get_term_by('slug', 'sweets', 'genre');
+                    ?>
+                    <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
+                    <?php
+                    $args = array(
+                        'post_type' => 'menu',
+                        'posts_per_page' => 3,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'genre',
+                                'field' => 'slug',
+                                'terms' => $term->slug,
+                            ),
+                        ),
+                    );
+                    $query = new WP_Query($args);
+                    ?>
+
                     <div class="grand__menu-list-wrapper">
                         <ul class="grand__menu-list bread">
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/sweets1.jpg" alt="パン&スイーツ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○サンド</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/sweets2.jpg" alt="パン&スイーツ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○サンド</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/sweets3.jpg" alt="パン&スイーツ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○サンド</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/sweets4.jpg" alt="パン&スイーツ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○サンド</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/sweets5.jpg" alt="パン&スイーツ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○サンド</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
-                            <li class="grand__menu-info">
-                                <div class="grand__menu-img">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/sweets6.jpg" alt="パン&スイーツ画像">
-                                </div>
-                                <div class="grand__menu-text">○○○○サンド</div>
-                                <div class="grand__menu-price">780 yen</div>
-                            </li>
+                            <?php if ($query->have_posts()): ?>
+                                <?php while ($query->have_posts()): $query->the_post(); ?>
+                                    <li class="grand__menu-info">
+                                        <div class="grand__menu-img">
+                                            <?php if (has_post_thumbnail()): ?>
+                                                <?php the_post_thumbnail(); ?>
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="grand__menu-text"><?php the_title(); ?></div>
+                                        <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
+                                    </li>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </ul>
                     </div>
                 </div>
+
+                <!-- ドリンクの欄 -->
                 <div class="grand__menu-content">
-                    <h3 class="grand__menu-top">ドリンク</h3>
-                    <div class="grand__menu-list-wrapper drink">
-                        <div class="grand__menu-drink-image">
-                            <div class="drink-img">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/drink.jpg" alt="コーヒー画像">
-                            </div>
-                        </div>
-                        <div class="grand__menu-drink-section">
-                            <div class="drink-group">
-                                <h4 class="drink-section-title">コーヒー</h4>
-                                <ul class="grand__menu-drink-lists">
-                                    <li class="drink-menu"><span class="menu">ブレンド</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">カフェラテ</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">豆乳ラテ</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">カフェモカ</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">キャラメルラテ</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">バニララテ</span><span class="price">500
-                                            yen</span></li>
-                                </ul>
-                            </div>
-                            <div class="drink-group">
-                                <h4 class="drink-section-title">紅茶</h4>
-                                <ul class="grand__menu-drink-lists">
-                                    <li class="drink-menu"><span class="menu">ストレート</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">ミルク</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">アップル</span><span class="price">500
-                                            yen</span></li>
-                                </ul>
-                            </div>
-                            <div class="drink-group">
-                                <h4 class="drink-section-title">ソフトドリンク</h4>
-                                <ul class="grand__menu-drink-lists">
-                                    <li class="drink-menu"><span class="menu">バナナ</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">オレンジ</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">アップル</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">マンゴー</span><span class="price">500
-                                            yen</span></li>
-                                    <li class="drink-menu"><span class="menu">ミックス</span><span class="price">500
-                                            yen</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                    $term = get_term_by('slug', 'drink', 'genre');
+                    ?>
+                    <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
+                    <?php
+                    $class = is_front_page() ? 'top-drink' : '';
+                    get_template_part('template-parts/loop-menu-drink', null, array('class' => $class));
+                    ?>
                 </div>
             </div>
             <div class="button1">

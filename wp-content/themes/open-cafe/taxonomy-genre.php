@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<!-- メニュー詳細ページ -->
 <main class="menu-lists">
     <div class="container">
         <section class="menu__contents">

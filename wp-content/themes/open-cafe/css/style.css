@@ -2234,10 +2234,10 @@ body {
 @media screen and (min-width: 1280px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
     aspect-ratio: 1/1;
-    max-width: 343px;
+    max-width: 327px;
     width: 100%;
     height: auto;
-    max-height: 343px;
+    max-height: 327px;
     background-color: #ffffff;
   }
 }
@@ -2313,7 +2313,6 @@ body {
 @media screen and (min-width: 1024px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .menu {
     min-width: 98px;
-    padding-right: 40px;
   }
 }
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .price {
@@ -2321,6 +2320,9 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
+}
+.grand__menu .grand__menu-inner.top-drink {
+  padding-top: 0;
 }
 .grand__menu .grand__menu-inner > .button1 {
   margin-top: 0;

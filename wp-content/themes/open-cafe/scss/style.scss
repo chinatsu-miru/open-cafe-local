@@ -1534,10 +1534,10 @@ body {
 
                             @include mq(xl) {
                                 aspect-ratio: 1 / 1;
-                                max-width: 343px;
+                                max-width: 327px;
                                 width: 100%;
                                 height: auto;
-                                max-height: 343px;
+                                max-height: 327px;
                                 background-color: $sub-text-color;
                             }
 
@@ -1613,7 +1613,7 @@ body {
 
                                         @include mq(lg) {
                                             min-width: 98px;
-                                            padding-right: 40px;
+                                            // padding-right: 40px;
                                         }
                                     }
 
@@ -1629,6 +1629,9 @@ body {
                     }
                 }
             }
+        }
+        &.top-drink {
+            padding-top: 0;
         }
 
         &>.button1 {

@@ -912,6 +912,7 @@ body {
 }
 .gift__main .gift__container .gift__item-s .gift__item-img img {
   width: 100%;
+  height: auto;
   vertical-align: bottom;
 }
 @media screen and (min-width: 768px) {
@@ -1033,4 +1034,4 @@ body {
   width: 100%;
 }
 
-/*# sourceMappingURL=gift.css.map */
+/*# sourceMappingURL=products.css.map */

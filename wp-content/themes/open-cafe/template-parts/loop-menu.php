@@ -1,3 +1,4 @@
+<!-- メニュー詳細のパスタ、サラダ、スイーツページの部品 -->
 <div class="menu__image">
 
     <?php if (has_post_thumbnail()) : ?>

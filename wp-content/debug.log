@@ -69,3 +69,15 @@ Stack trace:
 #2 /var/www/html/index.php(17): require('/var/www/html/w...')
 #3 {main}
   thrown in /var/www/html/wp-content/themes/open-cafe/archive-menu.php on line 118
+[19-Oct-2025 05:28:42 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/html/wp-includes/class-wp-hook.php on line 97
+[19-Oct-2025 05:30:21 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/html/wp-includes/class-wp-hook.php on line 315
+[19-Oct-2025 05:47:45 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/html/wp-includes/class-wp-list-util.php on line 113
+[19-Oct-2025 06:58:07 UTC] WordPress database error Table 'wordpress.wp_sbi_feeds' doesn't exist for query SELECT COUNT(*) FROM wp_sbi_feeds made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, sb_instagram_feed_init, InstagramFeed\Admin\SBI_Callout->__construct, InstagramFeed\Admin\SBI_Callout::get_callout_plugins_list, InstagramFeed\Admin\SBI_Callout::feeds_number
+[19-Oct-2025 06:58:07 UTC] WordPress database error Table 'wordpress.wp_sbi_feeds' doesn't exist for query SELECT COUNT(*) FROM wp_sbi_feeds made by require_once('wp-admin/admin.php'), require_once('wp-load.php'), require_once('wp-config.php'), require_once('wp-settings.php'), do_action('init'), WP_Hook->do_action, WP_Hook->apply_filters, sb_instagram_feed_init, InstagramFeed\Admin\SBI_Callout->__construct, InstagramFeed\Admin\SBI_Callout::should_show_callout, InstagramFeed\Admin\SBI_Callout::get_callout_plugins_list, InstagramFeed\Admin\SBI_Callout::feeds_number
+[19-Oct-2025 06:58:07 UTC] PHP Warning:  file_get_contents(http://localhost:8100/wp-content/plugins/instagram-feed/img/placeholder.png): Failed to open stream: Connection refused in /var/www/html/wp-includes/class-wp-image-editor-imagick.php on line 156
+[19-Oct-2025 13:32:11 UTC] PHP Parse error:  syntax error, unexpected token ")" in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 182
+[19-Oct-2025 13:32:36 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 495
+[19-Oct-2025 13:32:37 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 495
+[19-Oct-2025 13:32:57 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 495
+[19-Oct-2025 13:32:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 495
+[24-Oct-2025 07:13:53 UTC] PHP Warning:  foreach() argument must be of type array|object, int given in /var/www/html/wp-content/plugins/all-in-one-wp-migration/uninstall.php on line 39

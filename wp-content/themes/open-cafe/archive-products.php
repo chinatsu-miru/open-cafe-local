@@ -2,114 +2,44 @@
 
 <main class="gift__main">
     <section class="gift__container">
-        <div class="gift__item1">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img1.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img2.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img3.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img4.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img5.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img6.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img7.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img8.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
-        <div class="gift__item-s">
-            <div class="gift__item-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/gift/gift-img9.jpg" alt="ギフト画像">
-            </div>
-            <div class="gift__item-meta">
-                <div class="gift__item-text">○○○○の詰め合わせギフト</div>
-                <div class="gift__item-price">3000 yen</div>
-                <div class="button2">
-                    <a href="./concept.html" class="btn2">ショップで確認する</a>
-                </div>
-            </div>
-        </div>
+        <?php if (have_posts()): ?>
+
+            <?php $count = 0; ?>
+            <?php while (have_posts()): the_post(); ?>
+                <?php $count++; ?>
+                <?php if ($count === 1): ?>
+                    <div class="gift__item1">
+                        <div class="gift__item-img">
+                            <?php if (has_post_thumbnail()): ?>
+                                <?php the_post_thumbnail(); ?>
+                            <?php endif; ?>
+                        </div>
+                        <div class="gift__item-meta">
+                            <div class="gift__item-text"><?php the_title(); ?></div>
+                            <div class="gift__item-price"><?php the_field('price'); ?> yen</div>
+                            <div class="button2">
+                                <a href="./concept.html" class="btn2">ショップで確認する</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <div class="gift__item-s">
+                        <div class="gift__item-img">
+                            <?php if (has_post_thumbnail()): ?>
+                                <?php the_post_thumbnail(); ?>
+                            <?php endif; ?>
+                        </div>
+                        <div class="gift__item-meta">
+                            <div class="gift__item-text"><?php the_title(); ?></div>
+                            <div class="gift__item-price"><?php the_field('price'); ?> yen</div>
+                            <div class="button2">
+                                <a href="./concept.html" class="btn2">ショップで確認する</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </section>
 
     <section class="gift__info">
@@ -122,7 +52,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/img/gift/repeat-grid-pc.svg" alt="" class="sp-none">
                     </div>
                     <div class="gift__info-description">
-                        <p>テキストがはいります。テキストがはいります。テキストがはいります。テキストがはいります。テキストがはいります。テキストがはいります。テキストがはいります。テキストがはいります。テキストがはいります。</p>
+                        <p>大切な方への贈り物に、心を込めたラッピングを。ご希望のイメージや用途に合わせたご提案も可能です。<br>オンライン注文の際は備考欄にご記入くださいませ。</p>
                     </div>
                 </div>
                 <div class="gift__info-img">

@@ -1,4 +1,5 @@
-<div class="grand__menu-inner">
+<!-- メニュー詳細ページのドリンクの部品 -->
+<div class="grand__menu-inner <?php echo !empty($args['class']) ? esc_attr($args['class']) : ''; ?>">
     <div class="grand__menus">
         <div class="grand__menu-content">
             <div class="grand__menu-list-wrapper drink">
