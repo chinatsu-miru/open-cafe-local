@@ -90,7 +90,7 @@ body {
             width: 100%;
         }
 
-        &.is-checked + .logo {
+        &.is-checked+.logo {
             img {
                 display: none;
 
@@ -816,7 +816,7 @@ body {
                 // width: calc(100vw * 0.921);
                 max-width: 1324px;
                 padding-inline: 40px;
-                padding-bottom: 42px;
+                padding-bottom: 40px;
                 background-color: $sub-text-color;
                 width: 100%;
             }
@@ -916,10 +916,9 @@ body {
                         }
                     }
 
-                    &.lunch-set__pasta-item--b,
-                    &.lunch-set__pasta-item--d {
+                    &.special-item {
                         @include mq(lg) {
-                            margin-top: 41px;
+                            margin-top: 40px;
                         }
                     }
 
@@ -928,7 +927,7 @@ body {
                         padding-top: 6px;
                         gap: 6px;
                         width: 100%;
-                        align-items: flex-start;
+                        align-items: center;
 
                         @include mq(lg) {
                             padding-top: 16px;
@@ -936,9 +935,6 @@ body {
                         }
 
                         .lunch-set__pasta-label {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
                             width: calc(100vw * 0.064);
                             height: calc(100vw * 0.064);
                             background-color: $main-text-color;
@@ -955,7 +951,9 @@ body {
                             }
 
                             span.pasta-label-text {
-                                display: block;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                                 width: 100%;
                                 height: 100%;
                                 font-family: "Patua One";
@@ -964,12 +962,6 @@ body {
                                 font-weight: 400;
                                 line-height: normal;
                                 letter-spacing: 2.28px;
-
-                                // @include mq(md) {
-                                //     font-size: 2.5vw;
-                                //     letter-spacing: 3.84px;
-                                //     line-height: 3.8vw;
-                                // }
 
                                 @include mq(lg) {
                                     font-size: clamp(19px, 2.5vw, 32px);
@@ -1630,6 +1622,7 @@ body {
                 }
             }
         }
+
         &.top-drink {
             padding-top: 0;
         }

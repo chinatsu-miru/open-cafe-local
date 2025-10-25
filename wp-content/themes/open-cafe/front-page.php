@@ -63,57 +63,30 @@
                     </span>
                 </div>
 
-                <!-- <?php
-                        $post_id = get_queried_object_id();
-                        $sets = [
-                            'lunch_1' => 'A',
-                            'lunch_2' => 'B',
-                            'lunch_3' => 'C',
-                            'lunch_4' => 'D',
-                        ];
-                        ?> -->
-
-                <!-- <?php
-                        $post_id = get_queried_object_id(); // そのページのID
-                        $group   = get_field('lunch_1', $post_id); // グループ全体（配列）
-                        $image_url = '';
-                        ?> -->
-
-
                 <ul class="lunch-set__pasta-list">
-                    <li class="lunch-set__pasta-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta1.jpg" alt="パスタ画像">
-                        <div class="lunch-set__pasta-desc">
-                            <span class="lunch-set__pasta-label"><span class="pasta-label-text">A</span></span>
-                            <p class="lunch-set__pasta-text pc-none">テキストテキストの○○○風パスタ</p>
-                            <p class="lunch-set__pasta-text sp-none">テキストテキストの○○風パスタ</p>
-                        </div>
-                    </li>
-                    <li class="lunch-set__pasta-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta2.jpg" alt="パスタ画像">
-                        <div class="lunch-set__pasta-desc">
-                            <span class="lunch-set__pasta-label"><span class="pasta-label-text">B</span></span>
-                            <p class="lunch-set__pasta-text pc-none">テキストテキストの○○○風パスタ</p>
-                            <p class="lunch-set__pasta-text sp-none">テキストテキストの○○風パスタ</p>
-                        </div>
-                    </li>
-                    <li class="lunch-set__pasta-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta3.jpg" alt="パスタ画像">
-                        <div class="lunch-set__pasta-desc">
-                            <span class="lunch-set__pasta-label"><span class="pasta-label-text">C</span></span>
-                            <p class="lunch-set__pasta-text pc-none">テキストテキストの○○○風パスタ</p>
-                            <p class="lunch-set__pasta-text sp-none">テキストテキストの○○風パスタ</p>
-                        </div>
-                    </li>
-                    <li class="lunch-set__pasta-item">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/pasta4.jpg" alt="パスタ画像">
-                        <div class="lunch-set__pasta-desc">
-                            <span class="lunch-set__pasta-label"><span class="pasta-label-text">D</span></span>
-                            <p class="lunch-set__pasta-text pc-none">テキストテキストの○○○風パスタ</p>
-                            <p class="lunch-set__pasta-text sp-none">テキストテキストの○○風パスタ</p>
-                        </div>
-                    </li>
+                    <?php for ($i = 1; $i <= 4; $i++): ?>
+                        <?php
+                        $lunch = get_field('lunch_' . $i);
+                        $image = $lunch['lunch_' . $i . '-image'];
+                        $title = $lunch['lunch_' . $i . '-title'];
+                        $labels = ['A', 'B', 'C', 'D'];
+                        $extra_class = ($i === 2 || $i === 4)? ' special-item' : '';
+                        ?>
+                        <?php if (have_posts()): ?>
+                            <?php while (have_posts()): the_post(); ?>
+                                <li class="lunch-set__pasta-item <?php echo $extra_class; ?>">
+                                    <img src="<?php echo esc_url($image); ?>" alt="パスタ画像">
+                                    <div class="lunch-set__pasta-desc">
+                                        <span class="lunch-set__pasta-label"><span class="pasta-label-text"><?php echo $labels[$i -1]; ?></span></span>
+                                        <p class="lunch-set__pasta-text"><?php echo esc_html($title); ?></p>
+                                    </div>
+                                </li>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    <?php endfor; ?>
                 </ul>
+
+
             </div>
             <div class="lunch-set__footer">
                 <div class="lunch-set__footer-inner">

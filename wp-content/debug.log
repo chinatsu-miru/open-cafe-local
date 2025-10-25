@@ -81,3 +81,31 @@ Stack trace:
 [19-Oct-2025 13:32:57 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 495
 [19-Oct-2025 13:32:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 495
 [24-Oct-2025 07:13:53 UTC] PHP Warning:  foreach() argument must be of type array|object, int given in /var/www/html/wp-content/plugins/all-in-one-wp-migration/uninstall.php on line 39
+[25-Oct-2025 06:34:10 UTC] PHP Warning:  translations_api(): 予期しないエラーが発生しました。WordPress.org かこのサーバーの設定に何か問題があるかもしれません。問題が続くようであれば、<a href="https://ja.wordpress.org/support/forums/">サポートフォーラム</a>を参照してみてください。 (WordPress は WordPress.org との安全な接続を確立できませんでした。サーバー管理者にご連絡ください) in /var/www/html/wp-includes/functions.php on line 6121
+[25-Oct-2025 07:35:06 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:35:28 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:36:36 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:37:05 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:46:24 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:54:44 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:55:10 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Array to string conversion in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 70
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 07:59:01 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Array to string conversion in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 70
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 07:59:01 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Array to string conversion in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 70
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 07:59:01 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Array to string conversion in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 70
+[25-Oct-2025 07:59:01 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 07:59:01 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 08:00:59 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 08:00:59 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 08:00:59 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 08:00:59 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 08:00:59 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 08:00:59 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486
+[25-Oct-2025 08:00:59 UTC] PHP Warning:  Undefined variable $image in /var/www/html/wp-content/themes/open-cafe/front-page.php on line 75
+[25-Oct-2025 08:00:59 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in /var/www/html/wp-includes/formatting.php on line 4486

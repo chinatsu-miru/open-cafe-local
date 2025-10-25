@@ -1541,7 +1541,7 @@ body {
   .lunch .lunch__inner .lunch-set__pasta-select {
     max-width: 1324px;
     padding-inline: 40px;
-    padding-bottom: 42px;
+    padding-bottom: 40px;
     background-color: #ffffff;
     width: 100%;
   }
@@ -1644,8 +1644,8 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
-  .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item.lunch-set__pasta-item--b, .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item.lunch-set__pasta-item--d {
-    margin-top: 41px;
+  .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item.special-item {
+    margin-top: 40px;
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc {
@@ -1653,7 +1653,7 @@ body {
   padding-top: 6px;
   gap: 6px;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
 }
 @media screen and (min-width: 1024px) {
   .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc {
@@ -1662,9 +1662,6 @@ body {
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc .lunch-set__pasta-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 6.4vw;
   height: 6.4vw;
   background-color: #222222;
@@ -1682,7 +1679,9 @@ body {
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc .lunch-set__pasta-label span.pasta-label-text {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   font-family: "Patua One";
