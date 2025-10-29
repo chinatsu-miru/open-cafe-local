@@ -70,14 +70,14 @@
                         $image = $lunch['lunch_' . $i . '-image'];
                         $title = $lunch['lunch_' . $i . '-title'];
                         $labels = ['A', 'B', 'C', 'D'];
-                        $extra_class = ($i === 2 || $i === 4)? ' special-item' : '';
+                        $extra_class = ($i === 2 || $i === 4) ? ' special-item' : '';
                         ?>
                         <?php if (have_posts()): ?>
                             <?php while (have_posts()): the_post(); ?>
                                 <li class="lunch-set__pasta-item <?php echo $extra_class; ?>">
                                     <img src="<?php echo esc_url($image); ?>" alt="パスタ画像">
                                     <div class="lunch-set__pasta-desc">
-                                        <span class="lunch-set__pasta-label"><span class="pasta-label-text"><?php echo $labels[$i -1]; ?></span></span>
+                                        <span class="lunch-set__pasta-label"><span class="pasta-label-text"><?php echo $labels[$i - 1]; ?></span></span>
                                         <p class="lunch-set__pasta-text"><?php echo esc_html($title); ?></p>
                                     </div>
                                 </li>
@@ -306,25 +306,49 @@
                 <p>お知らせ</p>
             </div>
             <div class="news__contents">
-                <div class="news__latest">
-                    <div class="news__image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-L.jpg" alt="最新ニュース画像">
-                        <div class="ribbon">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/ribbon.png" alt="" class="ribbon-bg">
+                <?php
+                $news_latest = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 1,
+                    'orderby'  => 'date',
+                    'order'  => 'DESC',
+                );
+                $latest_query = new WP_Query($news_latest);
+                ?>
+                <?php if ($latest_query->have_posts()): ?>
+                    <?php while ($latest_query->have_posts()): $latest_query->the_post(); ?>
+                        <div class="news__latest">
+                            <div class="news__image">
+                                <?php if (has_post_thumbnail()): ?>
+                                    <?php the_post_thumbnail(); ?>
+                                <?php endif; ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-L.jpg" alt="最新ニュース画像">
+                                <div class="ribbon">
+                                    <?php
+                                    $categoriesText = get_the_category();
+                                    if (!empty($categoriesText)) {
+                                        echo esc_html($categoriesText[0]->name);
+                                    }
+                                    ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="22" viewBox="0 0 5 22" fill="none">
+                                        <path d="M5 22H0.000345965L0 0H5L0 11L5 22Z" fill="#382620" />
+                                    </svg>
+                                </div>
+                                <div class="pass">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
+                                </div>
+                            </div>
+                            <div class="news__desc">
+                                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</p>
+                            </div>
+                            <div class="news__text">
+                                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                </p>
+                            </div>
+                            <time datetime="2021-01-01" class="news__date">2021.01.01</time>
                         </div>
-                        <div class="pass">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
-                        </div>
-                    </div>
-                    <div class="news__desc">
-                        <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</p>
-                    </div>
-                    <div class="news__text">
-                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                        </p>
-                    </div>
-                    <time datetime="2021-01-01" class="news__date">2021.01.01</time>
-                </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
                 <div class="news__lists">
                     <ul class="news__lists-wrapper">
                         <li class="news__list">
