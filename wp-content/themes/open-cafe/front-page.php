@@ -12,10 +12,8 @@
                 最高のコーヒーと、<br />時の流れを味わうことができる<br />手作りカフェ
             </h3>
             <div class="concept__message">
-                <p>ダミー_国内外から賞賛を<br />受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</p>
-                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</p>
-                <br />
-                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</p>
+                <p>自家焙煎の新鮮な豆から丁寧に抽出したコーヒーが奏でる香りと味わいを、温もり溢れる手作りの店内で堪能していただける当店。ゆったりと流れる時間のなかで、雑味のないクリアな味をじっくりと味わえば、慌ただしい日常を忘れ、心ほどけるひとときをお過ごしいただけます。</p>
+                <p>訪れるたびに心満たされる特別な余韻は、ここでしか味わえない最上のくつろぎです。それは、忙しさに追われる日常をそっと解きほぐす、至福の瞬間でもあります。</p>
             </div>
             <div class="button1">
                 <a href="<?php echo get_permalink(get_page_by_path('concept')); ?>" class="btn1">詳しくはこちら</a>
@@ -67,8 +65,19 @@
                     <?php for ($i = 1; $i <= 4; $i++): ?>
                         <?php
                         $lunch = get_field('lunch_' . $i);
-                        $image = $lunch['lunch_' . $i . '-image'];
-                        $title = $lunch['lunch_' . $i . '-title'];
+                        if ($lunch === null) {
+                            $lunch = array();
+                        }
+                        if (isset($lunch['lunch_' . $i . '-image'])) {
+                            $image = $lunch['lunch_' . $i . '-image'];
+                        } else {
+                            $image = '';
+                        }
+                        if (isset($lunch['lunch_' . $i . '-title'])) {
+                            $title = $lunch['lunch_' . $i . '-title'];
+                        } else {
+                            $title = '';
+                        }
                         $labels = ['A', 'B', 'C', 'D'];
                         $extra_class = ($i === 2 || $i === 4) ? ' special-item' : '';
                         ?>
@@ -85,8 +94,6 @@
                         <?php endif; ?>
                     <?php endfor; ?>
                 </ul>
-
-
             </div>
             <div class="lunch-set__footer">
                 <div class="lunch-set__footer-inner">
@@ -161,6 +168,7 @@
                                         <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
                                     </li>
                                 <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
                             <?php endif; ?>
                         </ul>
                     </div>
@@ -200,6 +208,7 @@
                                         <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
                                     </li>
                                 <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
                             <?php endif; ?>
                         </ul>
                     </div>
@@ -240,6 +249,7 @@
                                         <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
                                     </li>
                                 <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
                             <?php endif; ?>
                         </ul>
                     </div>
@@ -322,8 +332,7 @@
                                 <?php if (has_post_thumbnail()): ?>
                                     <?php the_post_thumbnail(); ?>
                                 <?php endif; ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-L.jpg" alt="最新ニュース画像">
-                                <div class="ribbon">
+                                <div class="ribbon-s">
                                     <?php
                                     $categoriesText = get_the_category();
                                     if (!empty($categoriesText)) {
@@ -338,84 +347,69 @@
                                     <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
                                 </div>
                             </div>
-                            <div class="news__desc">
-                                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、ガーデニングの設計・建築から料理まで、あらゆる空間が誕生。</p>
-                            </div>
+                            <h3 class="news__desc">
+                                <?php the_title(); ?>
+                            </h3>
                             <div class="news__text">
-                                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                </p>
+                                <?php
+                                $content = strip_tags(get_the_content());
+                                $trimmed = mb_substr($content, 0, 87);
+                                echo $trimmed . '…';
+                                ?>
                             </div>
-                            <time datetime="2021-01-01" class="news__date">2021.01.01</time>
+                            <time datetime="<?php the_time('c'); ?>" class="news__date"><?php the_time('Y/n/j'); ?></time>
                         </div>
                     <?php endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
+
+                <?php
+                $news_lists = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 4,
+                    'offset' => 1,
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                );
+                $list_query = new WP_Query($news_lists);
+                ?>
                 <div class="news__lists">
-                    <ul class="news__lists-wrapper">
-                        <li class="news__list">
-                            <div class="news__image-s">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-s.jpg" alt="ニュース画像">
-                                <div class="ribbon-s">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ribbon.png" alt="" class="ribbon-bg">
-                                </div>
-                                <div class="pass">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
-                                </div>
-                            </div>
-                            <div class="news__text-s">
-                                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</p>
-                            </div>
-                            <time datetime="2021-01-01" class="news__date-s">2021.01.01</time>
-                        </li>
-                        <li class="news__list">
-                            <div class="news__image-s">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-s.jpg" alt="ニュース画像">
-                                <div class="ribbon-s">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ribbon.png" alt="" class="ribbon-bg">
-                                </div>
-                                <div class="pass">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
-                                </div>
-                            </div>
-                            <div class="news__text-s">
-                                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</p>
-                            </div>
-                            <time datetime="2021-01-01" class="news__date-s">2021.01.01</time>
-                        </li>
-                        <li class="news__list">
-                            <div class="news__image-s">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-s.jpg" alt="ニュース画像">
-                                <div class="ribbon-s">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ribbon.png" alt="" class="ribbon-bg">
-                                </div>
-                                <div class="pass">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
-                                </div>
-                            </div>
-                            <div class="news__text-s">
-                                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</p>
-                            </div>
-                            <time datetime="2021-01-01" class="news__date-s">2021.01.01</time>
-                        </li>
-                        <li class="news__list">
-                            <div class="news__image-s">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-s.jpg" alt="ニュース画像">
-                                <div class="ribbon-s">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/ribbon.png" alt="" class="ribbon-bg">
-                                </div>
-                                <div class="pass">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
-                                </div>
-                            </div>
-                            <div class="news__text-s">
-                                <p>ダミー_国内外から賞賛を受けた選りすぐりのデザイナーが集結し、あらゆる空間が誕生。</p>
-                            </div>
-                            <time datetime="2021-01-01" class="news__date-s">2021.01.01</time>
-                        </li>
-                    </ul>
+                    <?php if ($list_query->have_posts()): ?>
+                        <ul class="news__lists-wrapper">
+                            <?php while ($list_query->have_posts()): $list_query->the_post(); ?>
+                                <li class="news__list">
+                                    <div class="news__image-s">
+                                        <?php if (has_post_thumbnail()): ?>
+                                            <?php the_post_thumbnail(); ?>
+                                        <?php endif; ?>
+                                        <div class="ribbon-s">
+                                            <?php
+                                            $categoriesText = get_the_category();
+                                            if (!empty($categoriesText)) {
+                                                echo esc_html($categoriesText[0]->name);
+                                            }
+                                            ?>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="22" viewBox="0 0 5 22" fill="none">
+                                                <path d="M5 22H0.000345965L0 0H5L0 11L5 22Z" fill="#382620" />
+                                            </svg>
+                                        </div>
+                                        <div class="pass">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="news__text-s">
+                                        <h3><?php the_title(); ?></h3>
+                                    </div>
+                                    <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/n/j'); ?></time>
+                                </li>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </ul>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="button1">
-                <a href="<?php echo get_post_type_archive_link('news'); ?>" class="btn1">過去のお知らせ</a>
+                <a href="<?php echo get_post_type_archive_link('post'); ?>" class="btn1">過去のお知らせ</a>
             </div>
         </div>
         <div class="news__deco">

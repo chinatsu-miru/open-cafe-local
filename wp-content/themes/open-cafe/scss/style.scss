@@ -19,7 +19,7 @@ body {
 .body__inner {
     position: relative;
     margin: 0 auto;
-    overflow: hidden;
+    // overflow: hidden;
     background: #F3EFEB;
     width: 100%;
 
@@ -103,7 +103,7 @@ body {
 // kv スマホ------------------------------------
 .hero-sp {
     aspect-ratio: 375 / 667;
-    overflow: hidden;
+    // overflow: hidden;
 
     @include mq(lg) {
         display: none;
@@ -165,7 +165,8 @@ body {
                 position: absolute;
                 bottom: 32px;
                 left: 20px;
-                width: 335px;
+                width: 89.3vw;
+                max-width: 340px;
                 height: 124px;
                 opacity: 0.85;
                 background: $sub-text-color;
@@ -185,7 +186,20 @@ body {
 
                         img {
                             width: 100%;
+                            height: 100%;
                         }
+                    }
+
+                    .kv-text {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    .kv-text time {
+                        font-size: 12px;
+                        font-weight: 500;
+                        line-height: 18px;
                     }
 
                     .kv-text p {
@@ -193,33 +207,22 @@ body {
                         font-family: "Noto Serif JP";
                         font-size: 12px;
                         font-style: normal;
-                        font-weight: 500;
-                        line-height: normal;
-
-                        &:last-child {
-                            font-weight: 700;
-                            line-height: 18px;
-                        }
+                        font-weight: 700;
+                        line-height: 18px;
                     }
 
                     .ribbon {
                         position: absolute;
-                        width: 70px;
                         height: 22px;
+                        padding: 2px 10px;
                         top: 8px;
-                        left: -9px;
-
-                        &::after {
-                            content: "カテゴリ";
-                            position: absolute;
-                            bottom: 0px;
-                            left: 10px;
-                            color: #fff;
-                            font-family: "Noto Serif JP";
-                            font-size: 12px;
-                            font-weight: 700;
-                            z-index: 14;
-                        }
+                        left: -8px;
+                        background-color: $main-text-color;
+                        color: #fff;
+                        font-family: "Noto Serif JP";
+                        font-size: 12px;
+                        font-weight: 700;
+                        line-height: 18px;
 
                         img {
                             width: 100%;
@@ -231,19 +234,20 @@ body {
                         svg {
                             position: absolute;
                             width: 8px;
+                            height: 22px;
+                            top: 0px;
+                            right: -5px;
+                        }
+
+                        .pass {
+                            position: absolute;
+                            top: 22px;
+                            left: 0px;
+                            width: 8px;
                             height: 4px;
-                            top: 30px;
-                            left: -9px;
                         }
                     }
 
-                    .pass {
-                        position: absolute;
-                        top: 30px;
-                        left: -8px;
-                        width: 8px;
-                        height: 4px;
-                    }
                 }
 
                 .speech-bubble {
@@ -269,6 +273,7 @@ body {
             letter-spacing: 2.24px;
             z-index: 11;
         }
+
     }
 
     .kv__decor {
@@ -278,6 +283,11 @@ body {
         bottom: -110px;
         right: -17px;
         z-index: 5;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -308,7 +318,8 @@ body {
 
         .pc__nav {
             position: relative;
-            width: 200px;
+            // width: 200px;
+            width: 15.6vw;
             padding-top: 27px;
             padding-bottom: 72px;
             display: flex;
@@ -391,12 +402,13 @@ body {
         }
 
         .hero__kv-pc {
-            max-width: 1240px;
+            // max-width: 1240px;
             width: calc(100vw * 0.84);
             height: 735px;
             aspect-ratio: 1080 / 735;
             position: relative;
             flex: 1;
+            overflow: hidden;
 
             .main-visual {
                 width: 100%;
@@ -459,6 +471,7 @@ body {
                         padding: 16px;
                         display: flex;
                         gap: 16px;
+                        align-items: center;
 
                         .kv-img {
                             width: 9.375vw;
@@ -468,6 +481,7 @@ body {
 
                             img {
                                 width: 100%;
+                                height: 100%;
                             }
                         }
 
@@ -476,41 +490,33 @@ body {
                             flex-direction: column;
                             gap: 10px;
 
-                            p {
+                            .kv_text time {
                                 color: $main-text-color;
-                                font-size: 0.937vw;
+                                font-size: 1.09vw;
                                 font-style: normal;
                                 font-weight: 500;
-                                line-height: normal;
+                                line-height: 21px;
+                            }
 
-                                &:last-child {
-                                    font-size: clamp(12px, 1.0937vw, 16px);
-                                    // font-size: 1.0937vw;
-                                    font-weight: 700;
-                                    line-height: 24px;
-                                }
+                            .kv_text p {
+                                color: $main-color;
+                                font-size: clamp(12px, 1.0937vw, 16px);
+                                font-weight: 700;
+                                line-height: 21px;
                             }
                         }
 
                         .ribbon {
                             position: absolute;
-                            width: 70px;
                             height: 22px;
+                            padding-inline: 10px;
                             top: 8px;
-                            left: -9px;
-
-                            &::after {
-                                content: "カテゴリ";
-                                position: absolute;
-                                // bottom: 4px;
-                                top: 3px;
-                                left: 10px;
-                                color: #fff;
-                                font-family: "Noto Serif JP";
-                                font-size: 12px;
-                                font-weight: 700;
-                                z-index: 14;
-                            }
+                            left: -8px;
+                            background-color: $main-text-color;
+                            color: #fff;
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 18px;
 
                             img {
                                 width: 100%;
@@ -522,16 +528,24 @@ body {
                             svg {
                                 position: absolute;
                                 width: 8px;
+                                height: 22px;
+                                top: 0px;
+                                right: -5px;
+                            }
+
+                            .pass {
+                                position: absolute;
+                                top: 22px;
+                                left: 0px;
+                                width: 8px;
                                 height: 4px;
-                                top: 30px;
-                                left: -9px;
                             }
                         }
                     }
 
                     .speech-bubble {
                         position: absolute;
-                        top: -76px;
+                        top: -51px;
                         right: 0;
                         width: 160px;
                         height: 95px;
@@ -542,27 +556,28 @@ body {
                         }
                     }
                 }
-            }
 
-            .kv-message {
-                position: absolute;
-                bottom: 61px;
-                left: 56px;
-                color: $sub-text-color;
-                font-family: $base-font;
-                font-size: clamp(16px, 1.562vw, 23px);
-                // font-size: 1.562vw;
-                font-weight: 700;
-                line-height: 32px;
-                letter-spacing: 2.8px;
-                z-index: 11;
+                .kv-message {
+                    position: absolute;
+                    bottom: 61px;
+                    left: 56px;
+                    color: $sub-text-color;
+                    font-family: $base-font;
+                    font-size: clamp(16px, 1.562vw, 23px);
+                    // font-size: 1.562vw;
+                    font-weight: 700;
+                    line-height: 32px;
+                    letter-spacing: 2.8px;
+                    z-index: 11;
 
-                p {
-                    &:nth-child(1) {
-                        padding-bottom: 16px;
+                    p {
+                        &:nth-child(1) {
+                            padding-bottom: 16px;
+                        }
                     }
                 }
             }
+
         }
     }
 
@@ -608,7 +623,7 @@ body {
 
 //concept-------------------------------------------
 .concept {
-    padding-top: 120px;
+    padding-top: 60px;
     padding-bottom: 70px;
     position: relative;
     display: flex;
@@ -656,7 +671,11 @@ body {
         }
 
         .concept__message {
-            padding-top: 31px;
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            line-height: 28px;
 
             @include mq(md) {
                 padding-top: 48px;
@@ -667,7 +686,7 @@ body {
             @include mq(md) {
                 width: 280px;
                 margin-left: 0;
-                margin-top: 54px;
+                margin-top: 48px;
 
                 &::after {
                     width: 280px;
@@ -1858,6 +1877,7 @@ body {
                     height: auto;
                     width: 39.843vw;
                     max-width: 510px;
+                    gap: 16px;
                 }
 
                 .news__image {
@@ -1866,62 +1886,103 @@ body {
                     img {
                         display: block;
                         width: 100%;
+                        height: auto;
                     }
 
-                    .ribbon {
+                    // .ribbon {
+                    //     position: absolute;
+                    //     width: 78px;
+                    //     height: 24px;
+                    //     top: 19px;
+                    //     left: -7px;
+
+                    //     .ribbon-bg {
+                    //         width: 100%;
+                    //         height: 100%;
+                    //         display: inline-block;
+                    //         position: relative;
+                    //     }
+
+                    //     &::after {
+                    //         content: "カテゴリ";
+                    //         position: absolute;
+                    //         bottom: 4px;
+                    //         left: 15px;
+                    //         color: #fff;
+                    //         font-family: "Noto Serif JP";
+                    //         font-size: 12px;
+                    //         font-weight: 700;
+                    //         z-index: 14;
+                    //     }
+                    // }
+                    .ribbon-s {
                         position: absolute;
-                        width: 78px;
-                        height: 24px;
-                        top: 19px;
-                        left: -7px;
+                        height: 28px;
+                        top: 20px;
+                        left: -8px;
+                        padding-inline: 10px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $sub-text-color;
+                        background-color: $main-color;
+                        line-height: 24px;
 
-                        .ribbon-bg {
-                            width: 100%;
-                            height: 100%;
-                            display: inline-block;
-                            position: relative;
-                        }
-
-                        &::after {
-                            content: "カテゴリ";
+                        svg {
                             position: absolute;
-                            bottom: 4px;
-                            left: 15px;
-                            color: #fff;
-                            font-family: "Noto Serif JP";
-                            font-size: 12px;
-                            font-weight: 700;
-                            z-index: 14;
+                            top: 0;
+                            right: -5px;
                         }
                     }
 
                     .pass {
                         position: absolute;
-                        width: 7px;
+                        width: 8px;
                         height: 4px;
-                        top: 43px;
-                        left: -7px;
-
-                        @include mq(lg) {
-                            top: 43px;
-                        }
+                        top: 48px;
+                        left: -8px;
                     }
                 }
 
                 .news__desc {
                     font-weight: 700;
-                    line-height: 24px;
+                    line-height: 21px;
+                    font-size: 14px;
+
+                    @include mq(lg) {
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
                 }
 
                 .news__text {
                     font-size: 12px;
-                    font-weight: 400;
+                    font-weight: 500;
                     line-height: 18px;
+                    word-break: normal;
+                    /* 日本語の自然な改行に戻す */
+                    overflow-wrap: anywhere;
+                    /* 行末で自動改行を許可（英単語対応） */
+                    line-break: strict;
+                    /* 日本語の禁則処理を適切に行う */
+                    white-space: normal;
+
+                    @include mq(lg) {
+                        font-size: 14px;
+                        line-height: 21px;
+                        padding-top: 4px;
+                    }
                 }
 
                 .news__date {
                     font-size: 12px;
                     line-height: 17px;
+
+                    @include mq(lg) {
+                        padding-top: 4px;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 21px;
+                    }
                 }
             }
 
@@ -1975,7 +2036,7 @@ body {
                             display: flex;
                             flex-direction: column;
                             width: 255px;
-                            gap: 10px;
+                            gap: 12px;
                         }
 
                         .news__image-s {
@@ -1989,28 +2050,23 @@ body {
 
                             .ribbon-s {
                                 position: absolute;
-                                width: 70px;
                                 height: 22px;
                                 top: 10px;
+                                padding-inline: 10px;
                                 left: -8px;
+                                color: $sub-text-color;
+                                background-color: $main-color;
 
-                                .ribbon-bg {
-                                    width: 100%;
-                                    height: 100%;
-                                    display: inline-block;
-                                    position: relative;
-                                }
-
-                                &::after {
-                                    content: "カテゴリ";
+                                // .ribbon-bg {
+                                //     width: 100%;
+                                //     height: 100%;
+                                //     display: inline-block;
+                                //     position: relative;
+                                // }
+                                svg {
                                     position: absolute;
-                                    bottom: 1px;
-                                    left: 11px;
-                                    color: #fff;
-                                    font-family: "Noto Serif JP";
-                                    font-size: 12px;
-                                    font-weight: 700;
-                                    z-index: 14;
+                                    top: 0;
+                                    right: -5px;
                                 }
                             }
 
@@ -2024,23 +2080,39 @@ body {
                         }
 
                         .news__text-s {
-                            padding-top: 6.25px;
+                            padding-top: 8px;
                             font-size: 12px;
                             font-weight: 700;
                             line-height: 18px;
 
                             @include mq(lg) {
-                                font-size: 14px;
+                                font-size: 16px;
                                 line-height: 24px;
+                            }
+
+                            h3 {
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 3;
+                                /* ← 3行でカット */
+                                overflow: hidden;
+                                text-overflow: ellipsis;
                             }
                         }
 
                         .news__date-s {
                             font-size: 12px;
-                            padding-top: 8px;
+                            padding-top: 12px;
+                            display: inline-block;
+
+                            @include mq(lg) {
+                                font-size: 14px;
+                                font-weight: 500;
+                                line-height: 21px;
+                            }
                         }
 
-                        .news__text-s p,
+                        .news__text-s h3,
                         .news__date-s {
                             margin: 0;
                         }

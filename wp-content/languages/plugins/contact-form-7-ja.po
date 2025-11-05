@@ -2,14 +2,18 @@
 # This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-30 07:44:19+0000\n"
+"PO-Revision-Date: 2025-10-29 09:23:50+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/4.0.1\n"
+"X-Generator: GlotPress/4.0.3\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
+
+#: admin/includes/editor.php:396
+msgid "Exclude a line from output if all of its mail-tags are blank"
+msgstr "含まれるすべてのメールタグが空の行を出力から除外する"
 
 #. translators: 1: URL to support page about Cloudflare Turnstile, 2: Stripe
 #: admin/includes/welcome-panel.php:139
@@ -151,59 +155,59 @@ msgstr "<a href=\"%s\">プロジェクトに貢献する方法</a>はいくつ�
 msgid "It is hard to continue to maintain this plugin without support from users like you."
 msgstr "このプラグインを維持し続けるためにユーザーのみなさんからの支援を必要としています。"
 
-#: modules/textarea.php:154
+#: modules/textarea.php:152
 msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">multi-line plain text input area</a>."
 msgstr "<a href=\"https://contactform7.com/ja/text-fields/\">複数行プレーンテキスト入力エリア</a>のフォームタグを作成する。"
 
-#: modules/textarea.php:153
+#: modules/textarea.php:151
 msgid "Text area form-tag generator"
 msgstr "テキストエリアフォームタグジェネレーター"
 
-#: modules/textarea.php:152
+#: modules/textarea.php:150
 msgid "Text area"
 msgstr "テキストエリア"
 
-#: modules/text.php:250
+#: modules/text.php:248
 msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">telephone number input field</a>."
 msgstr "<a href=\"https://contactform7.com/ja/text-fields/\">電話番号入力項目</a>のフォームタグを作成する。"
 
-#: modules/text.php:249
+#: modules/text.php:247
 msgid "Telephone number field form-tag generator"
 msgstr "電話番号入力項目フォームタグジェネレーター"
 
-#: modules/text.php:248
+#: modules/text.php:246
 msgid "Telephone number field"
 msgstr "電話番号入力項目"
 
-#: modules/text.php:244
+#: modules/text.php:242
 msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">URL input field</a>."
 msgstr "<a href=\"https://contactform7.com/ja/text-fields/\">URL 入力項目</a>のフォームタグを作成する。"
 
-#: modules/text.php:243
+#: modules/text.php:241
 msgid "URL field form-tag generator"
 msgstr "URL 入力項目フォームタグジェネレーター"
 
-#: modules/text.php:242
+#: modules/text.php:240
 msgid "URL field"
 msgstr "URL 入力項目"
 
-#: modules/text.php:238
+#: modules/text.php:236
 msgid "Generates a form-tag for an <a href=\"https://contactform7.com/text-fields/\">email address input field</a>."
 msgstr "<a href=\"https://contactform7.com/ja/text-fields/\">メールアドレス入力項目</a>のフォームタグを作成する。"
 
-#: modules/text.php:237
+#: modules/text.php:235
 msgid "Email address field form-tag generator"
 msgstr "メールアドレス入力項目フォームタグジェネレーター"
 
-#: modules/text.php:236
+#: modules/text.php:234
 msgid "Email address field"
 msgstr "メールアドレス入力項目"
 
-#: modules/text.php:232
+#: modules/text.php:230
 msgid "Generates a form-tag for a <a href=\"https://contactform7.com/text-fields/\">single-line plain text input field</a>."
 msgstr "<a href=\"https://contactform7.com/ja/text-fields/\">単一行プレーンテキスト入力項目</a>のフォームタグを作成する。"
 
-#: modules/text.php:231
+#: modules/text.php:229
 msgid "Text field form-tag generator"
 msgstr "プレーンテキスト入力項目フォームタグジェネレーター"
 
@@ -215,15 +219,15 @@ msgstr "<a href=\"https://contactform7.com/ja/submit-button/\">送信ボタン</
 msgid "Submit button form-tag generator"
 msgstr "送信ボタンフォームタグジェネレーター"
 
-#: modules/select.php:243
+#: modules/select.php:239
 msgid "Generates a form-tag for a <a href=\"https://contactform7.com/checkboxes-radio-buttons-and-menus/\">drop-down menu</a>."
 msgstr "<a href=\"https://contactform7.com/ja/checkboxes-radio-buttons-and-menus/\">ドロップダウンメニュー</a>のフォームタグを作成する。"
 
-#: modules/select.php:242
+#: modules/select.php:238
 msgid "Drop-down menu form-tag generator"
 msgstr "ドロップダウンメニューフォームタグジェネレーター"
 
-#: modules/select.php:241
+#: modules/select.php:237
 msgid "Drop-down menu"
 msgstr "ドロップダウンメニュー"
 
@@ -243,11 +247,11 @@ msgstr "<a href=\"https://contactform7.com/ja/quiz/\">クイズ</a>のフォー�
 msgid "Quiz form-tag generator"
 msgstr "クイズフォームタグジェネレーター"
 
-#: modules/number.php:215
+#: modules/number.php:211
 msgid "Generates a form-tag for a <a href=\"https://contactform7.com/number-fields/\">number input field</a>."
 msgstr "<a href=\"https://contactform7.com/ja/number-fields/\">数値入力項目</a>のフォームタグを作成する。"
 
-#: modules/number.php:214
+#: modules/number.php:210
 msgid "Number field form-tag generator"
 msgstr "数値入力項目フォームタグジェネレーター"
 
@@ -275,11 +279,11 @@ msgstr "ファイルアップロード項目フォームタグジェネレータ
 msgid "File uploading field"
 msgstr "ファイルアップロード項目"
 
-#: modules/date.php:196
+#: modules/date.php:192
 msgid "Generates a form-tag for a <a href=\"https://contactform7.com/date-field/\">date input field</a>."
 msgstr "<a href=\"https://contactform7.com/ja/date-field/\">日付入力項目</a>のフォームタグを作成する。"
 
-#: modules/date.php:195
+#: modules/date.php:191
 msgid "Date field form-tag generator"
 msgstr "日付入力項目フォームタグジェネレーター"
 
@@ -358,8 +362,8 @@ msgstr "選択できる値"
 msgid "Use this text as the placeholder."
 msgstr "このテキストをプレースホルダーとして使用する。"
 
-#: admin/includes/tag-generator.php:376 modules/text.php:304
-#: modules/textarea.php:199
+#: admin/includes/tag-generator.php:376 modules/text.php:302
+#: modules/textarea.php:197
 msgid "Length"
 msgstr "長さ"
 
@@ -412,7 +416,7 @@ msgstr "不正な action URL を検出しました。"
 msgid "https://contactform7.com/2024/02/02/we-end-the-constant-contact-integration/"
 msgstr "https://contactform7.com/ja/2024/02/02/we-end-the-constant-contact-integration/"
 
-#: modules/checkbox.php:300 modules/select.php:217
+#: modules/checkbox.php:300 modules/select.php:213
 msgid "Undefined value was submitted through this field."
 msgstr "未定義の値がこの項目を通じて送信されました。"
 
@@ -478,7 +482,7 @@ msgctxt "block title"
 msgid "Contact Form 7"
 msgstr "Contact Form 7"
 
-#: modules/select.php:88
+#: modules/select.php:84
 msgid "&#8212;Please choose an option&#8212;"
 msgstr "&#8212;以下から選択してください&#8212;"
 
@@ -510,39 +514,39 @@ msgstr "アップロード可能なファイルサイズが PHP の受信可能�
 msgid "Colons are used in form-tag names."
 msgstr "フォームタグの名前にコロンが使われている。"
 
-#: modules/text.php:197
+#: modules/text.php:195
 msgid "Please enter a telephone number."
 msgstr "電話番号を入力してください。"
 
-#: modules/text.php:190
+#: modules/text.php:188
 msgid "Please enter a URL."
 msgstr "URL を入力してください。"
 
-#: modules/text.php:183
+#: modules/text.php:181
 msgid "Please enter an email address."
 msgstr "メールアドレスを入力してください。"
 
-#: modules/number.php:191
+#: modules/number.php:187
 msgid "This field has a too large number."
 msgstr "入力された数値が大きすぎます。"
 
-#: modules/number.php:186
+#: modules/number.php:182
 msgid "This field has a too small number."
 msgstr "入力された数値が小さすぎます。"
 
-#: modules/number.php:181
+#: modules/number.php:177
 msgid "Please enter a number."
 msgstr "数値を入力してください。"
 
-#: modules/date.php:172
+#: modules/date.php:168
 msgid "This field has a too late date."
 msgstr "入力された日付が遅すぎます。"
 
-#: modules/date.php:167
+#: modules/date.php:163
 msgid "This field has a too early date."
 msgstr "入力された日付が早すぎます。"
 
-#: modules/date.php:162
+#: modules/date.php:158
 msgid "Please enter a date in YYYY-MM-DD format."
 msgstr "YYYY-MM-DD の形式で日付を入力してください。"
 
@@ -843,23 +847,14 @@ msgid "The fourth parameter ($mail_tag) must be an instance of the WPCF7_MailTag
 msgstr "第4引数 ($mail_tag) に指定できるのは WPCF7_MailTag クラスのインスタンスに限られます。"
 
 #. translators: time format, see https://www.php.net/date
-#: admin/includes/class-contact-forms-list-table.php:231
+#: admin/includes/class-contact-forms-list-table.php:236
 msgid "g:i a"
 msgstr "g:i a"
 
 #. translators: 1: date, 2: time
-#: admin/includes/class-contact-forms-list-table.php:227
+#: admin/includes/class-contact-forms-list-table.php:232
 msgid "%1$s at %2$s"
 msgstr "%1$s %2$s"
-
-#: admin/edit-contact-form.php:373
-msgid "docs"
-msgstr "ドキュメント"
-
-#. translators: 1: FAQ, 2: Docs ("FAQ & Docs")
-#: admin/edit-contact-form.php:366
-msgid "%1$s and %2$s"
-msgstr "%1$sと%2$s"
 
 #: modules/sendinblue/service.php:127 modules/sendinblue/service.php:138
 msgid "Error"
@@ -948,19 +943,19 @@ msgstr "メールマーケティング"
 msgid "It is not allowed to use files outside the wp-content directory."
 msgstr "wp-content ディレクトリの外部にあるファイルは指定できません。"
 
-#: admin/edit-contact-form.php:392
+#: admin/edit-contact-form.php:386
 msgid "Professional services"
 msgstr "プロによるサービス"
 
-#: admin/edit-contact-form.php:391
+#: admin/edit-contact-form.php:385
 msgid "https://contactform7.com/custom-development/"
 msgstr "https://contactform7.com/custom-development/"
 
-#: admin/edit-contact-form.php:383
+#: admin/edit-contact-form.php:377
 msgid "Support forums"
 msgstr "サポートフォーラム"
 
-#: admin/edit-contact-form.php:382
+#: admin/edit-contact-form.php:376
 msgid "https://wordpress.org/support/plugin/contact-form-7/"
 msgstr "https://ja.wordpress.org/support/topic-tag/contact-form-7/"
 
@@ -1245,7 +1240,7 @@ msgstr "https://contactform7.com/"
 msgid "Contact form %d"
 msgstr "コンタクトフォーム %d"
 
-#: modules/textarea.php:143
+#: modules/textarea.php:141
 msgid "text area"
 msgstr "テキストエリア"
 
@@ -1253,35 +1248,35 @@ msgstr "テキストエリア"
 msgid "Akismet"
 msgstr "Akismet"
 
-#: modules/text.php:230
+#: modules/text.php:228
 msgid "Text field"
 msgstr "テキスト項目"
 
-#: modules/text.php:216
+#: modules/text.php:214
 msgid "tel"
 msgstr "電話番号"
 
-#: modules/text.php:215
+#: modules/text.php:213
 msgid "URL"
 msgstr "URL"
 
-#: modules/text.php:214
+#: modules/text.php:212
 msgid "email"
 msgstr "メールアドレス"
 
-#: modules/text.php:213
+#: modules/text.php:211
 msgid "text"
 msgstr "テキスト"
 
-#: modules/text.php:195
+#: modules/text.php:193
 msgid "Telephone number that the sender entered is invalid"
 msgstr "入力された電話番号の形式が正しくない"
 
-#: modules/text.php:188
+#: modules/text.php:186
 msgid "URL that the sender entered is invalid"
 msgstr "入力された URL の形式が正しくない"
 
-#: modules/text.php:181
+#: modules/text.php:179
 msgid "Email address that the sender entered is invalid"
 msgstr "入力されたメールアドレスの形式が正しくない"
 
@@ -1297,7 +1292,7 @@ msgstr "送信ボタン"
 msgid "submit"
 msgstr "送信ボタン"
 
-#: modules/select.php:232
+#: modules/select.php:228
 msgid "drop-down menu"
 msgstr "ドロップダウンメニュー"
 
@@ -1317,31 +1312,31 @@ msgstr "クイズ"
 msgid "Sender does not enter the correct answer to the quiz"
 msgstr "クイズに対する正しい答えが入力されなかった"
 
-#: modules/number.php:252
+#: modules/number.php:248
 msgid "Slider"
 msgstr "スライダー"
 
-#: modules/number.php:251
+#: modules/number.php:247
 msgid "Spinbox"
 msgstr "スピンボックス"
 
-#: modules/number.php:213
+#: modules/number.php:209
 msgid "Number field"
 msgstr "数値入力項目"
 
-#: modules/number.php:204
+#: modules/number.php:200
 msgid "number"
 msgstr "数値"
 
-#: modules/number.php:190
+#: modules/number.php:186
 msgid "Number is larger than maximum limit"
 msgstr "数値が最大制約値より大きい"
 
-#: modules/number.php:185
+#: modules/number.php:181
 msgid "Number is smaller than minimum limit"
 msgstr "数値が最小制約値より小さい"
 
-#: modules/number.php:180
+#: modules/number.php:176
 msgid "Number format that the sender entered is invalid"
 msgstr "入力された数値の形式が正しくない"
 
@@ -1382,7 +1377,7 @@ msgstr "上限"
 msgid "Min"
 msgstr "下限"
 
-#: modules/date.php:242 modules/number.php:261
+#: modules/date.php:238 modules/number.php:257
 msgid "Range"
 msgstr "範囲"
 
@@ -1390,23 +1385,23 @@ msgstr "範囲"
 msgid "Default value"
 msgstr "デフォルト値"
 
-#: modules/date.php:194
+#: modules/date.php:190
 msgid "Date field"
 msgstr "日付項目"
 
-#: modules/date.php:185
+#: modules/date.php:181
 msgid "date"
 msgstr "日付"
 
-#: modules/date.php:171
+#: modules/date.php:167
 msgid "Date is later than maximum limit"
 msgstr "日付が最大制約日より大きい"
 
-#: modules/date.php:166
+#: modules/date.php:162
 msgid "Date is earlier than minimum limit"
 msgstr "日付が最小制約日より小さい"
 
-#: modules/date.php:161
+#: modules/date.php:157
 msgid "Date format that the sender entered is invalid"
 msgstr "入力された日付の形式が正しくない"
 
@@ -1644,10 +1639,6 @@ msgstr "ファイル添付"
 msgid "Use HTML content type"
 msgstr "HTML 形式のメールを使用する"
 
-#: admin/includes/editor.php:396
-msgid "Exclude lines with blank mail-tags from output"
-msgstr "空のメールタグを含む行を出力から除外する"
-
 #: admin/includes/editor.php:359
 msgid "Message body"
 msgstr "メッセージ本文"
@@ -1685,7 +1676,7 @@ msgid "Mail (2)"
 msgstr "メール (2)"
 
 #. translators: date format, see https://www.php.net/date
-#: admin/includes/class-contact-forms-list-table.php:229
+#: admin/includes/class-contact-forms-list-table.php:234
 msgid "Y/m/d"
 msgstr "Y年n月j日"
 
@@ -1715,24 +1706,24 @@ msgstr "ショートコード"
 msgid "Title"
 msgstr "タイトル"
 
-#: admin/edit-contact-form.php:448 admin/includes/editor.php:529
+#: admin/edit-contact-form.php:442 admin/includes/editor.php:529
 msgid "Additional Settings"
 msgstr "その他の設定"
 
 #. translators: %d: number of additional settings
-#: admin/edit-contact-form.php:445
+#: admin/edit-contact-form.php:439
 msgid "Additional Settings (%d)"
 msgstr "その他の設定 (%d)"
 
-#: admin/edit-contact-form.php:425 admin/includes/editor.php:477
+#: admin/edit-contact-form.php:419 admin/includes/editor.php:477
 msgid "Messages"
 msgstr "メッセージ"
 
-#: admin/edit-contact-form.php:421 admin/includes/editor.php:140
+#: admin/edit-contact-form.php:415 admin/includes/editor.php:140
 msgid "Mail"
 msgstr "メール"
 
-#: admin/edit-contact-form.php:417 admin/includes/editor.php:93
+#: admin/edit-contact-form.php:411 admin/includes/editor.php:93
 msgid "Form"
 msgstr "フォーム"
 
@@ -1744,11 +1735,11 @@ msgstr "サポート"
 msgid "https://contactform7.com/support/"
 msgstr "https://contactform7.com/support/"
 
-#: admin/edit-contact-form.php:369 admin/includes/help-tabs.php:99
+#: admin/includes/help-tabs.php:99
 msgid "FAQ"
 msgstr "FAQ"
 
-#: admin/edit-contact-form.php:368 admin/includes/help-tabs.php:99
+#: admin/edit-contact-form.php:367 admin/includes/help-tabs.php:99
 msgid "https://contactform7.com/faq/"
 msgstr "https://contactform7.com/faq/"
 
@@ -1756,7 +1747,7 @@ msgstr "https://contactform7.com/faq/"
 msgid "Docs"
 msgstr "使い方"
 
-#: admin/edit-contact-form.php:372 admin/includes/help-tabs.php:98
+#: admin/edit-contact-form.php:368 admin/includes/help-tabs.php:98
 msgid "https://contactform7.com/docs/"
 msgstr "https://contactform7.com/docs/"
 
