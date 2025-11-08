@@ -33,9 +33,9 @@ if (is_page('concept')) {
     $header_class = 'shop-top';
 } elseif (is_post_type_archive('products') || is_singular('products')) {
     $header_class = 'gift-top';
-} elseif (is_page('contact')) {
+} elseif (is_page('contact') || is_page('thanks')) {
     $header_class = 'contact-top';
-}
+} 
 ?>
 
 
