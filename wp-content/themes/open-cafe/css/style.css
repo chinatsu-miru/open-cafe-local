@@ -1240,6 +1240,7 @@ body {
   height: 9.375vw;
   flex-shrink: 0;
   max-width: 135px;
+  max-height: 135px;
 }
 .hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .kv__card-inner .kv-img img {
   width: 100%;
@@ -1543,7 +1544,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .lunch .lunch__inner {
-    margin-inline: 50px;
+    margin-inline: 40px;
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select {
@@ -1744,6 +1745,7 @@ body {
 @media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer {
     max-width: 1324px;
+    width: 100%;
     min-height: 271px;
     margin: 0 auto;
     padding-bottom: 41px;
@@ -1761,9 +1763,8 @@ body {
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner {
     padding-top: 25px;
-    width: 85vw;
-    padding-left: min(6.562vw, 93px);
-    padding-right: min(5.468vw, 78px);
+    width: 100%;
+    padding-inline: 6.25%;
     display: flex;
     padding-bottom: 20px;
     justify-content: space-between;
@@ -1782,10 +1783,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo {
-    width: auto;
+    display: flex;
+    flex: 0 0 71.4%;
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
+    max-width: 710px;
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a {
@@ -1797,7 +1800,6 @@ body {
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a {
     width: auto;
-    padding-right: 2.031vw;
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b {
@@ -1809,7 +1811,6 @@ body {
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b {
     width: auto;
-    padding-inline: 2.89vw;
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c {
@@ -1821,7 +1822,6 @@ body {
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c {
     width: auto;
-    padding-left: 2.5vw;
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-symbol-a,
@@ -1947,6 +1947,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info {
+    width: 22.4%;
     padding-bottom: 0;
   }
 }
@@ -1962,7 +1963,7 @@ body {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__text {
     padding-top: 0;
     text-align: right;
-    font-size: 1.5vw;
+    font-size: 20px;
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__price {
@@ -1974,7 +1975,7 @@ body {
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__price {
     padding-top: 2px;
-    font-size: clamp(35.9424px, 4.68vw, 67.39px);
+    font-size: 60px;
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info img {
@@ -1985,7 +1986,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info img {
-    width: 17.1vw;
+    width: 100%;
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__note {
@@ -1999,6 +2000,7 @@ body {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__note {
     font-size: 1.09vw;
     padding-top: 9px;
+    text-align: right;
   }
 }
 .lunch .lunch-speech-bubble {
@@ -2007,6 +2009,7 @@ body {
   position: absolute;
   top: -12.2vw;
   right: -5.06vw;
+  max-width: 331px;
 }
 .lunch .lunch-speech-bubble img {
   width: 100%;
