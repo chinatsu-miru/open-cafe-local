@@ -588,15 +588,8 @@ body {
   }
 }
 
-.to-top {
-  position: fixed;
-  width: 44px;
-  height: 44px;
-  bottom: 6px;
-  right: 8px;
-  transition: translate 0.3s;
-  display: none;
-  z-index: 9999;
+html {
+  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 1280px) {
@@ -654,6 +647,7 @@ body {
   right: 10px;
   top: 10px;
   cursor: pointer;
+  display: none;
 }
 .header.concept {
   z-index: 20;
@@ -801,6 +795,29 @@ footer .footer-inner .footer-copy {
   padding-top: 37px;
   padding-bottom: 14px;
 }
+footer .footer-inner .to-top {
+  display: none;
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-inner .to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+footer .footer-inner .to-top img {
+  width: 100%;
+  height: 100%;
+}
+footer .footer-inner:hover {
+  opacity: 0.8;
+}
 footer .footer-beans {
   width: 34.133vw;
   height: 30.4vw;
@@ -852,7 +869,6 @@ body {
 @media screen and (min-width: 1024px) {
   .body__inner {
     height: auto;
-    max-width: 1440px;
     overflow: hidden;
   }
 }
@@ -1080,9 +1096,8 @@ body {
 @media screen and (min-width: 1024px) {
   .hero-pc {
     background-color: #f3efeb;
-    max-width: 1440px;
     width: 100%;
-    height: 800px;
+    height: auto;
     display: block;
     position: relative;
     overflow: hidden;
@@ -1092,7 +1107,7 @@ body {
 .hero-pc .hero-pc-inner {
   display: flex;
   width: 100%;
-  aspect-ratio: 1262/800;
+  aspect-ratio: 1280/795;
 }
 @media screen and (min-width: 768px) {
   .hero-pc .hero-pc-inner {
@@ -1103,15 +1118,16 @@ body {
 .hero-pc .hero-pc-inner .pc__nav {
   position: relative;
   width: 15.6vw;
-  padding-top: 27px;
-  padding-bottom: 72px;
+  padding-top: clamp(14px, 1.25vw, 24px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6.09vw;
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__logo-pc {
-  width: 166px;
-  height: 93px;
+  width: 83%;
+  height: auto;
   color: #222222;
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__logo-pc img {
@@ -1121,18 +1137,16 @@ body {
 .hero-pc .hero-pc-inner .pc__nav .nav__lists-pc {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 53px;
-  padding-bottom: 60px;
-  width: 79px;
-  gap: 31px;
+  justify-content: space-between;
+  width: 40%;
+  gap: clamp(30px, 2.5vw, 40px);
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__lists-pc .nav__list-pc .nav__link-pc {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-direction: column;
-  gap: 6px;
+  gap: clamp(4px, 0.468vw, 10px);
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__lists-pc .nav__list-pc .nav__link-pc .en,
 .hero-pc .hero-pc-inner .pc__nav .nav__lists-pc .nav__list-pc .nav__link-pc .ja {
@@ -1142,37 +1156,32 @@ body {
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__lists-pc .nav__list-pc .nav__link-pc .en {
   font-family: "Patua One";
-  font-size: 16px;
+  font-size: clamp(14px, 1.25vw, 32px);
   font-weight: 400;
-  letter-spacing: 1.92px;
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__lists-pc .nav__list-pc .nav__link-pc .ja {
   color: #222222;
   font-family: "Noto Serif JP";
-  font-size: 10px;
+  font-size: clamp(8px, 0.781vw, 14px);
   font-weight: 500;
 }
 .hero-pc .hero-pc-inner .pc__nav .sns__icons-pc {
   color: #ffffff;
-  width: 120px;
-  height: 24px;
+  width: 60%;
+  height: 1.875vw;
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
-.hero-pc .hero-pc-inner .pc__nav .sns__icons-pc .sns-icon-pc {
-  width: 24px;
-  height: 24px;
-}
-.hero-pc .hero-pc-inner .pc__nav .sns__icons-pc .sns-icon-pc .fa-twitter,
-.hero-pc .hero-pc-inner .pc__nav .sns__icons-pc .sns-icon-pc .fa-youtube,
-.hero-pc .hero-pc-inner .pc__nav .sns__icons-pc .sns-icon-pc .fa-instagram {
+.hero-pc .hero-pc-inner .pc__nav .sns__icons-pc .fa-twitter,
+.hero-pc .hero-pc-inner .pc__nav .sns__icons-pc .fa-youtube,
+.hero-pc .hero-pc-inner .pc__nav .sns__icons-pc .fa-instagram {
   color: #222222;
-  font-size: 24px;
+  font-size: 1.875vw;
 }
 .hero-pc .hero-pc-inner .hero__kv-pc {
   width: 84vw;
-  height: 735px;
+  height: auto;
   aspect-ratio: 1080/735;
   position: relative;
   flex: 1;
@@ -1180,7 +1189,7 @@ body {
 }
 .hero-pc .hero-pc-inner .hero__kv-pc .main-visual {
   width: 100%;
-  height: 735px;
+  height: auto;
   position: relative;
   margin: 0;
 }
@@ -1307,10 +1316,10 @@ body {
 .hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .speech-bubble img {
   width: 100%;
 }
-.hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv-message {
+.hero-pc .hero-pc-inner .hero__kv-pc .kv-message {
   position: absolute;
-  bottom: 61px;
-  left: 56px;
+  bottom: 8.98vw;
+  left: 3.9vw;
   color: #ffffff;
   font-family: "Noto Serif JP", serif;
   font-size: clamp(16px, 1.562vw, 23px);
@@ -1319,7 +1328,7 @@ body {
   letter-spacing: 2.8px;
   z-index: 11;
 }
-.hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv-message p:nth-child(1) {
+.hero-pc .hero-pc-inner .hero__kv-pc .kv-message p:nth-child(1) {
   padding-bottom: 16px;
 }
 .hero-pc .hero__pc-bg {
@@ -1553,7 +1562,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .lunch .lunch__inner .lunch-set__pasta-select {
-    max-width: 1324px;
     padding-inline: 40px;
     padding-bottom: 40px;
     background-color: #ffffff;
@@ -1760,7 +1768,7 @@ body {
   background-color: #F7F6F4;
   position: relative;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner {
     padding-top: 25px;
     width: 100%;
@@ -1774,6 +1782,7 @@ body {
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo {
   width: 89.06vw;
+  max-width: 648px;
   display: flex;
   align-items: center;
   padding-top: 21px;
@@ -1781,7 +1790,7 @@ body {
   padding-right: 10.17px;
   justify-content: space-between;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo {
     display: flex;
     flex: 0 0 71.4%;
@@ -1797,7 +1806,7 @@ body {
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a img {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a {
     width: auto;
   }
@@ -1808,7 +1817,7 @@ body {
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b img {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b {
     width: auto;
   }
@@ -1819,7 +1828,7 @@ body {
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c img {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c {
     width: auto;
   }
@@ -1834,7 +1843,7 @@ body {
   width: 100%;
   height: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-symbol-a,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-symbol-b {
     width: 26px;
@@ -1849,7 +1858,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c {
@@ -1862,7 +1871,7 @@ body {
   aspect-ratio: 88.06/73.44;
   margin-bottom: 9.5px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a .combo-item__img-a,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b .combo-item__img-a,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c .combo-item__img-a {
@@ -1877,7 +1886,7 @@ body {
   width: 9.349vw;
   aspect-ratio: 35.06/12.76;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a .combo-item__text-a,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b .combo-item__text-a,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c .combo-item__text-a {
@@ -1892,7 +1901,7 @@ body {
   margin-bottom: 5.6px;
   margin-top: 4.14px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a .combo-item__img-b,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b .combo-item__img-b,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c .combo-item__img-b {
@@ -1906,7 +1915,7 @@ body {
   width: 9.637vw;
   aspect-ratio: 36.13/11.87;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a .combo-item__text-b,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b .combo-item__text-b,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c .combo-item__text-b {
@@ -1920,7 +1929,7 @@ body {
   aspect-ratio: 81.83/79.37;
   margin-top: 5px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a .combo-item__img-c,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b .combo-item__img-c,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c .combo-item__img-c {
@@ -1934,7 +1943,7 @@ body {
   width: 11.576vw;
   aspect-ratio: 43.41/11.38;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-a .combo-item__text-c,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-b .combo-item__text-c,
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo .lunch-set__combo-item-c .combo-item__text-c {
@@ -1945,7 +1954,7 @@ body {
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info {
   padding-bottom: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info {
     width: 22.4%;
     padding-bottom: 0;
@@ -1959,7 +1968,7 @@ body {
   font-weight: 700;
   line-height: normal;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__text {
     padding-top: 0;
     text-align: right;
@@ -1972,7 +1981,7 @@ body {
   line-height: normal;
   padding-bottom: 4px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__price {
     padding-top: 2px;
     font-size: 60px;
@@ -1984,7 +1993,7 @@ body {
   margin: 0 auto;
   padding-top: 4px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info img {
     width: 100%;
   }
@@ -1996,7 +2005,7 @@ body {
   font-weight: 700;
   line-height: normal;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__price-info .lunch-set__note {
     font-size: 1.09vw;
     padding-top: 9px;
@@ -2384,7 +2393,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .grand__menu .grand__menu-bg {
-    height: 2700px;
+    height: 2196px;
     width: 1024px;
   }
 }

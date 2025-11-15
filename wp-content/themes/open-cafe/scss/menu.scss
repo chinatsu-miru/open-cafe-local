@@ -354,6 +354,7 @@ body {
                 .grand__menu-content {
                     @include mq(xl) {
                         max-width: 1287px;
+                        margin: 0 auto;
                     }
 
                     .grand__menu-top {

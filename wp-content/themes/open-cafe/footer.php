@@ -15,7 +15,7 @@
 		<div class="footer-copy">
 			<small>&copy;2000-2021 open cafe. All Rights Reserved.</small>
 		</div>
-		<div class="to-top">
+		<div class="to-top" id="to-top">
 			<a href="#top">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/to-top.png" alt="トップへ戻る">
 			</a>

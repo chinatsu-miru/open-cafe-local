@@ -1,12 +1,15 @@
 'use strict';
 {
     // ハンバーガーメニュークリックした時の動作
+    console.log('--- main.js loaded ---');
     const logo = document.querySelector('.logo');
     const btn = document.querySelector('.hamburger');
     const navs = document.querySelectorAll('.hero__nav');
     const img = document.querySelector('.btn-img');
     const mask = document.getElementById('mask');
     const themeDir = btn.dataset.themeDir;
+    const vh = innerHeight;
+    console.log(vh);
     img.src = themeDir + '/img/menu-icon.png';
 
 
@@ -57,6 +60,32 @@
     window.addEventListener('resize', () => {
         swiper.update();
     });
+
+
+    //トップへ戻るボタン-----------------------------------
+    const toTop = document.querySelector('.to-top');
+
+    toTop.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) {
+            toTop.style.display = 'block';
+        }else{
+            toTop.style.display = 'none';
+        }
+        if(window.scrollY > vh){
+            btn.style.display = 'block';
+        }else{
+            btn.style.display = 'none';
+        }
+    });
+
+
 
 
 

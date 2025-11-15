@@ -153,15 +153,9 @@ if (is_front_page()) {
                     );
                     ?>
                     <div class="sns__icons-pc">
-                        <div class="sns-icon-pc">
-                            <i class="fa-brands fa-twitter"></i>
-                        </div>
-                        <div class="sns-icon-pc">
-                            <i class="fa-brands fa-instagram"></i>
-                        </div>
-                        <div class="sns-icon-pc">
-                            <i class="fa-brands fa-youtube"></i>
-                        </div>
+                        <i class="fa-brands fa-twitter sns-icon-pc"></i>
+                        <i class="fa-brands fa-instagram sns-icon-pc"></i>
+                        <i class="fa-brands fa-youtube sns-icon-pc"></i>
                     </div>
                 </div>
                 <div class="hero__kv-pc">

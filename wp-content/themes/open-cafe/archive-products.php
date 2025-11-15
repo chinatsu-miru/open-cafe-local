@@ -18,7 +18,7 @@
                             <div class="gift__item-text"><?php the_title(); ?></div>
                             <div class="gift__item-price"><?php the_field('price'); ?> yen</div>
                             <div class="button2">
-                                <a href="./concept.html" class="btn2">ショップで確認する</a>
+                                <a href="<?php the_permalink(); ?>" class="btn2">ショップで確認する</a>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <div class="gift__item-text"><?php the_title(); ?></div>
                             <div class="gift__item-price"><?php the_field('price'); ?> yen</div>
                             <div class="button2">
-                                <a href="./concept.html" class="btn2">ショップで確認する</a>
+                                <a href="<?php the_permalink(); ?>" class="btn2">ショップで確認する</a>
                             </div>
                         </div>
                     </div>

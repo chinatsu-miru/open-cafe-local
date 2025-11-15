@@ -25,7 +25,7 @@ body {
 
     @include mq(lg) {
         height: auto;
-        max-width: 1440px;
+        // max-width: 1440px;
         overflow: hidden;
     }
 }
@@ -85,6 +85,7 @@ body {
         height: 60px;
         cursor: pointer;
         border-radius: 50%;
+        // display: none;
 
         img {
             width: 100%;
@@ -297,9 +298,9 @@ body {
 
     @include mq(lg) {
         background-color: $light-color;
-        max-width: 1440px;
+        // max-width: 1440px;
         width: 100%;
-        height: 800px;
+        height: auto;
         display: block;
         position: relative;
         overflow: hidden;
@@ -309,7 +310,7 @@ body {
     .hero-pc-inner {
         display: flex;
         width: 100%;
-        aspect-ratio: 1262 / 800;
+        aspect-ratio: 1280 / 795;
 
         @include mq(md) {
             position: relative;
@@ -318,17 +319,17 @@ body {
 
         .pc__nav {
             position: relative;
-            // width: 200px;
             width: 15.6vw;
-            padding-top: 27px;
-            padding-bottom: 72px;
+            padding-top: clamp(14px, 1.25vw, 24px);
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6.09vw;
 
             .nav__logo-pc {
-                width: 166px;
-                height: 93px;
+                width: 83%;
+                height: auto;
                 color: $main-text-color;
 
                 img {
@@ -340,11 +341,9 @@ body {
             .nav__lists-pc {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                padding-top: 53px;
-                padding-bottom: 60px;
-                width: 79px;
-                gap: 31px;
+                justify-content: space-between;
+                width: 40%;
+                gap: clamp(30px, 2.5vw, 40px);
 
                 .nav__list-pc {
 
@@ -353,7 +352,7 @@ body {
                         flex-direction: row;
                         align-items: center;
                         flex-direction: column;
-                        gap: 6px;
+                        gap: clamp(4px, 0.468vw, 10px);
 
                         .en,
                         .ja {
@@ -364,15 +363,15 @@ body {
 
                         .en {
                             font-family: "Patua One";
-                            font-size: 16px;
+                            font-size: clamp(14px, 1.25vw, 32px);
                             font-weight: 400;
-                            letter-spacing: 1.92px;
+                            // letter-spacing: 1.92px;
                         }
 
                         .ja {
                             color: $main-text-color;
                             font-family: "Noto Serif JP";
-                            font-size: 10px;
+                            font-size: clamp(8px, 0.781vw, 14px);
                             font-weight: 500;
                         }
                     }
@@ -381,22 +380,17 @@ body {
 
             .sns__icons-pc {
                 color: $sub-text-color;
-                width: 120px;
-                height: 24px;
+                width: 60%;
+                height: 1.875vw; //1280px幅で要素幅24px
                 align-items: center;
                 display: flex;
                 justify-content: space-between;
 
-                .sns-icon-pc {
-                    width: 24px;
-                    height: 24px;
-
-                    .fa-twitter,
-                    .fa-youtube,
-                    .fa-instagram {
-                        color: $main-text-color;
-                        font-size: 24px;
-                    }
+                .fa-twitter,
+                .fa-youtube,
+                .fa-instagram {
+                    color: $main-text-color;
+                    font-size: 1.875vw;
                 }
             }
         }
@@ -404,7 +398,8 @@ body {
         .hero__kv-pc {
             // max-width: 1240px;
             width: calc(100vw * 0.84);
-            height: 735px;
+            // height: 735px;
+            height: auto;
             aspect-ratio: 1080 / 735;
             position: relative;
             flex: 1;
@@ -412,7 +407,8 @@ body {
 
             .main-visual {
                 width: 100%;
-                height: 735px;
+                // height: 735px;
+                height: auto;
                 position: relative;
                 margin: 0;
 
@@ -557,28 +553,27 @@ body {
                         }
                     }
                 }
+            }
 
-                .kv-message {
-                    position: absolute;
-                    bottom: 61px;
-                    left: 56px;
-                    color: $sub-text-color;
-                    font-family: $base-font;
-                    font-size: clamp(16px, 1.562vw, 23px);
-                    // font-size: 1.562vw;
-                    font-weight: 700;
-                    line-height: 32px;
-                    letter-spacing: 2.8px;
-                    z-index: 11;
+            .kv-message {
+                position: absolute;
+                bottom: 8.98vw;
+                left: 3.9vw;
+                color: $sub-text-color;
+                font-family: $base-font;
+                font-size: clamp(16px, 1.562vw, 23px);
+                // font-size: 1.562vw;
+                font-weight: 700;
+                line-height: 32px;
+                letter-spacing: 2.8px;
+                z-index: 11;
 
-                    p {
-                        &:nth-child(1) {
-                            padding-bottom: 16px;
-                        }
+                p {
+                    &:nth-child(1) {
+                        padding-bottom: 16px;
                     }
                 }
             }
-
         }
     }
 
@@ -834,7 +829,6 @@ body {
 
             @include mq(md) {
                 // width: calc(100vw * 0.921);
-                max-width: 1324px;
                 padding-inline: 40px;
                 padding-bottom: 40px;
                 background-color: $sub-text-color;
@@ -1044,7 +1038,7 @@ body {
             background-color: #F7F6F4;
             position: relative;
 
-            @include mq(md) {
+            @include mq(lg) {
                 padding-top: 25px;
                 width: 100%;
                 padding-inline: 6.25%;
@@ -1058,6 +1052,7 @@ body {
 
             .lunch-set__combo {
                 width: 89.06vw;
+                max-width: 648px;
                 display: flex;
                 align-items: center;
                 padding-top: 21px;
@@ -1065,7 +1060,7 @@ body {
                 padding-right: 10.17px;
                 justify-content: space-between;
 
-                @include mq(md) {
+                @include mq(lg) {
                     display: flex;
                     flex: 0 0 71.4%;
                     padding-top: 0;
@@ -1081,7 +1076,7 @@ body {
                         width: 100%;
                     }
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         width: auto;
                     }
                 }
@@ -1093,7 +1088,7 @@ body {
                         width: 100%;
                     }
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         width: auto;
                     }
                 }
@@ -1105,7 +1100,7 @@ body {
                         width: 100%;
                     }
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         width: auto;
                     }
                 }
@@ -1120,7 +1115,7 @@ body {
                         height: 100%;
                     }
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         width: 26px;
                         height: 26px;
                     }
@@ -1134,7 +1129,7 @@ body {
                     flex-direction: column;
                     align-items: center;
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         justify-content: center
                     }
 
@@ -1142,7 +1137,7 @@ body {
                         aspect-ratio: 88.06 / 73.44;
                         margin-bottom: 9.5px;
 
-                        @include mq(md) {
+                        @include mq(lg) {
                             aspect-ratio: 172 / 145;
                             width: clamp(88px, 13.437vw, 177px);
                         }
@@ -1153,7 +1148,7 @@ body {
                         width: 9.349vw;
                         aspect-ratio: 35.06 / 12.76;
 
-                        @include mq(md) {
+                        @include mq(lg) {
                             width: calc(100vw * 0.053);
                             height: calc(100vw * 0.019);
                         }
@@ -1164,7 +1159,7 @@ body {
                         margin-bottom: 5.6px;
                         margin-top: 4.14px;
 
-                        @include mq(md) {
+                        @include mq(lg) {
                             aspect-ratio: 150 / 145;
                             width: clamp(90px, 11.718vw, 168px);
                         }
@@ -1174,7 +1169,7 @@ body {
                         width: 9.637vw;
                         aspect-ratio: 36.13 / 11.87;
 
-                        @include mq(md) {
+                        @include mq(lg) {
                             width: 5.468vw;
                             height: 2.187vw;
                         }
@@ -1184,7 +1179,7 @@ body {
                         aspect-ratio: 81.83 / 79.37;
                         margin-top: 5px;
 
-                        @include mq(md) {
+                        @include mq(lg) {
                             aspect-ratio: 160 / 155;
                             width: clamp(96px, 12.5vw, 164px);
                             // max-width: 164px;
@@ -1199,7 +1194,7 @@ body {
                         width: 11.576vw;
                         aspect-ratio: 43.41 / 11.38;
 
-                        @include mq(md) {
+                        @include mq(lg) {
                             width: calc(100vw * 0.066);
                             height: calc(100vw * 0.017);
 
@@ -1208,14 +1203,12 @@ body {
                         }
                     }
                 }
-
-
             }
 
             .lunch-set__price-info {
                 padding-bottom: 20px;
 
-                @include mq(md) {
+                @include mq(lg) {
                     width: 22.4%;
                     padding-bottom: 0;
                 }
@@ -1228,7 +1221,7 @@ body {
                     font-weight: 700;
                     line-height: normal;
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         padding-top: 0;
                         text-align: right;
                         font-size: 20px;
@@ -1241,7 +1234,7 @@ body {
                     line-height: normal;
                     padding-bottom: 4px;
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         padding-top: 2px;
                         font-size: 60px;
                     }
@@ -1253,7 +1246,7 @@ body {
                     margin: 0 auto;
                     padding-top: 4px;
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         width: 100%;
                     }
                 }
@@ -1265,7 +1258,7 @@ body {
                     font-weight: 700;
                     line-height: normal;
 
-                    @include mq(md) {
+                    @include mq(lg) {
                         font-size: 1.09vw;
                         padding-top: 9px;
                         text-align: right;
@@ -1678,7 +1671,7 @@ body {
         }
 
         @include mq(xl) {
-            height: 2700px;
+            height: 2196px;
             width: 1024px;
         }
 

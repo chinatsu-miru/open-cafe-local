@@ -25,6 +25,13 @@ body {
             gap: 40px;
         }
 
+        &.product_single {
+            display: block;
+            margin: 0 auto;
+            max-width: 70%;
+            margin-bottom: 50px;
+        }
+
         .gift__item1 {
             width: 100%;
             min-height: 455px;

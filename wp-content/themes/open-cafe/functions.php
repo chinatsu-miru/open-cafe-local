@@ -41,7 +41,7 @@ function my_enqueue_assets()
         wp_enqueue_style("thanks-page", get_template_directory_uri() . "/css/thanks.css", array(), filemtime(get_theme_file_path('css/thanks.css')), "all");
     } elseif (is_home() || is_category()) { // ニュース一覧
         wp_enqueue_style("news-page", get_template_directory_uri() . "/css/news.css", array(), filemtime(get_theme_file_path('css/news.css')), "all");
-    } elseif (is_single()) { // ニュースページ
+    } elseif (is_singular('news')) { // ニュースページ
         wp_enqueue_style("news-page", get_template_directory_uri() . "/css/news-single.css", array(), filemtime(get_theme_file_path('css/news-single.css')), "all");
     } elseif (is_singular('products') || is_post_type_archive('products')) { // productsページ
         wp_enqueue_style("products-page", get_template_directory_uri() . "/css/products.css", array(), filemtime(get_theme_file_path('css/products.css')), "all");

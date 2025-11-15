@@ -68,6 +68,7 @@ body {
 .hamburger {
     width: 60px;
     height: 60px;
+    // display: none;
 }
 
 .header__title {
@@ -586,13 +587,6 @@ body {
 }
 
 // topへ戻る-------------------------------------------
-.to-top {
-    position: fixed;
-    width: 44px;
-    height: 44px;
-    bottom: 6px;
-    right: 8px;
-    transition: translate 0.3s;
-    display: none;
-    z-index: 9999;
+html {
+    scroll-behavior: smooth;
 }
