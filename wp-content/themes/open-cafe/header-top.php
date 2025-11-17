@@ -24,6 +24,20 @@ if (is_front_page()) {
                 <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
             </button>
         </header>
+        <nav class="hero__nav">
+            <div class="nav__logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
+            </div>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'drawer-pc',
+                'container'      => false,
+                'menu_class'     => 'nav__lists',
+                'walker'         => new Custom_Drawer_Menu_Walker(),
+            ));
+            ?>
+        </nav>
+
 
         <!-- スマホ -->
         <section class="hero-sp">
@@ -130,8 +144,6 @@ if (is_front_page()) {
             <div class="kv__decor">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/bg-deco05.png" alt="">
             </div>
-
-
         </section>
 
         <!-- pc -->
@@ -236,7 +248,7 @@ if (is_front_page()) {
                 </div>
             </div>
             <!-- パソコン用ドロワーメニュー -->
-            <nav class="hero__nav">
+            <!-- <nav class="hero__nav">
                 <div class="nav__logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt=""></div>
                 <?php
                 wp_nav_menu(array(
@@ -248,9 +260,9 @@ if (is_front_page()) {
 
                 ?>
 
-            </nav>
-
+            </nav> -->
         </section>
+
     </div>
 
     <div id="mask" class="hidden"></div>

@@ -8,7 +8,7 @@
     const img = document.querySelector('.btn-img');
     const mask = document.getElementById('mask');
     const themeDir = btn.dataset.themeDir;
-    const vh = innerHeight;
+    const vh = window.innerHeight;
     console.log(vh);
     img.src = themeDir + '/img/menu-icon.png';
 

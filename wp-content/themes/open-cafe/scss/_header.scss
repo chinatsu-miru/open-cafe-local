@@ -49,10 +49,11 @@
     }
 
     .hamburger {
+        position: fixed;
         width: 60px;
         height: 60px;
-        position: absolute;
-        z-index: 20;
+        z-index: 99999;
+        background-color: red !important;
         right: 10px;
         top: 10px;
         cursor: pointer;

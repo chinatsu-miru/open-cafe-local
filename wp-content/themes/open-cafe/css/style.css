@@ -208,13 +208,9 @@ body {
   font-weight: 700;
 }
 
-.header .hero__nav,
-.header .hero__nav.is_sub,
-.hero-pc .hero__nav,
-.hero-pc .hero__nav.is_sub,
-.hero-sp .hero__nav,
-.hero-sp .hero__nav.is_sub {
-  position: absolute;
+.body__inner .hero__nav,
+.body__inner .hero__nav.is_sub {
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
@@ -222,87 +218,55 @@ body {
   background-color: #382620;
   padding-top: 130px;
   padding-bottom: 50px;
-  z-index: 10;
+  z-index: 50;
   transform: translateX(100%);
   transition: transform 0.3s;
   color: #ffffff;
 }
-.header .hero__nav.is-checked,
-.header .hero__nav.is_sub.is-checked,
-.hero-pc .hero__nav.is-checked,
-.hero-pc .hero__nav.is_sub.is-checked,
-.hero-sp .hero__nav.is-checked,
-.hero-sp .hero__nav.is_sub.is-checked {
+.body__inner .hero__nav.is-checked,
+.body__inner .hero__nav.is_sub.is-checked {
   transform: translateX(0);
 }
 @media screen and (min-width: 768px) {
-  .header .hero__nav,
-  .header .hero__nav.is_sub,
-  .hero-pc .hero__nav,
-  .hero-pc .hero__nav.is_sub,
-  .hero-sp .hero__nav,
-  .hero-sp .hero__nav.is_sub {
+  .body__inner .hero__nav,
+  .body__inner .hero__nav.is_sub {
     max-width: 375px;
     height: 800px;
     z-index: 12;
   }
 }
-.header .hero__nav .nav__logo,
-.header .hero__nav.is_sub .nav__logo,
-.hero-pc .hero__nav .nav__logo,
-.hero-pc .hero__nav.is_sub .nav__logo,
-.hero-sp .hero__nav .nav__logo,
-.hero-sp .hero__nav.is_sub .nav__logo {
+.body__inner .hero__nav .nav__logo,
+.body__inner .hero__nav.is_sub .nav__logo {
   width: 128px;
   height: 64px;
   position: absolute;
   top: 10px;
   left: 14px;
 }
-.header .hero__nav .nav__logo img,
-.header .hero__nav.is_sub .nav__logo img,
-.hero-pc .hero__nav .nav__logo img,
-.hero-pc .hero__nav.is_sub .nav__logo img,
-.hero-sp .hero__nav .nav__logo img,
-.hero-sp .hero__nav.is_sub .nav__logo img {
+.body__inner .hero__nav .nav__logo img,
+.body__inner .hero__nav.is_sub .nav__logo img {
   width: 100%;
 }
-.header .hero__nav .nav__lists,
-.header .hero__nav.is_sub .nav__lists,
-.hero-pc .hero__nav .nav__lists,
-.hero-pc .hero__nav.is_sub .nav__lists,
-.hero-sp .hero__nav .nav__lists,
-.hero-sp .hero__nav.is_sub .nav__lists {
+.body__inner .hero__nav .nav__lists,
+.body__inner .hero__nav.is_sub .nav__lists {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 52px;
   gap: 32px;
 }
-.header .hero__nav .nav__lists .nav__list,
-.header .hero__nav.is_sub .nav__lists .nav__list,
-.hero-pc .hero__nav .nav__lists .nav__list,
-.hero-pc .hero__nav.is_sub .nav__lists .nav__list,
-.hero-sp .hero__nav .nav__lists .nav__list,
-.hero-sp .hero__nav.is_sub .nav__lists .nav__list {
+.body__inner .hero__nav .nav__lists .nav__list,
+.body__inner .hero__nav.is_sub .nav__lists .nav__list {
   padding-left: 40px;
 }
-.header .hero__nav .nav__lists .nav__list .nav__link,
-.header .hero__nav.is_sub .nav__lists .nav__list .nav__link,
-.hero-pc .hero__nav .nav__lists .nav__list .nav__link,
-.hero-pc .hero__nav.is_sub .nav__lists .nav__list .nav__link,
-.hero-sp .hero__nav .nav__lists .nav__list .nav__link,
-.hero-sp .hero__nav.is_sub .nav__lists .nav__list .nav__link {
+.body__inner .hero__nav .nav__lists .nav__list .nav__link,
+.body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.header .hero__nav .nav__lists .nav__list .nav__link .en,
-.header .hero__nav.is_sub .nav__lists .nav__list .nav__link .en,
-.hero-pc .hero__nav .nav__lists .nav__list .nav__link .en,
-.hero-pc .hero__nav.is_sub .nav__lists .nav__list .nav__link .en,
-.hero-sp .hero__nav .nav__lists .nav__list .nav__link .en,
-.hero-sp .hero__nav.is_sub .nav__lists .nav__list .nav__link .en {
+.body__inner .hero__nav .nav__lists .nav__list .nav__link .en,
+.body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link .en {
   color: #fff;
   font-family: "Patua One";
   font-size: 24px;
@@ -312,12 +276,8 @@ body {
   letter-spacing: 2.88px;
   margin-right: 11px;
 }
-.header .hero__nav .nav__lists .nav__list .nav__link .slash,
-.header .hero__nav.is_sub .nav__lists .nav__list .nav__link .slash,
-.hero-pc .hero__nav .nav__lists .nav__list .nav__link .slash,
-.hero-pc .hero__nav.is_sub .nav__lists .nav__list .nav__link .slash,
-.hero-sp .hero__nav .nav__lists .nav__list .nav__link .slash,
-.hero-sp .hero__nav.is_sub .nav__lists .nav__list .nav__link .slash {
+.body__inner .hero__nav .nav__lists .nav__list .nav__link .slash,
+.body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link .slash {
   color: #ffffff;
   font-family: "Noto Serif JP";
   font-size: 10px;
@@ -325,12 +285,8 @@ body {
   font-weight: 500;
   line-height: normal;
 }
-.header .hero__nav .nav__lists .nav__list .nav__link .ja,
-.header .hero__nav.is_sub .nav__lists .nav__list .nav__link .ja,
-.hero-pc .hero__nav .nav__lists .nav__list .nav__link .ja,
-.hero-pc .hero__nav.is_sub .nav__lists .nav__list .nav__link .ja,
-.hero-sp .hero__nav .nav__lists .nav__list .nav__link .ja,
-.hero-sp .hero__nav.is_sub .nav__lists .nav__list .nav__link .ja {
+.body__inner .hero__nav .nav__lists .nav__list .nav__link .ja,
+.body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link .ja {
   color: #ffffff;
   font-family: "Noto Serif JP";
   font-size: 10px;
@@ -339,24 +295,16 @@ body {
   line-height: normal;
   margin-left: 12px;
 }
-.header .hero__nav .sns-icons,
-.header .hero__nav.is_sub .sns-icons,
-.hero-pc .hero__nav .sns-icons,
-.hero-pc .hero__nav.is_sub .sns-icons,
-.hero-sp .hero__nav .sns-icons,
-.hero-sp .hero__nav.is_sub .sns-icons {
+.body__inner .hero__nav .sns-icons,
+.body__inner .hero__nav.is_sub .sns-icons {
   display: flex;
   width: 184px;
   height: 40px;
   margin: 0 auto;
   justify-content: space-between;
 }
-.header .hero__nav .sns-icons .sns-icon,
-.header .hero__nav.is_sub .sns-icons .sns-icon,
-.hero-pc .hero__nav .sns-icons .sns-icon,
-.hero-pc .hero__nav.is_sub .sns-icons .sns-icon,
-.hero-sp .hero__nav .sns-icons .sns-icon,
-.hero-sp .hero__nav.is_sub .sns-icons .sns-icon {
+.body__inner .hero__nav .sns-icons .sns-icon,
+.body__inner .hero__nav.is_sub .sns-icons .sns-icon {
   width: 32px;
   height: 32px;
   display: flex;
@@ -364,24 +312,12 @@ body {
   align-items: center;
   color: #ffffff;
 }
-.header .hero__nav .sns-icons .sns-icon .fa-twitter,
-.header .hero__nav .sns-icons .sns-icon .fa-youtube,
-.header .hero__nav .sns-icons .sns-icon .fa-instagram,
-.header .hero__nav.is_sub .sns-icons .sns-icon .fa-twitter,
-.header .hero__nav.is_sub .sns-icons .sns-icon .fa-youtube,
-.header .hero__nav.is_sub .sns-icons .sns-icon .fa-instagram,
-.hero-pc .hero__nav .sns-icons .sns-icon .fa-twitter,
-.hero-pc .hero__nav .sns-icons .sns-icon .fa-youtube,
-.hero-pc .hero__nav .sns-icons .sns-icon .fa-instagram,
-.hero-pc .hero__nav.is_sub .sns-icons .sns-icon .fa-twitter,
-.hero-pc .hero__nav.is_sub .sns-icons .sns-icon .fa-youtube,
-.hero-pc .hero__nav.is_sub .sns-icons .sns-icon .fa-instagram,
-.hero-sp .hero__nav .sns-icons .sns-icon .fa-twitter,
-.hero-sp .hero__nav .sns-icons .sns-icon .fa-youtube,
-.hero-sp .hero__nav .sns-icons .sns-icon .fa-instagram,
-.hero-sp .hero__nav.is_sub .sns-icons .sns-icon .fa-twitter,
-.hero-sp .hero__nav.is_sub .sns-icons .sns-icon .fa-youtube,
-.hero-sp .hero__nav.is_sub .sns-icons .sns-icon .fa-instagram {
+.body__inner .hero__nav .sns-icons .sns-icon .fa-twitter,
+.body__inner .hero__nav .sns-icons .sns-icon .fa-youtube,
+.body__inner .hero__nav .sns-icons .sns-icon .fa-instagram,
+.body__inner .hero__nav.is_sub .sns-icons .sns-icon .fa-twitter,
+.body__inner .hero__nav.is_sub .sns-icons .sns-icon .fa-youtube,
+.body__inner .hero__nav.is_sub .sns-icons .sns-icon .fa-instagram {
   color: #ffffff;
   font-size: 32px;
 }
@@ -640,10 +576,11 @@ html {
   height: 100%;
 }
 .header .hamburger {
+  position: fixed;
   width: 60px;
   height: 60px;
-  position: absolute;
-  z-index: 20;
+  z-index: 99999;
+  background-color: red !important;
   right: 10px;
   top: 10px;
   cursor: pointer;
@@ -889,8 +826,6 @@ body {
 .header {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   height: auto;
   display: flex;
@@ -1096,6 +1031,7 @@ body {
 @media screen and (min-width: 1024px) {
   .hero-pc {
     background-color: #f3efeb;
+    max-width: 1440px;
     width: 100%;
     height: auto;
     display: block;

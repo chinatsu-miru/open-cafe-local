@@ -35,7 +35,7 @@ if (is_page('concept')) {
     $header_class = 'gift-top';
 } elseif (is_page('contact') || is_page('thanks')) {
     $header_class = 'contact-top';
-} 
+}
 ?>
 
 
@@ -52,28 +52,30 @@ if (is_page('concept')) {
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header class="header header-mask <?php echo esc_attr($header_class); ?>">
-        <div class="header-border">
-            <div class="header-border__inner">
-                <div class="header__title">
+    <div class="body__inner">
+        <header class="header header-mask <?php echo esc_attr($header_class); ?>">
+            <div class="header-border">
+                <div class="header-border__inner">
+                    <div class="header__title">
 
-                    <?php if (is_home()) :
-                        $page_title = get_the_title(243);
-                        $subtitle = get_field('subtitle', 243);
-                    ?>
-                        <h1><?php echo $page_title; ?></h1>
-                        <p><?php echo $subtitle; ?></p>
-                    <?php else: ?>
-                        <h1><?php echo $page_title; ?></h1>
-                        <p><?php echo $subtitle; ?></p>
-                    <?php endif; ?>
+                        <?php if (is_home()) :
+                            $page_title = get_the_title(243);
+                            $subtitle = get_field('subtitle', 243);
+                        ?>
+                            <h1><?php echo $page_title; ?></h1>
+                            <p><?php echo $subtitle; ?></p>
+                        <?php else: ?>
+                            <h1><?php echo $page_title; ?></h1>
+                            <p><?php echo $subtitle; ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <button id="pages" class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
-            <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
-        </button>
+            <button id="pages" class="hamburger " type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+                <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
+            </button>
+        </header>
         <nav class="hero__nav is_sub">
             <div class="nav__logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
@@ -98,7 +100,7 @@ if (is_page('concept')) {
                 </div>
             </div>
         </nav>
-    </header>
+    </div>
     <div id="mask" class="hidden"></div>
 
     <main class="concept-main">
