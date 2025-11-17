@@ -6,10 +6,10 @@
     const btn = document.querySelector('.hamburger');
     const navs = document.querySelectorAll('.hero__nav');
     const img = document.querySelector('.btn-img');
+    console.log(img);
     const mask = document.getElementById('mask');
     const themeDir = btn.dataset.themeDir;
     const vh = window.innerHeight;
-    console.log(vh);
     img.src = themeDir + '/img/menu-icon.png';
 
 
@@ -78,11 +78,14 @@
         }else{
             toTop.style.display = 'none';
         }
-        if(window.scrollY > vh){
-            btn.style.display = 'block';
-        }else{
-            btn.style.display = 'none';
+        if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
+            if (window.scrollY > vh) {
+                btn.style.display = 'block';
+            } else {
+                btn.style.display = 'none';
+            }
         }
+
     });
 
 
