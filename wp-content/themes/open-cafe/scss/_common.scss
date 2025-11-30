@@ -65,10 +65,10 @@ body {
 }
 
 //headerメニューバー
-.hamburger {
-    width: 60px;
-    height: 60px;
-}
+// .hamburger {
+//     width: 60px;
+//     height: 60px;
+// }
 
 .header__title {
     color: #fff;
@@ -267,8 +267,8 @@ body {
         button.is-subpage-menu {
             display: block;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 30px;
+            right: 30px;
         }
     }
 
@@ -294,7 +294,7 @@ body {
         @include mq(md) {
             max-width: 375px;
             height: 800px;
-            z-index: 12;
+            z-index: 50;
         }
 
         .nav__logo {
@@ -303,6 +303,19 @@ body {
             position: absolute;
             top: 10px;
             left: 14px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .hamburger {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            border-radius: 50%;
+            top: 50px;
+            right: 10px;
 
             img {
                 width: 100%;

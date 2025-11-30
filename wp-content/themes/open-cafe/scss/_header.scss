@@ -53,11 +53,23 @@
         width: 60px;
         height: 60px;
         z-index: 99999;
-        background-color: red !important;
-        right: 10px;
-        top: 10px;
+        // background-color: red !important;
+        right: 30px;
+        top: 30px;
         cursor: pointer;
-        display: none;
+
+        .btn-img-close {
+            display: none;
+        }
+
+        &.is-checked {
+            .btn-img {
+                display: none;
+            }
+            .btn-img-close {
+                display: block;
+            }
+        }
     }
 
     &.concept {

@@ -21,7 +21,8 @@ if (is_front_page()) {
         <header class="header top">
             <h1 class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="ヘッダーロゴ画像"></h1>
             <button id="pages" class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
-                <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
+                <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
+                <img class="btn-img-close" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
             </button>
         </header>
         <nav class="hero__nav">
@@ -248,8 +249,11 @@ if (is_front_page()) {
                 </div>
             </div>
             <!-- パソコン用ドロワーメニュー -->
-            <!-- <nav class="hero__nav">
+            <nav class="hero__nav">
                 <div class="nav__logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt=""></div>
+                <!-- <button class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+                    <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
+                </button> -->
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'drawer-pc',
@@ -260,7 +264,7 @@ if (is_front_page()) {
 
                 ?>
 
-            </nav> -->
+            </nav>
         </section>
 
     </div>

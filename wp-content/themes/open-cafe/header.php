@@ -57,7 +57,6 @@ if (is_page('concept')) {
             <div class="header-border">
                 <div class="header-border__inner">
                     <div class="header__title">
-
                         <?php if (is_home()) :
                             $page_title = get_the_title(243);
                             $subtitle = get_field('subtitle', 243);
@@ -73,13 +72,16 @@ if (is_page('concept')) {
             </div>
 
             <button id="pages" class="hamburger is-subpage-menu" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
-                <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
+                <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
             </button>
         </header>
         <nav class="hero__nav is_sub">
             <div class="nav__logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
             </div>
+            <button id="pages" class="hamburger is-subpage-menu" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+                <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
+            </button>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'drawer-sp',

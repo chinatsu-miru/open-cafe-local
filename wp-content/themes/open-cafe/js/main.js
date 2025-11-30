@@ -1,12 +1,12 @@
 'use strict';
 {
     // ハンバーガーメニュークリックした時の動作
-    console.log('--- main.js loaded ---');
-    const logo = document.querySelector('.logo');
+    const logo = document.querySelector('.nav__logo');
     const btn = document.querySelector('.hamburger');
+    console.log(`ボタン：${btn}`);
     const navs = document.querySelectorAll('.hero__nav');
     const img = document.querySelector('.btn-img');
-    console.log(img);
+    console.log(img.outerHTML);
     const mask = document.getElementById('mask');
     const themeDir = btn.dataset.themeDir;
     const vh = window.innerHeight;
@@ -24,9 +24,11 @@
 
         if (btn.classList.contains('is-checked')) {
             img.src = themeDir + "/img/close.png";
+            console.log('メニューオープン時の画像パス:', img.src);
         } else {
             img.src = themeDir + "/img/menu-icon.png";
         };
+        console.log('切り替えた後の img.src:', img.src);
         mask.classList.toggle('hidden');
     });
 

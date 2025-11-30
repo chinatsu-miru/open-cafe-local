@@ -26,11 +26,6 @@ body {
   }
 }
 
-.hamburger {
-  width: 60px;
-  height: 60px;
-}
-
 .header__title {
   color: #fff;
   text-align: center;
@@ -211,8 +206,8 @@ body {
 .body__inner .header.header-mask button.is-subpage-menu {
   display: block;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 30px;
+  right: 30px;
 }
 .body__inner .hero__nav,
 .body__inner .hero__nav.is_sub {
@@ -238,7 +233,7 @@ body {
   .body__inner .hero__nav.is_sub {
     max-width: 375px;
     height: 800px;
-    z-index: 12;
+    z-index: 50;
   }
 }
 .body__inner .hero__nav .nav__logo,
@@ -251,6 +246,19 @@ body {
 }
 .body__inner .hero__nav .nav__logo img,
 .body__inner .hero__nav.is_sub .nav__logo img {
+  width: 100%;
+}
+.body__inner .hero__nav .hamburger,
+.body__inner .hero__nav.is_sub .hamburger {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50px;
+  right: 10px;
+}
+.body__inner .hero__nav .hamburger img,
+.body__inner .hero__nav.is_sub .hamburger img {
   width: 100%;
 }
 .body__inner .hero__nav .nav__lists,
@@ -586,11 +594,18 @@ html {
   width: 60px;
   height: 60px;
   z-index: 99999;
-  background-color: red !important;
-  right: 10px;
-  top: 10px;
+  right: 30px;
+  top: 30px;
   cursor: pointer;
+}
+.header .hamburger .btn-img-close {
   display: none;
+}
+.header .hamburger.is-checked .btn-img {
+  display: none;
+}
+.header .hamburger.is-checked .btn-img-close {
+  display: block;
 }
 .header.concept {
   z-index: 20;
