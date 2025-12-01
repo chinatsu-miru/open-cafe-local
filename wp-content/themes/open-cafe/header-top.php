@@ -22,23 +22,8 @@ if (is_front_page()) {
             <h1 class="logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="ヘッダーロゴ画像"></h1>
             <button id="pages" class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
                 <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
-                <img class="btn-img-close" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
             </button>
         </header>
-        <nav class="hero__nav">
-            <div class="nav__logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
-            </div>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'drawer-pc',
-                'container'      => false,
-                'menu_class'     => 'nav__lists',
-                'walker'         => new Custom_Drawer_Menu_Walker(),
-            ));
-            ?>
-        </nav>
-
 
         <!-- スマホ -->
         <section class="hero-sp">
@@ -59,8 +44,6 @@ if (is_front_page()) {
                     $kv_news = array(
                         'post_type' => 'post',
                         'posts_per_page' => 1,
-                        // 'orderby'  => 'date',
-                        // 'order'  => 'DESC',
                     );
                     $kv_news_query = new WP_Query($kv_news);
                     ?>
@@ -120,27 +103,12 @@ if (is_front_page()) {
                 <div class="nav__logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
                 </div>
+                <button id="pages" class="hamburger close" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+                    <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
+                </button>
 
                 <!-- スマホ用ドロワーメニュー -->
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'drawer-sp',
-                    'container'      => false,
-                    'menu_class'     => 'nav__lists',
-                    'walker'         => new Custom_Drawer_Menu_Walker(),
-                ));
-                ?>
-                <div class="sns-icons">
-                    <div class="sns-icon">
-                        <i class="fa-brands fa-twitter" width="32" height="32"></i>
-                    </div>
-                    <div class="sns-icon">
-                        <i class="fa-brands fa-youtube" width="32" height="32"></i>
-                    </div>
-                    <div class="sns-icon">
-                        <i class="fa-brands fa-instagram" width="32" height="32"></i>
-                    </div>
-                </div>
+                <?php get_template_part("template-parts/drawer-menu-sp"); ?>
             </nav>
             <div class="kv__decor">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/bg-deco05.png" alt="">
@@ -249,22 +217,7 @@ if (is_front_page()) {
                 </div>
             </div>
             <!-- パソコン用ドロワーメニュー -->
-            <nav class="hero__nav">
-                <div class="nav__logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt=""></div>
-                <!-- <button class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
-                    <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
-                </button> -->
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'drawer-pc',
-                    'container'      => false,
-                    'menu_class'     => 'nav__lists',
-                    'walker'         => new Custom_Drawer_Menu_Walker(),
-                ));
-
-                ?>
-
-            </nav>
+            <?php get_template_part("template-parts/drawer-menu-pc"); ?>
         </section>
 
     </div>

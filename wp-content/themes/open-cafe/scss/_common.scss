@@ -273,6 +273,7 @@ body {
     }
 
     .hero__nav,
+    .hero__nav-sub,
     .hero__nav.is_sub {
         position: fixed;
         top: 0;
@@ -314,12 +315,21 @@ body {
             height: 60px;
             position: absolute;
             border-radius: 50%;
-            top: 50px;
-            right: 10px;
-
+            top: 20px;
+            right: 20px;
             img {
                 width: 100%;
             }
+        }
+        .hamburger.close-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            top: 20px;
+            right: 20px;
+            position: absolute;
+            cursor: pointer;
+
         }
 
         .nav__lists {

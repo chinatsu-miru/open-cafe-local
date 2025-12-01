@@ -210,6 +210,7 @@ body {
   right: 30px;
 }
 .body__inner .hero__nav,
+.body__inner .hero__nav-sub,
 .body__inner .hero__nav.is_sub {
   position: fixed;
   top: 0;
@@ -225,11 +226,13 @@ body {
   color: #ffffff;
 }
 .body__inner .hero__nav.is-checked,
+.body__inner .hero__nav-sub.is-checked,
 .body__inner .hero__nav.is_sub.is-checked {
   transform: translateX(0);
 }
 @media screen and (min-width: 768px) {
   .body__inner .hero__nav,
+  .body__inner .hero__nav-sub,
   .body__inner .hero__nav.is_sub {
     max-width: 375px;
     height: 800px;
@@ -237,6 +240,7 @@ body {
   }
 }
 .body__inner .hero__nav .nav__logo,
+.body__inner .hero__nav-sub .nav__logo,
 .body__inner .hero__nav.is_sub .nav__logo {
   width: 128px;
   height: 64px;
@@ -245,23 +249,38 @@ body {
   left: 14px;
 }
 .body__inner .hero__nav .nav__logo img,
+.body__inner .hero__nav-sub .nav__logo img,
 .body__inner .hero__nav.is_sub .nav__logo img {
   width: 100%;
 }
 .body__inner .hero__nav .hamburger,
+.body__inner .hero__nav-sub .hamburger,
 .body__inner .hero__nav.is_sub .hamburger {
   width: 60px;
   height: 60px;
   position: absolute;
   border-radius: 50%;
-  top: 50px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
 }
 .body__inner .hero__nav .hamburger img,
+.body__inner .hero__nav-sub .hamburger img,
 .body__inner .hero__nav.is_sub .hamburger img {
   width: 100%;
 }
+.body__inner .hero__nav .hamburger.close-btn,
+.body__inner .hero__nav-sub .hamburger.close-btn,
+.body__inner .hero__nav.is_sub .hamburger.close-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  cursor: pointer;
+}
 .body__inner .hero__nav .nav__lists,
+.body__inner .hero__nav-sub .nav__lists,
 .body__inner .hero__nav.is_sub .nav__lists {
   display: flex;
   flex-direction: column;
@@ -270,16 +289,19 @@ body {
   gap: 32px;
 }
 .body__inner .hero__nav .nav__lists .nav__list,
+.body__inner .hero__nav-sub .nav__lists .nav__list,
 .body__inner .hero__nav.is_sub .nav__lists .nav__list {
   padding-left: 40px;
 }
 .body__inner .hero__nav .nav__lists .nav__list .nav__link,
+.body__inner .hero__nav-sub .nav__lists .nav__list .nav__link,
 .body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 .body__inner .hero__nav .nav__lists .nav__list .nav__link .en,
+.body__inner .hero__nav-sub .nav__lists .nav__list .nav__link .en,
 .body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link .en {
   color: #fff;
   font-family: "Patua One";
@@ -291,6 +313,7 @@ body {
   margin-right: 11px;
 }
 .body__inner .hero__nav .nav__lists .nav__list .nav__link .slash,
+.body__inner .hero__nav-sub .nav__lists .nav__list .nav__link .slash,
 .body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link .slash {
   color: #ffffff;
   font-family: "Noto Serif JP";
@@ -300,6 +323,7 @@ body {
   line-height: normal;
 }
 .body__inner .hero__nav .nav__lists .nav__list .nav__link .ja,
+.body__inner .hero__nav-sub .nav__lists .nav__list .nav__link .ja,
 .body__inner .hero__nav.is_sub .nav__lists .nav__list .nav__link .ja {
   color: #ffffff;
   font-family: "Noto Serif JP";
@@ -310,6 +334,7 @@ body {
   margin-left: 12px;
 }
 .body__inner .hero__nav .sns-icons,
+.body__inner .hero__nav-sub .sns-icons,
 .body__inner .hero__nav.is_sub .sns-icons {
   display: flex;
   width: 184px;
@@ -318,6 +343,7 @@ body {
   justify-content: space-between;
 }
 .body__inner .hero__nav .sns-icons .sns-icon,
+.body__inner .hero__nav-sub .sns-icons .sns-icon,
 .body__inner .hero__nav.is_sub .sns-icons .sns-icon {
   width: 32px;
   height: 32px;
@@ -329,6 +355,9 @@ body {
 .body__inner .hero__nav .sns-icons .sns-icon .fa-twitter,
 .body__inner .hero__nav .sns-icons .sns-icon .fa-youtube,
 .body__inner .hero__nav .sns-icons .sns-icon .fa-instagram,
+.body__inner .hero__nav-sub .sns-icons .sns-icon .fa-twitter,
+.body__inner .hero__nav-sub .sns-icons .sns-icon .fa-youtube,
+.body__inner .hero__nav-sub .sns-icons .sns-icon .fa-instagram,
 .body__inner .hero__nav.is_sub .sns-icons .sns-icon .fa-twitter,
 .body__inner .hero__nav.is_sub .sns-icons .sns-icon .fa-youtube,
 .body__inner .hero__nav.is_sub .sns-icons .sns-icon .fa-instagram {
@@ -594,18 +623,9 @@ html {
   width: 60px;
   height: 60px;
   z-index: 99999;
-  right: 30px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
   cursor: pointer;
-}
-.header .hamburger .btn-img-close {
-  display: none;
-}
-.header .hamburger.is-checked .btn-img {
-  display: none;
-}
-.header .hamburger.is-checked .btn-img-close {
-  display: block;
 }
 .header.concept {
   z-index: 20;
@@ -821,7 +841,7 @@ body {
 .body__inner {
   position: relative;
   margin: 0 auto;
-  background: #F3EFEB;
+  background: #f3efeb;
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
@@ -829,6 +849,9 @@ body {
     height: auto;
     overflow: hidden;
   }
+}
+.body__inner:has(.hamburger.is-checked) .hero-pc .hero__nav {
+  transform: translateX(0%);
 }
 
 #mask {
@@ -881,6 +904,9 @@ body {
   width: 100%;
 }
 .header .hamburger.is-checked + .logo img {
+  display: none;
+}
+.header .hamburger.is-checked {
   display: none;
 }
 
@@ -1289,7 +1315,7 @@ body {
   padding-bottom: 16px;
 }
 .hero-pc .hero__pc-bg {
-  background: #EAE0D5;
+  background: #eae0d5;
   width: 76.64%;
   position: absolute;
   bottom: 0;
@@ -1722,7 +1748,7 @@ body {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  background-color: #F7F6F4;
+  background-color: #f7f6f4;
   position: relative;
 }
 @media screen and (min-width: 1024px) {

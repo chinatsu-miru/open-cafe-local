@@ -75,7 +75,7 @@ if (is_page('concept')) {
                 <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
             </button>
         </header>
-        <nav class="hero__nav is_sub">
+        <nav class="hero__nav-sub is_sub">
             <div class="nav__logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
             </div>

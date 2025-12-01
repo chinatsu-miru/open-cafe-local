@@ -3,34 +3,40 @@
     // ハンバーガーメニュークリックした時の動作
     const logo = document.querySelector('.nav__logo');
     const btn = document.querySelector('.hamburger');
-    console.log(`ボタン：${btn}`);
-    const navs = document.querySelectorAll('.hero__nav');
+    const nav = document.querySelector('.hero__nav');
     const img = document.querySelector('.btn-img');
-    console.log(img.outerHTML);
+    const close = document.querySelector('.close-btn');
+    console.log(close);
     const mask = document.getElementById('mask');
     const themeDir = btn.dataset.themeDir;
     const vh = window.innerHeight;
-    img.src = themeDir + '/img/menu-icon.png';
+
 
 
     btn.addEventListener('click', () => {
-        navs.forEach(nav => {
             nav.classList.toggle('is-checked');
-        });
+
         btn.classList.toggle('is-checked');
         logo.classList.toggle('is-hidden');
-
-        const isInPagesFolder = location.pathname.includes('/pages/');
-
-        if (btn.classList.contains('is-checked')) {
-            img.src = themeDir + "/img/close.png";
-            console.log('メニューオープン時の画像パス:', img.src);
-        } else {
-            img.src = themeDir + "/img/menu-icon.png";
-        };
-        console.log('切り替えた後の img.src:', img.src);
         mask.classList.toggle('hidden');
     });
+    close.addEventListener('click', () => {
+        // navs.forEach(nav => {
+            nav.classList.remove('is-checked');
+            mask.classList.toggle('hidden');
+        // });
+        // btn.click();
+        btn.classList.remove('is-checked');
+    });
+    // if (close && navs) {
+    //     close.addEventListener('click', () => {
+    //         navs.forEach(nav => {
+    //             nav.classList.toggle('is-checked');
+    //             mask.classList.toggle('hidden');
+    //         });
+    //         // btn.click();
+    //     });
+    // };
 
 
     mask.addEventListener('click', () => {
