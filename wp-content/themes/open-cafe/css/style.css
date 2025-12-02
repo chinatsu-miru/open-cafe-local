@@ -1078,7 +1078,6 @@ body {
 @media screen and (min-width: 1024px) {
   .hero-pc {
     background-color: #f3efeb;
-    max-width: 1440px;
     width: 100%;
     height: auto;
     display: block;

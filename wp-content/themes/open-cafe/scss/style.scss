@@ -297,7 +297,6 @@ body {
 
   @include mq(lg) {
     background-color: $light-color;
-    max-width: 1440px;
     width: 100%;
     height: auto;
     display: block;

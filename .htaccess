@@ -8,3 +8,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 # END WordPress
+AuthType Basic
+AuthName "Input ID and Password."
+AuthUserFile /home/olive-rose7/www/open-cafe-kaze/.htpasswd
+AuthGroupFile /dev/null
+require valid-user
+<Files ~ "^.(htpasswd|htaccess)$">
+  deny from all
+</Files>
