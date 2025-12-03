@@ -2,10 +2,32 @@
 {
     // ハンバーガーメニュークリックした時の動作
     const logo = document.querySelector('.nav__logo');
-    const btn = document.querySelector('.hamburger');
-    const nav = document.querySelector('.hero__nav');
+
+    //トップページのボタン操作
+    const btn = document.querySelector('.hamburger');//トップページのメニューボタン
+    const nav = document.querySelector('.hero__nav');//トップページのナビメニュー
+    const close = document.querySelector('.close-btn');//PCのトップページのクローズボタン
+    const spClose = document.querySelector('.close-sp');//spのトップページのクローズボタン
+
+    btn.addEventListener('click', () => {
+        nav.classList.toggle('is-checked');
+        btn.classList.toggle('is-checked');
+        logo.classList.toggle('is-hidden');
+        mask.classList.toggle('hidden');
+    });
+    spClose.addEventListener('click', () => {
+        nav.classList.remove('is-checked');
+        btn.classList.remove('is-checked');
+        mask.classList.toggle('hidden');
+    });
+
+
+    const btnSub = document.querySelector('.is-subpage-menu');//トップページ以外のメニューボタン
+    const subNav = document.querySelector('.hero__nav-sub');
     const img = document.querySelector('.btn-img');
-    const close = document.querySelector('.close-btn');
+    const otherClose = document.querySelector('close-other');//トップページ以外のクローズボタン
+    // console.log(otherClose);
+    console.log(spClose);
     console.log(close);
     const mask = document.getElementById('mask');
     const themeDir = btn.dataset.themeDir;
@@ -13,30 +35,17 @@
 
 
 
-    btn.addEventListener('click', () => {
-            nav.classList.toggle('is-checked');
-
-        btn.classList.toggle('is-checked');
-        logo.classList.toggle('is-hidden');
+    btnSub.addEventListener('click', () => {
+        subNav.classList.toggle('is-checked');
+        btnSub.classList.toggle('is-checked');
         mask.classList.toggle('hidden');
     });
     close.addEventListener('click', () => {
-        // navs.forEach(nav => {
-            nav.classList.remove('is-checked');
-            mask.classList.toggle('hidden');
-        // });
-        // btn.click();
+        nav.classList.remove('is-checked');
+        mask.classList.toggle('hidden');
         btn.classList.remove('is-checked');
     });
-    // if (close && navs) {
-    //     close.addEventListener('click', () => {
-    //         navs.forEach(nav => {
-    //             nav.classList.toggle('is-checked');
-    //             mask.classList.toggle('hidden');
-    //         });
-    //         // btn.click();
-    //     });
-    // };
+
 
 
     mask.addEventListener('click', () => {
@@ -81,12 +90,12 @@
     });
 
     window.addEventListener('scroll', () => {
-        if(window.scrollY > 300) {
+        if (window.scrollY > 300) {
             toTop.style.display = 'block';
-        }else{
+        } else {
             toTop.style.display = 'none';
         }
-        if(window.location.pathname === '/' || window.location.pathname === '/index.html'){
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
             if (window.scrollY > vh) {
                 btn.style.display = 'block';
             } else {
