@@ -46,6 +46,7 @@ if (is_page('concept')) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
+
     <?php wp_head(); ?>
 </head>
 
@@ -70,7 +71,7 @@ if (is_page('concept')) {
                 </div>
             </div>
 
-            <button class="hamburger is-subpage-menu" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+            <button id="pages" class="hamburger is-subpage-menu" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
                 <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
             </button>
         </header>
@@ -78,7 +79,7 @@ if (is_page('concept')) {
             <div class="nav__logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
             </div>
-            <button class="hamburger close-other is-subpage-menu" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+            <button id="pages" class="hamburger is-subpage-menu" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
                 <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
             </button>
             <?php

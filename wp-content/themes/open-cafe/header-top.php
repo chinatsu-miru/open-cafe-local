@@ -99,8 +99,17 @@ if (is_front_page()) {
                     <p>パスタとコーヒーが<br />とってもおいしい、<br />ほっと落ち着くのんびり空間。</p>
                 </div>
             </div>
-            <!-- スマホ用ドロワーメニュー -->
-            <?php get_template_part("template-parts/drawer-menu-sp"); ?>
+            <nav class="hero__nav">
+                <div class="nav__logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
+                </div>
+                <button id="pages" class="hamburger close" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+                    <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
+                </button>
+
+                <!-- スマホ用ドロワーメニュー -->
+                <?php get_template_part("template-parts/drawer-menu-sp"); ?>
+            </nav>
             <div class="kv__decor">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/bg-deco05.png" alt="">
             </div>
@@ -210,6 +219,7 @@ if (is_front_page()) {
             <!-- パソコン用ドロワーメニュー -->
             <?php get_template_part("template-parts/drawer-menu-pc"); ?>
         </section>
+
     </div>
 
     <div id="mask" class="hidden"></div>
