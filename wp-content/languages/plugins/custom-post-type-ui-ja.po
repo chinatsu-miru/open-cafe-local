@@ -2,14 +2,24 @@
 # This file is distributed under the same license as the Plugins - Custom Post Type UI - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-21 23:38:00+0000\n"
+"PO-Revision-Date: 2025-12-05 13:37:04+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/4.0.1\n"
+"X-Generator: GlotPress/4.0.3\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Custom Post Type UI - Stable (latest release)\n"
+
+#: inc/utility.php:136
+msgid "Follow on X:"
+msgstr "Xをフォロー:"
+
+#. translators: Placeholders are just for HTML markup that doesn't need
+#. translated
+#: inc/support.php:260
+msgid "We recommend the %1$sPosts 2 Posts%2$s plugin."
+msgstr "%1$sPosts 2 Posts%2$sプラグインをおすすめします。"
 
 #: inc/taxonomies.php:852
 msgid "(e.g. \"Category Archives\")"
@@ -44,22 +54,6 @@ msgstr "キャンセル"
 #: inc/utility.php:1036 inc/utility.php:1047
 msgid "OK"
 msgstr "OK"
-
-#: inc/about.php:104
-msgid "The move to require WordPress 6.3 allowed for adding \"item_trashed\" label support."
-msgstr "WordPress 6.3 を必要とする動きにより、\"item_trashed\" ラベルのサポートが追加されるようになりました。"
-
-#: inc/about.php:103
-msgid "Moved to minimum of WordPress 6.3."
-msgstr "最低動作バージョンは WordPress 6.3へ"
-
-#: inc/about.php:102
-msgid "If you are trying to move post types into CPTUI, you can now mark as such to prevent slug conflicts notices."
-msgstr "投稿タイプを CPTUI に移動しようとしている場合は、そのようにマークして、スラッグ競合の通知を防ぐことができるようになりました。"
-
-#: inc/about.php:101
-msgid "Post type migration support"
-msgstr "投稿タイプの取り込みに対応"
 
 #: inc/post-types.php:1234
 msgid "\"False\" behaves like posts, \"True\" behaves like pages."
@@ -675,11 +669,11 @@ msgstr "利用可能な登録済み投稿タイプのためのサポートを追
 
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: inc/support.php:289
+#: inc/support.php:286
 msgid "We recommend %s for some extended customization and addition of extra fields regarding roles and capabilities."
 msgstr "一部の拡張カスタマイズや、権限グループや権限に関するフィールドの追加には %s をお勧めします。"
 
-#: inc/support.php:283
+#: inc/support.php:280
 msgid "Any help with customizing capabilities?"
 msgstr "権限のカスタマイズについてヘルプが必要ですか ?"
 
@@ -930,7 +924,7 @@ msgid "Get code"
 msgstr "コードを取得"
 
 #. translators: Placeholder will hold the name of the author of the plugin.
-#: inc/about.php:131
+#: inc/about.php:111
 msgid "More from %s"
 msgstr "その他の %s プロダクト"
 
@@ -1406,11 +1400,6 @@ msgstr "エクスポートされるのは設定内容だけです。投稿デー
 msgid "Debug Info"
 msgstr "デバッグ情報"
 
-#. translators: Placeholder will hold the plugin version.
-#: inc/about.php:93
-msgid "What's new in version %s"
-msgstr "バージョン %s の新着情報"
-
 #: classes/class.cptui_debug_info.php:24
 msgid "If you have sought support for Custom Post Type UI on the forums, you may be requested to send the information below to the plugin developer. Simply insert the email they provided in the input field at the bottom and click the \"Send debug info\" button. Only the data below will be sent to them."
 msgstr "フォーラムで Custom Post Type UI のサポートを求めると、プラグイン開発者から以下に示すデバッグ情報の提示を指示されることがあります。その場合は、当該開発者から指定された送信先電子メールアドレスをこの画面の下の方にある欄に入力して「デバッグ情報の送信」ボタンをクリックしてください。送信されるのは下の欄に表示されている内容だけで、その他のいかなる情報も送信されることはありません。"
@@ -1611,19 +1600,13 @@ msgstr "(例: 俳優)"
 msgid "Taxonomy Slug"
 msgstr "タクソノミースラッグ"
 
-#: inc/support.php:272
+#: inc/support.php:269
 msgid "Change text inside the post/page editor title field. Should be able to adapt as necessary."
 msgstr "投稿 / 固定ページ編集画面のタイトルフィールド内の文字列を変更してください。以下のコードを用途に応じて調整してお使いください。"
 
-#: inc/support.php:271
+#: inc/support.php:268
 msgid "How do I filter the \"enter title here\" text in the post editor screen?"
 msgstr "投稿編集画面に表示される「ここにタイトルを入力」という文字列をフィルターしてカスタマイズするには ?"
-
-#. translators: Placeholders are just for HTML markup that doesn't need
-#. translated
-#: inc/support.php:260
-msgid "%1$s has an excellent %2$spost%3$s introducing users to the %4$sPosts 2 Posts%5$s plugin that should be a good start."
-msgstr "%1$s による、 %4$sPosts 2 Posts%5$s プラグインの素晴らしい%2$s紹介記事%3$sが良い参考になるでしょう。"
 
 #: inc/support.php:255
 msgid "Post relationships?"
@@ -2316,10 +2299,6 @@ msgstr "投稿タイプを編集"
 #: inc/listings.php:65 inc/post-types.php:88
 msgid "Add New Post Type"
 msgstr "新規投稿タイプを追加"
-
-#: inc/utility.php:136
-msgid "Follow on Twitter:"
-msgstr "Twitter でフォロー:"
 
 #. Plugin Name of the plugin
 #: custom-post-type-ui.php inc/about.php:63 inc/utility.php:113
