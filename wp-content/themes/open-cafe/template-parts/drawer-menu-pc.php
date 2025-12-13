@@ -2,7 +2,7 @@
     <div class="nav__logo">
         <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
     </div>
-    <button id="pages" class="hamburger close-btn" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+    <button id="pages" class="hamburger close-btn-pc" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
         <img class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/close.png" alt="ハンバーガーボタン">
     </button>
 
