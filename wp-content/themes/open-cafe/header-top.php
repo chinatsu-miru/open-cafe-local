@@ -247,20 +247,6 @@ if (is_front_page()) {
                 <div class="hero__pc-bg bg">
                 </div>
             </div>
-            <!-- パソコン用ドロワーメニュー -->
-            <!-- <nav class="hero__nav">
-                <div class="nav__logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt=""></div>
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'drawer-pc',
-                    'container'      => false,
-                    'menu_class'     => 'nav__lists',
-                    'walker'         => new Custom_Drawer_Menu_Walker(),
-                ));
-
-                ?>
-
-            </nav> -->
         </section>
 
     </div>

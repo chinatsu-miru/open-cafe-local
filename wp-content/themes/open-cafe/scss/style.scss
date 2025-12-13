@@ -94,9 +94,12 @@ body {
         &.is-checked+.logo {
             img {
                 display: none;
-
             }
         }
+    }
+
+    &.is-checked {
+        
     }
 }
 

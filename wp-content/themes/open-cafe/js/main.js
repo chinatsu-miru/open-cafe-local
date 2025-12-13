@@ -20,7 +20,7 @@
         btn.classList.toggle('is-checked');
         logo.classList.toggle('is-hidden');
 
-        const isInPagesFolder = location.pathname.includes('/pages/');
+        // const isInPagesFolder = location.pathname.includes('/pages/');
 
         if (btn.classList.contains('is-checked')) {
             img.src = themeDir + "/img/close.png";
