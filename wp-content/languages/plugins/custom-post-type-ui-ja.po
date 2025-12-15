@@ -2,14 +2,24 @@
 # This file is distributed under the same license as the Plugins - Custom Post Type UI - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-21 23:38:00+0000\n"
+"PO-Revision-Date: 2025-12-12 13:08:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/4.0.1\n"
+"X-Generator: GlotPress/4.0.3\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Plugins - Custom Post Type UI - Stable (latest release)\n"
+
+#: inc/utility.php:136
+msgid "Follow on X:"
+msgstr "Xをフォロー:"
+
+#. translators: Placeholders are just for HTML markup that doesn't need
+#. translated
+#: inc/support.php:260
+msgid "We recommend the %1$sPosts 2 Posts%2$s plugin."
+msgstr "%1$sPosts 2 Posts%2$sプラグインをおすすめします。"
 
 #: inc/taxonomies.php:852
 msgid "(e.g. \"Category Archives\")"
@@ -27,13 +37,15 @@ msgstr "サイトエディターがテンプレートの表示 / 新しいテン
 msgid "Template name"
 msgstr "テンプレート名"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1106 inc/taxonomies.php:857
+#: custom-post-type-ui.php:1139 inc/taxonomies.php:857
 msgid "%s Archives"
 msgstr "%s アーカイブ"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1088 inc/post-types.php:938
+#: custom-post-type-ui.php:1109 inc/post-types.php:938
 msgid "Single item: %s"
 msgstr "個別項目: %s"
 
@@ -44,22 +56,6 @@ msgstr "キャンセル"
 #: inc/utility.php:1036 inc/utility.php:1047
 msgid "OK"
 msgstr "OK"
-
-#: inc/about.php:104
-msgid "The move to require WordPress 6.3 allowed for adding \"item_trashed\" label support."
-msgstr "WordPress 6.3 を必要とする動きにより、\"item_trashed\" ラベルのサポートが追加されるようになりました。"
-
-#: inc/about.php:103
-msgid "Moved to minimum of WordPress 6.3."
-msgstr "最低動作バージョンは WordPress 6.3へ"
-
-#: inc/about.php:102
-msgid "If you are trying to move post types into CPTUI, you can now mark as such to prevent slug conflicts notices."
-msgstr "投稿タイプを CPTUI に移動しようとしている場合は、そのようにマークして、スラッグ競合の通知を防ぐことができるようになりました。"
-
-#: inc/about.php:101
-msgid "Post type migration support"
-msgstr "投稿タイプの取り込みに対応"
 
 #: inc/post-types.php:1234
 msgid "\"False\" behaves like posts, \"True\" behaves like pages."
@@ -96,11 +92,11 @@ msgstr "新しく作成した投稿タイプを、カテゴリーとタグのア
 msgid "Slugs may only contain lowercase alphanumeric characters, dashes, and underscores."
 msgstr "スラッグは小文字の英数字、ダッシュ、アンダースコアのみを含むことができます。"
 
-#: custom-post-type-ui.php:1128
+#: custom-post-type-ui.php:1167
 msgid "Back to top"
 msgstr "トップへ戻る"
 
-#: custom-post-type-ui.php:847
+#: custom-post-type-ui.php:834
 msgid "Secondary menu"
 msgstr "サブメニュー"
 
@@ -111,20 +107,20 @@ msgid "%1$s version %2$s by %3$s"
 msgstr "%1$s バージョン %2$s / %3$s"
 
 #. translators: Link text for WordPress Developer site.
-#: inc/post-types.php:1533
+#: inc/post-types.php:1534
 msgid "Theme support for post formats"
 msgstr "投稿フォーマットのテーマサポート"
 
 #. translators: Link text for WordPress Developer site.
-#: inc/post-types.php:1530
+#: inc/post-types.php:1531
 msgid "Theme support for featured images"
 msgstr "アイキャッチ画像のテーマサポート"
 
-#: inc/post-types.php:1523
+#: inc/post-types.php:1524
 msgid "Featured images and Post Formats need theme support added, to be used."
 msgstr "アイキャッチ画像と投稿フォーマットを使用するには、テーマのサポートを追加する必要があります。"
 
-#: inc/post-types.php:1513
+#: inc/post-types.php:1514
 msgid "Provide a callback function that sets up the meta boxes for the edit form. Do `remove_meta_box()` and `add_meta_box()` calls in the callback. Default null."
 msgstr "編集フォームのメタボックスを設定するコールバック関数を用意する。コールバック内で 'remove_meta_box()' と 'add_meta_box()' の呼び出しを行います。デフォルトは null です。"
 
@@ -267,7 +263,7 @@ msgstr "タグクラウドへ表示します。"
 msgid "We recommend checking out %s, the latest iteration of \"CMB2\". Both are supported by WebDevStudios."
 msgstr "\"CMB2\" の最新バージョンである %s をチェックすることを推奨します。どちらも WebDevStudios でサポートされています。"
 
-#: inc/post-types.php:1491
+#: inc/post-types.php:1492
 msgid "Choose dashicon"
 msgstr "ダッシュアイコンを選択"
 
@@ -284,7 +280,7 @@ msgid "(default: false) Whether or not the post type can have parent-child relat
 msgstr "(デフォルト: false) 投稿タイプが親子関係を持つことができるかどうか。親を選択するには、少なくとも1つの公開済みコンテンツ アイテムが必要です。"
 
 #: external/wpgraphql.php:340
-msgid "Custom Post Type UI has native support for WPGraphQL. Please <a href=\"%s\">de-active</a> the \"WPGraphQL for Custom Post Type UI\" extension to proceed."
+msgid "Custom Post Type UI has native support for WPGraphQL. Please <a href=\"%s\">de-activate</a> the \"WPGraphQL for Custom Post Type UI\" extension to proceed."
 msgstr "Custom Post Type UI は WPGraphQL をネイティブサポートしています。続行するには、「PGraphQL for Custom Post Type UI」 拡張機能を<a href=\"%s\">非アクティブ</a>にしてください。"
 
 #: external/wpgraphql.php:249
@@ -370,7 +366,7 @@ msgstr "複数の投稿タイプのテンプレートの設定の詳細につい
 msgid "How do I add custom post type support for custom templates selection like pages have?"
 msgstr "ページのようなカスタム テンプレートの選択に対してカスタム投稿の種類のサポートを追加するにはどうすればよいですか?"
 
-#: inc/post-types.php:1732
+#: inc/post-types.php:1733
 msgid "Taxonomy options"
 msgstr "タクソノミーオプション"
 
@@ -562,7 +558,7 @@ msgstr "%sがありません"
 msgid "Update %s name"
 msgstr "%s 名を更新"
 
-#: inc/post-types.php:1539 inc/taxonomies.php:342
+#: inc/post-types.php:1540 inc/taxonomies.php:342
 msgid "Post type options"
 msgstr "投稿タイプオプション"
 
@@ -633,7 +629,7 @@ msgstr "投稿タイプまたはタクソノミーをインポートするかど
 msgid "Review %s"
 msgstr "レビュー %s"
 
-#: inc/tools-sections/tools-get-code.php:44
+#: inc/tools-sections/tools-get-code.php:45
 msgid "All Custom Post Type UI Taxonomies"
 msgstr "すべてのカスタム投稿タイプの UI タクソノミー"
 
@@ -649,7 +645,7 @@ msgstr "Export Taxonomies 設定"
 msgid "Export Post Types settings"
 msgstr "Export Post Types 設定"
 
-#: inc/post-types.php:1512 inc/taxonomies.php:1316
+#: inc/post-types.php:1513 inc/taxonomies.php:1316
 msgid "Metabox callback"
 msgstr "メタボックスコールバック"
 
@@ -675,11 +671,11 @@ msgstr "利用可能な登録済み投稿タイプのためのサポートを追
 
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: inc/support.php:289
+#: inc/support.php:286
 msgid "We recommend %s for some extended customization and addition of extra fields regarding roles and capabilities."
 msgstr "一部の拡張カスタマイズや、権限グループや権限に関するフィールドの追加には %s をお勧めします。"
 
-#: inc/support.php:283
+#: inc/support.php:280
 msgid "Any help with customizing capabilities?"
 msgstr "権限のカスタマイズについてヘルプが必要ですか ?"
 
@@ -752,7 +748,7 @@ msgstr "無効なデータ"
 msgid "Successfully imported data."
 msgstr "データを正常にインポートしました。"
 
-#: inc/post-types.php:1519
+#: inc/post-types.php:1520
 msgid "Add support for various available post editor features on the right. A checked value means the post type feature is supported."
 msgstr "右側に、使用可能なさまざまな投稿エディター機能のサポートを追加します。チェックされた値は、投稿タイプ機能がサポートされていることを意味します。"
 
@@ -780,11 +776,11 @@ msgstr "項目を表示"
 msgid "No associated taxonomies"
 msgstr "関連するタクソノミーがありません"
 
-#: custom-post-type-ui.php:150
+#: custom-post-type-ui.php:137
 msgid "Tools"
 msgstr "ツール"
 
-#: custom-post-type-ui.php:150
+#: custom-post-type-ui.php:137
 msgid "Custom Post Type UI Tools"
 msgstr "Custom Post Type UI ツール"
 
@@ -836,11 +832,11 @@ msgstr "このタクソノミーの管理用デフォルト UI を生成する (
 msgid "Import/Export Taxonomies"
 msgstr "タクソノミーのインポート/エクスポート"
 
-#: inc/post-types.php:1728
+#: inc/post-types.php:1729
 msgid "Add support for available registered taxonomies."
 msgstr "登録済のタクソノミーから利用するものを選択。"
 
-#: inc/post-types.php:1712
+#: inc/post-types.php:1713
 msgid "Use this input to register custom \"supports\" values, separated by commas. Learn about this at %s"
 msgstr "カスタム「サポート」のスラッグとして登録したい値があればそれを入力。複数指定する場合はコンマ区切り。詳細は %s 参照"
 
@@ -930,7 +926,7 @@ msgid "Get code"
 msgstr "コードを取得"
 
 #. translators: Placeholder will hold the name of the author of the plugin.
-#: inc/about.php:131
+#: inc/about.php:111
 msgid "More from %s"
 msgstr "その他の %s プロダクト"
 
@@ -1116,15 +1112,15 @@ msgstr "タクソノミーを表示"
 msgid "Please choose a different post type name. %s matches an existing page slug, which can cause conflicts."
 msgstr "別の投稿タイプ名を選んでください。%s は既存のページスラッグと一致し、競合する可能性があります。"
 
-#: inc/post-types.php:1762 inc/taxonomies.php:379
+#: inc/post-types.php:1763 inc/taxonomies.php:379
 msgid "(WP Core)"
 msgstr "(WP コア)"
 
-#: inc/post-types.php:1500
+#: inc/post-types.php:1501
 msgid "Choose image icon"
 msgstr "画像アイコンを選択"
 
-#: inc/post-types.php:1477
+#: inc/post-types.php:1478
 msgid "Image URL or %sDashicon class name%s to use for icon. Custom image should be 20px by 20px."
 msgstr "アイコン用画像の URL または %sDashicon のクラス名%s。カスタム画像は20px × 20pxにする必要があります。"
 
@@ -1390,11 +1386,13 @@ msgstr "デバッグ情報の送信"
 msgid "Please provide an email address to send debug information to: "
 msgstr "デバッグ情報の送信先電子メールアドレスを入力してください: "
 
-#: inc/tools-sections/tools-get-code.php:59
+#. translators: placeholder will hold taxonomy name.
+#: inc/tools-sections/tools-get-code.php:61
 msgid "%s Taxonomy"
 msgstr "%s タクソノミー"
 
-#: inc/tools-sections/tools-get-code.php:34
+#. translators: placeholder will hold post type name.
+#: inc/tools-sections/tools-get-code.php:35
 msgid "%s Post Type"
 msgstr "%s 投稿タイプ"
 
@@ -1405,11 +1403,6 @@ msgstr "エクスポートされるのは設定内容だけです。投稿デー
 #: inc/tools.php:81
 msgid "Debug Info"
 msgstr "デバッグ情報"
-
-#. translators: Placeholder will hold the plugin version.
-#: inc/about.php:93
-msgid "What's new in version %s"
-msgstr "バージョン %s の新着情報"
 
 #: classes/class.cptui_debug_info.php:24
 msgid "If you have sought support for Custom Post Type UI on the forums, you may be requested to send the information below to the plugin developer. Simply insert the email they provided in the input field at the bottom and click the \"Send debug info\" button. Only the data below will be sent to them."
@@ -1611,19 +1604,13 @@ msgstr "(例: 俳優)"
 msgid "Taxonomy Slug"
 msgstr "タクソノミースラッグ"
 
-#: inc/support.php:272
+#: inc/support.php:269
 msgid "Change text inside the post/page editor title field. Should be able to adapt as necessary."
 msgstr "投稿 / 固定ページ編集画面のタイトルフィールド内の文字列を変更してください。以下のコードを用途に応じて調整してお使いください。"
 
-#: inc/support.php:271
+#: inc/support.php:268
 msgid "How do I filter the \"enter title here\" text in the post editor screen?"
 msgstr "投稿編集画面に表示される「ここにタイトルを入力」という文字列をフィルターしてカスタマイズするには ?"
-
-#. translators: Placeholders are just for HTML markup that doesn't need
-#. translated
-#: inc/support.php:260
-msgid "%1$s has an excellent %2$spost%3$s introducing users to the %4$sPosts 2 Posts%5$s plugin that should be a good start."
-msgstr "%1$s による、 %4$sPosts 2 Posts%5$s プラグインの素晴らしい%2$s紹介記事%3$sが良い参考になるでしょう。"
 
 #: inc/support.php:255
 msgid "Post relationships?"
@@ -1715,83 +1702,83 @@ msgstr "別の投稿タイプ名を選択してください。「%s」はすで�
 msgid "Please do not use quotes in post type/taxonomy names or rewrite slugs"
 msgstr "投稿タイプ / タクソノミーの名前またはリライトスラッグにはクオート (引用符) を使用しないでください"
 
-#: inc/post-types.php:2037
+#: inc/post-types.php:2038
 msgid "Please provide a post type name"
 msgstr "投稿タイプ名を入力してください"
 
-#: inc/post-types.php:1964
+#: inc/post-types.php:1965
 msgid "Please provide a post type to delete"
 msgstr "削除対象の投稿タイプを指定してください"
 
-#: inc/post-types.php:1773
+#: inc/post-types.php:1774
 msgid "Adds %s support"
 msgstr "%s サポートの追加"
 
-#: inc/post-types.php:1719
+#: inc/post-types.php:1720
 msgid "Provide custom support slugs here."
 msgstr "カスタム「サポート」のスラッグを入力。"
 
-#: inc/post-types.php:1711 inc/post-types.php:1712
+#: inc/post-types.php:1712 inc/post-types.php:1713
 msgid "Custom \"Supports\""
 msgstr "カスタム「サポート」"
 
-#: inc/post-types.php:1703
+#: inc/post-types.php:1704
 msgid "None"
 msgstr "なし"
 
-#: inc/post-types.php:1521
+#: inc/post-types.php:1522
 msgid "Use the \"None\" option to explicitly set \"supports\" to false."
 msgstr "すべてのサポートを明示的に無効化したい場合は「なし」をチェック。"
 
-#: inc/post-types.php:1690
+#: inc/post-types.php:1691
 msgid "Post Formats"
 msgstr "投稿フォーマット"
 
-#: inc/post-types.php:1677
+#: inc/post-types.php:1678
 msgid "Page Attributes"
 msgstr "ページ属性"
 
-#: inc/post-types.php:1664
+#: inc/post-types.php:1665
 msgid "Author"
 msgstr "投稿者"
 
-#: inc/post-types.php:624 inc/post-types.php:1586
+#: inc/post-types.php:624 inc/post-types.php:1587
 msgid "Featured Image"
 msgstr "アイキャッチ画像"
 
-#: inc/post-types.php:1651
+#: inc/post-types.php:1652
 msgid "Revisions"
 msgstr "リビジョン"
 
-#: inc/post-types.php:1638
+#: inc/post-types.php:1639
 msgid "Comments"
 msgstr "コメント"
 
-#: inc/post-types.php:1625
+#: inc/post-types.php:1626
 msgid "Custom Fields"
 msgstr "カスタムフィールド"
 
-#: inc/post-types.php:1612
+#: inc/post-types.php:1613
 msgid "Trackbacks"
 msgstr "トラックバック"
 
-#: inc/post-types.php:1599
+#: inc/post-types.php:1600
 msgid "Excerpt"
 msgstr "抜粋"
 
-#: inc/post-types.php:1569
+#: inc/post-types.php:1570
 msgid "Editor"
 msgstr "エディター"
 
-#: inc/post-types.php:1552
+#: inc/post-types.php:1553
 msgid "Title"
 msgstr "タイトル"
 
-#: inc/post-types.php:1475
+#: inc/post-types.php:1476
 msgid "(Full URL for icon or Dashicon class)"
 msgstr "(アイコン画像の完全な URL または Dashicon のクラス名)"
 
-#: inc/post-types.php:1468
+#: inc/post-types.php:1469
 msgid "Menu Icon"
 msgstr "メニューアイコン"
 
@@ -1985,15 +1972,15 @@ msgstr "投稿タイプのカスタム管理メニュー名。"
 msgid "Menu Name"
 msgstr "メニュー名"
 
-#: inc/post-types.php:379 inc/post-types.php:1832
+#: inc/post-types.php:379 inc/post-types.php:1833
 msgid "Add Post Type"
 msgstr "投稿タイプを追加"
 
-#: inc/post-types.php:367 inc/post-types.php:1820
+#: inc/post-types.php:367 inc/post-types.php:1821
 msgid "Delete Post Type"
 msgstr "投稿タイプを削除"
 
-#: inc/post-types.php:356 inc/post-types.php:1809
+#: inc/post-types.php:356 inc/post-types.php:1810
 msgid "Save Post Type"
 msgstr "投稿タイプを保存"
 
@@ -2053,7 +2040,7 @@ msgstr "フロントエンドでアーカイブを表示"
 msgid "Labels"
 msgstr "ラベル"
 
-#: inc/listings.php:87 inc/post-types.php:1517
+#: inc/listings.php:87 inc/post-types.php:1518
 msgid "Supports"
 msgstr "サポート"
 
@@ -2070,9 +2057,9 @@ msgid "No taxonomies to display at this time"
 msgstr "現時点で表示するタクソノミーはありません"
 
 #: inc/tools-sections/tools-get-code.php:23
-#: inc/tools-sections/tools-get-code.php:36
-#: inc/tools-sections/tools-get-code.php:48
-#: inc/tools-sections/tools-get-code.php:63
+#: inc/tools-sections/tools-get-code.php:37
+#: inc/tools-sections/tools-get-code.php:49
+#: inc/tools-sections/tools-get-code.php:65
 msgid "Copy/paste the code below into your functions.php file."
 msgstr "以下のコードを functions.php ファイルにコピー & ペーストしてください。"
 
@@ -2140,142 +2127,166 @@ msgstr "注"
 msgid "If you are wanting to migrate registered post types or taxonomies from this site to another, that will also use Custom Post Type UI, use the import and export functionality. If you are moving away from Custom Post Type UI, use the information in the \"Get Code\" tab."
 msgstr "ここで提供するインポート/エクスポート機能は、 Custom Post Type UI を使用している複数のサイトの間で、当該プラグインにて登録した投稿タイプ・タクソノミー設定を移行するために使うものです。Custom Post Type UI の使用をやめる際の移行には「コードを取得」タブの機能を使ってください。"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1064 custom-post-type-ui.php:1114
+#: custom-post-type-ui.php:1080 custom-post-type-ui.php:1153
 #: inc/taxonomies.php:696
 msgid "Choose from the most used %s"
 msgstr "最もよく使われている%sから選択"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1063 custom-post-type-ui.php:1113
+#: custom-post-type-ui.php:1078 custom-post-type-ui.php:1151
 #: inc/taxonomies.php:680
 msgid "Add or remove %s"
 msgstr "%sを追加または削除"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1062 custom-post-type-ui.php:1112
+#: custom-post-type-ui.php:1076 custom-post-type-ui.php:1149
 #: inc/taxonomies.php:664
 msgid "Separate %s with commas"
 msgstr "%s が複数ある場合はコンマで区切る"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1061 custom-post-type-ui.php:1105
+#: custom-post-type-ui.php:1074 custom-post-type-ui.php:1137
 #: inc/taxonomies.php:584
 msgid "New %s name"
 msgstr "新しい %s の名前"
 
-#: custom-post-type-ui.php:1059 custom-post-type-ui.php:1103
+#. translators: placeholder holds content label.
+#: custom-post-type-ui.php:1070 custom-post-type-ui.php:1133
 msgid "Update %s"
 msgstr "%sを更新"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1057 custom-post-type-ui.php:1101
+#: custom-post-type-ui.php:1066 custom-post-type-ui.php:1129
 #: inc/post-types.php:616 inc/taxonomies.php:616
 msgid "Parent %s:"
 msgstr "親の%s:"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1056 custom-post-type-ui.php:1100
+#: custom-post-type-ui.php:1064 custom-post-type-ui.php:1127
 #: inc/taxonomies.php:600
 msgid "Parent %s"
 msgstr "親%s"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1054 custom-post-type-ui.php:1110
+#: custom-post-type-ui.php:1060 custom-post-type-ui.php:1145
 #: inc/taxonomies.php:648
 msgid "Popular %s"
 msgstr "人気の %s"
 
-#: custom-post-type-ui.php:1050 custom-post-type-ui.php:1095
+#. translators: placeholder holds content label.
+#: custom-post-type-ui.php:1054 custom-post-type-ui.php:1121
 msgid "No %s found in trash."
 msgstr "ゴミ箱内に%sが見つかりません。"
 
-#: custom-post-type-ui.php:1049 custom-post-type-ui.php:1094
+#. translators: placeholder holds content label.
+#: custom-post-type-ui.php:1052 custom-post-type-ui.php:1119
 msgid "No %s found."
 msgstr "%s が見つかりませんでした。"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1048 custom-post-type-ui.php:1053
-#: custom-post-type-ui.php:1093 custom-post-type-ui.php:1109
+#: custom-post-type-ui.php:1050 custom-post-type-ui.php:1058
+#: custom-post-type-ui.php:1117 custom-post-type-ui.php:1143
 #: inc/post-types.php:567 inc/taxonomies.php:632
 msgid "Search %s"
 msgstr "%sを検索"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1047 custom-post-type-ui.php:1055
-#: custom-post-type-ui.php:1092 custom-post-type-ui.php:1111
+#: custom-post-type-ui.php:1048 custom-post-type-ui.php:1062
+#: custom-post-type-ui.php:1115 custom-post-type-ui.php:1147
 #: inc/post-types.php:455 inc/taxonomies.php:504
 msgid "All %s"
 msgstr "%s一覧"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1045 custom-post-type-ui.php:1046
-#: custom-post-type-ui.php:1087 custom-post-type-ui.php:1091
+#: custom-post-type-ui.php:1044 custom-post-type-ui.php:1046
+#: custom-post-type-ui.php:1107 custom-post-type-ui.php:1113
 #: inc/post-types.php:535 inc/post-types.php:551 inc/taxonomies.php:536
 msgid "View %s"
 msgstr "表示 %s"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1044 custom-post-type-ui.php:1086
+#: custom-post-type-ui.php:1042 custom-post-type-ui.php:1105
 #: inc/post-types.php:519
 msgid "New %s"
 msgstr "新規 %s"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1043 custom-post-type-ui.php:1058
-#: custom-post-type-ui.php:1085 custom-post-type-ui.php:1102
+#: custom-post-type-ui.php:1040 custom-post-type-ui.php:1068
+#: custom-post-type-ui.php:1103 custom-post-type-ui.php:1131
 #: inc/post-types.php:503 inc/taxonomies.php:520
 msgid "Edit %s"
 msgstr "%sを編集"
 
+#. translators: placeholder holds content label.
 #. translators: Used for autofill
-#: custom-post-type-ui.php:1042 custom-post-type-ui.php:1060
-#: custom-post-type-ui.php:1084 custom-post-type-ui.php:1104
+#: custom-post-type-ui.php:1038 custom-post-type-ui.php:1072
+#: custom-post-type-ui.php:1101 custom-post-type-ui.php:1135
 #: inc/post-types.php:487 inc/taxonomies.php:568
 msgid "Add new %s"
 msgstr "新規%sを追加"
 
-#: custom-post-type-ui.php:958
+#. translators: placeholder holds content name.
+#: custom-post-type-ui.php:953
 msgid "%s has failed to be imported"
 msgstr "%s をインポートできませんでした"
 
-#: custom-post-type-ui.php:956
+#. translators: placeholder holds content name.
+#: custom-post-type-ui.php:950
 msgid "%s has been successfully imported"
 msgstr "%s をインポートしました"
 
+#. translators: placeholder holds content name.
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: custom-post-type-ui.php:952 inc/utility.php:692
+#: custom-post-type-ui.php:945 inc/utility.php:692
 msgid "%s has failed to be deleted"
 msgstr "%s を削除できませんでした"
 
+#. translators: placeholder holds content name.
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: custom-post-type-ui.php:950 inc/utility.php:677
+#: custom-post-type-ui.php:942 inc/utility.php:677
 msgid "%s has been successfully deleted"
 msgstr "%s を削除しました"
 
+#. translators: placeholder holds content name.
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: custom-post-type-ui.php:946 inc/utility.php:661
+#: custom-post-type-ui.php:937 inc/utility.php:661
 msgid "%s has failed to be updated"
 msgstr "%s を更新できませんでした"
 
+#. translators: placeholder holds content name.
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: custom-post-type-ui.php:944 inc/utility.php:646
+#: custom-post-type-ui.php:934 inc/utility.php:646
 msgid "%s has been successfully updated"
 msgstr "%s を更新しました"
 
+#. translators: placeholder holds content name.
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: custom-post-type-ui.php:940 inc/utility.php:630
+#: custom-post-type-ui.php:929 inc/utility.php:630
 msgid "%s has failed to be added"
 msgstr "%s を追加できませんでした"
 
+#. translators: placeholder holds content name.
 #. translators: Placeholders are just for HTML markup that doesn't need
 #. translated
-#: custom-post-type-ui.php:938 inc/utility.php:615
+#: custom-post-type-ui.php:926 inc/utility.php:615
 msgid "%s has been successfully added"
 msgstr "%s を追加しました"
 
@@ -2292,7 +2303,7 @@ msgstr "設定"
 msgid "Get Code"
 msgstr "コードを取得"
 
-#: inc/listings.php:88 inc/listings.php:290 inc/post-types.php:1726
+#: inc/listings.php:88 inc/listings.php:290 inc/post-types.php:1727
 #: inc/tools.php:67
 msgid "Taxonomies"
 msgstr "タクソノミー"
@@ -2317,44 +2328,40 @@ msgstr "投稿タイプを編集"
 msgid "Add New Post Type"
 msgstr "新規投稿タイプを追加"
 
-#: inc/utility.php:136
-msgid "Follow on Twitter:"
-msgstr "Twitter でフォロー:"
-
 #. Plugin Name of the plugin
 #: custom-post-type-ui.php inc/about.php:63 inc/utility.php:113
 #: inc/utility.php:131
 msgid "Custom Post Type UI"
 msgstr "Custom Post Type UI"
 
-#: custom-post-type-ui.php:165
+#: custom-post-type-ui.php:152
 msgid "About CPT UI"
 msgstr "CPT UI について"
 
-#: custom-post-type-ui.php:151
+#: custom-post-type-ui.php:138
 msgid "Help/Support"
 msgstr "ヘルプとサポート"
 
-#: custom-post-type-ui.php:149
+#: custom-post-type-ui.php:136
 msgid "Registered Types/Taxes"
 msgstr "登録済み"
 
-#: custom-post-type-ui.php:149
+#: custom-post-type-ui.php:136
 msgid "Registered Types and Taxes"
 msgstr "登録済み投稿タイプとタクソノミー"
 
-#: custom-post-type-ui.php:148 inc/listings.php:521
+#: custom-post-type-ui.php:135 inc/listings.php:521
 msgid "Add/Edit Taxonomies"
 msgstr "タクソノミーの追加と編集"
 
-#: custom-post-type-ui.php:147 inc/listings.php:499
+#: custom-post-type-ui.php:134 inc/listings.php:499
 msgid "Add/Edit Post Types"
 msgstr "投稿タイプの追加と編集"
 
-#: custom-post-type-ui.php:146
+#: custom-post-type-ui.php:133
 msgid "CPT UI"
 msgstr "CPT UI"
 
-#: custom-post-type-ui.php:146
+#: custom-post-type-ui.php:133
 msgid "Custom Post Types"
 msgstr "Custom Post Types"

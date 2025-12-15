@@ -580,7 +580,6 @@ html {
   width: 60px;
   height: 60px;
   z-index: 99999;
-  background-color: red !important;
   right: 10px;
   top: 10px;
   cursor: pointer;
@@ -862,7 +861,6 @@ body {
 .header .hamburger.is-checked + .logo img {
   display: none;
 }
-
 .hero-sp {
   aspect-ratio: 375/667;
 }
