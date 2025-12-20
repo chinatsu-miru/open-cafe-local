@@ -1,18 +1,14 @@
 'use strict';
 {
     // ハンバーガーメニュークリックした時の動作
-    console.log('--- main.js loaded ---');
     const logo = document.querySelector('.logo');
     const btn = document.querySelector('.hamburger');
-    console.log(btn);
     const navs = document.querySelectorAll('.hero__nav');
     const close = document.querySelector('.nav__close');
-    const img = document.querySelector('.btn-img');
+    // const img = document.querySelector('.btn-img');
     const mask = document.getElementById('mask');
-    const themeDir = btn.dataset.themeDir;
+    // const themeDir = btn.dataset.themeDir;
     const vh = window.innerHeight;
-    console.log(vh);
-    // img.src = themeDir + '/img/menu-icon.png';
 
 
     btn.addEventListener('click', () => {
@@ -23,13 +19,8 @@
         if(logo) {
             logo.classList.toggle('is-hidden');
         }
-        const isInPagesFolder = location.pathname.includes('/pages/');
+        // const isInPagesFolder = location.pathname.includes('/pages/');
 
-        // if (btn.classList.contains('is-checked')) {
-        //     img.src = themeDir + "/img/close.png";
-        // } else {
-        //     img.src = themeDir + "/img/menu-icon.png";
-        // };
         mask.classList.toggle('hidden');
     });
 
@@ -73,6 +64,8 @@
     });
 
 
+
+
     //トップへ戻るボタン-----------------------------------
     const toTop = document.querySelector('.to-top');
 
@@ -83,48 +76,26 @@
         });
     });
 
+
+    //ハンバーガーボタンふわっと出現-----------------------------------
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > vh) {
+            btn.classList.add('is-show');
+        } else {
+            btn.classList.remove('is-show');
+        }
+    });
+
     window.addEventListener('scroll', () => {
         if(window.scrollY > 300) {
             toTop.style.display = 'block';
         }else{
             toTop.style.display = 'none';
         }
-        if(window.scrollY > vh){
-            btn.style.display = 'block';
-        }else{
-            btn.style.display = 'none';
-        }
+    //     if(window.scrollY > vh){
+    //         btn.style.display = 'block';
+    //     }else{
+    //         btn.style.display = 'none';
+    //     }
     });
-
-
-
-
-
-    //menuページ・タブをクリックした時の動作-----------------------------------
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     const buttons = document.querySelectorAll('.tab-button');
-
-    //     buttons.forEach(function (btn) {
-    //         btn.addEventListener('click', function (e) {
-    //             e.preventDefault(); // リンク遷移を止める（※必要なときだけ）
-
-    //             // すべてのボタンの色をリセット
-    //             buttons.forEach(function (b) {
-    //                 b.classList.remove('btn-active');
-    //             });
-
-    //             // クリックしたボタンだけ色をつける
-    //             btn.classList.add('btn-active');
-    //         });
-    //     });
-    // });
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     // .tab-button 内のリンクを “必ず” 遷移させる
-    //     document.querySelectorAll('.tab-button a').forEach(function (a) {
-    //         a.addEventListener('click', function () {
-    //             window.location.href = a.href; // ← これで確実に飛ぶ
-    //         });
-    //     });
-    // });
 }

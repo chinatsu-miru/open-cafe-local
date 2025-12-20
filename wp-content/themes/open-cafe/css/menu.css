@@ -217,7 +217,7 @@ body {
   background-color: #382620;
   padding-top: 130px;
   padding-bottom: 50px;
-  z-index: 50;
+  z-index: 999;
   transform: translateX(100%);
   transition: transform 0.3s;
   color: #ffffff;
@@ -257,6 +257,11 @@ body {
 .body__inner .hero__nav .nav__close img,
 .body__inner .hero__nav.is_sub .nav__close img {
   width: 100%;
+}
+.body__inner .hero__nav .nav__close:hover,
+.body__inner .hero__nav.is_sub .nav__close:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 .body__inner .hero__nav .nav__lists,
 .body__inner .hero__nav.is_sub .nav__lists {
@@ -594,7 +599,15 @@ html {
   right: 10px;
   top: 10px;
   cursor: pointer;
-  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.header .hamburger.is-show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .header.concept {
   z-index: 20;
