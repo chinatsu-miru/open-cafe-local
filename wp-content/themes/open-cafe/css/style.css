@@ -232,7 +232,7 @@ body {
   .body__inner .hero__nav.is_sub {
     max-width: 375px;
     height: 800px;
-    z-index: 12;
+    z-index: 9999;
   }
 }
 .body__inner .hero__nav .nav__logo,
@@ -245,6 +245,18 @@ body {
 }
 .body__inner .hero__nav .nav__logo img,
 .body__inner .hero__nav.is_sub .nav__logo img {
+  width: 100%;
+}
+.body__inner .hero__nav .nav__close,
+.body__inner .hero__nav.is_sub .nav__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+}
+.body__inner .hero__nav .nav__close img,
+.body__inner .hero__nav.is_sub .nav__close img {
   width: 100%;
 }
 .body__inner .hero__nav .nav__lists,
@@ -857,9 +869,6 @@ body {
 }
 .header .hamburger img {
   width: 100%;
-}
-.header .hamburger.is-checked + .logo img {
-  display: none;
 }
 .hero-sp {
   aspect-ratio: 375/667;

@@ -4,13 +4,15 @@
     console.log('--- main.js loaded ---');
     const logo = document.querySelector('.logo');
     const btn = document.querySelector('.hamburger');
+    console.log(btn);
     const navs = document.querySelectorAll('.hero__nav');
+    const close = document.querySelector('.nav__close');
     const img = document.querySelector('.btn-img');
     const mask = document.getElementById('mask');
     const themeDir = btn.dataset.themeDir;
     const vh = window.innerHeight;
     console.log(vh);
-    img.src = themeDir + '/img/menu-icon.png';
+    // img.src = themeDir + '/img/menu-icon.png';
 
 
     btn.addEventListener('click', () => {
@@ -18,15 +20,24 @@
             nav.classList.toggle('is-checked');
         });
         btn.classList.toggle('is-checked');
-        logo.classList.toggle('is-hidden');
+        if(logo) {
+            logo.classList.toggle('is-hidden');
+        }
+        const isInPagesFolder = location.pathname.includes('/pages/');
 
-        // const isInPagesFolder = location.pathname.includes('/pages/');
+        // if (btn.classList.contains('is-checked')) {
+        //     img.src = themeDir + "/img/close.png";
+        // } else {
+        //     img.src = themeDir + "/img/menu-icon.png";
+        // };
+        mask.classList.toggle('hidden');
+    });
 
-        if (btn.classList.contains('is-checked')) {
-            img.src = themeDir + "/img/close.png";
-        } else {
-            img.src = themeDir + "/img/menu-icon.png";
-        };
+    close.addEventListener('click', () => {
+        navs.forEach(nav => {
+            nav.classList.toggle('is-checked');
+        });
+        btn.classList.toggle('is-checked');
         mask.classList.toggle('hidden');
     });
 

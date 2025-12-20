@@ -85,21 +85,20 @@ body {
         height: 60px;
         cursor: pointer;
         border-radius: 50%;
-        // display: none;
 
         img {
             width: 100%;
         }
 
-        &.is-checked+.logo {
-            img {
-                display: none;
-            }
-        }
+        // &.is-checked+.logo {
+        //     img {
+        //         display: none;
+        //     }
+        // }
     }
 
     &.is-checked {
-        
+
     }
 }
 

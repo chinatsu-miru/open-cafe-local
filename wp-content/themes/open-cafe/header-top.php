@@ -25,17 +25,22 @@ if (is_front_page()) {
             </button>
         </header>
         <nav class="hero__nav">
-            <div class="nav__logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
+            <div class="nav_btns">
+                <div class="nav__logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
+                </div>
+                <div class="nav__close">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/close.png" alt="">
+                </div>
             </div>
-            <?php
-            wp_nav_menu(array(
-                'theme_location' => 'drawer-pc',
-                'container'      => false,
-                'menu_class'     => 'nav__lists',
-                'walker'         => new Custom_Drawer_Menu_Walker(),
-            ));
-            ?>
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'drawer-pc',
+                    'container'      => false,
+                    'menu_class'     => 'nav__lists',
+                    'walker'         => new Custom_Drawer_Menu_Walker(),
+                ));
+                ?>
         </nav>
 
 
@@ -119,6 +124,9 @@ if (is_front_page()) {
                 <div class="nav__logo">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
                 </div>
+                <!-- <button id="pages" class="hamburger" type="button" data-theme-dir="<?php echo esc_url(get_template_directory_uri()); ?>">
+                    <img id="open" class="btn-img" src="<?php echo esc_url(get_template_directory_uri()); ?>/img/menu-icon.png" alt="ハンバーガーボタン">
+                </button> -->
 
                 <!-- スマホ用ドロワーメニュー -->
                 <?php
