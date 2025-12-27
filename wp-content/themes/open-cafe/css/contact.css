@@ -126,7 +126,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 12px;
+  right: 24px;
   background-image: url(../img/arrow.png);
   color: #ffffff;
   display: inline-block;
@@ -348,7 +348,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .section__title {
-    gap: 8px;
+    gap: 0px;
   }
 }
 .section__title h2 {
@@ -356,7 +356,7 @@ body {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 4px;
-  line-height: normal;
+  line-height: 150%;
 }
 @media screen and (min-width: 768px) {
   .section__title h2 {
@@ -400,7 +400,7 @@ body {
   }
 }
 .access .access__inner .access__contents {
-  padding-top: 43px;
+  padding-top: 38px;
   padding-bottom: 80px;
 }
 @media screen and (min-width: 768px) {
@@ -413,7 +413,7 @@ body {
   aspect-ratio: 335/188;
   background: #ffffff;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -439,6 +439,9 @@ body {
   width: 17px;
   top: 67.68px;
   left: 158.74px;
+}
+.access .access__inner .access__contents .access__map .access__pin img {
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .access .access__inner .access__contents .access__map .access__pin {
@@ -466,7 +469,7 @@ body {
   display: flex;
   gap: 6.4vw;
   border-bottom: 1px solid #333;
-  padding-bottom: 12px;
+  padding-bottom: 5px;
 }
 @media screen and (min-width: 768px) {
   .access .access__inner .access__contents .business-info__inner .info__list {
@@ -478,14 +481,14 @@ body {
   font-weight: 700;
 }
 .access .access__inner .access__contents .business-info__inner .info__list .info__meta {
-  line-height: 24px;
+  line-height: 21px;
   font-weight: 700;
 }
 .access .access-dec {
   position: absolute;
   width: 50.85vw;
   height: 48vw;
-  top: -100px;
+  top: -91px;
   right: -37px;
 }
 .access .access-dec img {
@@ -657,7 +660,12 @@ html {
 }
 .breadcrumbs .breadcrumbs_inner {
   display: flex;
-  gap: 15px;
+  gap: 5px;
+}
+@media screen and (min-width: 768px) {
+  .breadcrumbs .breadcrumbs_inner {
+    gap: 15px;
+  }
 }
 .breadcrumbs span {
   color: #382620;
@@ -708,8 +716,8 @@ footer .footer-inner {
 }
 footer .footer-inner .sns-icons {
   display: flex;
-  width: 184px;
-  height: 40px;
+  width: 120px;
+  height: 24px;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -720,8 +728,8 @@ footer .footer-inner .sns-icons {
   }
 }
 footer .footer-inner .sns-icons .sns-icon {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -737,7 +745,7 @@ footer .footer-inner .sns-icons .sns-icon .fa-twitter::before,
 footer .footer-inner .sns-icons .sns-icon .fa-youtube::before,
 footer .footer-inner .sns-icons .sns-icon .fa-instagram::before {
   color: #ffffff;
-  font-size: 32px;
+  font-size: 18px;
 }
 @media screen and (min-width: 768px) {
   footer .footer-inner .sns-icons .sns-icon .fa-twitter::before,
@@ -754,6 +762,9 @@ footer .footer-inner .footer-copy {
   text-align: center;
   padding-top: 37px;
   padding-bottom: 14px;
+}
+footer .footer-inner .footer-copy small {
+  font-size: 12px;
 }
 footer .footer-inner .to-top {
   display: none;
@@ -779,11 +790,11 @@ footer .footer-inner:hover {
   opacity: 0.8;
 }
 footer .footer-beans {
-  width: 34.133vw;
+  width: 92px;
   height: 30.4vw;
   position: absolute;
-  bottom: 89px;
-  left: -36px;
+  bottom: 93px;
+  left: 0;
   clip-path: inset(-100vmax -100vmax 0 -100vmax);
 }
 footer .footer-beans img {

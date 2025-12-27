@@ -37,8 +37,6 @@
             <?php
             $prev_icon = '<img src="' . get_template_directory_uri() . '/img/news/news-single/prev.svg" alt="前の記事">';
             $next_icon = '<img src="' . get_template_directory_uri() . '/img/news/news-single/next.svg" alt="次の記事">';
-
-
             ?>
             <br>
             <nav class="post-nav__box" aria-label="記事ナビゲーション">

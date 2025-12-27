@@ -173,7 +173,8 @@ body {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 12px;
+            // right: 12px;
+            right: 24px;
             background-image: url(../img/arrow.png);
             color: $sub-text-color;
             display: inline-block;
@@ -403,7 +404,7 @@ body {
     text-align: center;
 
     @include mq(md) {
-        gap: 8px;
+        gap: 0px;
     }
 
     h2 {
@@ -411,7 +412,7 @@ body {
         font-size: 40px;
         font-weight: 700;
         letter-spacing: 4px;
-        line-height: normal;
+        line-height: 150%;
 
         @include mq(md) {
             font-size: 52px;
@@ -457,7 +458,7 @@ body {
         }
 
         .access__contents {
-            padding-top: 43px;
+            padding-top: 38px;
             padding-bottom: 80px;
 
             @include mq(md) {
@@ -469,7 +470,7 @@ body {
                 aspect-ratio: 335 / 188;
                 background: $sub-text-color;
                 margin: 0 auto;
-                margin-bottom: 40px;
+                margin-bottom: 35px;
                 position: relative;
 
                 @include mq(md) {
@@ -497,6 +498,10 @@ body {
                     top: 67.68px;
                     left: 158.74px;
 
+                    img {
+                        width: 100%;
+                    }
+
                     @include mq(md) {
                         aspect-ratio: 35 / 60;
                         width: 35px;
@@ -523,7 +528,7 @@ body {
                     display: flex;
                     gap: 6.4vw;
                     border-bottom: 1px solid #333;
-                    padding-bottom: 12px;
+                    padding-bottom: 5px;
 
                     @include mq(md) {
                         gap: 1.875vw;
@@ -535,7 +540,7 @@ body {
                     }
 
                     .info__meta {
-                        line-height: 24px;
+                        line-height: 21px;
                         font-weight: 700;
                     }
                 }
@@ -547,7 +552,7 @@ body {
         position: absolute;
         width: 50.85vw;
         height: 48vw;
-        top: -100px;
+        top: -91px;
         right: -37px;
 
         img {

@@ -6,7 +6,7 @@
             <h2>お問い合わせフォーム</h2>
             <p>お問い合わせ内容に応じて、項目をご選択のうえ、お気軽にお問い合わせください。</p>
         </div>
-        <div action="" class="contact-form">
+        <div class="contact-form">
             <?php
             if (have_posts()) {
                 while (have_posts()) {

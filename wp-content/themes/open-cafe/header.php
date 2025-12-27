@@ -108,5 +108,5 @@ if (is_page('concept')) {
     </div>
     <div id="mask" class="hidden"></div>
 
-    <main class="concept-main">
+    <div class="concept-main">
         <?php get_template_part('template-parts/breadcrumb'); ?>

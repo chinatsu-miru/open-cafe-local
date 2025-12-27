@@ -15,7 +15,8 @@ if (is_front_page()) {
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class();?>>
+    <div class="wrapper">
     <?php wp_body_open(); ?>
     <div class="body__inner">
         <header class="header top">
@@ -45,7 +46,7 @@ if (is_front_page()) {
 
 
         <!-- スマホ -->
-        <section class="hero-sp">
+        <div class="hero-sp">
             <div class="hero__kv">
                 <div class="swiper main-visual">
                     <div class="swiper-wrapper">
@@ -152,10 +153,10 @@ if (is_front_page()) {
             <div class="kv__decor">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/bg-deco05.png" alt="">
             </div>
-        </section>
+        </div>
 
         <!-- pc -->
-        <section class="hero-pc">
+        <div class="hero-pc">
             <div class="hero-pc-inner">
                 <div class="pc__nav">
                     <div class="nav__logo-pc">
@@ -255,7 +256,7 @@ if (is_front_page()) {
                 <div class="hero__pc-bg bg">
                 </div>
             </div>
-        </section>
+        </div>
 
     </div>
 

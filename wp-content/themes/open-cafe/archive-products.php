@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="gift__main">
-    <section class="gift__container">
+    <div class="gift__container">
         <?php if (have_posts()): ?>
 
             <?php $count = 0; ?>
@@ -40,7 +40,7 @@
                 <?php endif; ?>
             <?php endwhile; ?>
         <?php endif; ?>
-    </section>
+    </div>
 
     <section class="gift__info">
         <div class="gift__info-wrap">

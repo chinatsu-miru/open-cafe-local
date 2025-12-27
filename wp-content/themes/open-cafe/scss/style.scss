@@ -97,9 +97,7 @@ body {
         // }
     }
 
-    &.is-checked {
-
-    }
+    &.is-checked {}
 }
 
 
@@ -253,14 +251,22 @@ body {
 
                 }
 
-                .speech-bubble {
+                .top-pc__deco {
                     position: absolute;
                     top: -41px;
                     left: 215px;
                     width: 120px;
                     height: 71px;
-                    transform: rotate(5deg);
                 }
+
+                // .speech-bubble {
+                //     position: absolute;
+                //     top: -41px;
+                //     left: 215px;
+                //     width: 120px;
+                //     height: 71px;
+                //     transform: rotate(5deg);
+                // }
             }
         }
 
@@ -345,7 +351,7 @@ body {
                 flex-direction: column;
                 justify-content: space-between;
                 width: 40%;
-                gap: clamp(30px, 2.5vw, 40px);
+                gap: clamp(30px, 2.4vw, 40px);
 
                 .nav__list-pc {
 
@@ -354,19 +360,20 @@ body {
                         flex-direction: row;
                         align-items: center;
                         flex-direction: column;
-                        gap: clamp(4px, 0.468vw, 10px);
+                        // gap: clamp(4px, 0.468vw, 10px);
 
                         .en,
                         .ja {
                             color: $main-text-color;
                             font-style: normal;
-                            line-height: normal;
                         }
 
                         .en {
                             font-family: "Patua One";
                             font-size: clamp(14px, 1.25vw, 32px);
                             font-weight: 400;
+                            letter-spacing: 1.92px;
+                            // line-height: 150%;
                             // letter-spacing: 1.92px;
                         }
 
@@ -375,6 +382,7 @@ body {
                             font-family: "Noto Serif JP";
                             font-size: clamp(8px, 0.781vw, 14px);
                             font-weight: 500;
+                            line-height: 150%;
                         }
                     }
                 }
@@ -452,7 +460,7 @@ body {
 
                 .kv__card {
                     position: absolute;
-                    bottom: 23px;
+                    bottom: 21px;
                     right: 20px;
                     width: 30.312vw;
                     height: 11.875vw;
@@ -467,6 +475,7 @@ body {
                         width: 100%;
                         height: 100%;
                         padding: 16px;
+                        padding-right: 28px;
                         display: flex;
                         gap: 16px;
                         align-items: center;
@@ -550,6 +559,13 @@ body {
                         height: 95px;
                         transform: rotate(5deg);
 
+                        @include mq(md) {
+                            width: 175px;
+                            height: 110px;
+                            transform: rotate(-1deg);
+
+                        }
+
                         img {
                             width: 100%;
                         }
@@ -566,14 +582,14 @@ body {
                 font-size: clamp(16px, 1.562vw, 23px);
                 // font-size: 1.562vw;
                 font-weight: 700;
-                line-height: 32px;
+                line-height: 40px;
                 letter-spacing: 2.8px;
                 z-index: 11;
 
                 p {
-                    &:nth-child(1) {
-                        padding-bottom: 16px;
-                    }
+                    // &:nth-child(1) {
+                    //     padding-bottom: 16px;
+                    // }
                 }
             }
         }
@@ -622,7 +638,7 @@ body {
 //concept-------------------------------------------
 .concept {
     padding-top: 60px;
-    padding-bottom: 70px;
+    padding-bottom: 60px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -630,9 +646,9 @@ body {
 
     @include mq(md) {
         // max-width: 1440px;
-        padding-bottom: 100px;
+        padding-bottom: 80px;
         margin: 0 auto;
-        padding-top: 160px;
+        padding-top: 80px;
         flex-direction: row-reverse;
         justify-content: flex-end;
         gap: 80px;
@@ -645,12 +661,15 @@ body {
         z-index: 1;
 
         @include mq(md) {
-            width: calc(100vw * 0.36);
+            width: calc(100vw * 0.4);
         }
 
         .section__title {
             text-align-last: left;
-            padding-top: 18px;
+
+            @include mq(md) {
+                margin-top: 32.5px;
+            }
         }
 
         .concept__catch {
@@ -664,7 +683,7 @@ body {
             @include mq(md) {
                 padding-top: 48px;
                 font-size: 28px;
-                line-height: 60px;
+                line-height: 56px;
             }
         }
 
@@ -682,12 +701,12 @@ body {
 
         .button1 {
             @include mq(md) {
-                width: 280px;
+                width: 290px;
                 margin-left: 0;
                 margin-top: 48px;
 
                 &::after {
-                    width: 280px;
+                    width: 290px;
                 }
 
             }
@@ -697,7 +716,7 @@ body {
     .concept__image {
         position: relative;
         display: inline-block;
-        margin-top: 86px;
+        margin-top: 66px;
         aspect-ratio: 315 / 400;
         margin-left: -20px;
         width: 84vw;
@@ -768,17 +787,22 @@ body {
 
     .concept-decor {
         position: absolute;
-        width: calc(100vw * 0.317);
-        height: calc(100vw * 0.36);
-        right: -8vw;
-        bottom: calc(100vw * -0.197);
+        width: 86px;
+        // width: calc(100vw * 0.317);
+        // height: calc(100vw * 0.36);
+        right: 0;
+        bottom: calc(100vw * -0.227);
         z-index: 9999;
 
+        img {
+            width: 100%;
+        }
+
         @include mq(md) {
-            width: 15.703vw;
-            aspect-ratio: 201 / 228;
-            bottom: -337px;
-            right: -34px;
+            width: clamp(120px, 13.047vw, 167px);
+            aspect-ratio: 167 / 228;
+            bottom: -260px;
+            right: 0;
             height: auto;
         }
     }
@@ -793,24 +817,23 @@ body {
     z-index: 0;
     padding-inline: 0;
     background-color: $base-color;
-    padding-bottom: 63px;
+    padding-bottom: 60px;
 
     @include mq(md) {
         overflow: visible;
-        margin-top: 240px;
+        margin-top: 160px;
         margin-inline: 0px;
         padding-bottom: 77px;
     }
 
     .section__title {
         background-color: $base-color;
-        padding-top: 56px;
+        padding-top: 60px;
         padding-bottom: 62px;
 
         @include mq(md) {
             padding-top: 81px;
             padding-bottom: 60px;
-            gap: 6px;
         }
     }
 
@@ -838,23 +861,26 @@ body {
             }
 
             .ribbon {
-                width: 255px;
-                height: 32px;
+                width: 230px;
+                height: 37px;
+                padding: 8px 10px;
                 background-color: $main-text-color;
                 position: absolute;
-                top: -16.5px;
+                top: -25px;
                 left: 50%;
                 transform: translateX(-50%);
+                display: flex;
+                align-items: center;
 
                 @include mq(md) {
-                    width: 308px;
+                    width: 290px;
                     height: 37px;
                     top: -18.5px;
                 }
 
                 .ribbon__left {
                     position: absolute;
-                    top: 5.7px;
+                    top: 7.7px;
                     left: -17.37px;
 
                     @include mq(md) {
@@ -871,7 +897,7 @@ body {
                     font-family: "Noto Serif JP";
                     font-size: 14px;
                     font-weight: 700;
-                    line-height: 32px;
+                    line-height: 21px;
 
                     @include mq(md) {
                         font-size: 18px;
@@ -881,7 +907,7 @@ body {
 
                 .ribbon__right {
                     position: absolute;
-                    top: 5.7px;
+                    top: 7.7px;
                     right: -17.37px;
 
                     @include mq(md) {
@@ -911,7 +937,7 @@ body {
                 .lunch-set__pasta-item {
                     width: 42.13vw;
                     min-height: 203px;
-                    padding-bottom: 20px;
+                    padding-bottom: 22px;
 
                     @include mq(md) {
                         width: 281px;
@@ -1064,7 +1090,7 @@ body {
 
                 @include mq(lg) {
                     display: flex;
-                    flex: 0 0 71.4%;
+                    flex: 0 0 69.4%;
                     padding-top: 0;
                     padding-left: 0;
                     padding-right: 0;
@@ -1234,7 +1260,7 @@ body {
                     font-family: Damion;
                     font-size: 10.66vw;
                     line-height: normal;
-                    padding-bottom: 4px;
+                    // padding-bottom: 4px;
 
                     @include mq(lg) {
                         padding-top: 2px;
@@ -1246,7 +1272,7 @@ body {
                     width: calc(100vw * 0.39);
                     display: block;
                     margin: 0 auto;
-                    padding-top: 4px;
+                    // padding-top: 4px;
 
                     @include mq(lg) {
                         width: 100%;
@@ -1271,11 +1297,11 @@ body {
     }
 
     .lunch-speech-bubble {
-        width: calc(100vw * 0.53);
+        width: calc(100vw * 0.5);
         min-height: 93px;
         position: absolute;
-        top: -12.2vw;
-        right: -5.06vw;
+        top: -11.2vw;
+        right: 0;
         max-width: 331px;
 
         img {
@@ -1283,10 +1309,10 @@ body {
         }
 
         @include mq(md) {
-            width: calc(100vw * 0.23);
+            width: calc(100vw * 0.239);
             min-height: 140px;
-            top: 163px;
-            right: 26.29px;
+            top: 182px;
+            right: 19px;
             z-index: 10;
         }
     }
@@ -1296,8 +1322,8 @@ body {
 
 //grand-menu-------------------------------------------
 .grand__menu {
-    padding-top: 119px;
-    padding-bottom: 192px;
+    padding-top: 60px;
+    padding-bottom: 190px;
     padding-inline: 5.3vw;
     background-color: $light-color;
     position: relative;
@@ -1311,7 +1337,7 @@ body {
     }
 
     @include mq(md) {
-        padding-top: 159px;
+        padding-top: 80px;
         padding-bottom: 246px;
         padding-inline: min(7.03vw, 101px);
     }
@@ -1321,14 +1347,22 @@ body {
     }
 
     .section__title {
-        @include mq(md) {
-            gap: 9px;
+        h2 {
+            line-height: 150%;
+        }
+
+        p {
+            line-height: 18px;
         }
     }
 
     .grand__menu-inner {
-        padding-top: 44px;
+        padding-top: 40px;
         position: relative;
+
+        @include mq(lg) {
+            padding-top: 60px;
+        }
 
         .grand__menus {
             display: flex;
@@ -1342,18 +1376,19 @@ body {
 
                 .grand__menu-top {
                     padding-top: 2px;
-                    padding-bottom: 3px;
+                    padding-bottom: 2px;
                     padding-left: 10px;
                     font-size: 20px;
                     border-top: 1px solid $main-text-color;
                     border-bottom: 1px solid $main-text-color;
                     font-weight: 700;
                     position: relative;
+                    line-height: 30px;
 
 
                     @include mq(md) {
-                        padding-top: 5px;
-                        padding-bottom: 4px;
+                        padding-top: 13px;
+                        padding-bottom: 8px;
                         padding-left: 21px;
                         font-size: 24px;
                     }
@@ -1364,11 +1399,11 @@ body {
                         background-color: $main-text-color;
                         width: 100%;
                         height: 2px;
-                        top: -4px;
+                        top: -1px;
                         left: 0;
 
                         @include mq(md) {
-                            top: -7px;
+                            top: -2px;
                         }
                     }
 
@@ -1382,14 +1417,14 @@ body {
                         left: 0;
 
                         @include mq(md) {
-                            bottom: -7px;
+                            bottom: -5px;
                         }
                     }
                 }
 
                 .grand__menu-list-wrapper {
-                    padding-top: 24px;
-                    padding-bottom: 20px;
+                    padding-top: 22px;
+                    padding-bottom: 22px;
 
                     @include mq(md) {
                         padding-top: 28px;
@@ -1477,12 +1512,12 @@ body {
 
                             .grand__menu-text {
                                 font-size: 3.73vw;
-                                padding-top: 7px;
+                                padding-top: 13px;
                                 font-weight: 700;
-                                line-height: normal;
+                                line-height: 21px;
 
                                 @include mq(md) {
-                                    padding-top: 12px;
+                                    padding-top: 18px;
                                     font-size: 1.56vw;
                                 }
                             }
@@ -1491,10 +1526,11 @@ body {
                                 font-size: 6.4vw;
                                 font-family: Damion;
                                 font-weight: 400;
-                                line-height: normal;
+                                line-height: 36px;
 
                                 @include mq(md) {
                                     font-size: 2.5vw;
+                                    line-height: 150%;
                                 }
                             }
                         }
@@ -1512,8 +1548,8 @@ body {
                         }
 
                         @include mq(xl) {
-                            padding-top: 29px;
-                            gap: 62px;
+                            padding-top: 20px;
+                            gap: 85px;
                         }
 
                         .grand__menu-drink-image {
@@ -1563,7 +1599,7 @@ body {
                             }
 
                             .drink-group {
-                                padding-bottom: 43px;
+                                padding-bottom: 38px;
 
                                 @include mq(lg) {
                                     width: 19.531vw;
@@ -1579,13 +1615,13 @@ body {
                                 font-family: "Noto Serif JP";
                                 font-size: 16px;
                                 font-weight: 700;
-                                line-height: normal;
-                                padding-bottom: 10px;
+                                line-height: 24px;
+                                padding-bottom: 6px;
                                 border-bottom: 1px solid $main-text-color;
                             }
 
                             .grand__menu-drink-lists {
-                                padding-top: 15.5px;
+                                padding-top: 20px;
                                 display: flex;
                                 flex-direction: column;
                                 gap: 8px;
@@ -1601,9 +1637,10 @@ body {
                                     align-items: center;
 
                                     .menu {
+                                        font-size: 14px;
                                         font-style: normal;
                                         font-weight: 700;
-                                        line-height: normal;
+                                        line-height: 21px;
 
                                         @include mq(lg) {
                                             min-width: 98px;
@@ -1615,7 +1652,7 @@ body {
                                         font-family: Damion;
                                         font-size: 20px;
                                         font-weight: 400;
-                                        line-height: normal;
+                                        line-height: 30px;
                                     }
                                 }
                             }
@@ -1633,13 +1670,13 @@ body {
             margin-top: 0;
 
             @include mq(lg) {
-                margin-top: 54px;
-                width: 280px;
+                margin-top: 60px;
+                width: 290px;
             }
 
             &::after {
                 @include mq(md) {
-                    width: 280px;
+                    width: 290px;
                 }
             }
         }
@@ -1647,9 +1684,9 @@ body {
 
     .grand__menu-bg {
         position: absolute;
-        top: 368px;
+        bottom: 120px;
         width: 274px;
-        height: 2755px;
+        height: 1565px;
         z-index: -1;
         right: 0;
         background: $base-color;
@@ -1666,7 +1703,7 @@ body {
         }
 
         @include mq(lg) {
-            top: 543px;
+            top: 502px;
             width: 810px;
             right: 0;
             height: 2310px;
@@ -1685,17 +1722,17 @@ body {
 
 .grand__menu-decor {
     position: absolute;
-    width: 34.23vw;
-    height: 37.6vw;
-    transform: rotate(45deg);
-    top: -63px;
-    left: -28px;
+    width: 148px;
+    height: 190px;
+    top: -97px;
+    left: 0;
 
     @include mq(lg) {
-        width: 20.781vw;
-        height: 22.967vw;
-        top: -100px;
-        left: -56.74px;
+        width: 297px;
+        height: 415px;
+        aspect-ratio: 297 / 415;
+        top: -146px;
+        left: 0;
     }
 
     img {
@@ -1708,17 +1745,16 @@ body {
     width: 45.01vw;
     height: 38.1vw;
     bottom: 26.13px;
-    right: -39.81px;
+    right: -30px;
 
     img {
         width: 100%;
     }
 
     @include mq(md) {
-        width: 30.46vw;
-        height: 25.78vw;
-        bottom: 48px;
-        right: -134px;
+        width: 23.5vw;
+        bottom: 52px;
+        right: 0px;
         max-width: 438px;
         height: auto;
     }
@@ -1735,7 +1771,7 @@ body {
     .gallery__inner {
         max-width: 767px;
         margin: 0 auto;
-        padding-bottom: 106px;
+        padding-bottom: 64px;
         position: relative;
         z-index: 0;
 
@@ -1745,15 +1781,22 @@ body {
 
         @include mq(lg) {
             max-width: 1100px;
-
         }
 
         .section__title {
-            padding-top: 60px;
-            padding-bottom: 40px;
+            padding-top: 57px;
+            padding-bottom: 38px;
             padding-inline: 5.3vw;
             background-color: $base-color;
             gap: 5px;
+
+            h2 {
+                line-height: 146%;
+            }
+
+            p {
+                line-height: 18px;
+            }
         }
 
         .gallery__images {
@@ -1801,7 +1844,7 @@ body {
             width: 200px;
             height: 104px;
             position: absolute;
-            top: -57px;
+            top: -63px;
             left: -42px;
 
             @include mq(md) {
@@ -1830,15 +1873,19 @@ body {
 
 //news-------------------------------------------------
 .news {
-    padding-top: 116px;
-    padding-bottom: 166px;
+    padding-top: 60px;
+    padding-bottom: 184px;
     position: relative;
 
     .news__inner {
         position: relative;
 
+        .section__title {
+            gap: 3px;
+        }
+
         .news__contents {
-            padding-top: 40px;
+            padding-top: 38px;
             display: flex;
             flex-direction: column;
 
@@ -1854,7 +1901,7 @@ body {
                 padding-bottom: 20px;
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 16px;
 
                 @include mq(lg) {
                     height: auto;
@@ -1941,6 +1988,8 @@ body {
                     font-size: 12px;
                     font-weight: 500;
                     line-height: 18px;
+                    padding-top: 4px;
+                    letter-spacing: -0.01em;
                     word-break: normal;
                     /* 日本語の自然な改行に戻す */
                     overflow-wrap: anywhere;
@@ -1957,8 +2006,10 @@ body {
                 }
 
                 .news__date {
-                    font-size: 12px;
-                    line-height: 17px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 150%;
+                    padding-top: 4px;
 
                     @include mq(lg) {
                         padding-top: 4px;
@@ -2035,6 +2086,9 @@ body {
                                 position: absolute;
                                 height: 22px;
                                 top: 10px;
+                                font-size: 12px;
+                                font-weight: 700;
+                                line-height: 150%;
                                 padding-inline: 10px;
                                 left: -8px;
                                 color: $sub-text-color;
@@ -2121,9 +2175,9 @@ body {
 
     .news__deco {
         position: absolute;
-        top: -5px;
-        left: -52px;
-        width: 204px;
+        top: -40px;
+        left: 0px;
+        width: 134px;
         height: 185px;
 
         img {

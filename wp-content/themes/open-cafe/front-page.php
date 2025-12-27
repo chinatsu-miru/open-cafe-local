@@ -29,15 +29,17 @@
         <div class="kv__decor">
             <img src="<?php echo get_template_directory_uri(); ?>/img/coffee-beans.png" alt="デコレーション画像">
         </div>
-        <div class="concept-decor">
+        <picture class="concept-decor">
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/lunch/deco-2-pc.png">
             <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/deco-2.png" alt="デコレーション画像">
-        </div>
+        </picture>
     </section>
 
     <section class="section lunch">
-        <div class="lunch-speech-bubble">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/lunch-speech-bubble.png" alt="">
-        </div>
+        <picture class="lunch-speech-bubble">
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/lunch/lunch-speech-bubble-pc.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/lunch-speech-bubble.png" alt="デコレーション画像">
+        </picture>
         <div class="section__title">
             <h2>SPECIAL LUNCH SET</h2>
             <p>今月のスペシャルランチセット</p>
@@ -271,12 +273,14 @@
                 <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="btn1">その他のメニュー</a>
             </div>
         </div>
-        <div class="grand__menu-decor">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/coffee-leaves2.png" alt="">
-        </div>
-        <div class="grand__menu-decor2">
+        <picture class="grand__menu-decor">
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/grand-menu/coffee-leaves2.png">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/deco.png" alt="">
+        </picture>
+        <picture class="grand__menu-decor2">
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/grand-menu/coffee-beans-pc.png">
             <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/coffee-beans.png" alt="">
-        </div>
+        </picture>
         <div class="grand__menu-bg"></div>
     </section>
 
