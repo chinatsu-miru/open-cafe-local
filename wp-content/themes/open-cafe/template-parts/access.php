@@ -47,7 +47,7 @@
 		</div>
 	</div>
 	<div class="access-dec">
-		<img src="<?php echo get_template_directory_uri(); ?>/img/access/access-dec.png" alt="アクセスエリアパン画像">
+		<img src="<?php echo get_template_directory_uri(); ?>/img/access/access-dec-pc.png" alt="アクセスエリアパン画像">
 	</div>
 	<div class="access-bubble">
 		<img src="<?php echo get_template_directory_uri(); ?>/img/access/access-bubble.png" alt="アクセスエリア吹き出し">

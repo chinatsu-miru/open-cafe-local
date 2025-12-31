@@ -1343,7 +1343,7 @@ body {
     }
 
     @include mq(lg) {
-        padding-bottom: 258px;
+        padding-bottom: 246px;
     }
 
     .section__title {
@@ -1753,7 +1753,7 @@ body {
 
     @include mq(md) {
         width: 23.5vw;
-        bottom: 52px;
+        bottom: 42px;
         right: 0px;
         max-width: 438px;
         height: auto;
@@ -1777,6 +1777,7 @@ body {
 
         @include mq(md) {
             max-width: 660px;
+            padding-bottom: 83px;
         }
 
         @include mq(lg) {
@@ -1789,6 +1790,11 @@ body {
             padding-inline: 5.3vw;
             background-color: $base-color;
             gap: 5px;
+
+            @include mq(md) {
+              padding-top: 80px;
+              padding-bottom: 60px;
+            }
 
             h2 {
                 line-height: 146%;
@@ -1831,12 +1837,18 @@ body {
         .button1 {
             margin-top: 0;
 
+            a {
+                @include mq(md) {
+                    line-height: 150%;
+                }
+            }
+
             @include mq(lg) {
-                width: 280px;
+                width: 290px;
             }
 
             &::after {
-                width: 280px;
+                width: 290px;
             }
         }
 
@@ -1850,7 +1862,7 @@ body {
             @include mq(md) {
                 width: 265.7px;
                 height: 137.7px;
-                top: -20.48px;
+                top: -60px;
             }
 
             @include mq(lg) {
@@ -1877,11 +1889,16 @@ body {
     padding-bottom: 184px;
     position: relative;
 
+    @include mq(md) {
+    padding-top: 80px;
+    padding-bottom: 86px;
+    }
+
     .news__inner {
         position: relative;
 
         .section__title {
-            gap: 3px;
+            // gap: 3px;
         }
 
         .news__contents {
@@ -1890,9 +1907,10 @@ body {
             flex-direction: column;
 
             @include mq(lg) {
+                padding-top: 60px;
                 flex-direction: row;
-                gap: 2.89vw;
-                gap: min(2.89vw, 41.6px);
+                gap: 2.34vw;
+                // gap: min(2.89vw, 41.6px);
                 max-width: 1100px;
                 margin: 0 auto;
             }
@@ -2048,17 +2066,19 @@ body {
 
                     @include mq(md) {
                         flex-direction: row;
-                        gap: 5.06vw;
+                        gap: 0;
+                        justify-content: space-between;
                     }
 
                     @include mq(lg) {
-                        gap: 2.5vw 3.359vw;
-                        padding-bottom: 60px;
+                        // gap: 2.34vw 3.359vw;
+                        padding-bottom: 40px;
                     }
 
                     @include mq(xl) {
                         max-width: 1280px;
-                        gap: min(2.5vw, 36px) min(2.359vw, 34px);
+                        gap: 1.3vw;
+                        // gap: min(2.3vw, 36px) min(2.359vw, 34px);
                     }
 
                     .news__list {
@@ -2069,8 +2089,9 @@ body {
                         @include mq(lg) {
                             display: flex;
                             flex-direction: column;
-                            width: 255px;
+                            width: 265px;
                             gap: 12px;
+                            padding-bottom: 20px;
                         }
 
                         .news__image-s {
@@ -2123,6 +2144,7 @@ body {
                             line-height: 18px;
 
                             @include mq(lg) {
+                                padding-top: 0;
                                 font-size: 16px;
                                 line-height: 24px;
                             }
@@ -2143,6 +2165,7 @@ body {
                             display: inline-block;
 
                             @include mq(lg) {
+                                padding-top: 0;
                                 font-size: 14px;
                                 font-weight: 500;
                                 line-height: 21px;
@@ -2162,12 +2185,12 @@ body {
             margin-top: 0;
 
             @include mq(lg) {
-                width: 280px;
+                width: 290px;
             }
 
             &::after {
                 @include mq(lg) {
-                    width: 280px;
+                    width: 290px;
                 }
             }
         }
@@ -2185,7 +2208,7 @@ body {
         }
 
         @include mq(md) {
-            width: 354px;
+            width: 267px;
             height: 320px;
             top: calc((320px - 176px) *-1);
 

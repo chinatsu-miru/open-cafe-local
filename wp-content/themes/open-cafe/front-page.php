@@ -357,11 +357,11 @@
                             <div class="news__text">
                                 <?php
                                 $content = strip_tags(get_the_content());
-                                $trimmed = mb_substr($content, 0, 87);
+                                $trimmed = mb_substr($content, 0, 112);
                                 echo $trimmed . '…';
                                 ?>
                             </div>
-                            <time datetime="<?php the_time('c'); ?>" class="news__date"><?php the_time('Y/n/j'); ?></time>
+                            <time datetime="<?php the_time('c'); ?>" class="news__date"><?php the_time('Y/m/d'); ?></time>
                         </div>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
@@ -404,7 +404,7 @@
                                     <div class="news__text-s">
                                         <h3><?php the_title(); ?></h3>
                                     </div>
-                                    <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/n/j'); ?></time>
+                                    <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/m/d'); ?></time>
                                 </li>
                             <?php endwhile; ?>
                             <?php wp_reset_postdata(); ?>
@@ -416,9 +416,10 @@
                 <a href="<?php echo get_post_type_archive_link('post'); ?>" class="btn1">過去のお知らせ</a>
             </div>
         </div>
-        <div class="news__deco">
+        <picture class="news__deco">
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/news/news-deco-pc.png" >
             <img src="<?php echo get_template_directory_uri(); ?>/img/news/news-deco.png" alt="ニュースデコレーション画像">
-        </div>
+        </picture>
     </section>
 
     <?php get_template_part('template-parts/access'); ?>

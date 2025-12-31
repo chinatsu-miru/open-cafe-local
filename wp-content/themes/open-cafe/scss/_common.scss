@@ -36,8 +36,9 @@ $breakpoints: (
 
 // 共通パーツ
 // * {
-//     outline:1px solid rgb(252, 154, 172);
+//     outline: 1px solid red !important;
 // }
+
 html {
     font-size: 14px;
     font-weight: 500;
@@ -314,6 +315,7 @@ body {
             img {
                 width: 100%;
             }
+
             &:hover {
                 cursor: pointer;
                 opacity: 0.8;
@@ -398,7 +400,7 @@ body {
 .section__title {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    // gap: 4px;
     color: $main-text-color;
     font-weight: 700;
     text-align: center;
@@ -474,13 +476,18 @@ body {
                 position: relative;
 
                 @include mq(md) {
-                    aspect-ratio: 688 / 387;
+                    aspect-ratio: 688 / 377;
                     margin-bottom: 40px;
                 }
 
                 .access__map-content {
                     aspect-ratio: 335 / 188;
                     padding: 5px;
+
+                    @include mq(md) {
+                        aspect-ratio: 688 / 377;
+
+                    }
 
                     iframe {
                         width: 100%;
@@ -521,7 +528,7 @@ body {
                     grid-template-rows: repeat(3, auto); // 3行
                     grid-template-columns: 1fr 1fr; // 2列
                     grid-auto-flow: column;
-                    gap: 18px 40px; // ← 上下18px, 左右40px
+                    gap: 20px 40px; // ← 上下18px, 左右40px
                 }
 
                 .info__list {
@@ -537,11 +544,19 @@ body {
                     .info__details {
                         min-width: 56px;
                         font-weight: 700;
+
+                        @include mq(md) {
+                            line-height: 150%;
+                        }
                     }
 
                     .info__meta {
                         line-height: 21px;
                         font-weight: 700;
+
+                        @include mq(md) {
+                            line-height: 150%;
+                        }
                     }
                 }
             }
@@ -550,10 +565,10 @@ body {
 
     .access-dec {
         position: absolute;
-        width: 50.85vw;
-        height: 48vw;
+        width: 41vw;
+        height: 47.7vw;
         top: -91px;
-        right: -37px;
+        right: 0;
 
         img {
             width: 100%;
@@ -563,13 +578,16 @@ body {
             width: auto;
             height: auto;
             max-width: 350px;
-            top: -181px;
-            right: -93px;
+            top: -165px;
+            right: 0;
         }
 
         @include mq(xl) {
-            max-width: 437.609px;
-            max-height: 403.773px;
+            // max-width: 437.609px;
+            // max-height: 403.773px;
+            width: 298px;
+            height: 359px;
+
         }
     }
 

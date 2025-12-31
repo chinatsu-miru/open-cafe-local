@@ -20,13 +20,14 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/to-top.png" alt="トップへ戻る">
             </a>
         </div>
+        <div class="footer-beans">
+            <picture class="beans-img">
+                <source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/img/coffee-beans3-pc.png" />
+                <img src="<?php echo get_template_directory_uri(); ?>/img/coffee-beans3.png" alt="コーヒー豆の画像">
+            </picture>
+        </div>
     </div>
-    <div class="footer-beans">
-        <picture class="beans-img">
-            <source media="(min-width: 1024px)" srcset="<?php echo get_template_directory_uri(); ?>/img/coffee-beans3.png" />
-            <img src="<?php echo get_template_directory_uri(); ?>/img/coffee-beans3.png" alt="コーヒー豆の画像">
-        </picture>
-    </div>
+
 
     <?php wp_footer(); ?>
 </footer>

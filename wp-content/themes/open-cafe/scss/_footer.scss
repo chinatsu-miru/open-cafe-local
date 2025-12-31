@@ -6,6 +6,7 @@ footer {
     height: 147px;
     position: relative;
     z-index: 50;
+    // overflow:hidden;
 
     @include mq(md) {
         height: 141px;
@@ -19,6 +20,11 @@ footer {
     .footer-inner {
         padding-top: 40px;
         position: relative;
+
+        @include mq(md) {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
 
         .sns-icons {
             display: flex;
@@ -92,6 +98,7 @@ footer {
                 height: 100%;
             }
         }
+
         &:hover {
             opacity: .8;
         }
@@ -99,7 +106,7 @@ footer {
 
     .footer-beans {
         width: 92px;
-        height: 30.4vw;
+        // height: 30.4vw;
         position: absolute;
         bottom: 93px;
         left: 0;
@@ -111,17 +118,17 @@ footer {
 
         @include mq(md) {
             width: auto;
-            height: auto;
+            height: 100px;
             max-width: 150px;
         }
 
         @include mq(lg) {
-            width: 26.64vw;
+            width: 20vw;
             height: 22.5vw;
-            max-width: 340px;
+            max-width: 288px;
             max-height: 324px;
-            bottom: 1px;
-            left: -85px;
+            bottom: 0px;
+            left: 0px;
         }
     }
 }
