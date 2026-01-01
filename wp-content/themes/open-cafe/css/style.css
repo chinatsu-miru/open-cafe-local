@@ -378,7 +378,7 @@ body {
 
 .access {
   background-color: #eae0d5;
-  padding-top: 81px;
+  padding-top: 80px;
   position: relative;
   z-index: 10;
 }
@@ -413,7 +413,7 @@ body {
   aspect-ratio: 335/188;
   background: #ffffff;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 39px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -503,7 +503,7 @@ body {
   position: absolute;
   width: 41vw;
   height: 47.7vw;
-  top: -91px;
+  top: -98px;
   right: 0;
 }
 .access .access-dec img {
@@ -528,7 +528,7 @@ body {
   width: 53.333vw;
   height: 45.866vw;
   position: absolute;
-  top: -42px;
+  top: -45px;
   left: -30px;
 }
 .access .access-bubble img {
@@ -1049,6 +1049,14 @@ body {
   width: 120px;
   height: 71px;
 }
+.hero-sp .hero__kv .main-visual .kv__card .speech-bubble {
+  position: absolute;
+  top: -41px;
+  left: 215px;
+  width: 120px;
+  height: 71px;
+  transform: rotate(5deg);
+}
 .hero-sp .hero__kv .kv-message {
   position: absolute;
   top: 124px;
@@ -1112,6 +1120,7 @@ body {
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__logo-pc {
   width: 83%;
+  max-width: 190px;
   height: auto;
   color: #222222;
 }
@@ -1124,7 +1133,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
-  gap: clamp(30px, 2.4vw, 40px);
+  gap: clamp(30px, 2.4vw, 35px);
 }
 .hero-pc .hero-pc-inner .pc__nav .nav__lists-pc .nav__list-pc .nav__link-pc {
   display: flex;

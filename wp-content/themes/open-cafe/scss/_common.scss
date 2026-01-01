@@ -437,7 +437,7 @@ body {
 // accessセクション--------------------------------------
 .access {
     background-color: $base-color;
-    padding-top: 81px;
+    padding-top: 80px;
     position: relative;
     z-index: 10;
 
@@ -472,7 +472,7 @@ body {
                 aspect-ratio: 335 / 188;
                 background: $sub-text-color;
                 margin: 0 auto;
-                margin-bottom: 35px;
+                margin-bottom: 39px;
                 position: relative;
 
                 @include mq(md) {
@@ -567,7 +567,7 @@ body {
         position: absolute;
         width: 41vw;
         height: 47.7vw;
-        top: -91px;
+        top: -98px;
         right: 0;
 
         img {
@@ -595,7 +595,7 @@ body {
         width: 53.333vw;
         height: 45.866vw;
         position: absolute;
-        top: -42px;
+        top: -45px;
         left: -30px;
 
         img {

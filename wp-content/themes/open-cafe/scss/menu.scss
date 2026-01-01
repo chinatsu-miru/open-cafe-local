@@ -9,7 +9,7 @@ body {
 .container {
     padding-top: 60px;
     padding-inline: 20px;
-    padding-bottom: 160px;
+    padding-bottom: 118px;
 
     @include mq(md) {
         padding-inline: 90px;
@@ -31,7 +31,7 @@ body {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 grid-template-rows: repeat(2, auto);
                 row-gap: 12px;
-                column-gap: clamp(8px, 3vw, 16px);
+                column-gap: clamp(8px, 3.7vw, 16px);
 
                 @include mq(md) {
                     grid-template-columns: repeat(4, 1fr);
@@ -76,6 +76,10 @@ body {
 
                     .menu__image {
                         min-width: 0;
+
+                        img {
+                            padding-bottom: 12px;
+                        }
 
                         .menu__image-text {
                             .desc {
@@ -345,7 +349,7 @@ body {
         }
 
         .grand__menu-inner {
-            padding-top: 44px;
+            padding-top: 40px;
             position: relative;
 
             .grand__menus {
@@ -581,7 +585,7 @@ body {
                                 }
 
                                 .drink-group {
-                                    padding-bottom: 43px;
+                                    padding-bottom: 40px;
 
                                     @include mq(lg) {
                                         width: 19vw;
@@ -601,13 +605,13 @@ body {
                                     font-family: "Noto Serif JP";
                                     font-size: 16px;
                                     font-weight: 700;
-                                    line-height: normal;
-                                    padding-bottom: 10px;
+                                    line-height: 150%;
+                                    padding-bottom: 6px;
                                     border-bottom: 1px solid $main-text-color;
                                 }
 
                                 .grand__menu-drink-lists {
-                                    padding-top: 15.5px;
+                                    padding-top: 19px;
                                     display: flex;
                                     flex-direction: column;
                                     gap: 8px;
@@ -623,9 +627,10 @@ body {
                                         align-items: center;
 
                                         .menu {
+                                            font-size: 14px;
                                             font-style: normal;
                                             font-weight: 700;
-                                            line-height: normal;
+                                            line-height: 150%;
 
                                             @include mq(lg) {
                                                 min-width: 98px;
@@ -637,7 +642,7 @@ body {
                                             font-family: Damion;
                                             font-size: 20px;
                                             font-weight: 400;
-                                            line-height: normal;
+                                            line-height: 150%;
                                         }
                                     }
                                 }
