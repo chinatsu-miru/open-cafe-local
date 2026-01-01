@@ -59,7 +59,7 @@
                                         <div class="price">
                                             <?php
                                             $price = get_post_meta(get_the_ID(), 'price', true);
-                                            echo esc_html($price) . 'yen';
+                                            echo esc_html($price) . ' yen';
                                             ?>
                                         </div>
                                     </div>

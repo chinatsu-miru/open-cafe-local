@@ -377,7 +377,7 @@ body {
 
 .access {
   background-color: #eae0d5;
-  padding-top: 81px;
+  padding-top: 80px;
   position: relative;
   z-index: 10;
 }
@@ -412,7 +412,7 @@ body {
   aspect-ratio: 335/188;
   background: #ffffff;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 39px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -502,7 +502,7 @@ body {
   position: absolute;
   width: 41vw;
   height: 47.7vw;
-  top: -91px;
+  top: -98px;
   right: 0;
 }
 .access .access-dec img {
@@ -527,7 +527,7 @@ body {
   width: 53.333vw;
   height: 45.866vw;
   position: absolute;
-  top: -42px;
+  top: -45px;
   left: -30px;
 }
 .access .access-bubble img {
@@ -844,7 +844,7 @@ body {
 .container {
   padding-top: 60px;
   padding-inline: 20px;
-  padding-bottom: 160px;
+  padding-bottom: 118px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -866,7 +866,7 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, auto);
   row-gap: 12px;
-  column-gap: clamp(8px, 3vw, 16px);
+  column-gap: clamp(8px, 3.7vw, 16px);
 }
 @media screen and (min-width: 768px) {
   .container .menu__contents .tab-buttons .tab-buttons__inner {
@@ -901,6 +901,9 @@ body {
 }
 .container .menu__contents .menu__images .menu__images-contents .menu__images-inner .menu__image {
   min-width: 0;
+}
+.container .menu__contents .menu__images .menu__images-contents .menu__images-inner .menu__image img {
+  padding-bottom: 12px;
 }
 .container .menu__contents .menu__images .menu__images-contents .menu__images-inner .menu__image .menu__image-text .desc {
   font-weight: 700;
@@ -1147,7 +1150,7 @@ body {
   line-height: normal;
 }
 .container .menu__contents .grand__menu-inner {
-  padding-top: 44px;
+  padding-top: 40px;
   position: relative;
 }
 .container .menu__contents .grand__menu-inner .grand__menus {
@@ -1375,7 +1378,7 @@ body {
   }
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
-  padding-bottom: 43px;
+  padding-bottom: 40px;
 }
 @media screen and (min-width: 1024px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
@@ -1397,12 +1400,12 @@ body {
   font-family: "Noto Serif JP";
   font-size: 16px;
   font-weight: 700;
-  line-height: normal;
-  padding-bottom: 10px;
+  line-height: 150%;
+  padding-bottom: 6px;
   border-bottom: 1px solid #222222;
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists {
-  padding-top: 15.5px;
+  padding-top: 19px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -1419,9 +1422,10 @@ body {
   align-items: center;
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .menu {
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 150%;
 }
 @media screen and (min-width: 1024px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .menu {
@@ -1433,7 +1437,7 @@ body {
   font-family: Damion;
   font-size: 20px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 150%;
 }
 .container .menu__contents .grand__menu-inner > .button1 {
   margin-top: 0;
