@@ -49,7 +49,7 @@ body {
   font-family: "Amatic SC", sans-serif;
   font-size: 32px;
   letter-spacing: 6.4px;
-  line-height: normal;
+  line-height: 130%;
 }
 @media screen and (min-width: 1280px) {
   .header__title h1 {
@@ -143,6 +143,11 @@ body {
   color: #ffffff;
   padding: 4px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .tab-button {
+    aspect-ratio: 200/69;
+  }
 }
 .tab-button::after {
   content: "";
@@ -419,7 +424,7 @@ body {
 @media screen and (min-width: 768px) {
   .access .access__inner .access__contents .access__map {
     aspect-ratio: 688/377;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 }
 .access .access__inner .access__contents .access__map .access__map-content {
@@ -601,7 +606,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .header .header-border {
-    padding: 6px;
+    padding: 4px;
   }
 }
 .header .header-border .header-border__inner {

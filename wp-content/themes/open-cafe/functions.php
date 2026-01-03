@@ -157,3 +157,17 @@ function my_admin_menu()
     $menu[5][0] = 'お知らせ';
 }
 add_action('admin_menu', 'my_admin_menu');
+
+
+/*-----------------------------------------
+　　* ジャンル別ページ（taxonomy-genre.php）の並び順を
+ * プラグイン等で設定した管理画面の順序（menu_order）に合わせる
+-----------------------------------------*/
+function my_custom_menu_order($query)
+{
+    if (!is_admin() && $query->is_main_query() && is_tax('genre')) {
+        $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
+    }
+}
+add_action('pre_get_posts', 'my_custom_menu_order');

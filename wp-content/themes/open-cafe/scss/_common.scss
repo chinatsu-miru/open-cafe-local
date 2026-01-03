@@ -89,7 +89,7 @@ body {
         font-family: $amatic;
         font-size: 32px;
         letter-spacing: 6.4px;
-        line-height: normal;
+        line-height: 130%;
 
         @include mq(xl) {
             font-size: 72px;
@@ -193,6 +193,10 @@ body {
     color: $sub-text-color;
     padding: 4px;
     position: relative;
+
+    @include mq(md) {
+      aspect-ratio: 200 / 69;
+    }
 
     &::after {
         content: "";
@@ -477,7 +481,7 @@ body {
 
                 @include mq(md) {
                     aspect-ratio: 688 / 377;
-                    margin-bottom: 40px;
+                    margin-bottom: 45px;
                 }
 
                 .access__map-content {

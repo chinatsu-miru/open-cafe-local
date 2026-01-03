@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 14px;
   font-weight: 500;
@@ -48,7 +49,7 @@ body {
   font-family: "Amatic SC", sans-serif;
   font-size: 32px;
   letter-spacing: 6.4px;
-  line-height: normal;
+  line-height: 130%;
 }
 @media screen and (min-width: 1280px) {
   .header__title h1 {
@@ -142,6 +143,11 @@ body {
   color: #ffffff;
   padding: 4px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .tab-button {
+    aspect-ratio: 200/69;
+  }
 }
 .tab-button::after {
   content: "";
@@ -418,7 +424,7 @@ body {
 @media screen and (min-width: 768px) {
   .access .access__inner .access__contents .access__map {
     aspect-ratio: 688/377;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 }
 .access .access__inner .access__contents .access__map .access__map-content {
@@ -600,7 +606,7 @@ html {
 }
 @media screen and (min-width: 768px) {
   .header .header-border {
-    padding: 6px;
+    padding: 4px;
   }
 }
 .header .header-border .header-border__inner {
@@ -841,6 +847,26 @@ body {
   overflow-x: hidden;
 }
 
+/* archive-menu.php（メニューアーカイブ全体）の場合 */
+.post-type-archive-menu .menu__images-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 例：4列 */
+  grid-template-rows: repeat(5, auto);
+  /* 5行表示 */
+}
+
+/* taxonomy-genre.php（ジャンル別ページ）の場合 */
+@media screen and (min-width: 768px) {
+  .tax-genre .container .menu__contents .menu__images .menu__images-contents .menu__images-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 列数は同じ */
+    grid-template-rows: repeat(2, auto);
+    /* ★2行表示に変更 */
+  }
+}
+
 .container {
   padding-top: 60px;
   padding-inline: 20px;
@@ -848,7 +874,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container {
+    padding-top: 80px;
     padding-inline: 90px;
+    padding-bottom: 160px;
   }
 }
 .container .menu__contents .tab-buttons {
@@ -882,6 +910,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container .menu__contents .menu__images {
+    padding-top: 80px;
     max-width: 1100px;
   }
 }
@@ -897,6 +926,7 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, auto);
     column-gap: 3.333vw;
+    row-gap: 42px;
   }
 }
 .container .menu__contents .menu__images .menu__images-contents .menu__images-inner .menu__image {
@@ -1160,7 +1190,6 @@ body {
 @media screen and (min-width: 1280px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content {
     max-width: 1287px;
-    margin: 0 auto;
   }
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
@@ -1320,15 +1349,15 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
-    padding-top: 29px;
+    padding-top: 0;
     display: flex;
     gap: 36px;
   }
 }
 @media screen and (min-width: 1280px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
-    padding-top: 29px;
-    gap: 62px;
+    padding-top: 0;
+    gap: 85px;
   }
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {

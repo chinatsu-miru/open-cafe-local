@@ -6,13 +6,39 @@ body {
     overflow-x: hidden;
 }
 
+/* archive-menu.php（メニューアーカイブ全体）の場合 */
+.post-type-archive-menu .menu__images-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 例：4列 */
+    grid-template-rows: repeat(5, auto);
+    /* 5行表示 */
+}
+
+/* taxonomy-genre.php（ジャンル別ページ）の場合 */
+.tax-genre {
+    .container .menu__contents .menu__images .menu__images-contents .menu__images-inner {
+        @include mq(md) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 列数は同じ */
+            grid-template-rows: repeat(2, auto);
+            /* ★2行表示に変更 */
+
+        }
+    }
+}
+
+
 .container {
     padding-top: 60px;
     padding-inline: 20px;
     padding-bottom: 118px;
 
     @include mq(md) {
+        padding-top: 80px;
         padding-inline: 90px;
+        padding-bottom: 160px;
     }
 
     .menu__contents {
@@ -47,6 +73,7 @@ body {
             margin: 0 auto;
 
             @include mq(md) {
+                padding-top: 80px;
                 max-width: 1100px;
 
             }
@@ -72,6 +99,7 @@ body {
                         grid-template-columns: repeat(4, 1fr);
                         grid-template-rows: repeat(5, auto);
                         column-gap: 3.333vw;
+                        row-gap: 42px;
                     }
 
                     .menu__image {
@@ -359,7 +387,6 @@ body {
                 .grand__menu-content {
                     @include mq(xl) {
                         max-width: 1287px;
-                        margin: 0 auto;
                     }
 
                     .grand__menu-top {
@@ -371,7 +398,6 @@ body {
                         border-bottom: 1px solid $main-text-color;
                         font-weight: 700;
                         position: relative;
-
 
                         @include mq(md) {
                             padding-top: 5px;
@@ -528,14 +554,14 @@ body {
                             padding-bottom: 0;
 
                             @include mq(lg) {
-                                padding-top: 29px;
+                                padding-top: 0;
                                 display: flex;
                                 gap: 36px;
                             }
 
                             @include mq(xl) {
-                                padding-top: 29px;
-                                gap: 62px;
+                                padding-top: 0;
+                                gap: 85px;
                             }
 
                             .grand__menu-drink-image {
