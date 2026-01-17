@@ -1,3 +1,4 @@
+
 <?php get_header(); ?>
 <main class="news-lists">
     <div class="news-lists__inner">
@@ -28,9 +29,16 @@
                                         </div>
                                     </div>
                                     <a href="<?php the_permalink(); ?>" class="news__text-s">
-                                        <p><?php the_title(); ?></p>
+                                        <p>
+                                            <?php
+                                            the_title();
+                                            // $title = get_the_title();
+                                            // 40バイト（全角約20文字）で制限し、超えたら「...」を付ける
+                                            // echo mb_strimwidth($title, 0, 120, "…", "UTF-8");
+                                            ?>
+                                        </p>
                                     </a>
-                                    <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/n/j'); ?></time>
+                                    <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/m/d'); ?></time>
                                 </li>
                             <?php endwhile; ?>
                         <?php endif; ?>

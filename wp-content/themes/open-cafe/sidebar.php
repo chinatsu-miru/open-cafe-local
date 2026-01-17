@@ -22,7 +22,7 @@
                         </div>
                         <div class="articles__card__text-s">
                             <p><?php the_title(); ?></p>
-                            <time datetime="<?php the_time('c'); ?>" class="news__card__date-s"><?php the_time('Y/n/j'); ?></time>
+                            <time datetime="<?php the_time('c'); ?>" class="news__card__date-s"><?php the_time('Y/m/d'); ?></time>
                         </div>
                     </a>
                 <?php endwhile; ?>

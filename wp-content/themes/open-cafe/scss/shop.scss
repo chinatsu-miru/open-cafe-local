@@ -12,17 +12,19 @@ body {
 // }
 
 .shop-lists__inner {
-    // padding-inline: 20px;
+    padding-inline: 20px;
     padding-bottom: 100px;
 
     @include mq(md) {
+        padding-inline: 0;
         width: 53.7%;
         // max-width: 729px;
         margin: 0 auto;
+        padding-bottom: 0;
     }
 
     .access-lists {
-        padding-top: 60px;
+        padding-top: 58px;
 
         @include mq(md) {
             padding-top: 6.25vw;
@@ -31,7 +33,7 @@ body {
         .access__inner {
 
             @include mq(md) {
-                padding-bottom: 120px;
+                padding-bottom: 40px;
             }
 
             h2 {
@@ -69,22 +71,23 @@ body {
                 @include mq(md) {
                     padding-top: 24px;
                     margin: 0 auto;
+                    padding-bottom: 120px;
                 }
 
                 .access__map {
-                    aspect-ratio: 335 / 188;
+                    aspect-ratio: 335 / 184;
                     background: $sub-text-color;
                     margin: 0 auto;
-                    margin-bottom: 18px;
+                    margin-bottom: 40px;
                     position: relative;
 
                     @include mq(md) {
-                        aspect-ratio: 688 / 387;
-                        margin-bottom: 22px;
+                        aspect-ratio: 688 / 377;
+                        margin-bottom: 39px;
                     }
 
                     .access__map-content {
-                        aspect-ratio: 335 / 188;
+                        aspect-ratio: 335 / 184;
 
                         img {
                             width: 100%;
@@ -117,19 +120,24 @@ body {
                     flex-direction: column;
                     gap: 18px; // ← スマホ時の上下余白
 
-                    @media screen and (min-width: 768px) {
+                    @media screen and (min-width: 1024px) {
+                        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+                        word-break: break-all;
+                        /* 長い英数字や住所を強制的に改行させる */
+                        overflow-wrap: anywhere;
+                        /* 枠線に合わせて改行 */
                         display: grid;
                         grid-template-rows: repeat(3, auto); // 3行
-                        grid-template-columns: 1fr 1fr; // 2列
+                        // grid-template-columns: 1fr 1fr; // 2列
                         grid-auto-flow: column;
-                        gap: 24px 40px; // ← 上下18px, 左右40px
+                        gap: 20px 40px; // ← 上下18px, 左右40px
                     }
 
                     .info__list {
                         display: flex;
                         gap: 6.4vw;
                         border-bottom: 1px solid #333;
-                        padding-bottom: 12px;
+                        padding-bottom: 5px;
 
                         @include mq(md) {
                             gap: 1.875vw;
@@ -141,7 +149,7 @@ body {
                         }
 
                         .info__meta {
-                            line-height: 24px;
+                            // line-height: 24px;
                             font-weight: 700;
                         }
                     }

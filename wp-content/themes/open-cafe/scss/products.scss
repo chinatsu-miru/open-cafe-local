@@ -9,15 +9,17 @@ body {
 
 .gift__main {
     .gift__container {
-        padding-top: 48px;
+        padding-top: 60px;
         padding-inline: 20px;
         display: grid;
-        gap: 40px 19px;
+        gap: 20px 19px;
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
         margin: 0 auto;
 
         @include mq(md) {
+            padding-top: 80px;
+            padding-inline: 0;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3, auto);
             max-width: 85.93vw;
@@ -56,9 +58,31 @@ body {
             .gift__item-meta {
                 text-align: center;
 
+                .button2 {
+                    margin-top: 10px;
+                    width: 132px;
+                    padding: 0;
+                    @include mq(md) {
+                        width: 174px;
+                        height: 37px;
+                    }
+
+                    .btn2 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @include mq(md) {
+                            font-size: 14px;
+                            line-height: 150%;
+
+                        }
+                    }
+                }
+
                 .gift__item-text {
                     font-size: 20px;
-                    padding-top: 12px;
+                    padding-top: 8px;
                     font-weight: 700;
                     line-height: normal;
                     text-align: left;
@@ -73,7 +97,8 @@ body {
                     font-size: 28px;
                     font-family: Damion;
                     font-weight: 400;
-                    line-height: normal;
+                    line-height: 150%;
+                    padding-top: 7px;
 
                     @include mq(md) {
                         font-size: 2.5vw;
@@ -117,6 +142,31 @@ body {
                     font-weight: 400;
                     font-family: Damion;
                     text-align: center;
+                    line-height: 150%;
+                    padding-top: 7px;
+                }
+
+                .button2 {
+                    margin-top: 10px;
+                    width: 132px;
+                    padding: 0;
+
+                    @include mq(md) {
+                        width: 174px;
+                        height: 37px;
+                    }
+
+                    .btn2 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @include mq(md) {
+                            font-size: 14px;
+
+
+                        }
+                    }
                 }
             }
         }
@@ -129,6 +179,7 @@ body {
 
         @include mq(md) {
             max-width: 1100px;
+            padding-inline: 0;
             margin-top: 100px;
             margin-inline: auto;
         }
@@ -137,20 +188,29 @@ body {
             border: 4px solid $main-color;
             background-color: $sub-text-color;
             padding: 6px;
+            box-sizing: border-box;
+
+            @include mq(md) {
+              width: 100%;
+              aspect-ratio: 1100 / 458;
+            }
 
             .gift__info-inner {
+                box-sizing: border-box;
                 border: 1px solid $main-color;
                 padding: 27px 30px 30px;
+                height: 100%;
 
                 @include mq(md) {
                     display: flex;
                     align-items: center;
-                    padding: 70px 50px;
-                    gap: 32px;
+                    padding: calc(69 / 1100 * 100%) calc(50 / 1100 * 100%);
+                    gap: calc(60 / 1100 * 100%);
+                    // aspect-ratio: 1100 / 458;
+                    // height: auto;
                 }
                 @include mq(lg) {
-                    align-items: flex-start;
-                    gap: 4.687vw;
+                    // gap: 4.687vw;
                 }
 
                 .gift__info-text {
@@ -161,11 +221,11 @@ body {
                     .gift__info-message {
                         font-size: 16px;
                         font-weight: 700;
-                        line-height: 28px;
+                        line-height: 150%;
 
                         @include mq(lg) {
                             font-size: 24px;
-                            line-height: 40px;
+                            line-height: 150%;
                         }
                     }
 
@@ -175,7 +235,7 @@ body {
                         margin: 22px 0;
 
                         @include mq(md) {
-                            margin: 20px 0 36px;
+                            margin: 18px 0 37px;
                         }
 
                         img.pc-none {
@@ -203,6 +263,16 @@ body {
                             font-size: 16px;
                             line-height: 32px;
                         }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: 500;
+                            line-height: 200%;
+
+                            @include mq(md) {
+                                font-size: 16px;
+                            }
+                        }
                     }
                 }
 
@@ -216,6 +286,8 @@ body {
 
                     img {
                         width: 100%;
+                        height: auto;
+                        display: block;
                     }
                 }
             }

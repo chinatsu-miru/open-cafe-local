@@ -23,11 +23,10 @@ body {
     padding-bottom: 100px;
 
     @include mq(lg) {
+        padding-inline: 50px;
         display: flex;
         padding-top: 80px;
-        padding-left: 58px;
-        padding-right: 50px;
-        gap: 5.635vw;
+        // gap: 5.635vw;
         justify-content: space-between;
     }
 
@@ -46,12 +45,23 @@ body {
         }
 
         .news__lists {
+            .news__category-title {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 150%;
+                margin-bottom: 24px;
+
+                @include mq(md) {
+                    font-size: 24px;
+                    margin-bottom: 40px;
+                };
+            }
 
             .news__lists-wrapper {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 24px 19px;
-                padding-bottom: 40px;
+                padding-bottom: 60px;
                 margin: 0 auto;
 
                 @include mq(lg) {
@@ -87,9 +97,12 @@ body {
                     .news__image-s {
                         position: relative;
                         aspect-ratio: 158 / 99;
+                        margin-bottom: 8px;
                         // width: clamp(158px, 42.133vw, 340px);
 
-                        @include mq(md) {}
+                        @include mq(md) {
+                            margin-bottom: 0;
+                        }
 
                         img {
                             display: block;
@@ -127,31 +140,48 @@ body {
                     }
 
                     .news__text-s {
+                        display: block;
                         cursor: pointer;
-                        padding-top: 8px;
-                        font-size: 12px;
-                        font-weight: 700;
-                        line-height: 18px;
+                        padding-bottom: 12px;
+                        // padding-top: 8px;
+                        // font-size: 12px;
+                        // font-weight: 700;
+                        // line-height: 18px;
 
                         @include mq(md) {
                             padding-top: 0;
-                            font-size: 14px;
+                            padding-bottom: 0;
+                            font-size: 16px;
                             line-height: 24px;
                         }
 
-                        p {
+                        span {
+                            font-size: 12px;
+                            font-weight: 700;
+                            line-height: 150%;
                             display: -webkit-box;
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 3;
                             overflow: hidden;
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            word-break: break-all;
+                            letter-spacing: 0.05rem;
+
+                            @include mq(md) {
+                                margin-bottom: 0;
+                                font-size: 16px;
+                                letter-spacing: normal;
+                            }
                         }
                     }
 
                     .news__date-s {
+                        display: block;
                         font-size: 12px;
-                        padding-top: 7px;
+                        // padding-top: 7px;
                         font-weight: 500;
-                        padding-bottom: 24px;
+                        // padding-bottom: 24px;
 
                         @include mq(md) {
                             font-size: 14px;
@@ -174,7 +204,7 @@ body {
             padding-bottom: 60px;
 
             @include mq(md) {
-                padding-bottom: 160px;
+                margin-bottom: 0;
             }
 
             .page-numbers {
@@ -209,7 +239,8 @@ body {
         margin: 0 auto;
 
         @include mq(lg) {
-            max-width: 300px;
+            width: 320px;
+            max-width: 320px;
             margin: 0;
             padding-inline: 0;
         }
@@ -217,14 +248,14 @@ body {
         .latest__contents {
             background-color: #f8f8f8;
             padding: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
 
-            @include mq(lg) {
-                width: 300px;
-            }
+            // @include mq(lg) {
+            //     width: 300px;
+            // }
 
             h3 {
-                font-size: 1.25rem;
+                font-size: 20px;
                 font-weight: 700;
                 padding-bottom: 41px;
                 position: relative;
@@ -242,7 +273,7 @@ body {
 
             .latest__articles {
                 display: flex;
-                gap: 1rem;
+                gap: 20px;
                 flex-direction: column;
 
                 .articles__card {
@@ -272,10 +303,15 @@ body {
 
                     .articles__card__text-s {
                         flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 10px;
+
                         p {
                             font-size: 14px;
                             font-weight: 700;
-                            line-height: 24px;
+                            line-height: 150%;
                             display: -webkit-box;
                             -webkit-box-orient: vertical;
                             -webkit-line-clamp: 3;
@@ -284,7 +320,7 @@ body {
 
                         .news__card__date-s {
                             font-size: 12px;
-                            padding-top: 10px;
+
                             display: inline-block;
                         }
                     }
@@ -302,7 +338,7 @@ body {
                 }
 
                 li {
-                    padding-bottom: 16px;
+                    padding-bottom: 9px;
                     font-weight: 700;
 
                     &:last-child {

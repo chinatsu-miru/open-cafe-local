@@ -4,8 +4,12 @@
 
 
 .contact-completed {
-    margin-top: 54px;
+    margin-top: 53px;
     color: $main-color;
+
+    @include mq(md) {
+        margin-top: 80px;
+    }
 
     .contact-completed__inner {
         padding-inline: 20px;
@@ -34,15 +38,16 @@
             }
 
             p {
-                padding-top: 26px;
+                padding-top: 17px;
                 font-size: 14px;
                 font-weight: 500;
-                line-height: 24px;
+                line-height: 200%;
 
                 @include mq(lg) {
-                    padding-top: 28px;
+                    padding-top: 26px;
                     font-size: 16px;
-                    line-height: normal;
+                    font-weight: 500;
+                    line-height: 200%;
                 }
             }
         }

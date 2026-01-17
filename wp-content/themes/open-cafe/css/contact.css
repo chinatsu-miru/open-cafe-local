@@ -843,8 +843,13 @@ footer .footer-beans img {
 }
 
 .contact {
-  margin-top: 48px;
+  margin-top: 59px;
   color: #382620;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    margin-top: 80px;
+  }
 }
 .contact .contact__inner {
   padding-inline: 20px;
@@ -861,7 +866,7 @@ footer .footer-beans img {
   color: #382620;
   font-size: 20px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 150%;
 }
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact__title h2 {
@@ -871,42 +876,47 @@ footer .footer-beans img {
   }
 }
 .contact .contact__inner .contact__title p {
-  padding-top: 20px;
+  padding-top: 21px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 200%;
 }
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact__title p {
     padding-top: 28px;
     font-size: 16px;
-    line-height: normal;
   }
 }
 .contact .contact__inner .contact-form {
   margin-top: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 166px;
 }
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact-form {
-    margin-top: 81px;
+    margin-top: 78px;
   }
 }
 .contact .contact__inner .contact-form .contact__fields {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.85rem;
+}
+@media screen and (min-width: 768px) {
+  .contact .contact__inner .contact-form .contact__fields .contact__field:nth-of-type(n + 2):nth-of-type(-n + 4) .form-field {
+    display: flex;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .contact .contact__inner .contact-form .contact__fields .form-field {
+  .contact .contact__inner .contact-form .contact__fields .contact__field .form-field {
     display: flex;
     gap: 28px;
     align-items: flex-start;
   }
 }
-.contact .contact__inner .contact-form .contact__fields .form-field [type=text],
-.contact .contact__inner .contact-form .contact__fields .form-field [type=email],
-.contact .contact__inner .contact-form .contact__fields .form-field [type=tel] {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field [type=text],
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field [type=email],
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field [type=tel] {
   width: 100%;
   height: 48px;
   border-radius: 6px;
@@ -914,26 +924,26 @@ footer .footer-beans img {
   background: #ffffff;
   padding: 12px 16px;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__head {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__head {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  padding-bottom: 8px;
 }
 @media screen and (min-width: 1024px) {
-  .contact .contact__inner .contact-form .contact__fields .form-field .form-field__head {
+  .contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__head {
     min-width: 170px;
   }
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__head.label-radio {
-  padding-bottom: 22px;
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__head.label-radio {
+  padding-bottom: 20px;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__head .form-field__label {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__head .form-field__label {
   color: #382620;
   font-size: 16px;
   font-weight: 700;
+  line-height: 150%;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__head .form-field__tag {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__head .form-field__tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -945,57 +955,56 @@ footer .footer-beans img {
   font-weight: 700;
 }
 @media screen and (min-width: 1024px) {
-  .contact .contact__inner .contact-form .contact__fields .form-field .form-field__item {
+  .contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item {
     width: 100%;
   }
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 16px;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios [type=radio] {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios [type=radio] {
   width: 1px;
   height: 1px;
   position: absolute;
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios [type=radio]:checked + .form-field__radio-text:after {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios [type=radio]:checked + .form-field__radio-text:after {
   opacity: 1;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios .form-field__radio-text {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios .form-field__radio-text {
   font-size: 16px;
   font-weight: 500;
   position: relative;
   padding-left: 34px;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios .form-field__radio-text::before, .contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios .form-field__radio-text::after {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios .form-field__radio-text::before, .contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios .form-field__radio-text::after {
   content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios .form-field__radio-text::before {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios .form-field__radio-text::before {
   width: 24px;
   height: 24px;
   border: 1px solid #382620;
   left: 0;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-field__radios .form-field__radio-text::after {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-field__radios .form-field__radio-text::after {
   width: 12px;
   height: 12px;
   background-color: #f07317;
   left: 6px;
   opacity: 0;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-text::placeholder,
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-textarea::placeholder {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-text::placeholder,
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-textarea::placeholder {
   color: #ccc;
-  padding-left: 16px;
 }
-.contact .contact__inner .contact-form .contact__fields .form-field .form-field__item .form-textarea {
+.contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-textarea {
   padding-top: 12px;
   padding-left: 16px;
   width: 100%;
@@ -1004,20 +1013,29 @@ footer .footer-beans img {
   border: 1px solid #382620 !important;
   background: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item .form-textarea {
+    height: 240px;
+  }
+}
 .contact .contact__inner .contact-form .contact__policy {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  padding-top: 18px;
+  padding-top: 36px;
+}
+.contact .contact__inner .contact-form .contact__policy p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 150%;
 }
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact-form .contact__policy {
-    padding-top: 60px;
-    line-height: normal;
+    padding-top: 37px;
   }
 }
 .contact .contact__inner .contact-form .button-wrap {
-  margin-top: 38px;
+  margin-top: 40px;
   margin-bottom: 60px;
   margin-inline: auto;
 }
@@ -1034,15 +1052,36 @@ footer .footer-beans img {
   user-select: none;
   font-size: 16px;
   font-weight: 700;
+  margin-left: 5.2vw;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact-form .button-wrap .button1 {
-    width: 280px;
+    width: 290px;
+    margin-left: 15.3vw;
   }
+}
+.contact .contact__inner .contact-form .button-wrap .button1::before {
+  content: "";
+  width: 16px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+  background-image: url(../img/arrow.png);
+  color: #ffffff;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.contact .contact__inner .contact-form .button-wrap .button1::after {
+  left: 7px;
 }
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact-form .button-wrap .button1::after {
-    width: 280px;
+    width: 290px;
   }
 }
 

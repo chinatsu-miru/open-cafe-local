@@ -5,8 +5,11 @@
         <div class="contents__wrapper">
             <section class="news__contents">
                 <div class="news__lists">
-                    <ul class="news__lists-wrapper">
-                        <?php if (have_posts()): ?>
+                    <?php if (have_posts()): ?>
+                        <h1 class="news__category-title">
+                            <?php single_cat_title(); ?>
+                        </h1>
+                        <ul class="news__lists-wrapper">
                             <?php while (have_posts()) : the_post(); ?>
                                 <li class="news__list">
                                     <div class="news__image-s">
@@ -29,13 +32,13 @@
                                         </div>
                                     </div>
                                     <a href="<?php the_permalink(); ?>" class="news__text-s">
-                                        <p><?php the_title(); ?></p>
+                                        <span><?php the_title(); ?></span>
                                     </a>
-                                    <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/n/j'); ?></time>
+                                    <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/m/d'); ?></time>
                                 </li>
                             <?php endwhile; ?>
-                        <?php endif; ?>
-                    </ul>
+                        </ul>
+                    <?php endif; ?>
                 </div>
                 <?php get_template_part('template-parts/pagination'); ?>
 

@@ -159,6 +159,7 @@ function my_admin_menu()
 add_action('admin_menu', 'my_admin_menu');
 
 
+
 /*-----------------------------------------
 　　* ジャンル別ページ（taxonomy-genre.php）の並び順を
  * プラグイン等で設定した管理画面の順序（menu_order）に合わせる
@@ -171,3 +172,41 @@ function my_custom_menu_order($query)
     }
 }
 add_action('pre_get_posts', 'my_custom_menu_order');
+
+
+
+/*-----------------------------------------
+　　* ニュースページだけ投稿を8件にする
+-----------------------------------------*/
+function my_custom_news_posts_per_page($query){
+    if (!is_admin() && $query->is_main_query()) {
+        if ($query->is_home()) {
+            $query->set( 'posts_per_page', 8);
+        }
+    }
+}
+add_action( 'pre_get_posts', 'my_custom_news_posts_per_page');
+
+
+
+/*-----------------------------------------
+　　* thanksページのパンくずリストの制御
+-----------------------------------------*/
+/**
+ * パンくずリスト：完了ページのみをピンポイントで書き換える
+ */
+add_filter('bcn_breadcrumb_title', 'my_custom_bcn_title_strict', 10, 3);
+function my_custom_bcn_title_strict($title, $type, $id)
+{
+    // 1. お問い合わせ完了ページの「実際のID」をここで指定します
+    // ※IDの確認方法は下記に記載しています
+    $thanks_page_id = 26; // ←ここをお客様の完了ページのID番号に書き換えてください
+
+    // 2. 「今処理しているパーツのID」が「完了ページのID」と一致した時だけ書き換え
+    if ((int)$id === $thanks_page_id) {
+        return 'お問い合わせ完了';
+    }
+
+    // それ以外（親ページなど）は元のタイトルのまま返す
+    return $title;
+}
