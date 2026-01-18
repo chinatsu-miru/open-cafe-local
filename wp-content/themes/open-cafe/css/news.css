@@ -863,7 +863,7 @@ body {
     padding-inline: 50px;
     display: flex;
     padding-top: 80px;
-    justify-content: space-between;
+    gap: 4.7vw;
   }
 }
 .contents__wrapper .news__contents {

@@ -77,14 +77,14 @@ if (is_page('concept')) {
             </button>
         </header>
         <nav class="hero__nav is_sub">
-
-                <div class="nav__logo">
+            <div class="nav_btns">
+                <div class="nav__logo is-top">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/logo_light.png" alt="">
                 </div>
                 <div class="nav__close">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/close.png" alt="">
                 </div>
-
+            </div>
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'drawer-sp',

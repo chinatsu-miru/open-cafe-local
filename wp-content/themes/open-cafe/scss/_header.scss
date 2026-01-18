@@ -1,4 +1,5 @@
-@use 'common'  as * ;
+@use 'common' as *;
+
 .header.top {
     @include mq(xl) {
         height: auto;
@@ -74,26 +75,32 @@
         z-index: 20;
         background: url("../img/concept/concept-top.jpg") no-repeat center center / cover;
     }
+
     &.menu-top {
         z-index: 20;
         background: url("../img/menu/menu-top.jpg") no-repeat center center / cover;
     }
+
     &.news-top {
         z-index: 20;
         background: url("../img/news/news-top.jpg") no-repeat center center / cover;
     }
+
     &.shop-top {
         z-index: 20;
         background: url("../img/shop/shop-top.jpg") no-repeat center center / cover;
     }
-    &.gift-top{
+
+    &.gift-top {
         z-index: 20;
         background: url("../img/gift/gift-top.jpg") no-repeat center center / cover;
     }
+
     &.contact-top {
         z-index: 20;
         background: url("../img/contact/contact-top.jpg") no-repeat center center / cover;
     }
+
     &.thanks-top {
         z-index: 20;
         background: url("../img/contact/contact-top.jpg") no-repeat center center / cover;
@@ -120,6 +127,7 @@
     .breadcrumbs_inner {
         display: flex;
         gap: 5px;
+
         @include mq(md) {
             gap: 15px;
         }
