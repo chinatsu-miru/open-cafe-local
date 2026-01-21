@@ -1,63 +1,6 @@
 'use strict';
 {
     // ハンバーガーメニュークリックした時の動作
-    // const logo = document.querySelector('.logo');
-    // const btn = document.querySelector('.hamburger');
-    // const navs = document.querySelectorAll('.hero__nav');
-    // const mask = document.getElementById('mask');
-    // const vh = window.innerHeight;
-
-    // const close = document.querySelector('.nav__close');
-    // const closeTop = document.querySelector('.nav__close.is-top');
-
-    // // const img = document.querySelector('.btn-img');
-    // // const themeDir = btn.dataset.themeDir;
-
-
-    // btn.addEventListener('click', () => {
-    //     navs.forEach(nav => {
-    //         nav.classList.toggle('is-checked');
-    //     });
-    //     btn.classList.toggle('is-checked');
-    //     if(logo) {
-    //         logo.classList.toggle('is-hidden');
-    //     }
-    //     // const isInPagesFolder = location.pathname.includes('/pages/');
-
-    //     mask.classList.toggle('hidden');
-    // });
-
-    // close.addEventListener('click', () => {
-    //     navs.forEach(nav => {
-    //         nav.classList.toggle('is-checked');
-    //     });
-    //     btn.classList.toggle('is-checked');
-    //     mask.classList.toggle('hidden');
-    // });
-    // const closeMenu = () => {
-    //     navs.forEach(nav => {
-    //         nav.classList.toggle('is-checked');
-    //     });
-    //     btn.classList.toggle('is-checked');
-    //     mask.classList.toggle('hidden');
-    // };
-    // if (close) {
-    //     close.addEventListener('click', closeMenu);
-    // }
-    // if (closeTop) {
-    //     closeTop.addEventListener('click', closeMenu);
-    // }
-
-    // closes.forEach(closeBtn => {
-    //     closeBtn.addEventListener('click', () => {
-    //         navs.forEach(nav => {
-    //             nav.classList.toggle('is-checked');
-    //         });
-    //         btn.classList.toggle('is-checked');
-    //         mask.classList.toggle('hidden');
-    //     });
-    // });
-
     // 1. 変数の宣言（すべて1回ずつにする）
     const logo = document.querySelector('.logo');
     const btn = document.querySelector('.hamburger');
@@ -107,12 +50,7 @@
 
 
 
-
-
-
-
     //swiper-----------------------------------
-
     const swiper = new Swiper('.swiper', {
         loop: true,
         autoplay: {
@@ -163,10 +101,5 @@
         }else{
             toTop.style.display = 'none';
         }
-    //     if(window.scrollY > vh){
-    //         btn.style.display = 'block';
-    //     }else{
-    //         btn.style.display = 'none';
-    //     }
     });
 }

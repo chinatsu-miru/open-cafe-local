@@ -15,9 +15,9 @@ body {
     // padding-top: 4px;
     overflow: hidden;
 
-    .breadcrumbs {
-        padding-top: 16px;
-    }
+    // .breadcrumbs {
+    //     padding-top: 16px;
+    // }
 
     .concept__contents {
         padding-inline: 20px;
@@ -26,6 +26,10 @@ body {
         display: flex;
         flex-direction: column;
         gap: 50px;
+
+        @include mq(md) {
+            padding-inline: clamp(20px, 5vw, 45px);
+        }
 
         @include mq(lg) {
             gap: 200px;

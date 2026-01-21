@@ -354,13 +354,13 @@
                             <h3 class="news__desc">
                                 <?php the_title(); ?>
                             </h3>
-                            <div class="news__text">
+                            <a href="<?php the_permalink(); ?>" class="news__text">
                                 <?php
                                 $content = strip_tags(get_the_content());
                                 $trimmed = mb_substr($content, 0, 112);
                                 echo $trimmed . '…';
                                 ?>
-                            </div>
+                            </a>
                             <time datetime="<?php the_time('c'); ?>" class="news__date"><?php the_time('Y/m/d'); ?></time>
                         </div>
                     <?php endwhile; ?>
@@ -401,9 +401,9 @@
                                             <img src="<?php echo get_template_directory_uri(); ?>/img/pass69.png" alt="">
                                         </div>
                                     </div>
-                                    <div class="news__text-s">
+                                    <a href="<?php the_permalink(); ?>" class="news__text-s">
                                         <h3><?php the_title(); ?></h3>
-                                    </div>
+                                    </a>
                                     <time datetime="<?php the_time('c'); ?>" class="news__date-s"><?php the_time('Y/m/d'); ?></time>
                                 </li>
                             <?php endwhile; ?>
