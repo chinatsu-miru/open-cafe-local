@@ -1067,6 +1067,10 @@ body {
   background-color: #382620;
   color: #ffffff;
 }
+.contents__wrapper .news__contents .news__nav .page-numbers:hover {
+  background-color: #382620;
+  color: #ffffff;
+}
 .contents__wrapper .articles__contents {
   padding-inline: 20px;
   max-width: 700px;

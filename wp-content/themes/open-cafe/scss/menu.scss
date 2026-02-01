@@ -64,6 +64,11 @@ body {
                     grid-template-rows: repeat(1, auto);
                     column-gap: 12px;
                 }
+
+                .tab-button:hover {
+                    background: $main-color;
+                    color: $sub-text-color;
+                }
             }
         }
 

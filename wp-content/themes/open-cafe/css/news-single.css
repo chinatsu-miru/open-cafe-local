@@ -1104,6 +1104,9 @@ img {
   vertical-align: middle;
   width: 6px;
 }
+.single__news .post-nav__box .post-nav li a:hover {
+  opacity: 0.6;
+}
 .single__news .post-nav__box .post-nav li:nth-of-type(1) img {
   margin-right: 9.7px;
 }

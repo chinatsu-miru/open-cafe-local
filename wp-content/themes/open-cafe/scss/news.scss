@@ -221,11 +221,12 @@ body {
                 justify-content: center;
                 white-space: nowrap;
 
-                // &:nth-child(3) {
-                //     background-color: $main-color;
-                //     color: $sub-text-color;
-                // }
                 &.current {
+                    background-color: $main-color;
+                    color: $sub-text-color;
+                }
+
+                &:hover {
                     background-color: $main-color;
                     color: $sub-text-color;
                 }

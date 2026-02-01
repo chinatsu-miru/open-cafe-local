@@ -915,6 +915,7 @@ body {
   margin-top: 10px;
   width: 132px;
   padding: 0;
+  border: 1px solid #382620;
 }
 @media screen and (min-width: 768px) {
   .gift__main .gift__container .gift__item1 .gift__item-meta .button2 {
@@ -926,12 +927,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.5s;
 }
 @media screen and (min-width: 768px) {
   .gift__main .gift__container .gift__item1 .gift__item-meta .button2 .btn2 {
     font-size: 14px;
     line-height: 150%;
   }
+}
+.gift__main .gift__container .gift__item1 .gift__item-meta .button2 .btn2:hover {
+  background: #ffffff;
+  color: #382620;
 }
 .gift__main .gift__container .gift__item1 .gift__item-meta .gift__item-text {
   font-size: 20px;
@@ -997,6 +1003,7 @@ body {
   margin-top: 10px;
   width: 132px;
   padding: 0;
+  border: 1px solid #382620;
 }
 @media screen and (min-width: 768px) {
   .gift__main .gift__container .gift__item-s .gift__item-meta .button2 {
@@ -1008,11 +1015,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.5s;
 }
 @media screen and (min-width: 768px) {
   .gift__main .gift__container .gift__item-s .gift__item-meta .button2 .btn2 {
     font-size: 14px;
   }
+}
+.gift__main .gift__container .gift__item-s .gift__item-meta .button2 .btn2:hover {
+  background: #ffffff;
+  color: #382620;
 }
 .gift__main .gift__info {
   margin-top: 60px;

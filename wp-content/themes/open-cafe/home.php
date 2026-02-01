@@ -32,9 +32,6 @@
                                         <p>
                                             <?php
                                             the_title();
-                                            // $title = get_the_title();
-                                            // 40バイト（全角約20文字）で制限し、超えたら「...」を付ける
-                                            // echo mb_strimwidth($title, 0, 120, "…", "UTF-8");
                                             ?>
                                         </p>
                                     </a>

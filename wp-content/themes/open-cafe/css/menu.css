@@ -917,6 +917,10 @@ body {
     column-gap: 12px;
   }
 }
+.container .menu__contents .tab-buttons .tab-buttons__inner .tab-button:hover {
+  background: #382620;
+  color: #ffffff;
+}
 .container .menu__contents .menu__images {
   padding-top: 60px;
   max-width: 600px;

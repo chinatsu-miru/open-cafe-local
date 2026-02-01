@@ -1382,7 +1382,6 @@ body {
 @media screen and (min-width: 768px) {
   .concept {
     overflow: visible;
-    max-width: 1160px;
     padding-bottom: 80px;
     margin: 0 auto;
     padding-top: 80px;
