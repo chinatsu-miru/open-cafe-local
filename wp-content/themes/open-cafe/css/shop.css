@@ -1,4 +1,8 @@
 @charset "UTF-8";
+› * {
+  outline: 1px solid red !important;
+}
+
 html {
   font-size: 14px;
   font-weight: 500;
@@ -71,6 +75,12 @@ body {
 
 .section {
   padding-inline: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    padding-inline: 0;
+    width: 100%;
+  }
 }
 
 .bg {
@@ -506,22 +516,13 @@ body {
 }
 .access .access-dec {
   position: absolute;
-  width: 41vw;
-  height: 47.7vw;
+  width: 153.75px;
+  height: 178px;
   top: -98px;
   right: 0;
 }
 .access .access-dec img {
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .access .access-dec {
-    width: auto;
-    height: auto;
-    max-width: 350px;
-    top: -165px;
-    right: 0;
-  }
 }
 @media screen and (min-width: 1280px) {
   .access .access-dec {
@@ -530,8 +531,8 @@ body {
   }
 }
 .access .access-bubble {
-  width: 53.333vw;
-  height: 45.866vw;
+  width: 200px;
+  height: 172px;
   position: absolute;
   top: -45px;
   left: -30px;
@@ -541,9 +542,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .access .access-bubble {
-    width: auto;
-    height: auto;
-    max-width: 300px;
+    left: calc(50% - 305px);
   }
 }
 @media screen and (min-width: 1024px) {

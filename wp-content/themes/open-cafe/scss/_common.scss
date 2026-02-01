@@ -19,6 +19,7 @@ $button-color: #f3efeb;
 // breakpoints
 $breakpoints: (
     xs: "screen and (min-width: 375px)",
+    ms: "screen and (min-width: 425px)",
     sm: "screen and (min-width: 600px)",
     md: "screen and (min-width: 768px)",
     lg: "screen and (min-width: 1024px)",
@@ -32,12 +33,12 @@ $breakpoints: (
     @media #{string.unquote($mq-value)} {
         @content;
     }
-}
+}›
 
 // 共通パーツ
-// * {
-//     outline: 1px solid red !important;
-// }
+* {
+    outline: 1px solid red !important;
+}
 
 html {
     font-size: 14px;
@@ -112,6 +113,10 @@ body {
 //各セクション------------------------------------------
 .section {
     padding-inline: 20px;
+    @include mq(lg) {
+        padding-inline: 0;
+        width: 100%;
+    }
 }
 
 //背景色----------------------------------------------
@@ -569,8 +574,8 @@ body {
 
     .access-dec {
         position: absolute;
-        width: 41vw;
-        height: 47.7vw;
+        width: 153.75px;
+        height: 178px;
         top: -98px;
         right: 0;
 
@@ -579,11 +584,6 @@ body {
         }
 
         @include mq(md) {
-            width: auto;
-            height: auto;
-            max-width: 350px;
-            top: -165px;
-            right: 0;
         }
 
         @include mq(xl) {
@@ -596,8 +596,8 @@ body {
     }
 
     .access-bubble {
-        width: 53.333vw;
-        height: 45.866vw;
+        width: 200px;
+        height: 172px;
         position: absolute;
         top: -45px;
         left: -30px;
@@ -607,9 +607,7 @@ body {
         }
 
         @include mq(md) {
-            width: auto;
-            height: auto;
-            max-width: 300px;
+            left: calc(50% - 305px);
         }
 
         @include mq(lg) {

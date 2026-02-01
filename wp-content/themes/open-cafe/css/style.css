@@ -1,4 +1,8 @@
 @charset "UTF-8";
+› * {
+  outline: 1px solid red !important;
+}
+
 html {
   font-size: 14px;
   font-weight: 500;
@@ -71,6 +75,12 @@ body {
 
 .section {
   padding-inline: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    padding-inline: 0;
+    width: 100%;
+  }
 }
 
 .bg {
@@ -506,22 +516,13 @@ body {
 }
 .access .access-dec {
   position: absolute;
-  width: 41vw;
-  height: 47.7vw;
+  width: 153.75px;
+  height: 178px;
   top: -98px;
   right: 0;
 }
 .access .access-dec img {
   width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .access .access-dec {
-    width: auto;
-    height: auto;
-    max-width: 350px;
-    top: -165px;
-    right: 0;
-  }
 }
 @media screen and (min-width: 1280px) {
   .access .access-dec {
@@ -530,8 +531,8 @@ body {
   }
 }
 .access .access-bubble {
-  width: 53.333vw;
-  height: 45.866vw;
+  width: 200px;
+  height: 172px;
   position: absolute;
   top: -45px;
   left: -30px;
@@ -541,9 +542,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .access .access-bubble {
-    width: auto;
-    height: auto;
-    max-width: 300px;
+    left: calc(50% - 305px);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -863,6 +862,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f3efeb;
+  overflow: scroll;
 }
 @media screen and (min-width: 768px) {
   html,
@@ -1108,7 +1108,6 @@ body {
 @media screen and (min-width: 1024px) {
   .hero-pc {
     background-color: #f3efeb;
-    max-width: 1440px;
     width: 100%;
     height: auto;
     display: block;
@@ -1366,17 +1365,9 @@ body {
   }
 }
 
-.main {
-  background-color: #f3efeb;
-}
-@media screen and (min-width: 768px) {
-  .main {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-}
-
 .section {
+  background-color: #f3efeb;
+  padding-inline: 0;
   position: relative;
   background-color: #f3efeb;
   z-index: 0;
@@ -1390,6 +1381,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .concept {
+    overflow: visible;
+    max-width: 1160px;
     padding-bottom: 80px;
     margin: 0 auto;
     padding-top: 80px;
@@ -1403,6 +1396,7 @@ body {
 .concept .section--intro {
   position: relative;
   z-index: 1;
+  padding-inline: 20px;
 }
 @media screen and (min-width: 768px) {
   .concept .section--intro {
@@ -1555,9 +1549,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .lunch {
+    padding-inline: 30px;
     overflow: visible;
     margin-top: 160px;
-    margin-inline: 0px;
     padding-bottom: 77px;
   }
 }
@@ -1575,9 +1569,17 @@ body {
 .lunch .lunch__inner {
   background-color: #ffffff;
 }
+@media screen and (min-width: 425px) {
+  .lunch .lunch__inner {
+    max-width: 375px;
+    margin-inline: auto;
+  }
+}
 @media screen and (min-width: 768px) {
   .lunch .lunch__inner {
+    max-width: 1200px;
     margin-inline: 40px;
+    margin: 0 auto;
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select {
@@ -1586,10 +1588,13 @@ body {
 }
 @media screen and (min-width: 768px) {
   .lunch .lunch__inner .lunch-set__pasta-select {
-    padding-inline: 40px;
-    padding-bottom: 40px;
     background-color: #ffffff;
     width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .lunch .lunch__inner .lunch-set__pasta-select {
+    padding-inline: 40px;
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .ribbon {
@@ -1652,34 +1657,30 @@ body {
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
   padding-top: 39px;
   width: 100%;
   margin: 0 auto;
   justify-content: space-between;
   background-color: #ffffff;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list {
+    display: grid;
+    grid-template-columns: repeat(4, 23%);
     padding-top: 60px;
+    flex-wrap: nowrap;
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item {
-  width: 42.13vw;
   min-height: 203px;
   padding-bottom: 22px;
 }
 @media screen and (min-width: 768px) {
   .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item {
-    width: 281px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item {
-    width: 20.312vw;
-    max-width: 292px;
+    width: 100%;
+    max-width: 260px;
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item img {
@@ -1711,16 +1712,16 @@ body {
   }
 }
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc .lunch-set__pasta-label {
-  width: 6.4vw;
-  height: 6.4vw;
+  width: 24px;
+  height: 24px;
   background-color: #222222;
   color: #ffffff;
   margin-top: 2px;
 }
 @media screen and (min-width: 1024px) {
   .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc .lunch-set__pasta-label {
-    width: 3.8vw;
-    height: 3.8vw;
+    width: 24px;
+    height: 24px;
     padding-left: 14px;
     padding-right: 13px;
     max-width: 55px;
@@ -1734,7 +1735,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Patua One";
-  font-size: 5.07vw;
+  font-size: 19px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -1750,18 +1751,13 @@ body {
 .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc p.lunch-set__pasta-text {
   color: #222;
   font-family: "Noto Serif JP";
-  font-size: 3.73vw;
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   flex: 1;
   width: 100%;
   text-align: left;
-}
-@media screen and (min-width: 768px) {
-  .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc p.lunch-set__pasta-text {
-    font-size: 18px;
-  }
 }
 @media screen and (min-width: 1024px) {
   .lunch .lunch__inner .lunch-set__pasta-select .lunch-set__pasta-list .lunch-set__pasta-item .lunch-set__pasta-desc p.lunch-set__pasta-text {
@@ -1808,7 +1804,7 @@ body {
   }
 }
 .lunch .lunch-set__footer .lunch-set__footer-inner .lunch-set__combo {
-  width: 89.06vw;
+  width: 100%;
   max-width: 648px;
   display: flex;
   align-items: center;
@@ -2061,7 +2057,7 @@ body {
 .grand__menu {
   padding-top: 60px;
   padding-bottom: 190px;
-  padding-inline: 5.3vw;
+  padding-inline: 20px;
   background-color: #f3efeb;
   position: relative;
   z-index: 0;
@@ -2069,13 +2065,16 @@ body {
 @media screen and (min-width: 600px) {
   .grand__menu {
     margin: 0 auto;
+    overflow: visible;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
   .grand__menu {
     padding-top: 80px;
     padding-bottom: 246px;
-    padding-inline: min(7.03vw, 101px);
+    padding-inline: 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2093,30 +2092,32 @@ body {
   padding-top: 40px;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .grand__menu .grand__menu-inner {
+    padding-inline: 30px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .grand__menu .grand__menu-inner {
     padding-top: 60px;
+    max-width: 1160px;
+    margin: 0 auto;
   }
 }
 .grand__menu .grand__menu-inner .grand__menus {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1280px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content {
-    max-width: 1287px;
-  }
-}
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 10px;
   font-size: 20px;
-  border-top: 1px solid #222222;
-  border-bottom: 1px solid #222222;
+  border-top: 2px solid #222222;
+  border-bottom: 2px solid #222222;
   font-weight: 700;
   position: relative;
-  line-height: 30px;
+  line-height: 150%;
 }
 @media screen and (min-width: 768px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
@@ -2131,13 +2132,13 @@ body {
   content: "";
   background-color: #222222;
   width: 100%;
-  height: 2px;
-  top: -1px;
+  height: 1px;
+  top: 5px;
   left: 0;
 }
 @media screen and (min-width: 768px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::before {
-    top: -2px;
+    top: 5px;
   }
 }
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::after {
@@ -2145,13 +2146,13 @@ body {
   content: "";
   background-color: #222222;
   width: 100%;
-  height: 2px;
-  bottom: -4px;
+  height: 1px;
+  bottom: 5px;
   left: 0;
 }
 @media screen and (min-width: 768px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::after {
-    bottom: -5px;
+    bottom: 5px;
   }
 }
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper {
@@ -2165,8 +2166,8 @@ body {
   }
 }
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 47%);
   justify-content: space-between;
 }
 @media screen and (min-width: 600px) {
@@ -2178,6 +2179,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
+    grid-template-columns: repeat(3, 31.2%);
     max-width: 100%;
     flex-wrap: nowrap;
   }
@@ -2203,26 +2205,17 @@ body {
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info {
   display: flex;
   padding-bottom: 20px;
-  width: 42.1vw;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info {
-    width: 26.8vw;
+    width: 100%;
     max-width: 384px;
   }
 }
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img {
   width: 100%;
-  height: 42.1vw;
   background-color: #ffffff;
-}
-@media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img {
-    height: 26.8vw;
-    max-width: 385px;
-    max-height: 385px;
-  }
 }
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img img {
   display: inline-block;
@@ -2315,8 +2308,17 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+@media screen and (min-width: 768px) {
+  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
+    display: grid;
+    padding-inline: 0;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
+    display: flex;
     padding: 0;
     flex-direction: row;
     flex: 1;
@@ -2325,6 +2327,11 @@ body {
 }
 .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
   padding-bottom: 38px;
+}
+@media screen and (min-width: 768px) {
+  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
+    padding-bottom: 60px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
@@ -2382,6 +2389,11 @@ body {
 .grand__menu .grand__menu-inner.top-drink {
   padding-top: 0;
 }
+@media screen and (min-width: 768px) {
+  .grand__menu .grand__menu-inner.top-drink {
+    padding-inline: 0;
+  }
+}
 .grand__menu .grand__menu-inner > .button1 {
   margin-top: 0;
 }
@@ -2414,7 +2426,7 @@ body {
   .grand__menu .grand__menu-bg {
     top: 500px;
     width: 550px;
-    height: 2410px;
+    height: 1740px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2422,7 +2434,7 @@ body {
     top: 502px;
     width: 810px;
     right: 0;
-    height: 2310px;
+    height: 2090px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -2489,13 +2501,19 @@ body {
 }
 @media screen and (min-width: 768px) {
   .gallery .gallery__inner {
-    max-width: 660px;
+    max-width: 708px;
     padding-bottom: 83px;
   }
 }
 @media screen and (min-width: 1024px) {
   .gallery .gallery__inner {
     max-width: 1100px;
+    padding-inline: 30px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery .gallery__inner {
+    padding-inline: 0;
   }
 }
 .gallery .gallery__inner .section__title {
@@ -2525,6 +2543,15 @@ body {
   gap: 5.06vw;
   margin: 0 auto;
   padding-bottom: 40px;
+  padding-inline: 20px;
+}
+@media screen and (min-width: 768px) {
+  .gallery .gallery__inner .gallery__images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.1%;
+    padding-inline: 0;
+  }
 }
 @media screen and (min-width: 1024px) {
   .gallery .gallery__inner .gallery__images {
@@ -2537,6 +2564,11 @@ body {
   aspect-ratio: 1/1;
   width: calc(50% - 2.533vw);
   height: auto;
+}
+@media screen and (min-width: 768px) {
+  .gallery .gallery__inner .gallery__images .gallery__image {
+    width: 100%;
+  }
 }
 .gallery .gallery__inner .gallery__images .gallery__image img {
   width: 100%;
@@ -2607,8 +2639,9 @@ body {
   padding-top: 38px;
   display: flex;
   flex-direction: column;
+  padding-inline: 20px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .news .news__inner .news__contents {
     padding-top: 60px;
     flex-direction: row;
@@ -2617,11 +2650,21 @@ body {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1280px) {
+  .news .news__inner .news__contents {
+    padding-inline: 0;
+  }
+}
 .news .news__inner .news__contents .news__latest {
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .news .news__inner .news__contents .news__latest {
+    width: 328px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .news .news__inner .news__contents .news__latest {
@@ -2634,10 +2677,29 @@ body {
 .news .news__inner .news__contents .news__latest .news__image {
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .news .news__inner .news__contents .news__latest .news__image {
+    width: 328px;
+    height: 205.67px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .news .news__inner .news__contents .news__latest .news__image {
+    width: 407px;
+    height: 255px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .news .news__inner .news__contents .news__latest .news__image {
+    width: 510px;
+    height: 310px;
+  }
+}
 .news .news__inner .news__contents .news__latest .news__image img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 .news .news__inner .news__contents .news__latest .news__image .ribbon-s {
   position: absolute;
@@ -2718,6 +2780,7 @@ body {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    flex: 1;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2737,6 +2800,7 @@ body {
   gap: 5.06vw;
   padding-bottom: 40px;
   margin: 0 auto;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .news .news__inner .news__contents .news__lists .news__lists-wrapper {
@@ -2752,8 +2816,11 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .news .news__inner .news__contents .news__lists .news__lists-wrapper {
-    max-width: 1280px;
-    gap: 1.3vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
   }
 }
 .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list {
@@ -2768,6 +2835,13 @@ body {
     width: 265px;
     gap: 12px;
     padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list {
+    width: 48%;
+    flex-shrink: 0;
+    box-sizing: border-box;
   }
 }
 .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list .news__image-s {
@@ -2863,7 +2937,7 @@ body {
 .news .news__deco img {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .news .news__deco {
     width: 267px;
     height: 320px;

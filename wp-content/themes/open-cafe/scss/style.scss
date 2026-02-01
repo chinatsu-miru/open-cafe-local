@@ -3,12 +3,15 @@
 @use "./header" as *;
 @use "./footer" as *;
 
+// * {
+//     outline: 1px solid red !important;
+// }
 html,
 body {
     margin: 0;
     padding: 0;
     background-color: $light-color;
-    // overflow: scroll;
+    overflow: scroll;
     // height: 100%;
 
     @include mq(md) {
@@ -306,7 +309,7 @@ body {
 
     @include mq(lg) {
         background-color: $light-color;
-        max-width: 1440px;
+        // max-width: 1440px;
         width: 100%;
         height: auto;
         display: block;
@@ -615,24 +618,28 @@ body {
 //main-----------------------------------------------------
 //---------------------------------------------------------
 
-.main {
-    background-color: $light-color;
-    // overflow: hidden;
+// .main {
+//     background-color: $light-color;
+//     // overflow: hidden;
 
-    @include mq(md) {
-        max-width: 1440px;
-        margin: 0 auto;
-        // overflow: visible;
-    }
-}
+//     @include mq(md) {
+//         max-width: 1440px;
+//         margin: 0 auto;
+//         // overflow: visible;
+//     }
+// }
 
 .section {
+    background-color: $light-color;
+    padding-inline: 0;
     position: relative;
     background-color: $light-color;
     z-index: 0;
 
-    @include mq(xl) {
+    @include mq(md) {
         // max-width: 1440px;
+        // margin: 0 auto;
+        // // overflow: visible;
     }
 }
 
@@ -646,7 +653,8 @@ body {
     // overflow: hidden;
 
     @include mq(md) {
-        // max-width: 1440px;
+        overflow: visible;
+        max-width: 1160px;
         padding-bottom: 80px;
         margin: 0 auto;
         padding-top: 80px;
@@ -660,6 +668,7 @@ body {
     .section--intro {
         position: relative;
         z-index: 1;
+        padding-inline: 20px;
 
         @include mq(md) {
             width: calc(100vw * 0.4);
@@ -821,9 +830,10 @@ body {
     padding-bottom: 60px;
 
     @include mq(md) {
+        padding-inline: 30px;
         overflow: visible;
         margin-top: 160px;
-        margin-inline: 0px;
+        // margin-inline: auto;
         padding-bottom: 77px;
     }
 
@@ -841,8 +851,15 @@ body {
     .lunch__inner {
         background-color: $sub-text-color;
 
+        @include mq(ms) {
+            max-width: 375px;
+            margin-inline: auto;
+        }
+
         @include mq(md) {
+            max-width: 1200px;
             margin-inline: 40px;
+            margin: 0 auto;
         }
 
         @include mq(xl) {
@@ -855,10 +872,14 @@ body {
 
             @include mq(md) {
                 // width: calc(100vw * 0.921);
-                padding-inline: 40px;
-                padding-bottom: 40px;
+                // padding-inline: 40px;
+                // padding-bottom: 40px;
                 background-color: $sub-text-color;
                 width: 100%;
+            }
+
+            @include mq(lg) {
+                padding-inline: 40px;
             }
 
             .ribbon {
@@ -921,9 +942,10 @@ body {
             }
 
             .lunch-set__pasta-list {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(2, 47%);
+                // flex-direction: row;
+                // flex-wrap: wrap;
                 padding-top: 39px;
                 // gap: 20px;
                 width: 100%;
@@ -931,22 +953,22 @@ body {
                 justify-content: space-between;
                 background-color: $sub-text-color;
 
-                @include mq(lg) {
+                @include mq(md) {
+                    display: grid;
+                    grid-template-columns: repeat(4, 23%);
                     padding-top: 60px;
+                    flex-wrap: nowrap;
                 }
 
                 .lunch-set__pasta-item {
-                    width: 42.13vw;
+                    // width: 42.13vw;
                     min-height: 203px;
                     padding-bottom: 22px;
 
-                    @include mq(md) {
-                        width: 281px;
-                    }
 
-                    @include mq(lg) {
-                        width: 20.312vw;
-                        max-width: 292px;
+                    @include mq(md) {
+                        width: 100%;
+                        max-width: 260px;
                     }
 
                     img {
@@ -978,15 +1000,19 @@ body {
                         }
 
                         .lunch-set__pasta-label {
-                            width: calc(100vw * 0.064);
-                            height: calc(100vw * 0.064);
+                            // width: calc(100vw * 0.064);
+                            // height: calc(100vw * 0.064);
+                            width: 24px;
+                            height: 24px;
                             background-color: $main-text-color;
                             color: $sub-text-color;
                             margin-top: 2px;
 
                             @include mq(lg) {
-                                width: calc(100vw * 0.038);
-                                height: calc(100vw * 0.038);
+                                // width: calc(100vw * 0.038);
+                                // height: calc(100vw * 0.038);
+                                width: 24px;
+                                height: 24px;
                                 padding-left: 14px;
                                 padding-right: 13px;
                                 max-width: 55px;
@@ -1000,7 +1026,7 @@ body {
                                 width: 100%;
                                 height: 100%;
                                 font-family: "Patua One";
-                                font-size: 5.07vw;
+                                font-size: 19px;
                                 font-style: normal;
                                 font-weight: 400;
                                 line-height: normal;
@@ -1017,7 +1043,7 @@ body {
                         p.lunch-set__pasta-text {
                             color: #222;
                             font-family: "Noto Serif JP";
-                            font-size: 3.73vw;
+                            font-size: 14px;
                             font-style: normal;
                             font-weight: 700;
                             line-height: normal;
@@ -1025,9 +1051,9 @@ body {
                             width: 100%;
                             text-align: left;
 
-                            @include mq(md) {
-                                font-size: 18px;
-                            }
+                            // @include mq(md) {
+                            //     font-size: 18px;
+                            // }
 
                             @include mq(lg) {
                                 font-size: clamp(14px, 1.4vw, 20px);
@@ -1080,7 +1106,7 @@ body {
             }
 
             .lunch-set__combo {
-                width: 89.06vw;
+                width: 100%;
                 max-width: 648px;
                 display: flex;
                 align-items: center;
@@ -1320,12 +1346,11 @@ body {
 }
 
 
-
 //grand-menu-------------------------------------------
 .grand__menu {
     padding-top: 60px;
     padding-bottom: 190px;
-    padding-inline: 5.3vw;
+    padding-inline: 20px;
     background-color: $light-color;
     position: relative;
     z-index: 0;
@@ -1333,14 +1358,15 @@ body {
 
     @include mq(sm) {
         margin: 0 auto;
-        // overflow: visible;
-        // overflow: hidden;
+        overflow: visible;
+        max-width: 1440px;
+        margin: 0 auto;
     }
 
     @include mq(md) {
         padding-top: 80px;
         padding-bottom: 246px;
-        padding-inline: min(7.03vw, 101px);
+        padding-inline: 0;
     }
 
     @include mq(lg) {
@@ -1361,8 +1387,14 @@ body {
         padding-top: 40px;
         position: relative;
 
+        @include mq(md) {
+            padding-inline: 30px;
+        }
+
         @include mq(lg) {
             padding-top: 60px;
+            max-width: 1160px;
+            margin: 0 auto;
         }
 
         .grand__menus {
@@ -1370,21 +1402,17 @@ body {
             flex-direction: column;
 
             .grand__menu-content {
-                @include mq(xl) {
-                    max-width: 1287px;
-
-                }
 
                 .grand__menu-top {
-                    padding-top: 2px;
-                    padding-bottom: 2px;
+                    padding-top: 9px;
+                    padding-bottom: 9px;
                     padding-left: 10px;
                     font-size: 20px;
-                    border-top: 1px solid $main-text-color;
-                    border-bottom: 1px solid $main-text-color;
+                    border-top: 2px solid $main-text-color;
+                    border-bottom: 2px solid $main-text-color;
                     font-weight: 700;
                     position: relative;
-                    line-height: 30px;
+                    line-height: 150%;
 
 
                     @include mq(md) {
@@ -1399,12 +1427,12 @@ body {
                         content: "";
                         background-color: $main-text-color;
                         width: 100%;
-                        height: 2px;
-                        top: -1px;
+                        height: 1px;
+                        top: 5px;
                         left: 0;
 
                         @include mq(md) {
-                            top: -2px;
+                            top: 5px;
                         }
                     }
 
@@ -1413,12 +1441,12 @@ body {
                         content: "";
                         background-color: $main-text-color;
                         width: 100%;
-                        height: 2px;
-                        bottom: -4px;
+                        height: 1px;
+                        bottom: 5px;
                         left: 0;
 
                         @include mq(md) {
-                            bottom: -5px;
+                            bottom: 5px;
                         }
                     }
                 }
@@ -1433,8 +1461,8 @@ body {
                     }
 
                     .grand__menu-list {
-                        display: flex;
-                        flex-wrap: wrap;
+                        display: grid;
+                        grid-template-columns: repeat(2, 47%);
                         justify-content: space-between;
 
                         @include mq(sm) {
@@ -1446,6 +1474,7 @@ body {
 
                         @include mq(md) {
                             //768px以上
+                            grid-template-columns: repeat(3, 31.2%);
                             max-width: 100%;
                             flex-wrap: nowrap;
                         }
@@ -1479,24 +1508,22 @@ body {
                         .grand__menu-info {
                             display: flex;
                             padding-bottom: 20px;
-                            width: 42.1vw;
                             flex-direction: column;
 
                             @include mq(md) {
-                                width: 26.8vw;
+                                width: 100%;
                                 max-width: 384px;
                             }
 
 
                             .grand__menu-img {
                                 width: 100%;
-                                height: 42.1vw;
                                 background-color: $sub-text-color;
 
                                 @include mq(md) {
-                                    height: 26.8vw;
-                                    max-width: 385px;
-                                    max-height: 385px;
+                                    // height: 26.8vw;
+                                    // max-width: 385px;
+                                    // max-height: 385px;
                                 }
 
                                 img {
@@ -1592,7 +1619,15 @@ body {
                             padding-left: 20px;
                             padding-right: 20px;
 
+                            @include mq(md) {
+                                display: grid;
+                                padding-inline: 0;
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 48px;
+                            }
+
                             @include mq(lg) {
+                                display: flex;
                                 padding: 0;
                                 flex-direction: row;
                                 flex: 1;
@@ -1601,6 +1636,10 @@ body {
 
                             .drink-group {
                                 padding-bottom: 38px;
+
+                                @include mq(md) {
+                                    padding-bottom: 60px;
+                                }
 
                                 @include mq(lg) {
                                     width: 19.531vw;
@@ -1665,6 +1704,10 @@ body {
 
         &.top-drink {
             padding-top: 0;
+
+            @include mq(md) {
+                padding-inline: 0;
+            }
         }
 
         &>.button1 {
@@ -1700,14 +1743,14 @@ body {
         @include mq(md) {
             top: 500px;
             width: 550px;
-            height: 2410px;
+            height: 1740px;
         }
 
         @include mq(lg) {
             top: 502px;
             width: 810px;
             right: 0;
-            height: 2310px;
+            height: 2090px;
         }
 
         @include mq(xl) {
@@ -1777,12 +1820,18 @@ body {
         z-index: 0;
 
         @include mq(md) {
-            max-width: 660px;
+            max-width: 708px;
             padding-bottom: 83px;
         }
 
         @include mq(lg) {
             max-width: 1100px;
+            padding-inline: 30px;
+        }
+
+        @include mq(xl) {
+            padding-inline: 0;
+
         }
 
         .section__title {
@@ -1793,8 +1842,8 @@ body {
             gap: 5px;
 
             @include mq(md) {
-              padding-top: 80px;
-              padding-bottom: 60px;
+                padding-top: 80px;
+                padding-bottom: 60px;
             }
 
             h2 {
@@ -1814,6 +1863,14 @@ body {
             gap: 5.06vw;
             margin: 0 auto;
             padding-bottom: 40px;
+            padding-inline: 20px;
+
+            @include mq(md) {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2.1%;
+                padding-inline: 0;
+            }
 
             @include mq(lg) {
                 flex-wrap: nowrap;
@@ -1825,6 +1882,10 @@ body {
                 aspect-ratio: 1 / 1;
                 width: calc(50% - 2.533vw); // gapが19pxの半分
                 height: auto;
+
+                @include mq(md) {
+                    width: 100%;
+                }
 
                 img {
                     width: 100%;
@@ -1891,8 +1952,8 @@ body {
     position: relative;
 
     @include mq(md) {
-    padding-top: 80px;
-    padding-bottom: 86px;
+        padding-top: 80px;
+        padding-bottom: 86px;
     }
 
     .news__inner {
@@ -1906,14 +1967,18 @@ body {
             padding-top: 38px;
             display: flex;
             flex-direction: column;
+            padding-inline: 20px;
 
-            @include mq(lg) {
+            @include mq(md) {
                 padding-top: 60px;
                 flex-direction: row;
                 gap: 2.34vw;
-                // gap: min(2.89vw, 41.6px);
                 max-width: 1100px;
                 margin: 0 auto;
+            }
+
+            @include mq(xl) {
+                padding-inline: 0;
             }
 
             .news__latest {
@@ -1921,6 +1986,10 @@ body {
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+
+                @include mq(md) {
+                    width: 328px;
+                }
 
                 @include mq(lg) {
                     height: auto;
@@ -1932,38 +2001,29 @@ body {
                 .news__image {
                     position: relative;
 
+                    @include mq(md) {
+                        width: 328px;
+                        height: 205.67px;
+                    }
+
+                    @include mq(lg) {
+                        width: 407px;
+                        height: 255px;
+
+                    }
+
+                    @include mq(xl) {
+                        width: 510px;
+                        height: 310px;
+                    }
+
                     img {
                         display: block;
                         width: 100%;
-                        height: auto;
+                        height: 100%;
+                        object-fit: cover;
                     }
 
-                    // .ribbon {
-                    //     position: absolute;
-                    //     width: 78px;
-                    //     height: 24px;
-                    //     top: 19px;
-                    //     left: -7px;
-
-                    //     .ribbon-bg {
-                    //         width: 100%;
-                    //         height: 100%;
-                    //         display: inline-block;
-                    //         position: relative;
-                    //     }
-
-                    //     &::after {
-                    //         content: "カテゴリ";
-                    //         position: absolute;
-                    //         bottom: 4px;
-                    //         left: 15px;
-                    //         color: #fff;
-                    //         font-family: "Noto Serif JP";
-                    //         font-size: 12px;
-                    //         font-weight: 700;
-                    //         z-index: 14;
-                    //     }
-                    // }
                     .ribbon-s {
                         position: absolute;
                         height: 28px;
@@ -2047,6 +2107,7 @@ body {
                     width: 100%;
                     margin-left: 0;
                     margin-right: 0;
+                    flex: 1;
                 }
 
                 @include mq(lg) {
@@ -2064,6 +2125,7 @@ body {
                     gap: 5.06vw;
                     padding-bottom: 40px;
                     margin: 0 auto;
+                    width: 100%;
 
                     @include mq(md) {
                         flex-direction: row;
@@ -2072,14 +2134,15 @@ body {
                     }
 
                     @include mq(lg) {
-                        // gap: 2.34vw 3.359vw;
                         padding-bottom: 40px;
                     }
 
                     @include mq(xl) {
-                        max-width: 1280px;
-                        gap: 1.3vw;
-                        // gap: min(2.3vw, 36px) min(2.359vw, 34px);
+                        display: flex; // 念のため再宣言
+                        flex-direction: row; // 縦にならないよう強制
+                        flex-wrap: wrap; // 折り返しは許可
+                        gap: 20px; // vwではなく固定値にして計算を安定させる
+                        justify-content: flex-start; // 左詰めにしてみる
                     }
 
                     .news__list {
@@ -2093,6 +2156,12 @@ body {
                             width: 265px;
                             gap: 12px;
                             padding-bottom: 20px;
+                        }
+
+                        @include mq(xl) {
+                            width: 48%;
+                            flex-shrink: 0;
+                            box-sizing: border-box;
                         }
 
                         .news__image-s {
@@ -2208,7 +2277,7 @@ body {
             width: 100%;
         }
 
-        @include mq(md) {
+        @include mq(lg) {
             width: 267px;
             height: 320px;
             top: calc((320px - 176px) *-1);
