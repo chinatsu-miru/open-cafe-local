@@ -3,42 +3,44 @@
 <!-- ここからメイン -->
 <main class="main">
     <section class="section">
-        <div class="concept">
-            <div class="section--intro">
-                <div class="section__title">
-                    <h2>CONCEPT</h2>
-                    <p>当店のこだわり</p>
+        <div class="concept_wrapper">
+            <div class="concept">
+                <div class="section--intro">
+                    <div class="section__title">
+                        <h2>CONCEPT</h2>
+                        <p>当店のこだわり</p>
+                    </div>
+                    <h3 class="concept__catch">
+                        最高のコーヒーと、<br />時の流れを味わうことができる<br />手作りカフェ
+                    </h3>
+                    <div class="concept__message">
+                        <p>自家焙煎の新鮮な豆から丁寧に抽出したコーヒーが奏でる香りと味わいを、温もり溢れる手作りの店内で堪能していただける当店。ゆったりと流れる時間のなかで、雑味のないクリアな味をじっくりと味わえば、慌ただしい日常を忘れ、心ほどけるひとときをお過ごしいただけます。</p>
+                        <p>訪れるたびに心満たされる特別な余韻は、ここでしか味わえない最上のくつろぎです。それは、忙しさに追われる日常をそっと解きほぐす、至福の瞬間でもあります。</p>
+                    </div>
+                    <div class="button1">
+                        <a href="<?php echo get_permalink(get_page_by_path('concept')); ?>" class="btn1">詳しくはこちら</a>
+                    </div>
                 </div>
-                <h3 class="concept__catch">
-                    最高のコーヒーと、<br />時の流れを味わうことができる<br />手作りカフェ
-                </h3>
-                <div class="concept__message">
-                    <p>自家焙煎の新鮮な豆から丁寧に抽出したコーヒーが奏でる香りと味わいを、温もり溢れる手作りの店内で堪能していただける当店。ゆったりと流れる時間のなかで、雑味のないクリアな味をじっくりと味わえば、慌ただしい日常を忘れ、心ほどけるひとときをお過ごしいただけます。</p>
-                    <p>訪れるたびに心満たされる特別な余韻は、ここでしか味わえない最上のくつろぎです。それは、忙しさに追われる日常をそっと解きほぐす、至福の瞬間でもあります。</p>
+                <div class="concept__image">
+                    <picture>
+                        <source srcset="<?php echo get_template_directory_uri(); ?>/img/concept-pc.jpg" media="(min-width: 768px)">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/concept.jpg" alt="コンセプトセクション画像">
+                    </picture>
                 </div>
-                <div class="button1">
-                    <a href="<?php echo get_permalink(get_page_by_path('concept')); ?>" class="btn1">詳しくはこちら</a>
-                </div>
+                <div class="bg"></div>
             </div>
-            <div class="concept__image">
-                <picture>
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/img/concept-pc.jpg" media="(min-width: 768px)">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/concept.jpg" alt="コンセプトセクション画像">
-                </picture>
-            </div>
-            <div class="bg"></div>
             <div class="kv__decor">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/coffee-beans.png" alt="デコレーション画像">
             </div>
-            <picture class="concept-decor">
-                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/lunch/deco-2-pc.png">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/deco-2.png" alt="デコレーション画像">
-            </picture>
         </div>
     </section>
 
     <section class="section">
         <div class="lunch">
+            <picture class="concept-decor">
+                <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/lunch/deco-2-pc.png">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/deco-2.png" alt="デコレーション画像">
+            </picture>
             <picture class="lunch-speech-bubble">
                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/lunch/lunch-speech-bubble-pc.png">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/lunch/lunch-speech-bubble.png" alt="デコレーション画像">
@@ -131,152 +133,155 @@
     </section>
 
     <section class="section">
-        <div class="grand__menu">
-            <div class="section__title">
-                <h2>GRAND MENU</h2>
-                <p>グランドメニュー</p>
-            </div>
-            <div class="grand__menu-inner">
-                <div class="grand__menus">
+        <div class="grand__menu_wrapper">
+            <div class="grand__menu">
+                <div class="section__title">
+                    <h2>GRAND MENU</h2>
+                    <p>グランドメニュー</p>
+                </div>
+                <div class="grand__menu-inner">
+                    <div class="grand__menus">
 
-                    <!-- パスタの欄 -->
-                    <div class="grand__menu-content">
-                        <?php
-                        $term = get_term_by('slug', 'pasta', 'genre');
-                        ?>
-                        <h3 class="grand__menu-top">
-                            <?php echo $term->name; ?>
-                        </h3>
-                        <?php
-                        $args = array(
-                            'post_type' => 'menu',
-                            'posts_per_page' => 3,
-                            'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'genre',
-                                    'field' => 'slug',
-                                    'terms' => $term->slug,
+                        <!-- パスタの欄 -->
+                        <div class="grand__menu-content">
+                            <?php
+                            $term = get_term_by('slug', 'pasta', 'genre');
+                            ?>
+                            <h3 class="grand__menu-top">
+                                <?php echo $term->name; ?>
+                            </h3>
+                            <?php
+                            $args = array(
+                                'post_type' => 'menu',
+                                'posts_per_page' => 3,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'genre',
+                                        'field' => 'slug',
+                                        'terms' => $term->slug,
+                                    ),
                                 ),
-                            ),
-                        );
-                        $query = new WP_Query($args);
-                        ?>
-                        <div class="grand__menu-list-wrapper">
-                            <ul class="grand__menu-list">
-                                <?php if ($query->have_posts()): ?>
-                                    <?php while ($query->have_posts()): $query->the_post(); ?>
-                                        <li class="grand__menu-info">
-                                            <div class="grand__menu-img">
-                                                <?php if (has_post_thumbnail()): ?>
-                                                    <?php the_post_thumbnail(); ?>
-                                                <?php endif; ?>
-                                            </div>
-                                            <div class="grand__menu-text"><?php the_title(); ?></div>
-                                            <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
-                                        </li>
-                                    <?php endwhile; ?>
-                                    <?php wp_reset_postdata(); ?>
-                                <?php endif; ?>
-                            </ul>
+                            );
+                            $query = new WP_Query($args);
+                            ?>
+                            <div class="grand__menu-list-wrapper">
+                                <ul class="grand__menu-list">
+                                    <?php if ($query->have_posts()): ?>
+                                        <?php while ($query->have_posts()): $query->the_post(); ?>
+                                            <li class="grand__menu-info">
+                                                <div class="grand__menu-img">
+                                                    <?php if (has_post_thumbnail()): ?>
+                                                        <?php the_post_thumbnail(); ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="grand__menu-text"><?php the_title(); ?></div>
+                                                <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
+                                            </li>
+                                        <?php endwhile; ?>
+                                        <?php wp_reset_postdata(); ?>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- サラダの欄 -->
+                        <div class="grand__menu-content">
+                            <?php
+                            $term = get_term_by('slug', 'salad', 'genre');
+                            ?>
+                            <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
+                            <?php
+                            $args = array(
+                                'post_type' => 'menu',
+                                'posts_per_page' => 3,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'genre',
+                                        'field' => 'slug',
+                                        'terms' => $term->slug,
+                                    ),
+                                ),
+                            );
+                            $query = new WP_Query($args);
+                            ?>
+                            <div class="grand__menu-list-wrapper">
+                                <ul class="grand__menu-list">
+                                    <?php if ($query->have_posts()): ?>
+                                        <?php while ($query->have_posts()): $query->the_post(); ?>
+                                            <li class="grand__menu-info">
+                                                <div class="grand__menu-img">
+                                                    <?php if (has_post_thumbnail()): ?>
+                                                        <?php the_post_thumbnail(); ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="grand__menu-text"><?php the_title(); ?></div>
+                                                <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
+                                            </li>
+                                        <?php endwhile; ?>
+                                        <?php wp_reset_postdata(); ?>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- スイーツの欄 -->
+                        <div class="grand__menu-content">
+                            <?php
+                            $term = get_term_by('slug', 'sweets', 'genre');
+                            ?>
+                            <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
+                            <?php
+                            $args = array(
+                                'post_type' => 'menu',
+                                'posts_per_page' => 3,
+                                'tax_query' => array(
+                                    array(
+                                        'taxonomy' => 'genre',
+                                        'field' => 'slug',
+                                        'terms' => $term->slug,
+                                    ),
+                                ),
+                            );
+                            $query = new WP_Query($args);
+                            ?>
+
+                            <div class="grand__menu-list-wrapper">
+                                <ul class="grand__menu-list bread">
+                                    <?php if ($query->have_posts()): ?>
+                                        <?php while ($query->have_posts()): $query->the_post(); ?>
+                                            <li class="grand__menu-info">
+                                                <div class="grand__menu-img">
+                                                    <?php if (has_post_thumbnail()): ?>
+                                                        <?php the_post_thumbnail(); ?>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <div class="grand__menu-text"><?php the_title(); ?></div>
+                                                <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
+                                            </li>
+                                        <?php endwhile; ?>
+                                        <?php wp_reset_postdata(); ?>
+                                    <?php endif; ?>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- ドリンクの欄 -->
+                        <div class="grand__menu-content">
+                            <?php
+                            $term = get_term_by('slug', 'drink', 'genre');
+                            ?>
+                            <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
+                            <?php
+                            $class = is_front_page() ? 'top-drink' : '';
+                            get_template_part('template-parts/loop-menu-drink', null, array('class' => $class));
+                            ?>
                         </div>
                     </div>
-
-                    <!-- サラダの欄 -->
-                    <div class="grand__menu-content">
-                        <?php
-                        $term = get_term_by('slug', 'salad', 'genre');
-                        ?>
-                        <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
-                        <?php
-                        $args = array(
-                            'post_type' => 'menu',
-                            'posts_per_page' => 3,
-                            'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'genre',
-                                    'field' => 'slug',
-                                    'terms' => $term->slug,
-                                ),
-                            ),
-                        );
-                        $query = new WP_Query($args);
-                        ?>
-                        <div class="grand__menu-list-wrapper">
-                            <ul class="grand__menu-list">
-                                <?php if ($query->have_posts()): ?>
-                                    <?php while ($query->have_posts()): $query->the_post(); ?>
-                                        <li class="grand__menu-info">
-                                            <div class="grand__menu-img">
-                                                <?php if (has_post_thumbnail()): ?>
-                                                    <?php the_post_thumbnail(); ?>
-                                                <?php endif; ?>
-                                            </div>
-                                            <div class="grand__menu-text"><?php the_title(); ?></div>
-                                            <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
-                                        </li>
-                                    <?php endwhile; ?>
-                                    <?php wp_reset_postdata(); ?>
-                                <?php endif; ?>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- スイーツの欄 -->
-                    <div class="grand__menu-content">
-                        <?php
-                        $term = get_term_by('slug', 'sweets', 'genre');
-                        ?>
-                        <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
-                        <?php
-                        $args = array(
-                            'post_type' => 'menu',
-                            'posts_per_page' => 3,
-                            'tax_query' => array(
-                                array(
-                                    'taxonomy' => 'genre',
-                                    'field' => 'slug',
-                                    'terms' => $term->slug,
-                                ),
-                            ),
-                        );
-                        $query = new WP_Query($args);
-                        ?>
-
-                        <div class="grand__menu-list-wrapper">
-                            <ul class="grand__menu-list bread">
-                                <?php if ($query->have_posts()): ?>
-                                    <?php while ($query->have_posts()): $query->the_post(); ?>
-                                        <li class="grand__menu-info">
-                                            <div class="grand__menu-img">
-                                                <?php if (has_post_thumbnail()): ?>
-                                                    <?php the_post_thumbnail(); ?>
-                                                <?php endif; ?>
-                                            </div>
-                                            <div class="grand__menu-text"><?php the_title(); ?></div>
-                                            <div class="grand__menu-price"><?php the_field('price'); ?> yen</div>
-                                        </li>
-                                    <?php endwhile; ?>
-                                    <?php wp_reset_postdata(); ?>
-                                <?php endif; ?>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- ドリンクの欄 -->
-                    <div class="grand__menu-content">
-                        <?php
-                        $term = get_term_by('slug', 'drink', 'genre');
-                        ?>
-                        <h3 class="grand__menu-top"><?php echo $term->name; ?></h3>
-                        <?php
-                        $class = is_front_page() ? 'top-drink' : '';
-                        get_template_part('template-parts/loop-menu-drink', null, array('class' => $class));
-                        ?>
+                    <div class="button1">
+                        <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="btn1">その他のメニュー</a>
                     </div>
                 </div>
-                <div class="button1">
-                    <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="btn1">その他のメニュー</a>
-                </div>
+                <div class="grand__menu-bg"></div>
             </div>
             <picture class="grand__menu-decor">
                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/grand-menu/coffee-leaves2.png">
@@ -286,7 +291,7 @@
                 <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri(); ?>/img/grand-menu/coffee-beans-pc.png">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/grand-menu/coffee-beans.png" alt="">
             </picture>
-            <div class="grand__menu-bg"></div>
+
         </div>
     </section>
 

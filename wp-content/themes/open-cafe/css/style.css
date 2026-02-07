@@ -936,7 +936,7 @@ body {
 .hero-sp {
   aspect-ratio: 375/667;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .hero-sp {
     display: none;
   }
@@ -1105,7 +1105,7 @@ body {
 .hero-pc {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .hero-pc {
     background-color: #f3efeb;
     width: 100%;
@@ -1372,6 +1372,29 @@ body {
   background-color: #f3efeb;
   z-index: 0;
 }
+.concept_wrapper {
+  position: relative;
+}
+.concept_wrapper .kv__decor {
+  display: none;
+}
+.concept_wrapper .kv__decor img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .concept_wrapper .kv__decor {
+    display: block;
+    position: absolute;
+    right: -40px;
+    top: -44px;
+    width: 23.125vw;
+    height: 20.703vw;
+    z-index: 100;
+    max-width: 295px;
+    height: auto;
+  }
+}
+
 .concept {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1387,9 +1410,15 @@ body {
     padding-top: 80px;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    gap: 80px;
+    gap: 7.2%;
     position: relative;
     z-index: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept {
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }
 .concept .section--intro {
@@ -1399,7 +1428,13 @@ body {
 }
 @media screen and (min-width: 768px) {
   .concept .section--intro {
-    width: 40vw;
+    width: 52%;
+    padding-inline: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept .section--intro {
+    width: 39.8vw;
   }
 }
 .concept .section--intro .section__title {
@@ -1459,17 +1494,21 @@ body {
 }
 @media screen and (min-width: 768px) {
   .concept .concept__image {
-    width: 46.87vw;
-    height: 59.68vw;
+    width: 40%;
+    height: 764px;
     aspect-ratio: 600/764;
     margin-top: 0;
-    max-width: 684px;
-    max-height: 872px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept .concept__image {
+    width: 600px;
   }
 }
 .concept .concept__image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 .concept .bg {
   position: absolute;
@@ -1483,7 +1522,7 @@ body {
 @media screen and (min-width: 768px) {
   .concept .bg {
     width: 92.968vw;
-    aspect-ratio: 1190/900;
+    height: 290px;
     max-width: 1324px;
     z-index: 0;
   }
@@ -1496,44 +1535,6 @@ body {
 @media screen and (min-width: 1280px) {
   .concept .bg {
     aspect-ratio: 1190/300;
-  }
-}
-.concept .kv__decor {
-  display: none;
-}
-.concept .kv__decor img {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .concept .kv__decor {
-    display: block;
-    position: absolute;
-    right: -40px;
-    top: -44px;
-    width: 23.125vw;
-    height: 20.703vw;
-    z-index: 100;
-    max-width: 295px;
-    height: auto;
-  }
-}
-.concept .concept-decor {
-  position: absolute;
-  width: 86px;
-  right: 0;
-  bottom: -22.7vw;
-  z-index: 9999;
-}
-.concept .concept-decor img {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .concept .concept-decor {
-    width: clamp(120px, 13.047vw, 167px);
-    aspect-ratio: 167/228;
-    bottom: -260px;
-    right: 0;
-    height: auto;
   }
 }
 
@@ -1552,6 +1553,25 @@ body {
     overflow: visible;
     margin-top: 160px;
     padding-bottom: 77px;
+  }
+}
+.lunch .concept-decor {
+  position: absolute;
+  width: 86px;
+  right: 0;
+  top: -170px;
+  z-index: 9999;
+}
+.lunch .concept-decor img {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .lunch .concept-decor {
+    width: clamp(120px, 13.047vw, 167px);
+    aspect-ratio: 167/228;
+    top: -130px;
+    right: 0;
+    height: auto;
   }
 }
 .lunch .section__title {
@@ -2053,7 +2073,10 @@ body {
   }
 }
 
-.grand__menu {
+.grand__menu_wrapper {
+  position: relative;
+}
+.grand__menu_wrapper .grand__menu {
   padding-top: 60px;
   padding-bottom: 190px;
   padding-inline: 20px;
@@ -2062,7 +2085,7 @@ body {
   z-index: 0;
 }
 @media screen and (min-width: 600px) {
-  .grand__menu {
+  .grand__menu_wrapper .grand__menu {
     margin: 0 auto;
     overflow: visible;
     max-width: 1440px;
@@ -2070,44 +2093,44 @@ body {
   }
 }
 @media screen and (min-width: 768px) {
-  .grand__menu {
+  .grand__menu_wrapper .grand__menu {
     padding-top: 80px;
     padding-bottom: 246px;
     padding-inline: 0;
   }
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu {
+  .grand__menu_wrapper .grand__menu {
     padding-bottom: 246px;
   }
 }
-.grand__menu .section__title h2 {
+.grand__menu_wrapper .grand__menu .section__title h2 {
   line-height: 150%;
 }
-.grand__menu .section__title p {
+.grand__menu_wrapper .grand__menu .section__title p {
   line-height: 18px;
 }
-.grand__menu .grand__menu-inner {
+.grand__menu_wrapper .grand__menu .grand__menu-inner {
   padding-top: 40px;
   position: relative;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner {
     padding-inline: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner {
     padding-top: 60px;
     max-width: 1160px;
     margin: 0 auto;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus {
   display: flex;
   flex-direction: column;
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 10px;
@@ -2119,14 +2142,14 @@ body {
   line-height: 150%;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
     padding-top: 13px;
     padding-bottom: 8px;
     padding-left: 21px;
     font-size: 24px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::before {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::before {
   position: absolute;
   content: "";
   background-color: #222222;
@@ -2136,11 +2159,11 @@ body {
   left: 0;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::before {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::before {
     top: 5px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::after {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::after {
   position: absolute;
   content: "";
   background-color: #222222;
@@ -2150,130 +2173,130 @@ body {
   left: 0;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::after {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top::after {
     bottom: 5px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper {
   padding-top: 22px;
   padding-bottom: 22px;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper {
     padding-top: 28px;
     padding-bottom: 84px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
   display: grid;
   grid-template-columns: repeat(2, 47%);
   justify-content: space-between;
 }
 @media screen and (min-width: 600px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
     max-width: 728px;
     gap: 19px;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list {
     grid-template-columns: repeat(3, 31.2%);
     max-width: 100%;
     flex-wrap: nowrap;
   }
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread {
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread .grand__menu-info:nth-child(-n+3) {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread .grand__menu-info:nth-child(-n+3) {
     padding-bottom: 21px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread .grand__menu-info:nth-child(n+4) .grand__menu-img img {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread .grand__menu-info:nth-child(n+4) .grand__menu-img img {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread .grand__menu-info:nth-child(n+4) .grand__menu-img {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list.bread .grand__menu-info:nth-child(n+4) .grand__menu-img {
     height: 26.875vw;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info {
   display: flex;
   padding-bottom: 20px;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info {
     width: 100%;
     max-width: 384px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img {
   width: 100%;
   background-color: #ffffff;
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img img {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img img {
   display: inline-block;
   padding: 5px;
   width: 100%;
   height: 100%;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img img {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-img img {
     padding: 8px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-text {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-text {
   font-size: 3.73vw;
   padding-top: 13px;
   font-weight: 700;
   line-height: 21px;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-text {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-text {
     padding-top: 18px;
     font-size: 1.56vw;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-price {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-price {
   font-size: 6.4vw;
   font-family: Damion;
   font-weight: 400;
   line-height: 36px;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-price {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper .grand__menu-list .grand__menu-info .grand__menu-price {
     font-size: 2.5vw;
     line-height: 150%;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
   padding-top: 20px;
   width: 100%;
   padding-bottom: 0;
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
     padding-top: 29px;
     display: flex;
     gap: 36px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
     padding-top: 20px;
     gap: 85px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
   display: none;
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
     display: block;
     width: 19.531vw;
     height: 19.531vw;
@@ -2281,7 +2304,7 @@ body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
     aspect-ratio: 1/1;
     max-width: 327px;
     width: 100%;
@@ -2290,25 +2313,25 @@ body {
     background-color: #ffffff;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image .drink-img {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image .drink-img {
   padding: 8px;
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image .drink-img img {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image .drink-img img {
   width: 100%;
 }
 @media screen and (min-width: 1280px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image .drink-img {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image .drink-img {
     max-width: 100%;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
     display: grid;
     padding-inline: 0;
     grid-template-columns: repeat(3, 1fr);
@@ -2316,7 +2339,7 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
     display: flex;
     padding: 0;
     flex-direction: row;
@@ -2324,26 +2347,26 @@ body {
     justify-content: space-between;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
   padding-bottom: 38px;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
     padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
     width: 19.531vw;
   }
 }
 @media screen and (min-width: 1280px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
     width: 15.39vw;
     max-width: 222px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-section-title {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-section-title {
   font-family: "Noto Serif JP";
   font-size: 16px;
   font-weight: 700;
@@ -2351,63 +2374,63 @@ body {
   padding-bottom: 6px;
   border-bottom: 1px solid #222222;
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists {
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists {
     padding-top: 16px;
     gap: 8px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .menu {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .menu {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 21px;
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .menu {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .menu {
     min-width: 98px;
   }
 }
-.grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .price {
+.grand__menu_wrapper .grand__menu .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .grand__menu-drink-lists .drink-menu .price {
   font-family: Damion;
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
 }
-.grand__menu .grand__menu-inner.top-drink {
+.grand__menu_wrapper .grand__menu .grand__menu-inner.top-drink {
   padding-top: 0;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner.top-drink {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner.top-drink {
     padding-inline: 0;
   }
 }
-.grand__menu .grand__menu-inner > .button1 {
+.grand__menu_wrapper .grand__menu .grand__menu-inner > .button1 {
   margin-top: 0;
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-inner > .button1 {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner > .button1 {
     margin-top: 60px;
     width: 290px;
   }
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-inner > .button1::after {
+  .grand__menu_wrapper .grand__menu .grand__menu-inner > .button1::after {
     width: 290px;
   }
 }
-.grand__menu .grand__menu-bg {
+.grand__menu_wrapper .grand__menu .grand__menu-bg {
   position: absolute;
   bottom: 120px;
   width: 274px;
@@ -2417,19 +2440,19 @@ body {
   background: #eae0d5;
 }
 @media (min-width: 425px) {
-  .grand__menu .grand__menu-bg {
+  .grand__menu_wrapper .grand__menu .grand__menu-bg {
     height: 2965px;
   }
 }
 @media screen and (min-width: 768px) {
-  .grand__menu .grand__menu-bg {
+  .grand__menu_wrapper .grand__menu .grand__menu-bg {
     top: 500px;
     width: 550px;
     height: 1740px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu .grand__menu-bg {
+  .grand__menu_wrapper .grand__menu .grand__menu-bg {
     top: 502px;
     width: 810px;
     right: 0;
@@ -2437,18 +2460,18 @@ body {
   }
 }
 @media screen and (min-width: 1280px) {
-  .grand__menu .grand__menu-bg {
-    height: 2196px;
+  .grand__menu_wrapper .grand__menu .grand__menu-bg {
+    height: 2139px;
     width: 1024px;
   }
 }
 @media (min-width: 1440px) {
-  .grand__menu .grand__menu-bg {
-    height: 2940px;
+  .grand__menu_wrapper .grand__menu .grand__menu-bg {
+    height: 2196px;
+    top: 620px;
   }
 }
-
-.grand__menu-decor {
+.grand__menu_wrapper .grand__menu-decor {
   position: absolute;
   width: 148px;
   height: 190px;
@@ -2456,7 +2479,7 @@ body {
   left: 0;
 }
 @media screen and (min-width: 1024px) {
-  .grand__menu-decor {
+  .grand__menu_wrapper .grand__menu-decor {
     width: 297px;
     height: 415px;
     aspect-ratio: 297/415;
@@ -2464,22 +2487,21 @@ body {
     left: 0;
   }
 }
-.grand__menu-decor img {
+.grand__menu_wrapper .grand__menu-decor img {
   width: 100%;
 }
-
-.grand__menu-decor2 {
+.grand__menu_wrapper .grand__menu-decor2 {
   position: absolute;
   width: 45.01vw;
   height: 38.1vw;
   bottom: 26.13px;
   right: -30px;
 }
-.grand__menu-decor2 img {
+.grand__menu_wrapper .grand__menu-decor2 img {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .grand__menu-decor2 {
+  .grand__menu_wrapper .grand__menu-decor2 {
     width: 23.5vw;
     bottom: 42px;
     right: 0px;
@@ -2642,6 +2664,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .news .news__inner .news__contents {
+    padding-inline: 30px;
     padding-top: 60px;
     flex-direction: row;
     gap: 2.34vw;
@@ -2691,7 +2714,7 @@ body {
 @media screen and (min-width: 1280px) {
   .news .news__inner .news__contents .news__latest .news__image {
     width: 510px;
-    height: 310px;
+    height: 320px;
   }
 }
 .news .news__inner .news__contents .news__latest .news__image img {
@@ -2729,9 +2752,13 @@ body {
   line-height: 21px;
   font-size: 14px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .news .news__inner .news__contents .news__latest .news__desc {
     font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .news .news__inner .news__contents .news__latest .news__desc {
     line-height: 30px;
   }
 }
@@ -2749,9 +2776,13 @@ body {
   /* 日本語の禁則処理を適切に行う */
   white-space: normal;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .news .news__inner .news__contents .news__latest .news__text {
     font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .news .news__inner .news__contents .news__latest .news__text {
     line-height: 21px;
     padding-top: 4px;
   }
@@ -2804,12 +2835,13 @@ body {
 @media screen and (min-width: 768px) {
   .news .news__inner .news__contents .news__lists .news__lists-wrapper {
     flex-direction: row;
-    gap: 0;
+    gap: 17px;
     justify-content: space-between;
   }
 }
 @media screen and (min-width: 1024px) {
   .news .news__inner .news__contents .news__lists .news__lists-wrapper {
+    gap: 0;
     padding-bottom: 40px;
   }
 }
@@ -2826,6 +2858,11 @@ body {
   width: calc(50% - 2.533vw);
   height: auto;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list {
+    width: 171px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list {
@@ -2881,6 +2918,13 @@ body {
   font-weight: 700;
   line-height: 18px;
 }
+@media screen and (min-width: 768px) {
+  .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list .news__text-s {
+    padding-top: 12px;
+    display: inline-block;
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list .news__text-s {
     padding-top: 0;
@@ -2901,10 +2945,14 @@ body {
   padding-top: 12px;
   display: inline-block;
 }
+@media screen and (min-width: 768px) {
+  .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list .news__date-s {
+    font-size: 14px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .news .news__inner .news__contents .news__lists .news__lists-wrapper .news__list .news__date-s {
     padding-top: 0;
-    font-size: 14px;
     font-weight: 500;
     line-height: 21px;
   }

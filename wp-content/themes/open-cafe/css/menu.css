@@ -920,6 +920,7 @@ body {
 .container .menu__contents .tab-buttons .tab-buttons__inner .tab-button:hover {
   background: #382620;
   color: #ffffff;
+  opacity: 1;
 }
 .container .menu__contents .menu__images {
   padding-top: 60px;
