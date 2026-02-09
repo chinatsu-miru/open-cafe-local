@@ -660,6 +660,9 @@ html {
   background: url("../img/contact/contact-top.jpg") no-repeat center center/cover;
 }
 .header.concept {
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
   z-index: 20;
   background: url("../img/concept/concept-top.jpg") no-repeat center center/cover;
 }

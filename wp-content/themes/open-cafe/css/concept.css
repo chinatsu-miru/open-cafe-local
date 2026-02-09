@@ -660,6 +660,9 @@ html {
   background: url("../img/contact/contact-top.jpg") no-repeat center center/cover;
 }
 .header.concept {
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
   z-index: 20;
   background: url("../img/concept/concept-top.jpg") no-repeat center center/cover;
 }
@@ -885,6 +888,10 @@ body {
   .concept-main .concept__contents {
     gap: 200px;
     padding-top: 80px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents {
     padding-inline: 90px;
   }
 }
@@ -908,7 +915,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .concept-main .concept__contents .concept__content .contents__text {
-    width: 50%;
+    width: 55%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -953,7 +960,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .concept-main .concept__contents .concept__content .contents__image {
-    width: 50%;
+    width: 45%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -970,6 +977,12 @@ body {
 @media screen and (min-width: 1024px) {
   .concept-main .concept__contents .concept__content.concept__content--type1 {
     padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type1 {
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -992,42 +1005,26 @@ body {
   width: 100%;
 }
 .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 11px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub {
     gap: 10px;
-    height: 164px;
   }
 }
 @media screen and (min-width: 1024px) {
   .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub {
     gap: 20px;
-    height: 182px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub {
-    height: 310px;
   }
 }
 .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub img {
-  width: 164px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   display: block;
-  justify-content: space-between;
-}
-@media screen and (min-width: 1024px) {
-  .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub img {
-    width: 182px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub img {
-    width: 310px;
-    height: 310px;
-  }
 }
 .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub-bg {
   background-color: #eae0d5;
@@ -1038,17 +1035,28 @@ body {
   height: 26.66vw;
   z-index: -1;
 }
+@media screen and (min-width: 768px) {
+  .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub-bg {
+    width: 77vw;
+  }
+}
 @media screen and (min-width: 1024px) {
   .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub-bg {
     width: 76.875vw;
-    height: 15.625vw;
+    height: 200px;
     right: -90px;
-    top: 380px;
+    top: 470px;
   }
 }
 @media screen and (min-width: 1280px) {
   .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub-bg {
     top: 49.218vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .concept-main .concept__contents .concept__content.concept__content--type1 .contents__image .image-sub-bg {
+    top: 622px;
+    right: -180px;
   }
 }
 .concept-main .concept__contents .concept__content.concept__content--type2 {
@@ -1057,15 +1065,37 @@ body {
 }
 @media screen and (min-width: 768px) {
   .concept-main .concept__contents .concept__content.concept__content--type2 {
-    padding-bottom: 98px;
+    padding-bottom: 200px;
     flex-direction: row-reverse;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 {
+    padding-bottom: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 {
+    padding-bottom: 97.6px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__text {
+    width: 337px;
   }
 }
 @media screen and (min-width: 1024px) {
   .concept-main .concept__contents .concept__content.concept__content--type2 .contents__text {
     padding-top: 7.4vw;
-    width: 389px;
+    width: 340px;
     flex-shrink: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__text {
+    width: 389px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1083,11 +1113,16 @@ body {
 .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-main img {
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-main {
     margin-left: 7.812vw;
     width: auto;
     display: block;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-main {
+    width: 540px;
   }
 }
 .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-main .image-sub {
@@ -1096,16 +1131,31 @@ body {
   right: 40.533vw;
   width: 48.8vw;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-main .image-sub {
-    width: 27.343vw;
-    height: auto;
-    top: auto;
-    bottom: -132px;
-    left: -7.812vw;
+    top: 15.13vw;
+    right: 17.533vw;
+    width: 21.8vw;
   }
 }
-.concept-main .concept__contents .concept__content.concept__content--type2 .image-sub-bg {
+@media screen and (min-width: 1024px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-main .image-sub {
+    width: 29.343vw;
+    height: auto;
+    top: 237px;
+    bottom: -132px;
+    left: -6.812vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-main .image-sub {
+    left: -100px;
+    width: 350px;
+    height: 263px;
+    top: 274px;
+  }
+}
+.concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-sub-bg {
   background-color: #eae0d5;
   position: absolute;
   top: 106px;
@@ -1114,16 +1164,69 @@ body {
   height: 60.533vw;
   z-index: -1;
 }
+@media screen and (min-width: 768px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-sub-bg {
+    width: 45.7vw;
+    left: -30px;
+    height: 280px;
+    top: 62px;
+  }
+}
 @media screen and (min-width: 1024px) {
-  .concept-main .concept__contents .concept__content.concept__content--type2 .image-sub-bg {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-sub-bg {
     top: 160px;
-    left: -90px;
-    width: 580px;
+    left: -30px;
+    width: 464px;
     height: 34.14vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2 .contents__image .image-sub-bg {
+    display: none;
+    width: 45.3125vw;
+    left: -7vw;
+  }
+}
+.concept-main .concept__contents .concept__content.concept__content--type2::after {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type2::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 45.3125vw;
+    left: -13vw;
+    background-color: #eae0d5;
+    bottom: -60px;
+    height: 437px;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type3 {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .concept-main .concept__contents .concept__content.concept__content--type3 .contents__text {
+    width: 340px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type3 .contents__text {
+    width: 389px;
+    justify-content: center;
   }
 }
 .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image {
   position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image {
+    width: 640px;
+  }
 }
 .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-main {
   margin-right: auto;
@@ -1131,6 +1234,15 @@ body {
 }
 .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-main img {
   width: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-main {
+    margin-right: 0;
+  }
+  .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-main img {
+    width: 100%;
+    height: auto;
+  }
 }
 .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-sub-bg {
   background-color: #eae0d5;
@@ -1141,12 +1253,24 @@ body {
   height: 50vw;
   z-index: -1;
 }
+@media screen and (min-width: 768px) {
+  .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-sub-bg {
+    width: 240px;
+    height: 330px;
+    right: -30px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-sub-bg {
     width: 31.25vw;
-    height: 40.625vw;
-    bottom: -6.25vw;
+    height: 520px;
+    bottom: -130px;
     right: -7.031vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .concept-main .concept__contents .concept__content.concept__content--type3 .contents__image .image-sub-bg {
+    top: -40px;
   }
 }
 
