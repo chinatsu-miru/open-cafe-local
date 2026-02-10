@@ -29,7 +29,6 @@ body {
     }
 }
 
-
 .container {
     padding-top: 60px;
     padding-inline: 20px;
@@ -37,7 +36,7 @@ body {
 
     @include mq(md) {
         padding-top: 80px;
-        padding-inline: 90px;
+        padding-inline: 30px;
         padding-bottom: 160px;
     }
 
@@ -47,10 +46,17 @@ body {
             margin: 0 auto;
             width: 100%;
 
+            @include mq(md) {
+                max-width: 708px;
+            }
+
+            @include mq(lg) {
+              max-width: 800px;
+            }
+
             @include mq(xl) {
                 max-width: 840px;
             }
-
 
             .tab-buttons__inner {
                 display: grid;
@@ -81,8 +87,8 @@ body {
             @include mq(md) {
                 padding-top: 80px;
                 max-width: 1100px;
-
             }
+
 
             // &.archive {
             //     display: block;
@@ -392,7 +398,8 @@ body {
 
                 .grand__menu-content {
                     @include mq(xl) {
-                        max-width: 1287px;
+                        max-width: 1100px;
+                        margin: 0 auto;
                     }
 
                     .grand__menu-top {
@@ -562,12 +569,12 @@ body {
                             @include mq(lg) {
                                 padding-top: 0;
                                 display: flex;
-                                gap: 36px;
+                                gap: 60px;
                             }
 
                             @include mq(xl) {
                                 padding-top: 0;
-                                gap: 85px;
+                                width: 1100px;
                             }
 
                             .grand__menu-drink-image {
@@ -609,18 +616,31 @@ body {
                                 padding-left: 20px;
                                 padding-right: 20px;
 
+                                @include mq(md) {
+                                    flex-direction: row;
+                                    padding-inline: 0;
+                                    justify-content: space-between;
+                                }
+
                                 @include mq(lg) {
                                     padding: 0;
-                                    flex-direction: row;
                                     flex: 1;
-                                    justify-content: space-between;
+                                }
+
+                                @include mq(xxl) {
+                                    gap: 27px;
+
                                 }
 
                                 .drink-group {
                                     padding-bottom: 40px;
 
+                                    @include mq(md) {
+                                        width: 30%;
+                                    }
+
                                     @include mq(lg) {
-                                        width: 19vw;
+                                        width: 20vw;
                                     }
 
                                     @include mq(xl) {

@@ -892,7 +892,7 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     padding-top: 80px;
-    padding-inline: 90px;
+    padding-inline: 30px;
     padding-bottom: 160px;
   }
 }
@@ -900,6 +900,16 @@ body {
   max-width: 600px;
   margin: 0 auto;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .container .menu__contents .tab-buttons {
+    max-width: 708px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container .menu__contents .tab-buttons {
+    max-width: 800px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .container .menu__contents .tab-buttons {
@@ -1211,7 +1221,8 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content {
-    max-width: 1287px;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-top {
@@ -1373,13 +1384,13 @@ body {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
     padding-top: 0;
     display: flex;
-    gap: 36px;
+    gap: 60px;
   }
 }
 @media screen and (min-width: 1280px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink {
     padding-top: 0;
-    gap: 85px;
+    width: 1100px;
   }
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-image {
@@ -1420,20 +1431,35 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+@media screen and (min-width: 768px) {
+  .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
+    flex-direction: row;
+    padding-inline: 0;
+    justify-content: space-between;
+  }
+}
 @media screen and (min-width: 1024px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
     padding: 0;
-    flex-direction: row;
     flex: 1;
-    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section {
+    gap: 27px;
   }
 }
 .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
   padding-bottom: 40px;
 }
+@media screen and (min-width: 768px) {
+  .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
+    width: 30%;
+  }
+}
 @media screen and (min-width: 1024px) {
   .container .menu__contents .grand__menu-inner .grand__menus .grand__menu-content .grand__menu-list-wrapper.drink .grand__menu-drink-section .drink-group {
-    width: 19vw;
+    width: 20vw;
   }
 }
 @media screen and (min-width: 1280px) {
