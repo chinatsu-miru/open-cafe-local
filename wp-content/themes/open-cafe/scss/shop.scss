@@ -16,12 +16,17 @@ body {
     padding-bottom: 100px;
 
     @include mq(md) {
-        padding-inline: 0;
-        width: 53.7%;
+        width: 100%;
+        max-width: 748px;
+        padding-inline: 30px;
+        // width: 53.7%;
         // max-width: 729px;
         margin: 0 auto;
         padding-bottom: 0;
     }
+
+
+
 
     .access-lists {
         padding-top: 58px;

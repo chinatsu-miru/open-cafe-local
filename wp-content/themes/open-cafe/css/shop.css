@@ -871,8 +871,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .shop-lists__inner {
-    padding-inline: 0;
-    width: 53.7%;
+    width: 100%;
+    max-width: 748px;
+    padding-inline: 30px;
     margin: 0 auto;
     padding-bottom: 0;
   }
