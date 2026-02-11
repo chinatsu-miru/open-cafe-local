@@ -845,8 +845,8 @@ footer .footer-beans img {
 @media screen and (min-width: 768px) {
   footer .footer-beans {
     width: auto;
-    height: 100px;
     max-width: 150px;
+    bottom: 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -903,6 +903,11 @@ img {
   line-height: 150%;
 }
 @media screen and (min-width: 768px) {
+  .single__news .single__news-content .single__news-title {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 1280px) {
   .single__news .single__news-content .single__news-title {
     font-size: 28px;
   }

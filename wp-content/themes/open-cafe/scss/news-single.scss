@@ -57,6 +57,10 @@ img {
             line-height: 150%;
 
             @include mq(md) {
+                font-size: 26px;
+            }
+
+            @include mq(xl) {
                 font-size: 28px;
             }
         }

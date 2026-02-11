@@ -118,8 +118,9 @@ footer {
 
         @include mq(md) {
             width: auto;
-            height: 100px;
+            // height: 100px;
             max-width: 150px;
+            bottom: 0;
         }
 
         @include mq(lg) {
