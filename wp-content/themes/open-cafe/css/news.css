@@ -884,8 +884,10 @@ body {
 @media screen and (min-width: 1024px) {
   .contents__wrapper {
     padding-inline: 50px;
+    max-width: 1200px;
     padding-top: 80px;
     gap: 4.7vw;
+    margin: 0 auto;
   }
 }
 .contents__wrapper .news__contents {

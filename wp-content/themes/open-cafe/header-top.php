@@ -222,10 +222,12 @@ if (is_front_page()) {
                                                     <?php the_post_thumbnail(); ?>
                                                 <?php endif; ?>
                                             </div>
-                                            <div class="kv-text">
-                                                <time datetime="<?php the_time('c'); ?>" class="news__date"><?php the_time('Y/n/j'); ?></time>
-                                                <p><?php the_title(); ?></p>
-                                            </div>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <div class="kv-text">
+                                                    <time datetime="<?php the_time('c'); ?>" class="news__date"><?php the_time('Y/n/j'); ?></time>
+                                                    <p><?php the_title(); ?></p>
+                                                </div>
+                                            </a>
                                             <div class="ribbon">
                                                 <div>
                                                     <?php

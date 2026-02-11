@@ -28,9 +28,10 @@ body {
 
     @include mq(lg) {
         padding-inline: 50px;
-        // display: flex;
+        max-width: 1200px;
         padding-top: 80px;
         gap: 4.7vw;
+        margin: 0 auto;
 
     }
 

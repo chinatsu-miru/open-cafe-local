@@ -925,6 +925,13 @@ footer .footer-beans img {
     align-items: center;
   }
 }
+@media screen and (min-width: 768px) {
+  .contact .contact__inner .contact-form .contact__fields .contact__field .form-field {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+  }
+}
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact-form .contact__fields .contact__field .form-field {
     display: flex;
@@ -947,7 +954,7 @@ footer .footer-beans img {
   align-items: center;
   gap: 0.5em;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__head {
     min-width: 170px;
   }
@@ -972,7 +979,7 @@ footer .footer-beans img {
   font-size: 11px;
   font-weight: 700;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .contact .contact__inner .contact-form .contact__fields .contact__field .form-field .form-field__item {
     width: 100%;
   }
@@ -1073,10 +1080,14 @@ footer .footer-beans img {
   margin-left: 5.2vw;
   position: relative;
 }
+@media screen and (min-width: 768px) {
+  .contact .contact__inner .contact-form .button-wrap .button1 {
+    margin-inline: auto;
+  }
+}
 @media screen and (min-width: 1024px) {
   .contact .contact__inner .contact-form .button-wrap .button1 {
     width: 290px;
-    margin-left: 15.3vw;
   }
 }
 .contact .contact__inner .contact-form .button-wrap .button1::before {

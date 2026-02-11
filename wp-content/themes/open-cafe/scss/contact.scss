@@ -74,6 +74,11 @@
 
 
                     .form-field {
+                        @include mq(md) {
+                            display: flex;
+                            gap: 28px;
+                            align-items: flex-start;
+                        }
                         @include mq(lg) {
                             display: flex;
                             gap: 28px;
@@ -97,7 +102,7 @@
                             align-items: center;
                             gap: 0.5em;
 
-                            @include mq(lg) {
+                            @include mq(md) {
                                 min-width: 170px;
 
                             }
@@ -127,7 +132,7 @@
                         }
 
                         .form-field__item {
-                            @include mq(lg) {
+                            @include mq(md) {
                                 width: 100%;
                             }
 
@@ -247,9 +252,13 @@
                     margin-left: 5.2vw;
                     position: relative;
 
+                    @include mq(md) {
+                        margin-inline: auto;
+                    }
+
                     @include mq(lg) {
                         width: 290px;
-                        margin-left: 15.3vw;
+                        // margin-left: 15.3vw;
                     }
 
                     &::before {
