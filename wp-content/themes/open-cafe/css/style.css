@@ -916,7 +916,7 @@ body {
   width: 120px;
   height: 63px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .header .logo {
     display: none;
   }
@@ -1277,14 +1277,14 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-.hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .kv__card-inner .kv-text .kv_text time {
+.hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .kv__card-inner .kv-text time {
   color: #222222;
   font-size: 1.09vw;
   font-style: normal;
   font-weight: 500;
   line-height: 21px;
 }
-.hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .kv__card-inner .kv-text .kv_text p {
+.hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .kv__card-inner .kv-text p {
   color: #382620;
   font-size: clamp(12px, 1.0937vw, 16px);
   font-weight: 700;
@@ -1331,6 +1331,15 @@ body {
   transform: rotate(5deg);
 }
 @media screen and (min-width: 768px) {
+  .hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .speech-bubble {
+    top: -41px;
+    left: 215px;
+    width: 120px;
+    height: 71px;
+    transform: rotate(5deg);
+  }
+}
+@media screen and (min-width: 1024px) {
   .hero-pc .hero-pc-inner .hero__kv-pc .main-visual .kv__card .speech-bubble {
     width: 175px;
     height: 110px;

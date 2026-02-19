@@ -317,7 +317,8 @@
                     </div>
                 </div>
                 <div class="button1">
-                    <a href="<?php echo get_permalink(get_page_by_path('gallery')); ?>" class="btn1">インスタグラムを見る</a>
+                    <!-- <a href="<?php echo get_permalink(get_page_by_path('gallery')); ?>" class="btn1">インスタグラムを見る</a> -->
+                    <a href="https://www.instagram.com/chinats53/" class="btn1">インスタグラムを見る</a>
                 </div>
                 <div class="gallery-speech-bubble">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/gallery/speech-bubble.png" alt="吹き出し画像">
